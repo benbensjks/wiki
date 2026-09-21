@@ -1,0 +1,103 @@
+{
+  "completeness": {
+    "rows": 7,
+    "unique": 7,
+    "expected": 7,
+    "duplicates": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "control_check": {
+    "crossings": 12.0,
+    "stage1_crossings": 12,
+    "reproduces": true,
+    "gate_width_h": 1.3333333333333215,
+    "stage1_gate_width_h": 1.333,
+    "off_on": 0.0163265519079841,
+    "s2_cycle_min_median": 0.6292416484364877
+  },
+  "lift": {
+    "crossings_70": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "crossings_85": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mrna_70": [
+      3.0,
+      4.0,
+      6.0
+    ],
+    "mrna_85": [
+      3.0,
+      4.0,
+      6.0
+    ]
+  },
+  "stage1_at_60": {
+    "3.0": null,
+    "4.0": 12.0,
+    "6.0": null
+  },
+  "trend": {
+    "best_crossings": 12.0,
+    "best_rows": [
+      {
+        "carry1_mrna_min": 4.0,
+        "carry1_maturation_min": 60.0,
+        "bit2_crossings": 12,
+        "crossing_error": 2,
+        "certified": false,
+        "gate_contrast_passed": true,
+        "gate_duration_median_h": 1.3333333333333215,
+        "off_on_peak_ratio": 0.0163265519079841,
+        "s2_cycle_min_median": 0.6292416484364877,
+        "steady_sequence": "567xxxx4567xxxx4567xxxx4567xxxx456x4567xxxx4567x"
+      },
+      {
+        "carry1_mrna_min": 3.0,
+        "carry1_maturation_min": 70.0,
+        "bit2_crossings": 1,
+        "crossing_error": 13,
+        "certified": false,
+        "gate_contrast_passed": true,
+        "gate_duration_median_h": 1.4666666666666224,
+        "off_on_peak_ratio": 0.0135302547907357,
+        "s2_cycle_min_median": 0.6226736011475531,
+        "steady_sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      {
+        "carry1_mrna_min": 3.0,
+        "carry1_maturation_min": 85.0,
+        "bit2_crossings": 1,
+        "crossing_error": 13,
+        "certified": false,
+        "gate_contrast_passed": true,
+        "gate_duration_median_h": 1.6666666666666463,
+        "off_on_peak_ratio": 0.010866558922887,
+        "s2_cycle_min_median": 0.5575234924051061,
+        "steady_sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      }
+    ],
+    "certified": 0,
+    "gate_contrast_passed": 7,
+    "stage1_reference": {
+      "mrna": 4.0,
+      "mat": 60.0,
+      "crossings": 12,
+      "gate_width_h": 1.333,
+      "off_on": 0.0163,
+      "s2_cycle_min_median": 0.629
+    }
+  },
+  "verdict": "saturation: crossings do not exceed the stage-1 best of 12 -> the R2 floor binds, stop tuning maturation",
+  "stage2_mrna_vs_stage1": {
+    "3.0": "new",
+    "4.0": "same as stage-1 best",
+    "6.0": "new"
+  }
+}

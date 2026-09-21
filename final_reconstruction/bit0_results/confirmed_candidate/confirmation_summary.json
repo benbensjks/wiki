@@ -1,0 +1,57 @@
+{
+  "configuration": {
+    "uM_per_au": 10.0,
+    "mrna_half_life_min": 2.0,
+    "maturation_half_life_min": 20.0,
+    "translation_h": 30.0,
+    "immature_decay_h": 0.0,
+    "complex_on_au_inv_h": 0.1,
+    "complex_off_h": 1.0,
+    "complex_decay_h": 1.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "add_growth": false
+  },
+  "bit0_score": {
+    "alternation_accuracy": 0.8461538461538461,
+    "confident_fraction": 0.8571428571428571,
+    "dynamic_range": 0.3585951133192482,
+    "stable_alternation": true,
+    "codes": "xx101010101010",
+    "late_codes": "01010"
+  },
+  "cycles": 16,
+  "twobit": {
+    "falling_edges_h": [
+      53.733333333333334,
+      75.0,
+      96.18333333333334,
+      117.36666666666666,
+      138.53333333333333,
+      159.71666666666667
+    ],
+    "carry_peak_h": [
+      13.583333333333334,
+      33.36666666666667,
+      54.083333333333336,
+      75.33333333333333,
+      96.5,
+      117.68333333333334,
+      138.86666666666667,
+      160.05
+    ],
+    "carry_peaks_per_falling_edge": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "exactly_one_per_falling_edge": true,
+    "bit1_S_range": [
+      0.0,
+      0.005669279021907112
+    ]
+  }
+}

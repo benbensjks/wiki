@@ -1,0 +1,805 @@
+Engineering a New SsrA-based Degradation Tag (LAA-LAA) and a Bacterial Synthetic Oscillator. 
+Prajakta Jadhav1#, Sudeshna Roy1#, Xuan Yi Butzin1, and Nicholas C. Butzin1* 
+ 
+Affiliations. 
+1Department of Biology and Microbiology; South Dakota State University; Brookings, SD 57007, USA.  
+ 
+#These authors contributed equally 
+*Correspondence: Nicholas.Butzin@gmail.com 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table S1. The queue is likely formed at ClpX in the ClpXP-SspB system. CFP queue was formed by using 1mM IPTG and 1% Arabinose. The 
+components of the ClpXP-SspB system were cloned under Dox promoter and induced with 75ng/mL Dox. 
+ClpX-overexpression 
+  
+% CFP-Uninduced 
+SEM-Uninduced 
+%CFP-Induced 
+SEM-Induced 
+p-value 
+% change 
+No-Tag 
+99.76712853 
+3.351865123 
+84.81670844 
+4.589798 
+0.003866 
+14.95042 
+SsrA 
+100 
+2.846067661 
+66.23539521 
+4.092574 
+2.78E-10 
+33.7646 
+LAA-LAA 
+100 
+3.509232438 
+43.40390527 
+0.29129 
+9.21E-05 
+56.59609 
+AANDENY 
+100 
+0.951446936 
+80.37994033 
+1.147486 
+6.71E-07 
+19.62006 
+  
+  
+SspB-overexpression 
+  
+% CFP-Uninduced 
+SEM-Uninduced 
+%CFP-Induced 
+SEM-Induced 
+p-value 
+% change 
+No-Tag 
+100 
+2.143127945 
+97.00938154 
+4.210991 
+0.314996 
+2.990618 
+SsrA 
+100 
+2.323382625 
+95.81866307 
+1.062491 
+0.02977 
+4.181337 
+LAA-LAA 
+100 
+75 
+99.03008828 
+5.614461 
+0.80808 
+0.969912 
+AANDENY 
+100 
+75 
+94.17929251 
+1.519188 
+0.017293 
+5.820708 
+  
+  
+ClpP-overexpression 
+  
+% CFP-Uninduced 
+SEM-Uninduced 
+%CFP-Induced 
+SEM-Induced 
+p-value 
+% change 
+No-Tag 
+99.99999999 
+3.420760003 
+95.72312159 
+0.860214 
+0.080461 
+4.276878 
+SsrA 
+100 
+3.052113633 
+67.66825186 
+3.24003 
+1.96E-11 
+32.33175 
+LAA-LAA 
+100 
+2.257523744 
+64.01312427 
+1.423421 
+2.38E-06 
+35.98688 
+AANDENY 
+99.99999999 
+2.9468371 
+104.4067736 
+6.170299 
+0.307014 
+-4.40677 
+Supplementary tables 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S2
+Table S2. Per cent CFP degradation tagged with SsrA variant tags compared with other tags. CFP tagged with SsrA and LAA-LAA were 
+degraded faster than CFP with SsrA tag. 
+Tag-1 
+% CFP 
+SEM 
+Tag-2 
+% CFP 
+SEM 
+p-value 
+No Tag 
+99.99999298 
+3.075865572 LDD 
+85.8849 
+1.162233 
+7.81E-05 
+No Tag 
+99.99999298 
+3.075865572 DAS+4 
+66.14298 
+5.837943 
+6.84E-11 
+No Tag 
+99.99999298 
+3.075865572 DAS 
+65.47897 
+4.170515 
+0.00566 
+No Tag 
+99.99999298 
+3.075865572 DLAA 
+47.39052 
+11.77187 
+1.03E-11 
+No Tag 
+99.99999298 
+3.075865572 AANDENY-AANDENY 
+80.84964 
+15.79077 
+0.000461 
+No Tag 
+99.99999298 
+3.075865572 AANDENY 
+43.23287 
+18.61047 
+9.27E-12 
+No Tag 
+99.99999298 
+3.075865572 LAA-LAA-LAA 
+53.41405 
+10.14669 
+2.72E-08 
+No Tag 
+99.99999298 
+3.075865572 LAA-LAA 
+13.67582 
+4.373402 
+4.45E-56 
+No Tag 
+99.99999298 
+3.075865572 LAA 
+51.30243 
+5.883632 
+3.76E-24 
+No Tag 
+99.99999298 
+3.075865572 LAA+4 
+37.38304 
+6.118474 
+5.37E-14 
+No Tag 
+99.99999298 
+3.075865572 SsrA2X 
+17.81488 
+5.717566 
+4.32E-45 
+No Tag 
+99.99999298 
+3.075865572 SsrA 
+37.18906 
+6.641744 
+7.13E-21 
+SsrA 
+37.18905695 
+6.641744278 LDD 
+85.8849 
+1.162233 
+1.83E-15 
+SsrA 
+37.18905695 
+6.641744278 DAS+4 
+66.14298 
+5.837943 
+4.18E-12 
+SsrA 
+37.18905695 
+6.641744278 DAS 
+65.47897 
+4.170515 
+0.002327 
+SsrA 
+37.18905695 
+6.641744278 DLAA 
+47.39052 
+11.77187 
+0.006926 
+SsrA 
+37.18905695 
+6.641744278 AANDENY-AANDENY 
+80.84964 
+15.79077 
+1.46E-08 
+SsrA 
+37.18905695 
+6.641744278 AANDENY 
+43.23287 
+18.61047 
+0.187367 
+SsrA 
+37.18905695 
+6.641744278 LAA-LAA-LAA 
+53.41405 
+10.14669 
+0.0004 
+SsrA 
+37.18905695 
+6.641744278 LAA-LAA 
+13.67582 
+4.373402 
+6.99E-13 
+SsrA 
+37.18905695 
+6.641744278 LAA 
+51.30243 
+5.883632 
+8.03E-08 
+SsrA 
+37.18905695 
+6.641744278 LAA+4 
+37.38304 
+6.118474 
+0.937505 
+SsrA 
+37.18905695 
+6.641744278 SsrA2X 
+17.81488 
+5.717566 
+2.47E-11 
+ 
+ 
+ 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S3
+ 
+ 
+ 
+ 
+Table S3. Per cent degradation of CFP with SsrA, SsrA2X and LAA-LAA with increasing inducer (Arabinose) concentrations. CFP tagged with LAA-LAA was degraded faster 
+than SsrA2X at all inducer (Arabinose) concentrations.IPTG concentration was kept constant at 0.1mM. 
+Tag 
+Arabinose 
+(%) 
+Average 
+SEM 
+Tag 
+Arabinose (%) 
+Average 
+SEM 
+p-value 
+SsrA (AANDENYALAA) 
+0.1 
+16.65362437 1.533014571 LAA-LAA 
+0.1 4.018802 
+0.2132 0.000581 
+SsrA (AANDENYALAA) 
+0.1 
+16.65362437 1.533014571 SsrA2X (AANDENYALAA-AANDENYALAA) 
+0.1 3.363274 0.262306 0.000427 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+SsrA (AANDENYALAA) 
+0.2 
+33.51584962 0.243060627 LAA-LAA 
+0.2 7.379777 0.208855 
+8.51E-15 
+SsrA (AANDENYALAA) 
+0.2 
+33.51584962 0.243060627 SsrA2X (AANDENYALAA-AANDENYALAA) 
+0.2 13.30575 
+0.89095 
+1.59E-06 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+SsrA (AANDENYALAA) 
+0.4 
+49.74359939 0.641456446 LAA-LAA 
+0.4 21.89051 0.345638 
+9.76E-10 
+SsrA (AANDENYALAA) 
+0.4 
+49.74359939 0.641456446 SsrA2X (AANDENYALAA-AANDENYALAA) 
+0.4 39.99999 1.803681 0.003171 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+SsrA (AANDENYALAA) 
+0.6 
+58.81850522 0.795885569 LAA-LAA 
+0.6 32.71032 0.510268 
+2.67E-09 
+SsrA (AANDENYALAA) 
+0.6 
+58.81850522 0.795885569 SsrA2X (AANDENYALAA-AANDENYALAA) 
+0.6 56.82141 1.166235 
+0.22568 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+SsrA (AANDENYALAA) 
+0.8 
+74.8854229 1.462850495 LAA-LAA 
+0.8 41.02415 0.870098 
+8.06E-07 
+SsrA (AANDENYALAA) 
+0.8 
+74.8854229 1.462850495 SsrA2X (AANDENYALAA-AANDENYALAA) 
+0.8 73.24916 1.469393 0.494176 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+SsrA (AANDENYALAA) 
+1 
+76.47357525 0.459965233 LAA-LAA 
+1 47.53178 
+1.23016 
+5.41E-07 
+SsrA (AANDENYALAA) 
+1 
+76.47357525 0.459965233 SsrA2X (AANDENYALAA-AANDENYALAA) 
+1 80.74372 2.365737 0.163424 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S4
+Table S4: Measurement of self-crosstalk at different Dox 
+concentrations.  
+  
+  
+Dox 
+concentration 
+(ng/mL) 
+p-Value 
+1 Control vs. Control 
+0 
+0.623416327 
+  
+  
+25 
+0.09928194 
+  
+  
+50 
+0.420940577 
+  
+  
+100 
+0.266344023 
+  
+  
+150 
+0.085475344 
+  
+  
+200 
+0.454978671 
+  
+  
+  
+  
+2 SsrA vs. SsrA 
+0 
+0.892376347 
+  
+  
+25 
+4.54568E-07 
+  
+  
+50 
+4.00126E-09 
+  
+  
+100 
+9.04599E-13 
+  
+  
+150 
+2.18969E-14 
+  
+  
+200 
+1.49696E-09 
+  
+  
+  
+  
+3 LAA-LAA vs. LAA-LAA 
+0 
+0.712954299 
+  
+  
+25 
+0.071290658 
+  
+  
+50 
+7.82159E-07 
+  
+  
+100 
+2.94546E-11 
+  
+  
+150 
+1.3854E-13 
+  
+  
+200 
+7.52953E-09 
+ 
+Table S5. Quantification of oscillation period of the LAA-LAA-Osc and the SsrA-Osc.  
+a. Single cell tracking 
+ 
+  
+Period 
+SEM 
+p-value 
+ssrA-Osc 
+47 
+3.29 
+3.08E-08 
+LAA-LAA-Osc 
+68 
+5.81   
+b. Fourier Transformation method 
+  
+Period 
+SEM 
+p-value 
+ssrA-Osc 
+49.1875 
+0.610928651 
+0.000141573 
+LAA-LAA-Osc 
+71.7 
+1.907354188   
+ 
+ 
+ 
+ 
+ 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S5
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table S6: Strains used for overexpression of the components of the ClpXP-SspB system and their effect on CFP No tag, CFP-SsrA 
+and CFP-LAA-LAA.  
+E. coli 
+(DH5alphaZ1) 
+Name 
+Plasmid 1 
+Description 
+Plasmid 2 
+Description 
+AI006 
+p24KmNB83 
+Plac/ara-1- CFPNo tag 
+p31CmPJ118 
+PLtetO-1-ClpX 
+AI007 
+p24KmNB82 
+Plac/ara-1- CFP-SsrA 
+p31CmPJ118 
+PLtetO-1-ClpX 
+AI008 
+p24KmNB83 
+Plac/ara-1- CFPNo tag 
+p31CmPJ121 
+PLtetO-1-SspB 
+AI009 
+p24KmNB82 
+Plac/ara-1- CFP-SsrA 
+p31CmPJ121 
+PLtetO-1-SspB 
+AI010 
+p24KmNB83 
+Plac/ara-1- CFPNo tag 
+p31CmPJ122 
+PLtetO-1-ClpP 
+AI011 
+p24KmNB82 
+Plac/ara-1- CFP-SsrA 
+p31CmPJ122 
+PLtetO-1-ClpP 
+AI98 
+p24KmPJ153 
+Plac/ara-1- CFP-LAA-LAA 
+p31CmPJ118 
+PLtetO-1-ClpX 
+AI99 
+p24KmPJ153 
+Plac/ara-1- CFP-LAA-LAA 
+p31CmPJ121 
+PLtetO-1-SspB 
+AI100 
+p24KmPJ153 
+Plac/ara-1- CFP-LAA-LAA 
+p31CmPJ122 
+PLtetO-1-ClpP 
+AI101 
+p24KmPJ154 
+Plac/ara-1- CFP-AANDENY 
+p31CmPJ118 
+PLtetO-1-ClpX 
+AI102 
+p24KmPJ154 
+Plac/ara-1- CFP-AANDENY 
+p31CmPJ121 
+PLtetO-1-SspB 
+AI103 
+p24KmPJ154 
+Plac/ara-1- CFP-AANDENY 
+p31CmPJ122 
+PLtetO-1-ClpP 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S6
+Table S7. Strains used to measure degradation of different tags. 
+Strain 
+Plasmid name Description 
+E. coli 
+(DH5alphaZ1) 
+p24KmNB83 
+Plac/ara-1- CFPNo tag 
+p31CmPJ254 
+Plac/ara-1- CFP-AANDENYALAA  
+p24KmPJ129 
+Plac/ara-1-CFP-AANDENYALAA-AANDENYALAA 
+p24KmPJ152 
+Plac/ara-1-CFP-LAA 
+p24KmPJ153 
+Plac/ara-1-CFP-LAA-LAA 
+p24KmPJ154 
+Plac/ara-1-CFP-AANDENY 
+p24KmPJ155 
+Plac/ara-1-CFP-AANDENY-AANDENY 
+p24KmPJ211 
+Plac/ara-1-CFP-AANDENYDLAA 
+p24KmPJ215  
+Plac/ara-1-CFP-LAALAALAA 
+p24KmPJ267 
+Plac/ara-1-CFP-LAA+4 
+p24KmPJ268 
+Plac/ara-1-CFP-DAS+4 
+p24KmPJ131 
+Plac/ara-1-CFP-AANDENYADAS 
+p24KmPJ132 
+Plac/ara-1-CFP-AANDENYALDD 
+ 
+Table S8. Strains used for quantify self-crosstalk of CFPNo tag, CFP-SsrA and CFP-LAA-LAA tags. 
+Strain 
+Name 
+Plasmid 1 
+Plasmid 2 
+E.coli (DH5alphaZ1) 
+DZ60 
+Plac/ara-1- CFPNo tag 
+PLtetO-1-YFPNo tag 
+AI083 
+Plac/ara-1- CFP-SsrA 
+PLtetO-1-YFP-SsrA 
+AI094 
+Plac/ara-1- CFP-LAA-LAA 
+PLtetO-1-YFP-LAA-LAA 
+ 
+ 
+ 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S7
+Table S9. Strains used for experiments related to oscillator. 
+Strain 
+Name 
+Description 
+E.coli (NB001) 
+pTDCL7 
+Plac/ara-1-LacI-SsrA-Plac/ara-1-AraC-
+SsrA-Plac/ara-1-GFP-SsrA 
+pKmPJ271 
+Plac/ara-1-LacI-LAA-LAA-Plac/ara-1-AraC-
+LAA-LAA-Plac/ara-1-GFP-LAA-LAA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S8
+ 
+Fig. S1. Overexpression of ClpX, SspB or ClpP has no apparent growth defects. The lines represent 
+the growth curve of E.coli (DH5alphaZ1) with CFPNo Tag  and either ClpX, SspB or ClpP in uninduced 
+(without overexpression) or induced (with overexpression) conditions (n>6). 
+ 
+Supplementary figures 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S9
+ 
+Fig. S2. The components of the SsrA-Osc and the LAA-LAA-Osc is controlled by three separate 
+Plac/ara-1 promoter. Each gene is tagged with SsrA tag in SsrA-Osc or LAA-LAA in LAA-LAA-Osc with 
+a TS-linker at the N-terminus of each tag.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026
+
+ 
+S10 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. S3. Cells with SsrA-Osc and LAA-LAA-Osc grow at similar rate. Growth curve of 
+SsrA-Osc and LAA-LAA-Osc in population analysis and single-cell analysis. a. For 
+population analysis no apparent growth difference was observed between LAA-LAA-Osc 
+and SsrA-Osc (n=6). b. For single cell growth data, cells with SsrA-Osc (n=42) and LAA-
+LAA-Osc (n=71) were tracked and their doubling time was calculated. There was no 
+significant difference between the doubling time of cells with SsrA-Osc or LAA-LAA-Osc.  
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026

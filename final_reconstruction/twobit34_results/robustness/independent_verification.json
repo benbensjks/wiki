@@ -1,0 +1,702 @@
+{
+  "completeness_raw": {
+    "rows": 75,
+    "unique": 75,
+    "expected": 75,
+    "duplicates": 0,
+    "missing": [],
+    "unexpected": [],
+    "solver_failures": 0,
+    "nonfinite": 0,
+    "shard_row_counts": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "passes": {
+    "cold": 34,
+    "steady": 53,
+    "certified": 53,
+    "certified_rate": 0.7066666666666667,
+    "one_to_one": 55,
+    "causal_order": 55,
+    "directions_alternate": 55,
+    "certified_but_not_steady": 0,
+    "steady_but_not_certified": 0,
+    "failure_reasons": {
+      "": 53,
+      "readout_unlabelled_window": 22
+    },
+    "by_mrna": {
+      "1.0": {
+        "certified": 19,
+        "points": 25
+      },
+      "2.0": {
+        "certified": 18,
+        "points": 25
+      },
+      "4.0": {
+        "certified": 16,
+        "points": 25
+      }
+    }
+  },
+  "continuity": {
+    "total_components": 1,
+    "components": [
+      {
+        "size": 53,
+        "mrna": [
+          1.0,
+          2.0,
+          4.0
+        ],
+        "mat": [
+          25.0,
+          35.0
+        ],
+        "um": [
+          5.5,
+          6.5
+        ],
+        "cells": [
+          {
+            "mrna": 1.0,
+            "mat": 25.0,
+            "um": 6.0
+          },
+          {
+            "mrna": 1.0,
+            "mat": 27.5,
+            "um": 6.0
+          },
+          {
+            "mrna": 1.0,
+            "mat": 27.5,
+            "um": 5.75
+          },
+          {
+            "mrna": 1.0,
+            "mat": 30.0,
+            "um": 5.75
+          },
+          {
+            "mrna": 1.0,
+            "mat": 30.0,
+            "um": 5.5
+          },
+          {
+            "mrna": 1.0,
+            "mat": 32.5,
+            "um": 5.5
+          },
+          {
+            "mrna": 1.0,
+            "mat": 35.0,
+            "um": 5.5
+          },
+          {
+            "mrna": 1.0,
+            "mat": 35.0,
+            "um": 5.75
+          },
+          {
+            "mrna": 1.0,
+            "mat": 35.0,
+            "um": 6.0
+          },
+          {
+            "mrna": 1.0,
+            "mat": 35.0,
+            "um": 6.25
+          },
+          {
+            "mrna": 1.0,
+            "mat": 35.0,
+            "um": 6.5
+          },
+          {
+            "mrna": 1.0,
+            "mat": 32.5,
+            "um": 6.5
+          },
+          {
+            "mrna": 1.0,
+            "mat": 30.0,
+            "um": 6.5
+          },
+          {
+            "mrna": 1.0,
+            "mat": 27.5,
+            "um": 6.5
+          },
+          {
+            "mrna": 1.0,
+            "mat": 25.0,
+            "um": 6.5
+          },
+          {
+            "mrna": 2.0,
+            "mat": 25.0,
+            "um": 6.5
+          },
+          {
+            "mrna": 4.0,
+            "mat": 25.0,
+            "um": 6.5
+          },
+          {
+            "mrna": 4.0,
+            "mat": 27.5,
+            "um": 6.5
+          },
+          {
+            "mrna": 4.0,
+            "mat": 30.0,
+            "um": 6.5
+          },
+          {
+            "mrna": 4.0,
+            "mat": 32.5,
+            "um": 6.5
+          },
+          {
+            "mrna": 4.0,
+            "mat": 35.0,
+            "um": 6.5
+          },
+          {
+            "mrna": 4.0,
+            "mat": 35.0,
+            "um": 6.25
+          },
+          {
+            "mrna": 4.0,
+            "mat": 35.0,
+            "um": 6.0
+          },
+          {
+            "mrna": 4.0,
+            "mat": 35.0,
+            "um": 5.75
+          },
+          {
+            "mrna": 4.0,
+            "mat": 35.0,
+            "um": 5.5
+          },
+          {
+            "mrna": 4.0,
+            "mat": 32.5,
+            "um": 5.5
+          },
+          {
+            "mrna": 4.0,
+            "mat": 32.5,
+            "um": 5.75
+          },
+          {
+            "mrna": 4.0,
+            "mat": 30.0,
+            "um": 5.75
+          },
+          {
+            "mrna": 4.0,
+            "mat": 30.0,
+            "um": 6.0
+          },
+          {
+            "mrna": 4.0,
+            "mat": 27.5,
+            "um": 6.0
+          },
+          {
+            "mrna": 4.0,
+            "mat": 25.0,
+            "um": 6.0
+          },
+          {
+            "mrna": 2.0,
+            "mat": 30.0,
+            "um": 6.0
+          },
+          {
+            "mrna": 2.0,
+            "mat": 32.5,
+            "um": 6.0
+          },
+          {
+            "mrna": 2.0,
+            "mat": 32.5,
+            "um": 5.75
+          },
+          {
+            "mrna": 4.0,
+            "mat": 32.5,
+            "um": 6.0
+          },
+          {
+            "mrna": 2.0,
+            "mat": 27.5,
+            "um": 6.5
+          },
+          {
+            "mrna": 2.0,
+            "mat": 30.0,
+            "um": 6.5
+          },
+          {
+            "mrna": 2.0,
+            "mat": 32.5,
+            "um": 6.5
+          },
+          {
+            "mrna": 2.0,
+            "mat": 35.0,
+            "um": 6.5
+          },
+          {
+            "mrna": 1.0,
+            "mat": 32.5,
+            "um": 6.25
+          },
+          {
+            "mrna": 2.0,
+            "mat": 35.0,
+            "um": 6.25
+          },
+          {
+            "mrna": 1.0,
+            "mat": 32.5,
+            "um": 6.0
+          },
+          {
+            "mrna": 2.0,
+            "mat": 35.0,
+            "um": 6.0
+          },
+          {
+            "mrna": 2.0,
+            "mat": 35.0,
+            "um": 5.75
+          },
+          {
+            "mrna": 2.0,
+            "mat": 35.0,
+            "um": 5.5
+          },
+          {
+            "mrna": 2.0,
+            "mat": 32.5,
+            "um": 5.5
+          },
+          {
+            "mrna": 2.0,
+            "mat": 30.0,
+            "um": 5.5
+          },
+          {
+            "mrna": 1.0,
+            "mat": 32.5,
+            "um": 5.75
+          },
+          {
+            "mrna": 2.0,
+            "mat": 30.0,
+            "um": 5.75
+          },
+          {
+            "mrna": 2.0,
+            "mat": 27.5,
+            "um": 5.75
+          },
+          {
+            "mrna": 1.0,
+            "mat": 30.0,
+            "um": 6.0
+          },
+          {
+            "mrna": 2.0,
+            "mat": 27.5,
+            "um": 6.0
+          },
+          {
+            "mrna": 2.0,
+            "mat": 25.0,
+            "um": 6.0
+          }
+        ]
+      }
+    ],
+    "per_slice_certified_um": {
+      "1": {
+        "25": [
+          6.0,
+          6.5
+        ],
+        "27.5": [
+          5.75,
+          6.0,
+          6.5
+        ],
+        "30": [
+          5.5,
+          5.75,
+          6.0,
+          6.5
+        ],
+        "32.5": [
+          5.5,
+          5.75,
+          6.0,
+          6.25,
+          6.5
+        ],
+        "35": [
+          5.5,
+          5.75,
+          6.0,
+          6.25,
+          6.5
+        ]
+      },
+      "2": {
+        "25": [
+          6.0,
+          6.5
+        ],
+        "27.5": [
+          5.75,
+          6.0,
+          6.5
+        ],
+        "30": [
+          5.5,
+          5.75,
+          6.0,
+          6.5
+        ],
+        "32.5": [
+          5.5,
+          5.75,
+          6.0,
+          6.5
+        ],
+        "35": [
+          5.5,
+          5.75,
+          6.0,
+          6.25,
+          6.5
+        ]
+      },
+      "4": {
+        "25": [
+          6.0,
+          6.5
+        ],
+        "27.5": [
+          6.0,
+          6.5
+        ],
+        "30": [
+          5.75,
+          6.0,
+          6.5
+        ],
+        "32.5": [
+          5.5,
+          5.75,
+          6.0,
+          6.5
+        ],
+        "35": [
+          5.5,
+          5.75,
+          6.0,
+          6.25,
+          6.5
+        ]
+      }
+    },
+    "full_grid_slice_contiguous": {
+      "1": false,
+      "2": false,
+      "4": false
+    }
+  },
+  "region_shape": {
+    "failing_cells": 22,
+    "interior_failures": [],
+    "largest_solid_box": {
+      "mrna": [
+        1.0,
+        2.0
+      ],
+      "mat": [
+        30.0,
+        35.0
+      ],
+      "um": [
+        5.5,
+        6.0
+      ],
+      "cells": 18
+    },
+    "interior_points": [
+      {
+        "uM_per_au": 6.5,
+        "carry_maturation_half_life_min": 35.0,
+        "carry_mrna_half_life_min": 4.0,
+        "timing_margin_h": 3.508840639223976
+      },
+      {
+        "uM_per_au": 6.5,
+        "carry_maturation_half_life_min": 35.0,
+        "carry_mrna_half_life_min": 2.0,
+        "timing_margin_h": 3.430554896459796
+      },
+      {
+        "uM_per_au": 6.5,
+        "carry_maturation_half_life_min": 35.0,
+        "carry_mrna_half_life_min": 1.0,
+        "timing_margin_h": 3.390627832750269
+      },
+      {
+        "uM_per_au": 6.0,
+        "carry_maturation_half_life_min": 35.0,
+        "carry_mrna_half_life_min": 4.0,
+        "timing_margin_h": 3.2815669956037823
+      },
+      {
+        "uM_per_au": 6.5,
+        "carry_maturation_half_life_min": 32.5,
+        "carry_mrna_half_life_min": 1.0,
+        "timing_margin_h": 3.207052325073405
+      },
+      {
+        "uM_per_au": 5.75,
+        "carry_maturation_half_life_min": 35.0,
+        "carry_mrna_half_life_min": 4.0,
+        "timing_margin_h": 3.199952079139564
+      },
+      {
+        "uM_per_au": 6.0,
+        "carry_maturation_half_life_min": 35.0,
+        "carry_mrna_half_life_min": 2.0,
+        "timing_margin_h": 3.1963683772906397
+      },
+      {
+        "uM_per_au": 6.0,
+        "carry_maturation_half_life_min": 35.0,
+        "carry_mrna_half_life_min": 1.0,
+        "timing_margin_h": 3.153258376268468
+      },
+      {
+        "uM_per_au": 5.75,
+        "carry_maturation_half_life_min": 35.0,
+        "carry_mrna_half_life_min": 2.0,
+        "timing_margin_h": 3.1078295625408714
+      },
+      {
+        "uM_per_au": 6.25,
+        "carry_maturation_half_life_min": 35.0,
+        "carry_mrna_half_life_min": 1.0,
+        "timing_margin_h": 3.1015905901296428
+      }
+    ],
+    "interior_point_count": 22,
+    "certified_by_um": {
+      "5.5": {
+        "points": 15,
+        "certified": 8
+      },
+      "5.75": {
+        "points": 15,
+        "certified": 11
+      },
+      "6.0": {
+        "points": 15,
+        "certified": 15
+      },
+      "6.25": {
+        "points": 15,
+        "certified": 4
+      },
+      "6.5": {
+        "points": 15,
+        "certified": 15
+      }
+    },
+    "note": "The certified set is one 6-connected component but it is not a box: uM_per_au = 6.25 fails for most maturation values, so a nominal point must be chosen from the interior points or from the largest solid box."
+  },
+  "top5": [
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 4.0,
+      "timing_margin_h": 3.508840639223976,
+      "bit1_setup_h": 4.56074274931899,
+      "bit1_hold_h": 3.508840639223976,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.1840769380558907,
+      "Int1_source_peak": 3.313384885006034,
+      "cold_sequence": "1012301230123012301230123012",
+      "steady_sequence": "301230123012301230123012"
+    },
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 2.0,
+      "timing_margin_h": 3.430554896459796,
+      "bit1_setup_h": 4.613201220024479,
+      "bit1_hold_h": 3.430554896459796,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.1779934062535843,
+      "Int1_source_peak": 3.2038813125645182,
+      "cold_sequence": "1012301230123012301230123012",
+      "steady_sequence": "301230123012301230123012"
+    },
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 1.0,
+      "timing_margin_h": 3.390627832750269,
+      "bit1_setup_h": 4.639246406302021,
+      "bit1_hold_h": 3.390627832750269,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.1735305952650031,
+      "Int1_source_peak": 3.123550714770057,
+      "cold_sequence": "1012301230123012301230123012",
+      "steady_sequence": "301230123012301230123012"
+    },
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 32.5,
+      "carry_mrna_half_life_min": 4.0,
+      "timing_margin_h": 3.3387538680044315,
+      "bit1_setup_h": 4.655167190967632,
+      "bit1_hold_h": 3.3387538680044315,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.2043831416416934,
+      "Int1_source_peak": 3.6788965495504815,
+      "cold_sequence": "1012301230123012301230123012",
+      "steady_sequence": "301230123012301230123012"
+    },
+    {
+      "uM_per_au": 6.0,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 4.0,
+      "timing_margin_h": 3.2815669956037823,
+      "bit1_setup_h": 4.120888311674058,
+      "bit1_hold_h": 3.2815669956037823,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.3718097409138107,
+      "Int1_source_peak": 6.692575336448593,
+      "cold_sequence": "1230123012301230123012301230",
+      "steady_sequence": "123012301230123012301230"
+    }
+  ],
+  "nominal_6_30_2": {
+    "found": true,
+    "certified": true,
+    "steady": true,
+    "cold": true,
+    "timing_margin_h": 2.7993745172201443,
+    "bit1_setup_h": 4.430957620609558,
+    "bit1_hold_h": 2.7993745172201443,
+    "minimum_commitment": 1.0,
+    "g0_peak": 0.4053036075420759,
+    "Int1_source_peak": 7.295464935757367,
+    "Jrev0_peak": 0.9147605914476294,
+    "one_to_one": true,
+    "causal_order": true,
+    "directions_alternate": true,
+    "cold_sequence": "1230123012301230123012301230",
+    "steady_sequence": "123012301230123012301230",
+    "failure_reason": "nan",
+    "matches_smoke_claim": true
+  },
+  "environment": {
+    "shards": 15,
+    "points_per_shard": [
+      5
+    ],
+    "hours": [
+      300.0
+    ],
+    "python": [
+      "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+    ],
+    "platform": [
+      "Windows-11-10.0.26200-SP0"
+    ],
+    "versions": {
+      "numpy": [
+        "2.3.5"
+      ],
+      "pandas": [
+        "2.3.3"
+      ],
+      "scipy": [
+        "1.16.3"
+      ]
+    },
+    "source_hashes": {
+      "model_py": [
+        "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A"
+      ],
+      "model_twobit34_py": [
+        "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062"
+      ],
+      "verifier_py": [
+        "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0"
+      ],
+      "scanner_py": [
+        "CF66786011AFD94A084AD253449B0E6C22104E6E65CF2A596ED784B76E4008E6"
+      ]
+    },
+    "uniform": true,
+    "matches_baseline": {
+      "model_py": true,
+      "model_twobit34_py": true,
+      "verifier_py": true,
+      "scanner_py": true
+    },
+    "on_disk_now": {
+      "model_py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+      "model_twobit34_py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+      "verifier_py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+      "scanner_py": "CF66786011AFD94A084AD253449B0E6C22104E6E65CF2A596ED784B76E4008E6"
+    },
+    "on_disk_equals_baseline": {
+      "model_py": true,
+      "model_twobit34_py": true,
+      "verifier_py": true,
+      "scanner_py": true
+    },
+    "grid_identical": true
+  },
+  "manifest": {
+    "entries": 70,
+    "mismatches": [],
+    "missing": [],
+    "ok": true,
+    "covers_source_files": true
+  },
+  "interpretation_guard": "This scan only tests engineering robustness under the assumption add_growth=False (Zeng gamma read as total clearance). It is not experimental evidence that gamma already contains growth dilution."
+}

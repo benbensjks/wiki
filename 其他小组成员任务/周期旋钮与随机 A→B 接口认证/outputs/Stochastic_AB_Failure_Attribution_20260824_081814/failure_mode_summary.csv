@@ -1,0 +1,21 @@
+knob_setting_id,initial_DNA_state,failure_category,n_cycles,fraction
+Robust_K4,LR,correct,53,0.6309523809523809
+Robust_K4,LR,incomplete endpoint,3,0.03571428571428571
+Robust_K4,LR,multiple crossings,6,0.07142857142857142
+Robust_K4,LR,wrong direction/phase,15,0.17857142857142858
+Robust_K4,LR,zero crossing,7,0.08333333333333333
+Robust_K4,PB,correct,51,0.6071428571428571
+Robust_K4,PB,incomplete endpoint,2,0.023809523809523808
+Robust_K4,PB,multiple crossings,5,0.05952380952380952
+Robust_K4,PB,wrong direction/phase,16,0.19047619047619047
+Robust_K4,PB,zero crossing,10,0.11904761904761904
+Robust_K5,LR,correct,52,0.6190476190476191
+Robust_K5,LR,incomplete endpoint,2,0.023809523809523808
+Robust_K5,LR,multiple crossings,9,0.10714285714285714
+Robust_K5,LR,wrong direction/phase,14,0.16666666666666666
+Robust_K5,LR,zero crossing,7,0.08333333333333333
+Robust_K5,PB,correct,56,0.6666666666666666
+Robust_K5,PB,incomplete endpoint,4,0.047619047619047616
+Robust_K5,PB,multiple crossings,6,0.07142857142857142
+Robust_K5,PB,wrong direction/phase,14,0.16666666666666666
+Robust_K5,PB,zero crossing,4,0.047619047619047616

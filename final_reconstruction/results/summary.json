@@ -1,0 +1,58 @@
+{
+  "n_states": 43,
+  "total_hours": 150.0,
+  "initial_condition": "PB regulators pre-equilibrated",
+  "finite": true,
+  "minimum_state": 0.0,
+  "S_ranges": {
+    "b0": [
+      0.0,
+      0.9510887080243251
+    ],
+    "b1": [
+      0.0,
+      0.4479091036254186
+    ],
+    "b2": [
+      0.0,
+      0.5881607347568754
+    ]
+  },
+  "upstream_period_h": 10.591666666666669,
+  "observed_codes": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "expected_codes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "confident_samples": 0,
+  "sample_count": 13,
+  "sequence_accuracy_from_zero": 0.0,
+  "increment_accuracy": 0.0,
+  "binary_counter_pass": false,
+  "note": "Numerical/structural validation is distinct from binary-counter performance. No parameter fitting performed."
+}

@@ -1,0 +1,4 @@
+lower_setting,upper_setting,mean_period_difference_generations,difference_CI_low,difference_CI_high,bootstrap_probability_upper_period_is_longer,ordering_pass
+Certified_T10,Certified_T11,0.974463559980844,0.8307693762312792,1.126288949242666,1.0,True
+Certified_T11,Certified_T12,1.0347060682540192,0.877524551294318,1.197771616203688,1.0,True
+Certified_T12,Certified_T13,1.0564508837333761,0.869492684830912,1.2472920981810667,1.0,True

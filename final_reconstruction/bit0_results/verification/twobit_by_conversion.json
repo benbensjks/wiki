@@ -1,0 +1,542 @@
+[
+  {
+    "uM_per_au": 6.0,
+    "add_growth": false,
+    "bit0_codes": "1010101010101010",
+    "bit0_commit": 0.8589341692789969,
+    "bit0_dwell": [
+      0.013088988961106449,
+      0.981427431266643
+    ],
+    "bit1_codes": "01x0x1x0x1x0x1x0",
+    "bit1_commit": 0.8166144200626959,
+    "bit1_dwell": [
+      1.5675142841018505e-05,
+      0.9929331177185076
+    ],
+    "bit1_alternates": false,
+    "two_bit_sequence": "10011x001x011x001x011x001x011x00",
+    "A0_range": [
+      0.0845283795791306,
+      4.2105263157894735
+    ],
+    "F0_range": [
+      0.3324762731290948,
+      6.245265333898283
+    ],
+    "g0_range": [
+      6.691838114426614e-05,
+      0.24698443424034555
+    ],
+    "Int1_source_peak": 4.4457198163262195,
+    "F0_below_threshold_fraction": 0.13534530642473616,
+    "gate_open_windows": [
+      [
+        9.5,
+        11.3
+      ],
+      [
+        29.67,
+        32.6
+      ],
+      [
+        50.83,
+        53.77
+      ],
+      [
+        72.03,
+        74.97
+      ],
+      [
+        93.2,
+        96.13
+      ],
+      [
+        114.4,
+        117.33
+      ],
+      [
+        135.57,
+        138.5
+      ],
+      [
+        156.77,
+        159.7
+      ],
+      [
+        177.93,
+        180.0
+      ]
+    ],
+    "n_fallings": 8,
+    "n_risings": 7,
+    "per_falling_edge": [
+      {
+        "to_cycle": 1,
+        "transition_h": 7.566666666666666,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 1,
+        "bit1_label_before": "0",
+        "bit1_label_after": "1"
+      },
+      {
+        "to_cycle": 3,
+        "transition_h": 28.65,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 1,
+        "bit1_label_before": "x",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 5,
+        "transition_h": 49.83333333333333,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 1,
+        "bit1_label_before": "x",
+        "bit1_label_after": "1"
+      },
+      {
+        "to_cycle": 7,
+        "transition_h": 71.01666666666667,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 1,
+        "bit1_label_before": "x",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 9,
+        "transition_h": 92.2,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 1,
+        "bit1_label_before": "x",
+        "bit1_label_after": "1"
+      },
+      {
+        "to_cycle": 11,
+        "transition_h": 113.38333333333333,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 1,
+        "bit1_label_before": "x",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 13,
+        "transition_h": 134.56666666666666,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 1,
+        "bit1_label_before": "x",
+        "bit1_label_after": "1"
+      },
+      {
+        "to_cycle": 15,
+        "transition_h": 155.75,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 1,
+        "bit1_label_before": "x",
+        "bit1_label_after": "0"
+      }
+    ],
+    "bit1_S_range": [
+      0.0,
+      0.9966809626002382
+    ]
+  },
+  {
+    "uM_per_au": 8.0,
+    "add_growth": false,
+    "bit0_codes": "1010101010101010",
+    "bit0_commit": 0.8727795193312435,
+    "bit0_dwell": [
+      0.021197426713487292,
+      0.924380952173226
+    ],
+    "bit1_codes": "0000000000000000",
+    "bit1_commit": 1.0,
+    "bit1_dwell": [
+      1.5740560901790836e-05,
+      0.1475636077774128
+    ],
+    "bit1_alternates": false,
+    "two_bit_sequence": "10001000100010001000100010001000",
+    "A0_range": [
+      0.31796503822430683,
+      4.2105263157894735
+    ],
+    "F0_range": [
+      1.925074931008668,
+      6.245265333898283
+    ],
+    "g0_range": [
+      8.383778769890684e-05,
+      0.0036624159810395174
+    ],
+    "Int1_source_peak": 0.06592348765871131,
+    "F0_below_threshold_fraction": 0.0,
+    "gate_open_windows": [
+      [
+        9.5,
+        12.03
+      ],
+      [
+        27.4,
+        33.7
+      ],
+      [
+        48.67,
+        54.87
+      ],
+      [
+        69.83,
+        76.07
+      ],
+      [
+        91.0,
+        97.23
+      ],
+      [
+        112.2,
+        118.43
+      ],
+      [
+        133.37,
+        139.6
+      ],
+      [
+        154.57,
+        160.8
+      ],
+      [
+        175.73,
+        180.0
+      ]
+    ],
+    "n_fallings": 8,
+    "n_risings": 7,
+    "per_falling_edge": [
+      {
+        "to_cycle": 1,
+        "transition_h": 7.566666666666666,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 1,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 3,
+        "transition_h": 28.65,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 5,
+        "transition_h": 49.83333333333333,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 7,
+        "transition_h": 71.01666666666667,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 9,
+        "transition_h": 92.2,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 11,
+        "transition_h": 113.38333333333333,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 13,
+        "transition_h": 134.56666666666666,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 15,
+        "transition_h": 155.75,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      }
+    ],
+    "bit1_S_range": [
+      0.0,
+      0.15284586276216985
+    ]
+  },
+  {
+    "uM_per_au": 9.0,
+    "add_growth": false,
+    "bit0_codes": "1x10101010101010",
+    "bit0_commit": 0.8884880029967863,
+    "bit0_dwell": [
+      0.05974917525316965,
+      0.8912678481414048
+    ],
+    "bit1_codes": "0000000000000000",
+    "bit1_commit": 1.0,
+    "bit1_dwell": [
+      1.5750358812105868e-05,
+      0.014895610453000413
+    ],
+    "bit1_alternates": false,
+    "two_bit_sequence": "10x01000100010001000100010001000",
+    "A0_range": [
+      0.45759218481849023,
+      4.2105263157894735
+    ],
+    "F0_range": [
+      2.9527556157557684,
+      6.245265333898283
+    ],
+    "g0_range": [
+      8.389158460651497e-05,
+      0.0009106469734311924
+    ],
+    "Int1_source_peak": 0.016391645521761464,
+    "F0_below_threshold_fraction": 0.0,
+    "gate_open_windows": [
+      [
+        7.3,
+        13.6
+      ],
+      [
+        26.33,
+        34.8
+      ],
+      [
+        47.97,
+        55.97
+      ],
+      [
+        69.13,
+        77.17
+      ],
+      [
+        90.3,
+        98.33
+      ],
+      [
+        111.5,
+        119.53
+      ],
+      [
+        132.67,
+        140.7
+      ],
+      [
+        153.87,
+        161.87
+      ],
+      [
+        175.03,
+        180.0
+      ]
+    ],
+    "n_fallings": 7,
+    "n_risings": 6,
+    "per_falling_edge": [
+      {
+        "to_cycle": 3,
+        "transition_h": 28.65,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 5,
+        "transition_h": 49.83333333333333,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 7,
+        "transition_h": 71.01666666666667,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 9,
+        "transition_h": 92.2,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 11,
+        "transition_h": 113.38333333333333,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 13,
+        "transition_h": 134.56666666666666,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 15,
+        "transition_h": 155.75,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      }
+    ],
+    "bit1_S_range": [
+      0.0,
+      0.015483676694841008
+    ]
+  },
+  {
+    "uM_per_au": 10.0,
+    "add_growth": false,
+    "bit0_codes": "1x1x101010101010",
+    "bit0_commit": 0.8508655192129493,
+    "bit0_dwell": [
+      0.1819092462350191,
+      0.843112744620632
+    ],
+    "bit1_codes": "0000000000000000",
+    "bit1_commit": 1.0,
+    "bit1_dwell": [
+      1.5755623543249275e-05,
+      0.0054498086282234945
+    ],
+    "bit1_alternates": false,
+    "two_bit_sequence": "10x010x0100010001000100010001000",
+    "A0_range": [
+      0.6605598824720706,
+      4.2105263157894735
+    ],
+    "F0_range": [
+      4.066891803173804,
+      6.245265333898283
+    ],
+    "g0_range": [
+      8.391945044398027e-05,
+      0.00031959903125645
+    ],
+    "Int1_source_peak": 0.0057527825626161,
+    "F0_below_threshold_fraction": 0.0,
+    "gate_open_windows": [
+      [
+        5.9,
+        37.83
+      ],
+      [
+        46.2,
+        57.67
+      ],
+      [
+        68.3,
+        78.93
+      ],
+      [
+        89.47,
+        100.1
+      ],
+      [
+        110.67,
+        121.3
+      ],
+      [
+        131.83,
+        142.47
+      ],
+      [
+        153.03,
+        163.67
+      ],
+      [
+        174.2,
+        180.0
+      ]
+    ],
+    "n_fallings": 6,
+    "n_risings": 5,
+    "per_falling_edge": [
+      {
+        "to_cycle": 5,
+        "transition_h": 49.83333333333333,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 7,
+        "transition_h": 71.01666666666667,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 9,
+        "transition_h": 92.2,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 11,
+        "transition_h": 113.38333333333333,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 13,
+        "transition_h": 134.56666666666666,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      },
+      {
+        "to_cycle": 15,
+        "transition_h": 155.75,
+        "gate_openings_in_previous_half_period": 1,
+        "gate_openings_in_next_half_period": 0,
+        "bit1_label_before": "0",
+        "bit1_label_after": "0"
+      }
+    ],
+    "bit1_S_range": [
+      0.0,
+      0.005669279021907112
+    ]
+  }
+]

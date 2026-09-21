@@ -1,0 +1,182 @@
+[
+ {
+  "cand": "A1 \u539f\u751fssrA (Szydlo 3-8 h\u207b\u00b9 \u533a\u95f4)",
+  "tag": 2.5,
+  "min_score": 0.6,
+  "PB": 0.6
+ },
+ {
+  "cand": "A1 \u539f\u751fssrA (Szydlo 3-8 h\u207b\u00b9 \u533a\u95f4)",
+  "tag": 3,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A1 \u539f\u751fssrA (Szydlo 3-8 h\u207b\u00b9 \u533a\u95f4)",
+  "tag": 4,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A1 \u539f\u751fssrA (Szydlo 3-8 h\u207b\u00b9 \u533a\u95f4)",
+  "tag": 5,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A1 \u539f\u751fssrA (Szydlo 3-8 h\u207b\u00b9 \u533a\u95f4)",
+  "tag": 6,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A1 \u539f\u751fssrA (Szydlo 3-8 h\u207b\u00b9 \u533a\u95f4)",
+  "tag": 8,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A2 LAA-LAA (>\u539f\u751f, \u5047\u8bbe\u5feb2-4\u00d7=6-24)",
+  "tag": 6,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A2 LAA-LAA (>\u539f\u751f, \u5047\u8bbe\u5feb2-4\u00d7=6-24)",
+  "tag": 8,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A2 LAA-LAA (>\u539f\u751f, \u5047\u8bbe\u5feb2-4\u00d7=6-24)",
+  "tag": 12,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A2 LAA-LAA (>\u539f\u751f, \u5047\u8bbe\u5feb2-4\u00d7=6-24)",
+  "tag": 16,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A2 LAA-LAA (>\u539f\u751f, \u5047\u8bbe\u5feb2-4\u00d7=6-24)",
+  "tag": 20,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A2 LAA-LAA (>\u539f\u751f, \u5047\u8bbe\u5feb2-4\u00d7=6-24)",
+  "tag": 24,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A3 +ClpX\u5171\u8868\u8fbe (\u518d\u4e0a\u63a2)",
+  "tag": 12,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A3 +ClpX\u5171\u8868\u8fbe (\u518d\u4e0a\u63a2)",
+  "tag": 16,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "A3 +ClpX\u5171\u8868\u8fbe (\u518d\u4e0a\u63a2)",
+  "tag": 20,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "C SENY\u53d8\u4f53 (\u2248\u539f\u751f\u00b1)",
+  "tag": 4,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "C SENY\u53d8\u4f53 (\u2248\u539f\u751f\u00b1)",
+  "tag": 6,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "C SENY\u53d8\u4f53 (\u2248\u539f\u751f\u00b1)",
+  "tag": 8,
+  "min_score": 1.0,
+  "PB": 1.0
+ },
+ {
+  "cand": "\u5bf9\u7167: \u6162\u6863 AAV (0.7-1.7 h\u207b\u00b9)",
+  "tag": 0.7,
+  "min_score": 0.6,
+  "PB": 0.6
+ },
+ {
+  "cand": "\u5bf9\u7167: \u6162\u6863 AAV (0.7-1.7 h\u207b\u00b9)",
+  "tag": 1.0,
+  "min_score": 0.4,
+  "PB": 0.6
+ },
+ {
+  "cand": "\u5bf9\u7167: \u6162\u6863 AAV (0.7-1.7 h\u207b\u00b9)",
+  "tag": 1.7,
+  "min_score": 0.4,
+  "PB": 0.4
+ },
+ {
+  "cand": "\u60b2\u89c2: Int\u878d\u5408\u6bd4GFP\u61623\u00d7 (A1\u6253\u6298)",
+  "tag": 1.0,
+  "min_score": 0.4,
+  "PB": 0.6
+ },
+ {
+  "cand": "\u60b2\u89c2: Int\u878d\u5408\u6bd4GFP\u61623\u00d7 (A1\u6253\u6298)",
+  "tag": 1.5,
+  "min_score": 0.6,
+  "PB": 0.6
+ },
+ {
+  "cand": "\u60b2\u89c2: Int\u878d\u5408\u6bd4GFP\u61623\u00d7 (A1\u6253\u6298)",
+  "tag": 2.0,
+  "min_score": 0.6,
+  "PB": 0.6
+ },
+ {
+  "cand": "\u60b2\u89c2: Int\u878d\u5408\u6bd4GFP\u61623\u00d7 (A1\u6253\u6298)",
+  "tag": 2.7,
+  "min_score": 0.6,
+  "PB": 0.6
+ },
+ {
+  "cand": "\u4e0a\u754c\u63a2\u9488 RBS0.45",
+  "tag": 24,
+  "min_score": 1.0
+ },
+ {
+  "cand": "\u4e0a\u754c\u63a2\u9488 RBS0.45",
+  "tag": 26,
+  "min_score": 0.4
+ },
+ {
+  "cand": "\u4e0a\u754c\u63a2\u9488 RBS0.45",
+  "tag": 28,
+  "min_score": 0.4
+ },
+ {
+  "cand": "\u4e0a\u754c\u63a2\u9488 RBS0.45",
+  "tag": 30,
+  "min_score": 0.6
+ },
+ {
+  "cand": "\u4e0a\u754c\u63a2\u9488 RBS0.45",
+  "tag": 32,
+  "min_score": 0.8
+ },
+ {
+  "cand": "\u4e0a\u754c\u63a2\u9488 RBS0.45",
+  "tag": 36,
+  "min_score": 0.6
+ }
+]

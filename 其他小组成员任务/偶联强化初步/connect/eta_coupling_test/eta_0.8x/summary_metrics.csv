@@ -1,0 +1,2 @@
+case,eta_factor,eta_value,period_min,period_generations,c31_peak_uM,c31_trough_copies,duty_above_half_peak,toggle_score,H_mean,L_mean,alternation_fidelity,Int_peak_uM,Int_final_uM,RDF_peak_uM,BM3R1_peak_uM,sample_count
+eta_0.8x,0.8,0.4,409.36822803800635,13.645607601266878,3.912139653889763,169.70207442435904,0.2777777777777778,0.8157102573691192,0.8946858116084,0.18428974263088083,1.0,0.5826178557812659,0.08709793665617535,45.93709256946688,3.825,8

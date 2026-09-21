@@ -1,0 +1,62 @@
+{
+  "states": 34,
+  "hours": 300.0,
+  "samples": 9001,
+  "cold_start": {
+    "drop_reads": 0,
+    "reads": 28,
+    "valid_windows": true,
+    "increments_mod4": true,
+    "passed": true,
+    "sequence": "1230123012301230123012301230",
+    "minimum_commitment": 1.0
+  },
+  "steady_state": {
+    "drop_reads": 4,
+    "reads": 24,
+    "valid_windows": true,
+    "increments_mod4": true,
+    "passed": true,
+    "sequence": "123012301230123012301230",
+    "minimum_commitment": 1.0
+  },
+  "certified": true,
+  "causal_verdict": {
+    "exactly_one_gate_and_flip_per_late_reverse": true,
+    "causal_order_after_reverse_start": true,
+    "bit1_directions_alternate": true,
+    "unassigned_gate_events": [],
+    "unassigned_bit1_crossings": []
+  },
+  "signal_ranges": {
+    "S0": [
+      0.0,
+      0.9815390319504206
+    ],
+    "S1": [
+      0.0,
+      0.9998757289137792
+    ],
+    "Jrev0": [
+      0.0,
+      0.9147605914476294
+    ],
+    "g0": [
+      3.6456524622067906e-05,
+      0.40530360754207595
+    ],
+    "Int1_source_peak": 7.2954649357573675
+  },
+  "margins": {
+    "bit0": {
+      "min_setup_h": 3.9765904857889733,
+      "min_hold_h": 3.126259510821612
+    },
+    "bit1": {
+      "min_setup_h": 4.430957620609558,
+      "min_hold_h": 2.7993745172201443
+    }
+  },
+  "reverse_events": 14,
+  "gate_events": 14
+}

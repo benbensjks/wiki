@@ -1,0 +1,26 @@
+{
+  "version": "B_Minimum_Recovery_Period_Map_20260821",
+  "mode": "full",
+  "source_clock": "RBS1p2_mRNA1p5min",
+  "source_period_h": 9.437499999999998,
+  "Td_min": 50.0,
+  "Int_tag_rate_h_inv": 12.0,
+  "active_threshold_fraction": 0.05,
+  "fixed_pulse_metrics": {
+    "trough_uM_h": 0.016212109396668846,
+    "peak_uM_h": 2.688284541898461,
+    "active_duration_h": 4.266666666666424,
+    "FWHM_h": 3.0666666666664923,
+    "excess_pulse_dose_uM": 7.733946815511889,
+    "source_cycle_period_h": 9.433333333333309,
+    "source_cycle_total_dose_uM": 7.918380107296688
+  },
+  "raw_minimum_passing_period_h": 8.75,
+  "sustained_minimum_passing_period_h": 8.75,
+  "zhao_core": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\code\\zhao_core.py",
+  "scope": [
+    "Peak, active pulse shape, FWHM and excess pulse dose are fixed from K4.",
+    "Only the inter-pulse low-input interval is changed.",
+    "This is a deterministic B recovery boundary, not stochastic fidelity."
+  ]
+}

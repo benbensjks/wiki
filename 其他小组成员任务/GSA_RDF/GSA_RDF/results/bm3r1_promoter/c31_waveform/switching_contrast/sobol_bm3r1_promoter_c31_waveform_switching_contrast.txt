@@ -1,0 +1,13 @@
+========== Sobol Results ==========
+
+MODE = bm3r1_promoter
+SOURCE_MODE = c31_waveform
+OUTPUT = switching_contrast
+
+krep_tsl      S1 = 0.1005    ST = 0.6135
+K_rep         S1 = 0.0030    ST = 0.4968
+n_rep         S1 = 0.0123    ST = 0.3420
+krdf_tsl      S1 = 0.0251    ST = 0.5703
+k_tag_int     S1 = 0.1031    ST = 0.6018
+k_int         S1 = 0.0000    ST = 0.0000
+pulse_width   S1 = 0.0000    ST = 0.0000

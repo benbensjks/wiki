@@ -1,0 +1,39 @@
+{
+  "settings": {
+    "duration_min": 6000.0,
+    "sample_step_min": 1.0,
+    "transient_min": 1500.0,
+    "Td_min": 50.0,
+    "make_plots": true,
+    "minimum_relative_amplitude": 0.01,
+    "minimum_peaks": 4,
+    "fast_limit_max_period_error_percent": 10.0,
+    "fast_limit_min_waveform_correlation": 0.95
+  },
+  "base_parameters": {
+    "Td_min": 50.0,
+    "lambda_protein_scale": 1000.0,
+    "K_copies": 13.0,
+    "hill_n": 3.0,
+    "oscillator_plasmid_copies": 10.0,
+    "functional_tetO_per_plasmid": 4.0,
+    "functional_accessible_fraction": 1.0,
+    "sponge_plasmid_copies": 40.0,
+    "sponge_tetO_per_plasmid": 2.0,
+    "sponge_accessible_fraction": 1.0,
+    "oscillator_promoter_leak": 0.0,
+    "oscillator_translation_per_mrna_per_min": 0.5,
+    "oscillator_protein_intrinsic_loss_per_min": 0.0,
+    "c31_promoter_leak": 0.005,
+    "c31_tx_per_plasmid_per_min": 5.0,
+    "c31_translation_per_mrna_per_min": 0.5,
+    "c31_mrna_total_half_life_min": 2.0,
+    "c31_protein_intrinsic_loss_per_min": 0.0
+  },
+  "mRNA_scenarios": {
+    "fast_mRNA_0p2min": 0.2,
+    "mRNA_2min": 2.0
+  },
+  "QSS_mapping": "beta*No*alpha/(delta_m+mu)=(delta_p+mu)*lambda",
+  "purpose": "Test whether the symmetric 6-state oscillator is a credible mechanistic extension of the frozen reduced ODE."
+}

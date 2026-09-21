@@ -1,0 +1,13 @@
+========== Sobol Results ==========
+
+MODE = rdf_waveform
+SOURCE_MODE = c31_waveform
+OUTPUT = toggle_score
+
+baseline_sub  S1 = 0.0465    ST = 0.7629
+waveform_scaleS1 = 0.0354    ST = 0.5416
+krep_tsl      S1 = -0.0611    ST = 0.3487
+krdf_tsl      S1 = 0.0107    ST = 0.2177
+k_tag_int     S1 = 0.0618    ST = 0.7436
+K_rep         S1 = -0.0885    ST = 0.3414
+n_rep         S1 = -0.0453    ST = 0.3020

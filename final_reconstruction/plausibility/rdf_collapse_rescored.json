@@ -1,0 +1,27 @@
+{
+  "rescored_from_csv": true,
+  "baseline_crossings": 5,
+  "baseline_reverse_events": 14,
+  "R_ss_of_stall_point": 0.031426617996364314,
+  "R_ss_at_S_0p95": 7.016741948012752,
+  "probes_preserving_prefix": [
+    "bit2_soft_repression_n2",
+    "bit2_no_repression_Krep100"
+  ],
+  "probes_that_recover_strict": [],
+  "probes_that_recover_counting": [
+    "bit2_soft_repression_n2"
+  ],
+  "longest_correct_mod8_run": {
+    "baseline": 4,
+    "bit2_soft_repression_n2": 37,
+    "bit2_no_repression_Krep100": 4
+  },
+  "near_miss": {
+    "baseline": "not_counting",
+    "bit2_soft_repression_n2": "counting_correct_over_37_reads_blocked_by_readout: 1 unlabelled window(s) inside the steady set",
+    "bit2_no_repression_Krep100": "not_counting"
+  },
+  "rdf_collapse_is_load_bearing": false,
+  "rdf_collapse_supported_by_counting": true
+}

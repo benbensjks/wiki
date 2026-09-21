@@ -1,0 +1,333 @@
+"""Read-window commitment margin for the two pre-selected carry-2 candidates.
+
+Why this exists
+---------------
+The three-segment scan certified 16/20 points by the steady mod-8 rule.  That
+rule already implies ">= 80 % of every read window sits inside one 0.30/0.70
+band", but certification is a BINARY statement: it says nothing about how far
+from the 0.80 occupancy edge the point sits, nor how close the bit2 pool comes
+to the 0.30/0.70 band edges.  Freezing a working point needs those margins.
+
+So this script measures the margins for exactly the two candidates the reviewer
+named -- n_A1_gate = 5 and n_A1_gate = 6, both at carry1 mRNA 2 min and
+A1/F1 maturation 32.5 min -- and nothing else.  Two 600 h points, same geometry
+and same integrator settings as `scan_gate_segments.py`, so the numbers are
+directly comparable with `gate_segments_all.csv`.
+
+Pre-registered outputs (fixed before the run)
+---------------------------------------------
+  * per bit: minimum commitment over the steady read set;
+  * bit2 split by read label: minimum commitment of the low-state reads and of
+    the high-state reads separately;
+  * S2 in low-state reads: minimum / median / maximum of the in-window maximum;
+  * S2 in high-state reads: minimum / median / maximum of the in-window minimum;
+  * distance from those extremes to the 0.30 and the 0.70 band edge;
+  * occupancy slack above the 0.80 rule;
+  * read-window geometry (width, sample count, windows clipped at a cycle edge),
+    because a window truncated at a clock-cycle boundary rests on fewer samples.
+
+Two drops are reported: 8 (the value `verify_threebit51.counter_verdict` uses,
+i.e. the one that produced the certification) and 4
+(`verify_twobit_causal.STEADY_DROP_READS`, reported only for contrast).
+
+No new acceptance threshold is invented here.  The script reports margins and a
+mechanical comparison of the two points; the freeze decision stays with the
+reviewer.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+import time
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from plausibility_common import (OUT, flux_array, frozen_carry0,  # noqa: E402
+                                 frozen_extension, merge_shards, shard_slice,
+                                 sha256, source_hashes, write_manifest,
+                                 write_shard)
+from model_threebit51 import ThreeBit51Model, ThreeBitCarryParameters  # noqa: E402
+from model_twobit34 import CarryExpressionParameters  # noqa: E402
+
+NAME = 'read_commitment'
+ROOT_MODEL = Path(__file__).resolve().parents[1] / 'model_threebit51.py'
+
+# The two points the reviewer asked for, verbatim.  Nothing else is scanned.
+POINTS = [dict(n_A1_gate=5.0, mrna=2.0, mat=32.5),
+          dict(n_A1_gate=6.0, mrna=2.0, mat=32.5)]
+
+PRIMARY_DROP = 8      # verify_threebit51.counter_verdict  -> produced the certification
+ALT_DROP = 4          # verify_twobit_causal.STEADY_DROP_READS -> contrast only
+MIN_READS = 16        # the >=16-reads rule that forces >=254 h
+MIN_OCCUPANCY = 0.80
+BAND_LOW = 0.30
+BAND_HIGH = 0.70
+REFERENCE = OUT / 'gate_segments_all.csv'
+
+
+def point_id(p):
+    return f"n={p['n_A1_gate']:g}|mRNA={p['mrna']:g}|mat={p['mat']:g}"
+
+
+def build(p):
+    """Identical construction to scan_gate_segments.build."""
+    carry1 = CarryExpressionParameters(mrna_half_life_min=p['mrna'],
+                                       activator_maturation_half_life_min=p['mat'],
+                                       repressor_maturation_half_life_min=p['mat'])
+    return ThreeBit51Model(extension=frozen_extension(),
+                           carry=ThreeBitCarryParameters(carry0=frozen_carry0(),
+                                                         carry1=carry1),
+                           n_A1_gate=p['n_A1_gate'])
+
+
+def _stats(values):
+    v = np.asarray([x for x in values if x is not None], dtype=float)
+    if v.size == 0:
+        return dict(n=0, min=None, median=None, max=None)
+    return dict(n=int(v.size), min=float(v.min()), median=float(np.median(v)),
+                max=float(v.max()))
+
+
+def _flat(prefix, s):
+    return {f'{prefix}_n': s['n'], f'{prefix}_min': s['min'],
+            f'{prefix}_median': s['median'], f'{prefix}_max': s['max']}
+
+
+def window_metrics(reads, drop):
+    """All margins over the steady set, for one drop value."""
+    chosen = reads[drop:]
+    out = dict(reads_total=len(reads), reads_steady=len(chosen),
+               reads_rule_satisfied=bool(len(chosen) >= MIN_READS))
+
+    for i in range(3):
+        out.update(_flat(f'bit{i}_commitment',
+                         _stats([r['bits'][i]['commitment'] for r in chosen])))
+
+    w2 = [r['bits'][2] for r in chosen]
+    low = [w for w in w2 if w['label'] == '0']
+    high = [w for w in w2 if w['label'] == '1']
+    out.update(bit2_low_reads=len(low), bit2_high_reads=len(high),
+               bit2_unlabelled_reads=int(sum(w['label'] == 'x' for w in w2)))
+
+    out.update(_flat('bit2_low_commitment', _stats([w['commitment'] for w in low])))
+    out.update(_flat('bit2_high_commitment', _stats([w['commitment'] for w in high])))
+    out.update(_flat('bit2_low_occupancy', _stats([w['low_occupancy'] for w in low])))
+    out.update(_flat('bit2_high_occupancy', _stats([w['high_occupancy'] for w in high])))
+    # worst S2 inside a committed low read / inside a committed high read
+    out.update(_flat('bit2_low_window_max', _stats([w['maximum'] for w in low])))
+    out.update(_flat('bit2_high_window_min', _stats([w['minimum'] for w in high])))
+
+    # margins: positive means strictly inside the band
+    out['margin_commitment_low'] = (out['bit2_low_commitment_min'] - MIN_OCCUPANCY
+                                    if low else None)
+    out['margin_commitment_high'] = (out['bit2_high_commitment_min'] - MIN_OCCUPANCY
+                                     if high else None)
+    out['margin_to_band_low'] = (BAND_LOW - out['bit2_low_window_max_max']
+                                 if low else None)
+    out['margin_to_band_high'] = (out['bit2_high_window_min_min'] - BAND_HIGH
+                                  if high else None)
+    return out
+
+
+def geometry(reads, peaks, t):
+    if not reads:
+        return {}
+    widths = np.asarray([r['window_end_h'] - r['window_start_h'] for r in reads])
+    starts = np.asarray([r['window_start_h'] for r in reads])
+    ends = np.asarray([r['window_end_h'] for r in reads])
+    cyc_a = np.asarray([r['cycle_start_h'] for r in reads])
+    cyc_b = np.asarray([r['cycle_end_h'] for r in reads])
+    clipped = np.isclose(starts, cyc_a) | np.isclose(ends, cyc_b)
+    period = np.median(np.diff(t[peaks])) if len(peaks) > 1 else np.nan
+    return dict(clock_period_h=float(period),
+                read_window_h_median=float(np.median(widths)),
+                read_window_h_min=float(widths.min()),
+                read_windows_clipped=int(clipped.sum()),
+                read_windows_clipped_fraction=float(clipped.mean()),
+                read_windows_total=int(len(reads)),
+                catch_up_h=float(t[peaks[0]] - t[0]) if len(peaks) else None,
+                guard_note=('a window clipped at a clock-cycle edge is evaluated on '
+                            'fewer samples than the nominal 20 % width'))
+
+
+def reference_row(p, hours):
+    """The matching row of gate_segments_all.csv, for a cross-check only."""
+    if not REFERENCE.exists() or hours != 600.0:
+        return {}
+    ref = pd.read_csv(REFERENCE)
+    hit = ref[ref.point_id == point_id(p)]
+    if hit.empty:
+        return {}
+    r = hit.iloc[0]
+    return dict(ref_certified=bool(r.certified), ref_crossings=int(r.crossings),
+                ref_gates=int(r.gates), ref_reverse_events=int(r.reverse_events),
+                ref_leak_ratio=float(r.leak_ratio),
+                ref_gate_on_rev=float(r.gate_on_rev),
+                ref_bit2_hold_h=float(r.bit2_hold_h))
+
+
+def evaluate(p, hours, sample_min, max_step_min):
+    from verify_threebit51 import read_windows_three
+    from verify_bit0_part2 import clock_cycles
+    from plausibility_common import gate_windows, leak_report
+
+    started = time.perf_counter()
+    row = dict(point_id=point_id(p), **p)
+    try:
+        model = build(p)
+        sol = model.simulate(hours=hours, sample_min=sample_min,
+                             max_step_min=max_step_min)
+        t, y = sol.t, sol.y
+        flux = flux_array(model, sol)
+        peaks = clock_cycles(t, flux)
+        reads = read_windows_three(t, flux, (y[16], y[27], y[44]))
+        sig = model.diagnostic_signals(y)
+
+        row.update(ok=True, error='', hours=hours)
+        row.update(geometry(reads, peaks, t))
+        for drop, tag in ((PRIMARY_DROP, 'drop8'), (ALT_DROP, 'drop4')):
+            for k, v in window_metrics(reads, drop).items():
+                row[f'{tag}_{k}'] = v
+
+        # cross-check: this re-integration must reproduce the segment-scan row
+        win = gate_windows(t, sig['g1'])
+        rep = leak_report(t, sig['g1'], sig['J_rev2'], sig['J_fwd2'], y[36], win)[0.05]
+        ref = reference_row(p, hours)
+        row.update(ref_crossings=len(model.diagnostic_signals(y) and
+                                     __import__('verify_threebit51',
+                                                fromlist=['_crossings'])
+                                     ._crossings(t, y[44])),
+                   ref_gates=len(win),
+                   ref_leak_ratio=rep['leak_ratio'],
+                   ref_gate_on_rev=rep['gate_on_rev'],
+                   ref_bit2_hold_h=None)
+        for k, v in ref.items():
+            row[f'crosscheck_{k}'] = v
+        row['crosscheck_leak_ratio_gap'] = (abs(rep['leak_ratio'] - ref['ref_leak_ratio'])
+                                            if 'ref_leak_ratio' in ref else None)
+        if 'ref_crossings' in ref:
+            row['crosscheck_crossings_gap'] = abs(row['ref_crossings'] - ref['ref_crossings'])
+    except Exception as exc:                                     # noqa: BLE001
+        row.update(ok=False, error=repr(exc))
+    row['runtime_s'] = round(time.perf_counter() - started, 2)
+    return row
+
+
+def scan(args):
+    pts = shard_slice(POINTS, args.shard, args.nshards)
+    tag = f'shard{args.shard:02d}of{args.nshards:02d}'
+    rows = []
+    for p in pts:
+        r = evaluate(p, args.hours, args.sample_min, args.max_step_min)
+        rows.append(r)
+        print(f"[{tag}] {point_id(p):<24} ok={r['ok']} "
+              f"reads={r.get('drop8_reads_steady')} "
+              f"bit2_low_commit_min={r.get('drop8_bit2_low_commitment_min')} "
+              f"bit2_high_commit_min={r.get('drop8_bit2_high_commitment_min')} "
+              f"({r['runtime_s']}s)", flush=True)
+    write_shard(NAME, tag, rows, dict(kind='check', shard=args.shard, nshards=args.nshards,
+                                      hours=args.hours, points=len(pts),
+                                      model_sha256=sha256(ROOT_MODEL),
+                                      steady_drop=PRIMARY_DROP, alt_drop=ALT_DROP,
+                                      source_hashes=source_hashes()))
+    print(f'[{tag}] wrote {len(rows)} rows')
+
+
+MARGIN_KEYS = ('margin_commitment_low', 'margin_commitment_high',
+               'margin_to_band_low', 'margin_to_band_high',
+               'bit2_low_commitment_min', 'bit2_high_commitment_min',
+               'bit2_low_window_max_max', 'bit2_high_window_min_min')
+
+
+def merge(args):
+    df = merge_shards(NAME, args.nshards)
+    ok = df[df.ok.astype(bool)].sort_values('n_A1_gate')
+    verdict = dict(rows=len(df), ok=int(len(ok)), primary_drop=PRIMARY_DROP,
+                   alt_drop=ALT_DROP, min_reads_rule=MIN_READS,
+                   min_occupancy_rule=MIN_OCCUPANCY,
+                   bands=dict(low=BAND_LOW, high=BAND_HIGH),
+                   source_sha256=source_hashes(),
+                   model_sha256=sha256(ROOT_MODEL),
+                   note=('Margins are reported, not thresholded. A negative margin means the '
+                         'point violates that specific edge; no new acceptance threshold is '
+                         'introduced by this script.'))
+
+    per_point = {}
+    for _, r in ok.iterrows():
+        n = float(r.n_A1_gate)
+        per_point[f'n={n:g}'] = {
+            'reads_total': int(r['drop8_reads_total']),
+            'reads_steady_drop8': int(r['drop8_reads_steady']),
+            'reads_rule_satisfied': bool(r['drop8_reads_rule_satisfied']),
+            'reads_steady_drop4': int(r['drop4_reads_steady']),
+            'clock_period_h': r.get('clock_period_h'),
+            'read_window_h_median': r.get('read_window_h_median'),
+            'read_windows_clipped': r.get('read_windows_clipped'),
+            'bit2_low_reads': int(r['drop8_bit2_low_reads']),
+            'bit2_high_reads': int(r['drop8_bit2_high_reads']),
+            'bit2_unlabelled_reads': int(r['drop8_bit2_unlabelled_reads']),
+            'crosscheck_leak_ratio_gap': r.get('crosscheck_leak_ratio_gap'),
+            'crosscheck_crossings_gap': r.get('crosscheck_crossings_gap'),
+            **{k: (None if pd.isna(r[k]) else float(r[k])) for k in MARGIN_KEYS},
+            **{f'drop4_{k}': (None if pd.isna(r[f'drop4_{k}']) else float(r[f'drop4_{k}']))
+               for k in ('bit2_low_commitment_min', 'bit2_high_commitment_min',
+                         'margin_to_band_low', 'margin_to_band_high')},
+        }
+    verdict['per_point'] = per_point
+
+    # mechanical comparison: which point sits farther from each edge
+    if len(ok) == 2:
+        a = per_point[[k for k in per_point if k.startswith('n=5')][0]]
+        b = per_point[[k for k in per_point if k.startswith('n=6')][0]]
+        cmp_rows = {}
+        for k in ('bit2_low_commitment_min', 'bit2_high_commitment_min',
+                  'margin_commitment_low', 'margin_commitment_high',
+                  'margin_to_band_low', 'margin_to_band_high'):
+            va, vb = a.get(k), b.get(k)
+            if va is None or vb is None:
+                cmp_rows[k] = dict(n5=va, n6=vb, farther_from_edge=None)
+            else:
+                cmp_rows[k] = dict(n5=va, n6=vb,
+                                   farther_from_edge=('n=6' if vb > va else
+                                                      ('n=5' if va > vb else 'tie')),
+                                   difference=float(vb - va))
+        wins = [v['farther_from_edge'] for v in cmp_rows.values()]
+        verdict['margin_comparison'] = cmp_rows
+        verdict['points_farther_from_edge'] = dict(
+            n5=int(wins.count('n=5')), n6=int(wins.count('n=6')),
+            tie=int(wins.count('tie')),
+            strict=('n=6 never closer to an edge than n=5' if 'n=5' not in wins
+                    else ('n=5 never closer to an edge than n=6' if 'n=6' not in wins
+                          else 'mixed')))
+
+    df.to_csv(OUT / f'{NAME}_all.csv', index=False, encoding='utf-8')
+    (OUT / f'{NAME}_verdict.json').write_text(
+        json.dumps(verdict, ensure_ascii=False, indent=2), encoding='utf-8')
+    write_manifest()
+    print(json.dumps(verdict, ensure_ascii=False, indent=2))
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    sub = ap.add_subparsers(dest='mode', required=True)
+    s = sub.add_parser('scan')
+    s.add_argument('--shard', type=int, required=True)
+    s.add_argument('--nshards', type=int, required=True)
+    s.add_argument('--hours', type=float, default=600.0)
+    s.add_argument('--sample-min', type=float, default=2.0)
+    s.add_argument('--max-step-min', type=float, default=2.0)
+    m = sub.add_parser('merge')
+    m.add_argument('--nshards', type=int, required=True)
+    args = ap.parse_args()
+    if args.mode == 'scan':
+        scan(args)
+    else:
+        merge(args)
+
+
+if __name__ == '__main__':
+    main()

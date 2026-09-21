@@ -1,0 +1,39 @@
+{
+  "profile_name": "twobit34_selected_robust_centre_v1",
+  "selection_basis": "strict three-axis interior point with all six axis neighbours certified; largest timing margin among strict interior points",
+  "extension": {
+    "uM_per_au": 5.75,
+    "mrna_half_life_min": 2.0,
+    "maturation_half_life_min": 20.0,
+    "translation_h": 30.0,
+    "immature_decay_h": 0.0,
+    "complex_on_au_inv_h": 0.1,
+    "complex_off_h": 1.0,
+    "complex_decay_h": 1.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "add_growth": false
+  },
+  "carry_expression": {
+    "mrna_half_life_min": 2.0,
+    "activator_maturation_half_life_min": 32.5,
+    "repressor_maturation_half_life_min": 32.5
+  },
+  "validated_metrics": {
+    "minimum_timing_margin_h": 2.9137227753952324,
+    "bit1_setup_h": 4.637884499952506,
+    "bit1_hold_h": 2.9137227753952324,
+    "minimum_commitment": 1.0,
+    "cold_start_passed": true,
+    "steady_state_passed": true,
+    "causal_certified": true,
+    "four_phase_consistent_initial_states_passed": true
+  },
+  "confirmed_semantics": {
+    "zeng_gamma": "total clearance rate = degradation + dilution",
+    "add_growth_false": "correct; do not add dilution a second time",
+    "add_growth_true": "legacy diagnostic only; double-counts dilution and is not a physical candidate",
+    "k_int_6": "square-wave-specific tuning value used to obtain a normal Int0 pulse; not applied to the real C31 flux"
+  },
+  "unresolved_cross_condition_issue": "Han upstream uses mu approximately 0.8318 per hour (50 min doubling), greater than the smallest Zeng total gamma 0.6 per hour. Zeng's assumed mu/doubling time is still required; the two parameter sets cannot yet be interpreted as one common growth condition."
+}

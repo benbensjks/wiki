@@ -1,0 +1,5 @@
+{
+  "prompt": "Add clean minimal English labels to this scientific illustration. Keep the drawing and colors unchanged; only add text and thin leader lines. Use a modern sans-serif font in dark slate grey. Labels: the bacterium outline = 'E. coli'; the circular DNA loop = 'plasmid'; the highlighted DNA segment = 'single-bit DNA switch'; the teal protein = 'Integrase (Int)'; the dark blue protein = 'BM3R1'; the cluster of orange dots = 'RDF pool'; the waveform = 'clock pulse'. Add a small title at the top left: 'One pulse, one flip'. Do not change anything else, do not add extra text, no watermark.",
+  "reference_images": ["/Users/steven/workspace/iGEM/Sept/Wiki图设计_20260921/qwen_cell_context_v1.png"],
+  "size": "1664*928"
+}

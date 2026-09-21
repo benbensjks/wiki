@@ -1,0 +1,39 @@
+{
+  "label": "K_D_comp_scale|minus|0.02",
+  "overrides": {
+    "K_D_comp_scale": 0.98
+  },
+  "theo_names": [
+    "S0",
+    "S1",
+    "S2",
+    "I0",
+    "R0",
+    "C0",
+    "I1",
+    "R1",
+    "C1",
+    "I2",
+    "R2",
+    "C2",
+    "A1",
+    "F1",
+    "g1",
+    "J_rev1",
+    "J_rev2"
+  ],
+  "exp_names": [
+    "S0",
+    "S1",
+    "S2",
+    "I0",
+    "A1"
+  ],
+  "theo_n": 4501,
+  "exp_n": 301,
+  "meta": {
+    "q": 0.05,
+    "K_complex": 0.0588,
+    "k_D_comp_used": 1.176
+  }
+}

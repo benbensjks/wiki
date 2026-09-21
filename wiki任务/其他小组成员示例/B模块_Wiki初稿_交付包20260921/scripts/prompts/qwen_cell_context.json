@@ -1,0 +1,6 @@
+{
+  "prompt": "Flat vector scientific illustration for a synthetic biology wiki page. A single rod-shaped Escherichia coli bacterium shown in a clean cross-section with a semi-transparent outline. Inside the cell, a circular plasmid DNA loop carries a short highlighted DNA segment. A smooth oscillating waveform, representing a molecular clock pulse, enters the cell from the left. Around the DNA segment: a teal integrase protein drawn as a rounded abstract shape, a deep blue repressor protein, and small orange RDF molecules accumulating as a soft pool near the segment. Thin curved arrows suggest the DNA segment reversibly flipping between two orientations. Minimalist textbook style, clean outlines, generous white space. Color palette: deep blue #304B53, orange #D29144, teal #4F9194, light blue #DCE5E7, light orange #F2E2CF, white background. No text, no letters, no numbers, no labels, no watermark. Wide 16:9 composition.",
+  "negative_prompt": "text, letters, words, numbers, labels, captions, watermark, signature, clutter, photorealism, 3D render, dark background, neon colors, human hands",
+  "size": "1664*928",
+  "watermark": false
+}

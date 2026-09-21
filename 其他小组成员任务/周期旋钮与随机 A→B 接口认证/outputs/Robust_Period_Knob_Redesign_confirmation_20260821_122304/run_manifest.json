@@ -1,0 +1,40 @@
+{
+  "version": "Robust_Continuous_Period_Knob_Library_Redesign_20260821",
+  "mode": "confirmation",
+  "settings": {
+    "n_scenarios": 64,
+    "duration_min": 6000.0,
+    "transient_min": 1500.0,
+    "sample_step_min": 1.0,
+    "random_seed": 20260821
+  },
+  "input_grid": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Shared_PLtetO1_RBS_mRNA_2D_full_20260819_155941\\RBS_mRNA_2D_all_conditions.csv",
+  "PR_leak_gate": 0.0044891988797823,
+  "candidate_ids": [
+    "RBS0p6_mRNA1min",
+    "RBS0p8_mRNA1min",
+    "RBS1_mRNA1min",
+    "RBS1p2_mRNA1min",
+    "RBS1p4_mRNA1min",
+    "RBS0p6_mRNA1p5min",
+    "RBS0p8_mRNA1p5min",
+    "RBS1_mRNA1p5min",
+    "RBS1p2_mRNA1p5min",
+    "RBS1p4_mRNA1p5min",
+    "RBS0p6_mRNA2min",
+    "RBS0p8_mRNA2min",
+    "RBS1_mRNA2min",
+    "RBS1p2_mRNA2min",
+    "RBS1p4_mRNA2min",
+    "RBS0p6_mRNA3min",
+    "RBS0p8_mRNA3min",
+    "RBS1_mRNA3min",
+    "RBS1p2_mRNA3min",
+    "RBS1p4_mRNA3min",
+    "RBS0p6_mRNA4min",
+    "RBS0p8_mRNA4min",
+    "RBS1_mRNA4min",
+    "RBS1p2_mRNA4min",
+    "RBS1p4_mRNA4min"
+  ]
+}

@@ -1,0 +1,24 @@
+ 
+S7
+Table S9. Strains used for experiments related to oscillator. 
+Strain 
+Name 
+Description 
+E.coli (NB001) 
+pTDCL7 
+Plac/ara-1-LacI-SsrA-Plac/ara-1-AraC-
+SsrA-Plac/ara-1-GFP-SsrA 
+pKmPJ271 
+Plac/ara-1-LacI-LAA-LAA-Plac/ara-1-AraC-
+LAA-LAA-Plac/ara-1-GFP-LAA-LAA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026

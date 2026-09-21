@@ -1,0 +1,9 @@
+========== Sobol Results ==========
+
+krep_tsl      S1 = 0.7175    ST = 0.7053
+K_rep         S1 = 0.3067    ST = 0.2980
+n_rep         S1 = 0.0000    ST = 0.0000
+krdf_tsl      S1 = 0.0000    ST = 0.0000
+k_tag_int     S1 = 0.0000    ST = 0.0000
+k_int         S1 = 0.0000    ST = 0.0000
+pulse_width   S1 = 0.0000    ST = 0.0000

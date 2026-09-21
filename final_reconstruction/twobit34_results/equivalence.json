@@ -1,0 +1,155 @@
+{
+  "state_contract": {
+    "count": 34,
+    "names": [
+      "m_TetR",
+      "TetR_total",
+      "m_CI",
+      "CI",
+      "m_LacI",
+      "LacI",
+      "b0_M_I",
+      "b0_I_u",
+      "b0_I",
+      "b0_M_T",
+      "b0_T_u",
+      "b0_T",
+      "b0_M_R",
+      "b0_R_u",
+      "b0_R",
+      "b0_C",
+      "b0_S",
+      "b1_M_I",
+      "b1_I_u",
+      "b1_I",
+      "b1_M_T",
+      "b1_T_u",
+      "b1_T",
+      "b1_M_R",
+      "b1_R_u",
+      "b1_R",
+      "b1_C",
+      "b1_S",
+      "A0",
+      "F0",
+      "M_A0",
+      "A0_u",
+      "M_F0",
+      "F0_u"
+    ]
+  },
+  "integration": {
+    "hours": 300.0,
+    "samples": 9001,
+    "overall_max_abs_error": 0.0,
+    "per_state_max_abs_error": {
+      "m_TetR": 0.0,
+      "TetR_total": 0.0,
+      "m_CI": 0.0,
+      "CI": 0.0,
+      "m_LacI": 0.0,
+      "LacI": 0.0,
+      "b0_M_I": 0.0,
+      "b0_I_u": 0.0,
+      "b0_I": 0.0,
+      "b0_M_T": 0.0,
+      "b0_T_u": 0.0,
+      "b0_T": 0.0,
+      "b0_M_R": 0.0,
+      "b0_R_u": 0.0,
+      "b0_R": 0.0,
+      "b0_C": 0.0,
+      "b0_S": 0.0,
+      "b1_M_I": 0.0,
+      "b1_I_u": 0.0,
+      "b1_I": 0.0,
+      "b1_M_T": 0.0,
+      "b1_T_u": 0.0,
+      "b1_T": 0.0,
+      "b1_M_R": 0.0,
+      "b1_R_u": 0.0,
+      "b1_R": 0.0,
+      "b1_C": 0.0,
+      "b1_S": 0.0,
+      "A0": 0.0,
+      "F0": 0.0,
+      "M_A0": 0.0,
+      "A0_u": 0.0,
+      "M_F0": 0.0,
+      "F0_u": 0.0
+    },
+    "max_rhs_error": 0.0
+  },
+  "signals": {
+    "max_abs_error": {
+      "S0": 0.0,
+      "S1": 0.0,
+      "J_fwd0": 0.0,
+      "J_rev0": 0.0,
+      "g0": 0.0,
+      "Int1_source": 0.0
+    }
+  },
+  "digital": {
+    "formal_cold": {
+      "drop_reads": 0,
+      "reads": 28,
+      "valid_windows": true,
+      "increments_mod4": true,
+      "passed": true,
+      "sequence": "1230123012301230123012301230",
+      "minimum_commitment": 1.0
+    },
+    "legacy_cold": {
+      "drop_reads": 0,
+      "reads": 28,
+      "valid_windows": true,
+      "increments_mod4": true,
+      "passed": true,
+      "sequence": "1230123012301230123012301230",
+      "minimum_commitment": 1.0
+    },
+    "formal_steady": {
+      "drop_reads": 4,
+      "reads": 24,
+      "valid_windows": true,
+      "increments_mod4": true,
+      "passed": true,
+      "sequence": "123012301230123012301230",
+      "minimum_commitment": 1.0
+    },
+    "legacy_steady": {
+      "drop_reads": 4,
+      "reads": 24,
+      "valid_windows": true,
+      "increments_mod4": true,
+      "passed": true,
+      "sequence": "123012301230123012301230",
+      "minimum_commitment": 1.0
+    },
+    "formal_certified": true,
+    "legacy_certified": true
+  },
+  "causal": {
+    "reverse_events_formal": 14,
+    "reverse_events_legacy": 14,
+    "gate_events_formal": 14,
+    "gate_events_legacy": 14,
+    "max_event_metric_error": 0.0,
+    "formal": {
+      "exactly_one_gate_and_flip_per_late_reverse": true,
+      "causal_order_after_reverse_start": true,
+      "bit1_directions_alternate": true,
+      "unassigned_gate_events": [],
+      "unassigned_bit1_crossings": []
+    },
+    "legacy": {
+      "exactly_one_gate_and_flip_per_late_reverse": true,
+      "causal_order_after_reverse_start": true,
+      "bit1_directions_alternate": true,
+      "unassigned_gate_events": [],
+      "unassigned_bit1_crossings": []
+    }
+  },
+  "passed": true
+}

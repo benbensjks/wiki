@@ -1,0 +1,21 @@
+{
+  "version": "Stochastic_Deterministic_Mean_Consistency_Audit_20260823",
+  "mode": "audit",
+  "settings": {
+    "trajectories_per_setting": 12,
+    "duration_generations": 150.0,
+    "transient_generations": 30.0,
+    "tau_step_min": 0.2,
+    "sample_step_min": 1.0,
+    "random_seed": 20260823
+  },
+  "library_csv": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Robust_Period_Knob_Redesign_confirmation_20260821_122304\\ranked_five_setting_libraries.csv",
+  "conditions": [
+    "deterministic_reference",
+    "stochastic_fixed_plasmids",
+    "stochastic_fluctuating_plasmids"
+  ],
+  "primary_question": "Why is mean stochastic C31 translation flux higher than the matched ODE?",
+  "scope_boundary": "Attribution only. No parameter fitting, empirical normalization or B certification.",
+  "fixed_plasmids_recorded_explicitly": true
+}

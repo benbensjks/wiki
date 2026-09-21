@@ -1,0 +1,118 @@
+{
+  "extension": {
+    "uM_per_au": 6.0,
+    "mrna_half_life_min": 2.0,
+    "maturation_half_life_min": 20.0,
+    "translation_h": 30.0,
+    "immature_decay_h": 0.0,
+    "complex_on_au_inv_h": 0.1,
+    "complex_off_h": 1.0,
+    "complex_decay_h": 1.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "add_growth": false
+  },
+  "carry_expression": {
+    "mrna_half_life_min": 2.0,
+    "activator_maturation_half_life_min": 30.0,
+    "repressor_maturation_half_life_min": 30.0
+  },
+  "zeng": {
+    "k_fwd": 7.0,
+    "k_rev": 5.0,
+    "K_D_int": [
+      1.0,
+      1.0,
+      0.6
+    ],
+    "K_D_comp": 1.2,
+    "K_inh": 0.1,
+    "k_int": 6.0,
+    "gamma_int": [
+      2.0,
+      1.4,
+      2.2
+    ],
+    "alpha_rep": 3.5,
+    "gamma_rep": 0.6,
+    "K_rep": 0.85,
+    "n_rep": 3.9,
+    "alpha_rdf": 6.0,
+    "gamma_rdf": 0.8,
+    "alpha_A": [
+      8.0,
+      16.0
+    ],
+    "gamma_A": [
+      1.9,
+      2.5
+    ],
+    "K_A": [
+      0.5,
+      1.2
+    ],
+    "n_A": [
+      2.0,
+      4.0
+    ],
+    "alpha_F": [
+      3.8,
+      5.0
+    ],
+    "gamma_F": [
+      0.6,
+      1.1
+    ],
+    "K_F": [
+      0.6,
+      0.4
+    ],
+    "n_F": [
+      4.0,
+      4.0
+    ],
+    "alpha_Int": [
+      18.0,
+      38.0
+    ],
+    "K_auto1": 0.6,
+    "n_auto1": 2.0
+  },
+  "state_names": [
+    "m_TetR",
+    "TetR_total",
+    "m_CI",
+    "CI",
+    "m_LacI",
+    "LacI",
+    "b0_M_I",
+    "b0_I_u",
+    "b0_I",
+    "b0_M_T",
+    "b0_T_u",
+    "b0_T",
+    "b0_M_R",
+    "b0_R_u",
+    "b0_R",
+    "b0_C",
+    "b0_S",
+    "b1_M_I",
+    "b1_I_u",
+    "b1_I",
+    "b1_M_T",
+    "b1_T_u",
+    "b1_T",
+    "b1_M_R",
+    "b1_R_u",
+    "b1_R",
+    "b1_C",
+    "b1_S",
+    "A0",
+    "F0",
+    "M_A0",
+    "A0_u",
+    "M_F0",
+    "F0_u"
+  ],
+  "interpretation": "Zeng gamma is treated as total downstream clearance; growth dilution is not added again downstream."
+}

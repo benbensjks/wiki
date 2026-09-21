@@ -1,0 +1,136 @@
+{
+  "version": "Period_Knob_Robustness_Certification_20260820",
+  "mode": "confirmation",
+  "mode_settings": {
+    "n_scenarios": 128,
+    "duration_min": 6000.0,
+    "transient_min": 1500.0,
+    "sample_step_min": 1.0,
+    "random_seed": 20260820
+  },
+  "uncertainties": [
+    {
+      "name": "Td_min",
+      "label": "doubling time (min)",
+      "lower": 45.0,
+      "upper": 55.0,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "oscillator_plasmid_copies",
+      "label": "oscillator plasmid copies",
+      "lower": 8.0,
+      "upper": 12.0,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "K_copies",
+      "label": "common effective K (copies)",
+      "lower": 10.0,
+      "upper": 16.0,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "hill_n",
+      "label": "common effective Hill n",
+      "lower": 2.5,
+      "upper": 3.5,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "PLlacO1_leak",
+      "label": "PLlacO1 -> TetR leak",
+      "lower": 0.001,
+      "upper": 0.02,
+      "scale": "log",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "PLtetO1_leak",
+      "label": "PLtetO1 -> cI/C31 leak",
+      "lower": 0.001,
+      "upper": 0.02,
+      "scale": "log",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "PR_leak",
+      "label": "PR -> LacI leak",
+      "lower": 0.001,
+      "upper": 0.02,
+      "scale": "log",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "oscillator_RBS_multiplier",
+      "label": "oscillator RBS implementation multiplier",
+      "lower": 0.9,
+      "upper": 1.1,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "oscillator_mrna_half_life_multiplier",
+      "label": "oscillator mRNA lifetime multiplier",
+      "lower": 0.8,
+      "upper": 1.2,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "effective_sponge_sites",
+      "label": "effective sponge TetO capacity",
+      "lower": 60.0,
+      "upper": 100.0,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "C31_RBS_multiplier",
+      "label": "C31 RBS implementation multiplier",
+      "lower": 0.9,
+      "upper": 1.1,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "C31_mrna_half_life_multiplier",
+      "label": "C31 mRNA lifetime multiplier",
+      "lower": 0.8,
+      "upper": 1.2,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    },
+    {
+      "name": "peak_load_fraction",
+      "label": "peak shared translation load",
+      "lower": 0.0,
+      "upper": 0.2,
+      "scale": "linear",
+      "evidence": "provisional engineering scenario"
+    }
+  ],
+  "criteria": {
+    "minimum_resolved_fraction": 0.95,
+    "minimum_period_within_tolerance_fraction": 0.95,
+    "minimum_amplitude_pass_fraction": 0.95,
+    "minimum_adjacent_ordering_fraction": 0.95,
+    "period_tolerance_generations": 0.5,
+    "minimum_relative_amplitude": 0.2,
+    "minimum_B_robust_pass_fraction": 0.95
+  },
+  "certified_library": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Certified_Period_Knob_Library_20260819_184900\\certified_period_knob_library.csv",
+  "stochastic_summary": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Stochastic_Period_Knob_confirmation_20260819_190935\\stochastic_setting_summary.csv",
+  "B_robustness_csv": null,
+  "interpretation_boundaries": [
+    "Default uncertainty ranges are engineering scenarios, not experimental confidence intervals.",
+    "Nominal stochastic CV and parameter-uncertainty spread are distinct outputs.",
+    "Complete-system robustness remains pending until scenario-level B evidence is merged.",
+    "K and n remain common effective parameters pending arm-specific transfer curves.",
+    "Smoke mode is a workflow check; audit and confirmation are evidential stages."
+  ]
+}

@@ -1,0 +1,2 @@
+gamma_factor,gamma_value_per_min,period_min,period_generations,c31_peak_copies,c31_peak_uM,c31_trough_copies,duty_above_half_peak,toggle_score,H_mean,L_mean,alternation_fidelity,Int_peak_uM,Int_final_uM,RDF_peak_uM,BM3R1_peak_uM,sample_count
+1.2,0.02772588722239781,338.7487658199443,11.291625527331478,2280.424908835341,3.788081243912526,182.44333125413857,0.314,0.7532513152514871,0.960271813710204,0.24674868474851283,1.0,0.5793883317229942,0.09747404924546692,34.789881317719264,3.825,10

@@ -1,0 +1,37 @@
+{
+  "version": "Shared_PLtetO1_RBS_mRNA_2D_Design_Window_20260819",
+  "mode": "full",
+  "target_period_generations": 12.5,
+  "grid": {
+    "RBS_scale": [
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4
+    ],
+    "oscillator_mRNA_total_half_life_min": [
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0
+    ]
+  },
+  "shared_PLtetO1_constraint": {
+    "K_shared": true,
+    "hill_n_shared": true,
+    "leak_shared": true,
+    "transcription_scale_shared": true
+  },
+  "frozen_C31_interface": {
+    "C31_RBS_scale": 0.45,
+    "C31_mRNA_total_half_life_min": 2.0,
+    "peak_load_fraction": 0.0
+  },
+  "interpretation": [
+    "The target-period ranking is an A-module design ranking, not B compatibility certification.",
+    "All top candidates must be passed to B as beta31*m31 flux before construct selection.",
+    "A design is biologically interpretable only if all three oscillator arms are changed symmetrically."
+  ]
+}

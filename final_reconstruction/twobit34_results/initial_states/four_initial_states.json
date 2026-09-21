@@ -1,0 +1,3249 @@
+{
+  "parameters": {
+    "extension": {
+      "uM_per_au": 6.0,
+      "mrna_half_life_min": 2.0,
+      "maturation_half_life_min": 20.0,
+      "translation_h": 30.0,
+      "immature_decay_h": 0.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 1.0,
+      "complex_decay_h": 1.0,
+      "clock_K_au": 0.3,
+      "clock_n": 2.0,
+      "add_growth": false
+    },
+    "carry": {
+      "mrna_half_life_min": 2.0,
+      "activator_maturation_half_life_min": 30.0,
+      "repressor_maturation_half_life_min": 30.0
+    },
+    "warmup_h": 300.0,
+    "verification_h": 300.0
+  },
+  "construction": "late orbit-derived complete biochemical states; oscillator plus C31 mRNA reset to one common phase",
+  "phase_audit": {
+    "common_phase_source_value": 0,
+    "sampled_times_h": [
+      208.29999999999998,
+      218.86666666666667,
+      187.1,
+      197.7
+    ],
+    "max_upstream_absolute_spread": 0.8465706115940037,
+    "max_upstream_relative_spread": 0.05745237889957202,
+    "upstream_absolute_spread": {
+      "m_TetR": 0.45476209205419593,
+      "TetR_total": 0.5453596027288086,
+      "m_CI": 2.046173805479029e-08,
+      "CI": 0.8465706115940037,
+      "m_LacI": 0.042943271457878684,
+      "LacI": 0.37921292534958084,
+      "b0_M_I": 2.931922838734537e-11
+    },
+    "upstream_relative_spread": {
+      "m_TetR": 0.01860942836572894,
+      "TetR_total": 0.0006056088013053269,
+      "m_CI": 0.00015958022492383004,
+      "CI": 0.02005525099461254,
+      "m_LacI": 0.05745237889957202,
+      "LacI": 0.04955410692951031,
+      "b0_M_I": 1.467272057782758e-07
+    }
+  },
+  "results": {
+    "0": {
+      "initial_value": 0,
+      "initial_bits": "00",
+      "source_time_h": 208.29999999999998,
+      "decoded_initial": 0,
+      "expected_sequence": "123012301230123012301230123",
+      "observed_sequence": "123012301230123012301230123",
+      "sequence_relation_correct": true,
+      "cold_start": {
+        "drop_reads": 0,
+        "reads": 27,
+        "valid_windows": true,
+        "increments_mod4": true,
+        "passed": true,
+        "sequence": "123012301230123012301230123",
+        "minimum_commitment": 1.0
+      },
+      "steady_state": {
+        "drop_reads": 4,
+        "reads": 23,
+        "valid_windows": true,
+        "increments_mod4": true,
+        "passed": true,
+        "sequence": "12301230123012301230123",
+        "minimum_commitment": 1.0
+      },
+      "certified": true,
+      "causal_verdict": {
+        "exactly_one_gate_and_flip_per_late_reverse": true,
+        "causal_order_after_reverse_start": true,
+        "bit1_directions_alternate": true,
+        "unassigned_gate_events": [],
+        "unassigned_bit1_crossings": []
+      },
+      "margins": {
+        "bit0": {
+          "min_setup_h": 4.566157160843289,
+          "min_hold_h": 3.126262762968537
+        },
+        "bit1": {
+          "min_setup_h": 5.030918925925885,
+          "min_hold_h": 2.794234592118528
+        }
+      },
+      "signal_ranges": {
+        "S0": [
+          0.012085860857734887,
+          0.9815390319565258
+        ],
+        "S1": [
+          0.0326446416598952,
+          0.9998745630028663
+        ],
+        "Jrev0": [
+          1.3322078843967292e-09,
+          0.9147792836748941
+        ],
+        "g0": [
+          3.6456524622074466e-05,
+          0.4053036075417745
+        ],
+        "Int1_source_peak": 7.295464935751942
+      },
+      "reverse_events": 14,
+      "gate_events": 14,
+      "read_windows": [
+        {
+          "cycle": 0,
+          "cycle_start_h": 5.7,
+          "cycle_end_h": 16.3,
+          "trough_h": 10.566666666666666,
+          "window_start_h": 9.5,
+          "window_end_h": 11.633333333333333,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767122952840519,
+            "maximum": 0.9800026085126705,
+            "median": 0.9779873407969144
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728700123297189,
+            "maximum": 0.07730363874180647,
+            "median": 0.0772895988653968
+          },
+          "value": 1
+        },
+        {
+          "cycle": 1,
+          "cycle_start_h": 16.3,
+          "cycle_end_h": 26.866666666666667,
+          "trough_h": 21.166666666666668,
+          "window_start_h": 20.1,
+          "window_end_h": 22.233333333333334,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966414132492064,
+            "maximum": 0.07021806133555514,
+            "median": 0.07012577349967132
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.950859719972519,
+            "maximum": 0.9676295837987448,
+            "median": 0.9541286901545312
+          },
+          "value": 2
+        },
+        {
+          "cycle": 2,
+          "cycle_start_h": 26.866666666666667,
+          "cycle_end_h": 37.46666666666667,
+          "trough_h": 31.766666666666666,
+          "window_start_h": 30.7,
+          "window_end_h": 32.833333333333336,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766948806643306,
+            "maximum": 0.9799664047778898,
+            "median": 0.9779599245456613
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489225655620904,
+            "maximum": 0.9490810045950299,
+            "median": 0.9490334233399329
+          },
+          "value": 3
+        },
+        {
+          "cycle": 3,
+          "cycle_start_h": 37.46666666666667,
+          "cycle_end_h": 48.06666666666666,
+          "trough_h": 42.333333333333336,
+          "window_start_h": 41.266666666666666,
+          "window_end_h": 43.4,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06964755609371834,
+            "maximum": 0.07021713614719846,
+            "median": 0.07012354985350744
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07629222066321097,
+            "maximum": 0.07720666585374615,
+            "median": 0.07709854569304975
+          },
+          "value": 0
+        },
+        {
+          "cycle": 4,
+          "cycle_start_h": 48.06666666666666,
+          "cycle_end_h": 58.666666666666664,
+          "trough_h": 52.93333333333333,
+          "window_start_h": 51.86666666666667,
+          "window_end_h": 54.0,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.976709803805677,
+            "maximum": 0.9799974454938317,
+            "median": 0.9779834086807824
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728705517974163,
+            "maximum": 0.07730380014754774,
+            "median": 0.07728965414072059
+          },
+          "value": 1
+        },
+        {
+          "cycle": 5,
+          "cycle_start_h": 58.666666666666664,
+          "cycle_end_h": 69.23333333333333,
+          "trough_h": 63.53333333333333,
+          "window_start_h": 62.46666666666667,
+          "window_end_h": 64.6,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966685250527611,
+            "maximum": 0.07021821506708885,
+            "median": 0.07012613931900427
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508565016543432,
+            "maximum": 0.9675782513225927,
+            "median": 0.9541130020923728
+          },
+          "value": 2
+        },
+        {
+          "cycle": 6,
+          "cycle_start_h": 69.23333333333333,
+          "cycle_end_h": 79.83333333333333,
+          "trough_h": 74.13333333333333,
+          "window_start_h": 73.06666666666666,
+          "window_end_h": 75.2,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766923987420137,
+            "maximum": 0.979961223420182,
+            "median": 0.9779560302319295
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489218200728494,
+            "maximum": 0.9490808540949592,
+            "median": 0.9490333026360945
+          },
+          "value": 3
+        },
+        {
+          "cycle": 7,
+          "cycle_start_h": 79.83333333333333,
+          "cycle_end_h": 90.43333333333334,
+          "trough_h": 84.7,
+          "window_start_h": 83.63333333333333,
+          "window_end_h": 85.76666666666667,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965035758700922,
+            "maximum": 0.07021729062639516,
+            "median": 0.07012392378594397
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07629680162495375,
+            "maximum": 0.0772067686044994,
+            "median": 0.07709912659970074
+          },
+          "value": 0
+        },
+        {
+          "cycle": 8,
+          "cycle_start_h": 90.43333333333334,
+          "cycle_end_h": 101.0,
+          "trough_h": 95.3,
+          "window_start_h": 94.23333333333333,
+          "window_end_h": 96.36666666666666,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.976707313716269,
+            "maximum": 0.9799922797478912,
+            "median": 0.9779794819780251
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728706533292942,
+            "maximum": 0.07730391877171296,
+            "median": 0.07728966565761164
+          },
+          "value": 1
+        },
+        {
+          "cycle": 9,
+          "cycle_start_h": 101.0,
+          "cycle_end_h": 111.6,
+          "trough_h": 105.89999999999999,
+          "window_start_h": 104.83333333333333,
+          "window_end_h": 106.96666666666667,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966954892515048,
+            "maximum": 0.07021836867674451,
+            "median": 0.07012650381344218
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508533041460427,
+            "maximum": 0.9675270065343898,
+            "median": 0.9540973812647254
+          },
+          "value": 2
+        },
+        {
+          "cycle": 10,
+          "cycle_start_h": 111.6,
+          "cycle_end_h": 122.2,
+          "trough_h": 116.5,
+          "window_start_h": 115.43333333333334,
+          "window_end_h": 117.56666666666666,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.976689918152705,
+            "maximum": 0.9799560395869702,
+            "median": 0.9779521412981363
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489210781542037,
+            "maximum": 0.9490807130279117,
+            "median": 0.9490331910184568
+          },
+          "value": 3
+        },
+        {
+          "cycle": 11,
+          "cycle_start_h": 122.2,
+          "cycle_end_h": 132.8,
+          "trough_h": 127.06666666666666,
+          "window_start_h": 126.0,
+          "window_end_h": 128.13333333333333,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0696531438232096,
+            "maximum": 0.07021744497904728,
+            "median": 0.07012429634695508
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07630135709356003,
+            "maximum": 0.07720686778435568,
+            "median": 0.07709970148421583
+          },
+          "value": 0
+        },
+        {
+          "cycle": 12,
+          "cycle_start_h": 132.8,
+          "cycle_end_h": 143.36666666666667,
+          "trough_h": 137.66666666666666,
+          "window_start_h": 136.6,
+          "window_end_h": 138.73333333333332,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767048250077744,
+            "maximum": 0.9799871113107124,
+            "median": 0.977975560684105
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.077287072244287,
+            "maximum": 0.07730403517477558,
+            "median": 0.07728967396788108
+          },
+          "value": 1
+        },
+        {
+          "cycle": 13,
+          "cycle_start_h": 143.36666666666667,
+          "cycle_end_h": 153.96666666666667,
+          "trough_h": 148.26666666666665,
+          "window_start_h": 147.2,
+          "window_end_h": 149.33333333333334,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967223066591986,
+            "maximum": 0.07021852216533492,
+            "median": 0.07012686699062634
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508501188211071,
+            "maximum": 0.9674758424849735,
+            "median": 0.9540818190133016
+          },
+          "value": 2
+        },
+        {
+          "cycle": 14,
+          "cycle_start_h": 153.96666666666667,
+          "cycle_end_h": 164.56666666666666,
+          "trough_h": 158.86666666666667,
+          "window_start_h": 157.8,
+          "window_end_h": 159.93333333333334,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766874388884866,
+            "maximum": 0.9799508533142713,
+            "median": 0.9779482577391874
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489203312161029,
+            "maximum": 0.9490805728484636,
+            "median": 0.9490330799422158
+          },
+          "value": 3
+        },
+        {
+          "cycle": 15,
+          "cycle_start_h": 164.56666666666666,
+          "cycle_end_h": 175.16666666666666,
+          "trough_h": 169.43333333333334,
+          "window_start_h": 168.36666666666667,
+          "window_end_h": 170.5,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965591488609334,
+            "maximum": 0.07021759920594198,
+            "median": 0.07012466754441024
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07630589015994974,
+            "maximum": 0.07720696638918809,
+            "median": 0.07710027335535982
+          },
+          "value": 0
+        },
+        {
+          "cycle": 16,
+          "cycle_start_h": 175.16666666666666,
+          "cycle_end_h": 185.73333333333332,
+          "trough_h": 180.03333333333333,
+          "window_start_h": 178.96666666666667,
+          "window_end_h": 181.1,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767023376721623,
+            "maximum": 0.9799819402181903,
+            "median": 0.9779716447944078
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0772870789078823,
+            "maximum": 0.07730415236033936,
+            "median": 0.07728968206577064
+          },
+          "value": 1
+        },
+        {
+          "cycle": 17,
+          "cycle_start_h": 185.73333333333332,
+          "cycle_end_h": 196.33333333333334,
+          "trough_h": 190.63333333333333,
+          "window_start_h": 189.56666666666666,
+          "window_end_h": 191.7,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967489780845885,
+            "maximum": 0.07021867553356875,
+            "median": 0.07012722885805277
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.950846944997569,
+            "maximum": 0.9674247589396673,
+            "median": 0.9540663145305517
+          },
+          "value": 2
+        },
+        {
+          "cycle": 18,
+          "cycle_start_h": 196.33333333333334,
+          "cycle_end_h": 206.93333333333334,
+          "trough_h": 201.2,
+          "window_start_h": 200.13333333333333,
+          "window_end_h": 202.26666666666665,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767172856140193,
+            "maximum": 0.9800129327849855,
+            "median": 0.9779952263065413
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489289304536318,
+            "maximum": 0.9490822684265325,
+            "median": 0.9490344036323848
+          },
+          "value": 3
+        },
+        {
+          "cycle": 19,
+          "cycle_start_h": 206.93333333333334,
+          "cycle_end_h": 217.53333333333333,
+          "trough_h": 211.79999999999998,
+          "window_start_h": 210.73333333333332,
+          "window_end_h": 212.86666666666667,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965867085902576,
+            "maximum": 0.07021775330786499,
+            "median": 0.07012503738613438
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07631040114551832,
+            "maximum": 0.07720706464168618,
+            "median": 0.07710084244864497
+          },
+          "value": 0
+        },
+        {
+          "cycle": 20,
+          "cycle_start_h": 217.53333333333333,
+          "cycle_end_h": 228.1,
+          "trough_h": 222.4,
+          "window_start_h": 221.33333333333334,
+          "window_end_h": 223.46666666666667,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766998517014156,
+            "maximum": 0.9799767665062321,
+            "median": 0.977967734304232
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728708554482255,
+            "maximum": 0.07730427055919492,
+            "median": 0.07728969017257112
+          },
+          "value": 1
+        },
+        {
+          "cycle": 21,
+          "cycle_start_h": 228.1,
+          "cycle_end_h": 238.7,
+          "trough_h": 233.0,
+          "window_start_h": 231.93333333333334,
+          "window_end_h": 234.06666666666666,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967755043333056,
+            "maximum": 0.07021882878224035,
+            "median": 0.07012758942326223
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508437825802941,
+            "maximum": 0.9673737561576398,
+            "median": 0.9540508675888968
+          },
+          "value": 2
+        },
+        {
+          "cycle": 22,
+          "cycle_start_h": 238.7,
+          "cycle_end_h": 249.29999999999998,
+          "trough_h": 243.56666666666666,
+          "window_start_h": 242.5,
+          "window_end_h": 244.63333333333333,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767147913316854,
+            "maximum": 0.9800077753314408,
+            "median": 0.9779912833434854
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489282435278663,
+            "maximum": 0.9490821260064287,
+            "median": 0.9490342940547594
+          },
+          "value": 3
+        },
+        {
+          "cycle": 23,
+          "cycle_start_h": 249.29999999999998,
+          "cycle_end_h": 259.8666666666667,
+          "trough_h": 254.16666666666666,
+          "window_start_h": 253.1,
+          "window_end_h": 255.23333333333332,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966141182495612,
+            "maximum": 0.07021790728559188,
+            "median": 0.07012540587989977
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0763148901668454,
+            "maximum": 0.0772071625598002,
+            "median": 0.07710140879477745
+          },
+          "value": 0
+        },
+        {
+          "cycle": 24,
+          "cycle_start_h": 259.8666666666667,
+          "cycle_end_h": 270.46666666666664,
+          "trough_h": 264.76666666666665,
+          "window_start_h": 263.7,
+          "window_end_h": 265.8333333333333,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766973670875471,
+            "maximum": 0.9799715902107852,
+            "median": 0.9779638292088064
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728709217149984,
+            "maximum": 0.07730438979751635,
+            "median": 0.07728969830486083
+          },
+          "value": 1
+        },
+        {
+          "cycle": 25,
+          "cycle_start_h": 270.46666666666664,
+          "cycle_end_h": 281.06666666666666,
+          "trough_h": 275.3666666666667,
+          "window_start_h": 274.3,
+          "window_end_h": 276.43333333333334,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06968018862067281,
+            "maximum": 0.07021898191211541,
+            "median": 0.07012794869372563
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508406315175115,
+            "maximum": 0.9673228344320688,
+            "median": 0.954035478003651
+          },
+          "value": 2
+        },
+        {
+          "cycle": 26,
+          "cycle_start_h": 281.06666666666666,
+          "cycle_end_h": 291.6666666666667,
+          "trough_h": 285.93333333333334,
+          "window_start_h": 284.8666666666667,
+          "window_end_h": 287.0,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767122984544918,
+            "maximum": 0.9800026150790903,
+            "median": 0.9779873458026338
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489275513964345,
+            "maximum": 0.9490819837972414,
+            "median": 0.9490341843542713
+          },
+          "value": 3
+        }
+      ],
+      "passed": true
+    },
+    "1": {
+      "initial_value": 1,
+      "initial_bits": "01",
+      "source_time_h": 218.86666666666667,
+      "decoded_initial": 1,
+      "expected_sequence": "230123012301230123012301230",
+      "observed_sequence": "230123012301230123012301230",
+      "sequence_relation_correct": true,
+      "cold_start": {
+        "drop_reads": 0,
+        "reads": 27,
+        "valid_windows": true,
+        "increments_mod4": true,
+        "passed": true,
+        "sequence": "230123012301230123012301230",
+        "minimum_commitment": 1.0
+      },
+      "steady_state": {
+        "drop_reads": 4,
+        "reads": 23,
+        "valid_windows": true,
+        "increments_mod4": true,
+        "passed": true,
+        "sequence": "23012301230123012301230",
+        "minimum_commitment": 1.0
+      },
+      "certified": true,
+      "causal_verdict": {
+        "exactly_one_gate_and_flip_per_late_reverse": true,
+        "causal_order_after_reverse_start": true,
+        "bit1_directions_alternate": true,
+        "unassigned_gate_events": [],
+        "unassigned_bit1_crossings": []
+      },
+      "margins": {
+        "bit0": {
+          "min_setup_h": 4.564873453606545,
+          "min_hold_h": 3.127542444690505
+        },
+        "bit1": {
+          "min_setup_h": 5.014382363866595,
+          "min_hold_h": 2.7955206137551727
+        }
+      },
+      "signal_ranges": {
+        "S0": [
+          0.012085882044789453,
+          0.9815390307511539
+        ],
+        "S1": [
+          0.03248157752714158,
+          0.9998752205859434
+        ],
+        "Jrev0": [
+          1.3321944834316597e-09,
+          0.9147746090873685
+        ],
+        "g0": [
+          3.645655166154306e-05,
+          0.4053036911355747
+        ],
+        "Int1_source_peak": 7.295466440440344
+      },
+      "reverse_events": 14,
+      "gate_events": 14,
+      "read_windows": [
+        {
+          "cycle": 0,
+          "cycle_start_h": 5.7,
+          "cycle_end_h": 16.3,
+          "trough_h": 10.566666666666666,
+          "window_start_h": 9.5,
+          "window_end_h": 11.633333333333333,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965392640523073,
+            "maximum": 0.07021690734293826,
+            "median": 0.07012386815967754
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9523218303242253,
+            "maximum": 0.9689669640023005,
+            "median": 0.9556012196704081
+          },
+          "value": 2
+        },
+        {
+          "cycle": 1,
+          "cycle_start_h": 16.3,
+          "cycle_end_h": 26.866666666666667,
+          "trough_h": 21.166666666666668,
+          "window_start_h": 20.1,
+          "window_end_h": 22.233333333333334,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767035822342764,
+            "maximum": 0.9799845175659244,
+            "median": 0.9779736002018988
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9503726971852615,
+            "maximum": 0.9505301689248584,
+            "median": 0.9504821653032985
+          },
+          "value": 3
+        },
+        {
+          "cycle": 2,
+          "cycle_start_h": 26.866666666666667,
+          "cycle_end_h": 37.46666666666667,
+          "trough_h": 31.766666666666666,
+          "window_start_h": 30.7,
+          "window_end_h": 32.833333333333336,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0696735673350079,
+            "maximum": 0.07021859854247857,
+            "median": 0.07012704789831914
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0758351758810222,
+            "maximum": 0.07670727009445541,
+            "median": 0.07660359408382934
+          },
+          "value": 0
+        },
+        {
+          "cycle": 3,
+          "cycle_start_h": 37.46666666666667,
+          "cycle_end_h": 48.06666666666666,
+          "trough_h": 42.333333333333336,
+          "window_start_h": 41.266666666666666,
+          "window_end_h": 43.4,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767185317085166,
+            "maximum": 0.980015507177986,
+            "median": 0.9779971973211942
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07678674474546386,
+            "maximum": 0.0768031273808357,
+            "median": 0.07678934070889788
+          },
+          "value": 1
+        },
+        {
+          "cycle": 4,
+          "cycle_start_h": 48.06666666666666,
+          "cycle_end_h": 58.666666666666664,
+          "trough_h": 52.93333333333333,
+          "window_start_h": 51.86666666666667,
+          "window_end_h": 54.0,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965729650464353,
+            "maximum": 0.07021767636851713,
+            "median": 0.07012485286751985
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9509734721610646,
+            "maximum": 0.9678474302407061,
+            "median": 0.9542725593019665
+          },
+          "value": 2
+        },
+        {
+          "cycle": 5,
+          "cycle_start_h": 58.666666666666664,
+          "cycle_end_h": 69.23333333333333,
+          "trough_h": 63.53333333333333,
+          "window_start_h": 62.46666666666667,
+          "window_end_h": 64.6,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767010929354649,
+            "maximum": 0.979979350396536,
+            "median": 0.9779696863873486
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9490295790021449,
+            "maximum": 0.9491866345642983,
+            "median": 0.9491389541043265
+          },
+          "value": 3
+        },
+        {
+          "cycle": 6,
+          "cycle_start_h": 69.23333333333333,
+          "cycle_end_h": 79.83333333333333,
+          "trough_h": 74.13333333333333,
+          "window_start_h": 73.06666666666666,
+          "window_end_h": 75.2,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967622761785865,
+            "maximum": 0.0702187522702806,
+            "median": 0.07012740953231458
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07630239421056147,
+            "maximum": 0.07717084073713205,
+            "median": 0.07706762148044902
+          },
+          "value": 0
+        },
+        {
+          "cycle": 7,
+          "cycle_start_h": 79.83333333333333,
+          "cycle_end_h": 90.43333333333334,
+          "trough_h": 84.7,
+          "window_start_h": 83.63333333333333,
+          "window_end_h": 85.76666666666667,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767160367101446,
+            "maximum": 0.9800103511297534,
+            "median": 0.9779932516389347
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07725019040649293,
+            "maximum": 0.07726666923575647,
+            "median": 0.07725278622086101
+          },
+          "value": 1
+        },
+        {
+          "cycle": 8,
+          "cycle_start_h": 90.43333333333334,
+          "cycle_end_h": 101.0,
+          "trough_h": 95.3,
+          "window_start_h": 94.23333333333333,
+          "window_end_h": 96.36666666666666,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966004495615427,
+            "maximum": 0.07021783041013827,
+            "median": 0.07012522203541019
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.950872339786829,
+            "maximum": 0.9677133255250453,
+            "median": 0.9541600175849387
+          },
+          "value": 2
+        },
+        {
+          "cycle": 9,
+          "cycle_start_h": 101.0,
+          "cycle_end_h": 111.6,
+          "trough_h": 105.89999999999999,
+          "window_start_h": 104.83333333333333,
+          "window_end_h": 106.96666666666667,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766986076449599,
+            "maximum": 0.9799741753866624,
+            "median": 0.9779657785985287
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.948931406900548,
+            "maximum": 0.9490889697896998,
+            "median": 0.9490413414710683
+          },
+          "value": 3
+        },
+        {
+          "cycle": 10,
+          "cycle_start_h": 111.6,
+          "cycle_end_h": 122.2,
+          "trough_h": 116.5,
+          "window_start_h": 115.43333333333334,
+          "window_end_h": 117.56666666666666,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967887300480176,
+            "maximum": 0.07021890545939466,
+            "median": 0.07012776944840811
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07634083155275072,
+            "maximum": 0.07720507057570983,
+            "median": 0.07710230450224621
+          },
+          "value": 0
+        },
+        {
+          "cycle": 11,
+          "cycle_start_h": 122.2,
+          "cycle_end_h": 132.8,
+          "trough_h": 127.06666666666666,
+          "window_start_h": 126.0,
+          "window_end_h": 128.13333333333333,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767135431322858,
+            "maximum": 0.9800051922705492,
+            "median": 0.9779893113909696
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728432851875797,
+            "maximum": 0.07730091265742148,
+            "median": 0.07728692550710811
+          },
+          "value": 1
+        },
+        {
+          "cycle": 12,
+          "cycle_start_h": 132.8,
+          "cycle_end_h": 143.36666666666667,
+          "trough_h": 137.66666666666666,
+          "window_start_h": 136.6,
+          "window_end_h": 138.73333333333332,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966277844007514,
+            "maximum": 0.07021798432598439,
+            "median": 0.07012558985725008
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508618951594389,
+            "maximum": 0.967655785678021,
+            "median": 0.9541371190480729
+          },
+          "value": 2
+        },
+        {
+          "cycle": 13,
+          "cycle_start_h": 143.36666666666667,
+          "cycle_end_h": 153.96666666666667,
+          "trough_h": 148.26666666666665,
+          "window_start_h": 147.2,
+          "window_end_h": 149.33333333333334,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766961237073956,
+            "maximum": 0.9799689978113317,
+            "median": 0.9779618762020891
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489234937482697,
+            "maximum": 0.9490816375143574,
+            "median": 0.9490340410902298
+          },
+          "value": 3
+        },
+        {
+          "cycle": 14,
+          "cycle_start_h": 153.96666666666667,
+          "cycle_end_h": 164.56666666666666,
+          "trough_h": 158.86666666666667,
+          "window_start_h": 157.8,
+          "window_end_h": 159.93333333333334,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06968150399415564,
+            "maximum": 0.07021905853006362,
+            "median": 0.0701281280734487
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07634767540526094,
+            "maximum": 0.07720768579859183,
+            "median": 0.07710537046383242
+          },
+          "value": 0
+        },
+        {
+          "cycle": 15,
+          "cycle_start_h": 164.56666666666666,
+          "cycle_end_h": 175.16666666666666,
+          "trough_h": 169.43333333333334,
+          "window_start_h": 168.36666666666667,
+          "window_end_h": 170.5,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767110509555149,
+            "maximum": 0.980000030630465,
+            "median": 0.9779853765630313
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728685475557666,
+            "maximum": 0.07730354580309208,
+            "median": 0.07728945304758895
+          },
+          "value": 1
+        },
+        {
+          "cycle": 16,
+          "cycle_start_h": 175.16666666666666,
+          "cycle_end_h": 185.73333333333332,
+          "trough_h": 180.03333333333333,
+          "window_start_h": 178.96666666666667,
+          "window_end_h": 181.1,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966549704073577,
+            "maximum": 0.0702181381188225,
+            "median": 0.07012595634273934
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508581480961396,
+            "maximum": 0.9676039712895316,
+            "median": 0.9541208850823156
+          },
+          "value": 2
+        },
+        {
+          "cycle": 17,
+          "cycle_start_h": 185.73333333333332,
+          "cycle_end_h": 196.33333333333334,
+          "trough_h": 190.63333333333333,
+          "window_start_h": 189.56666666666666,
+          "window_end_h": 191.7,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766936411147487,
+            "maximum": 0.9799638177064753,
+            "median": 0.9779579791930781
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489222305090401,
+            "maximum": 0.9490809659571692,
+            "median": 0.9490333996162089
+          },
+          "value": 3
+        },
+        {
+          "cycle": 18,
+          "cycle_start_h": 196.33333333333334,
+          "cycle_end_h": 206.93333333333334,
+          "trough_h": 201.2,
+          "window_start_h": 200.13333333333333,
+          "window_end_h": 202.26666666666665,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06964895697077862,
+            "maximum": 0.07021721330440069,
+            "median": 0.0701237367537944
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07629449823320866,
+            "maximum": 0.0772067044011737,
+            "median": 0.07709882332147955
+          },
+          "value": 0
+        },
+        {
+          "cycle": 19,
+          "cycle_start_h": 206.93333333333334,
+          "cycle_end_h": 217.53333333333333,
+          "trough_h": 211.79999999999998,
+          "window_start_h": 210.73333333333332,
+          "window_end_h": 212.86666666666667,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767085601717508,
+            "maximum": 0.9799948662453325,
+            "median": 0.9779814471507084
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728704744707622,
+            "maximum": 0.07730384645463742,
+            "median": 0.0772896470846894
+          },
+          "value": 1
+        },
+        {
+          "cycle": 20,
+          "cycle_start_h": 217.53333333333333,
+          "cycle_end_h": 228.1,
+          "trough_h": 222.4,
+          "window_start_h": 221.33333333333334,
+          "window_end_h": 223.46666666666667,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0696682008400444,
+            "maximum": 0.0702182917893952,
+            "median": 0.07012632149951174
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508549062019082,
+            "maximum": 0.9675526538170179,
+            "median": 0.9541051970424933
+          },
+          "value": 2
+        },
+        {
+          "cycle": 21,
+          "cycle_start_h": 228.1,
+          "cycle_end_h": 238.7,
+          "trough_h": 233.0,
+          "window_start_h": 231.93333333333334,
+          "window_end_h": 234.06666666666666,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766911598590765,
+            "maximum": 0.979958635108086,
+            "median": 0.9779540875665231
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489214529906654,
+            "maximum": 0.9490807863233385,
+            "median": 0.9490332496130303
+          },
+          "value": 3
+        },
+        {
+          "cycle": 22,
+          "cycle_start_h": 238.7,
+          "cycle_end_h": 249.29999999999998,
+          "trough_h": 243.56666666666666,
+          "window_start_h": 242.5,
+          "window_end_h": 244.63333333333333,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965175083474154,
+            "maximum": 0.07021736772031699,
+            "median": 0.070124110000414
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07629907829430253,
+            "maximum": 0.07720681722802591,
+            "median": 0.07709941307856698
+          },
+          "value": 0
+        },
+        {
+          "cycle": 23,
+          "cycle_start_h": 249.29999999999998,
+          "cycle_end_h": 259.8666666666667,
+          "trough_h": 254.16666666666666,
+          "window_start_h": 253.1,
+          "window_end_h": 255.23333333333332,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.976706070772926,
+            "maximum": 0.9799896991509999,
+            "median": 0.9779775231495011
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728706783996613,
+            "maximum": 0.07730397582679532,
+            "median": 0.07728966885880613
+          },
+          "value": 1
+        },
+        {
+          "cycle": 24,
+          "cycle_start_h": 259.8666666666667,
+          "cycle_end_h": 270.46666666666664,
+          "trough_h": 264.76666666666665,
+          "window_start_h": 263.7,
+          "window_end_h": 265.8333333333333,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967088991956898,
+            "maximum": 0.0702184453385066,
+            "median": 0.07012668533522097
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508517122752375,
+            "maximum": 0.9675014471846727,
+            "median": 0.9540896030092728
+          },
+          "value": 2
+        },
+        {
+          "cycle": 25,
+          "cycle_start_h": 270.46666666666664,
+          "cycle_end_h": 281.06666666666666,
+          "trough_h": 275.3666666666667,
+          "window_start_h": 274.3,
+          "window_end_h": 276.43333333333334,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766886799324588,
+            "maximum": 0.9799534500521809,
+            "median": 0.977950201317376
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489207060750465,
+            "maximum": 0.9490806432007591,
+            "median": 0.9490331357676881
+          },
+          "value": 3
+        },
+        {
+          "cycle": 26,
+          "cycle_start_h": 281.06666666666666,
+          "cycle_end_h": 291.6666666666667,
+          "trough_h": 285.93333333333334,
+          "window_start_h": 284.8666666666667,
+          "window_end_h": 287.0,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965452948349064,
+            "maximum": 0.07021752201007424,
+            "median": 0.07012448187953572
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0763036234378408,
+            "maximum": 0.07720691699618258,
+            "median": 0.0770999873321541
+          },
+          "value": 0
+        }
+      ],
+      "passed": true
+    },
+    "2": {
+      "initial_value": 2,
+      "initial_bits": "10",
+      "source_time_h": 187.1,
+      "decoded_initial": 2,
+      "expected_sequence": "301230123012301230123012301",
+      "observed_sequence": "301230123012301230123012301",
+      "sequence_relation_correct": true,
+      "cold_start": {
+        "drop_reads": 0,
+        "reads": 27,
+        "valid_windows": true,
+        "increments_mod4": true,
+        "passed": true,
+        "sequence": "301230123012301230123012301",
+        "minimum_commitment": 1.0
+      },
+      "steady_state": {
+        "drop_reads": 4,
+        "reads": 23,
+        "valid_windows": true,
+        "increments_mod4": true,
+        "passed": true,
+        "sequence": "30123012301230123012301",
+        "minimum_commitment": 1.0
+      },
+      "certified": true,
+      "causal_verdict": {
+        "exactly_one_gate_and_flip_per_late_reverse": true,
+        "causal_order_after_reverse_start": true,
+        "bit1_directions_alternate": true,
+        "unassigned_gate_events": [],
+        "unassigned_bit1_crossings": []
+      },
+      "margins": {
+        "bit0": {
+          "min_setup_h": 4.566157160843289,
+          "min_hold_h": 3.126262762968537
+        },
+        "bit1": {
+          "min_setup_h": 5.0156906269196995,
+          "min_hold_h": 2.8044978278595636
+        }
+      },
+      "signal_ranges": {
+        "S0": [
+          0.012085860857734873,
+          0.9815390319565258
+        ],
+        "S1": [
+          0.03264016729192678,
+          0.9998745668274348
+        ],
+        "Jrev0": [
+          1.3322078843967284e-09,
+          0.9147792836748916
+        ],
+        "g0": [
+          3.645653054820529e-05,
+          0.4053036075357842
+        ],
+        "Int1_source_peak": 7.295464935644116
+      },
+      "reverse_events": 14,
+      "gate_events": 14,
+      "read_windows": [
+        {
+          "cycle": 0,
+          "cycle_start_h": 5.7,
+          "cycle_end_h": 16.3,
+          "trough_h": 10.566666666666666,
+          "window_start_h": 9.5,
+          "window_end_h": 11.633333333333333,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767093210742885,
+            "maximum": 0.9799978583341641,
+            "median": 0.9779838889194218
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489298767697185,
+            "maximum": 0.9490843204510949,
+            "median": 0.9490365067637744
+          },
+          "value": 3
+        },
+        {
+          "cycle": 1,
+          "cycle_start_h": 16.3,
+          "cycle_end_h": 26.866666666666667,
+          "trough_h": 21.166666666666668,
+          "window_start_h": 20.1,
+          "window_end_h": 22.233333333333334,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966467634833329,
+            "maximum": 0.07021859724955885,
+            "median": 0.07012630935772236
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07627796280939375,
+            "maximum": 0.07716548490613565,
+            "median": 0.07706022972076632
+          },
+          "value": 0
+        },
+        {
+          "cycle": 2,
+          "cycle_start_h": 26.866666666666667,
+          "cycle_end_h": 37.46666666666667,
+          "trough_h": 31.766666666666666,
+          "window_start_h": 30.7,
+          "window_end_h": 32.833333333333336,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766948649803883,
+            "maximum": 0.9799663961440012,
+            "median": 0.9779599105811206
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07724532194446518,
+            "maximum": 0.07726273427260723,
+            "median": 0.07724792974865695
+          },
+          "value": 1
+        },
+        {
+          "cycle": 3,
+          "cycle_start_h": 37.46666666666667,
+          "cycle_end_h": 48.06666666666666,
+          "trough_h": 42.333333333333336,
+          "window_start_h": 41.266666666666666,
+          "window_end_h": 43.4,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06964755881472866,
+            "maximum": 0.07021713887371979,
+            "median": 0.07012355257967036
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508880509056226,
+            "maximum": 0.9679466734301383,
+            "median": 0.954232730502356
+          },
+          "value": 2
+        },
+        {
+          "cycle": 4,
+          "cycle_start_h": 48.06666666666666,
+          "cycle_end_h": 58.666666666666664,
+          "trough_h": 52.93333333333333,
+          "window_start_h": 51.86666666666667,
+          "window_end_h": 54.0,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767098037275704,
+            "maximum": 0.9799974454520358,
+            "median": 0.9779834086115886
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489356559267423,
+            "maximum": 0.9490906509618715,
+            "median": 0.949042881786187
+          },
+          "value": 3
+        },
+        {
+          "cycle": 5,
+          "cycle_start_h": 58.666666666666664,
+          "cycle_end_h": 69.23333333333333,
+          "trough_h": 63.53333333333333,
+          "window_start_h": 62.46666666666667,
+          "window_end_h": 64.6,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966685251883499,
+            "maximum": 0.07021821508067383,
+            "median": 0.07012613933258761
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07632072627854805,
+            "maximum": 0.07720427122193005,
+            "median": 0.07709944770457987
+          },
+          "value": 0
+        },
+        {
+          "cycle": 6,
+          "cycle_start_h": 69.23333333333333,
+          "cycle_end_h": 79.83333333333333,
+          "trough_h": 74.13333333333333,
+          "window_start_h": 73.06666666666666,
+          "window_end_h": 75.2,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766923987416247,
+            "maximum": 0.9799612234199714,
+            "median": 0.977956030231584
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728401933964991,
+            "maximum": 0.07730154558701542,
+            "median": 0.07728662860359194
+          },
+          "value": 1
+        },
+        {
+          "cycle": 7,
+          "cycle_start_h": 79.83333333333333,
+          "cycle_end_h": 90.43333333333334,
+          "trough_h": 84.7,
+          "window_start_h": 83.63333333333333,
+          "window_end_h": 85.76666666666667,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965035758707662,
+            "maximum": 0.07021729062646266,
+            "median": 0.07012392378601147
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508765826442837,
+            "maximum": 0.9678879971859966,
+            "median": 0.954208613153029
+          },
+          "value": 2
+        },
+        {
+          "cycle": 8,
+          "cycle_start_h": 90.43333333333334,
+          "cycle_end_h": 101.0,
+          "trough_h": 95.3,
+          "window_start_h": 94.23333333333333,
+          "window_end_h": 96.36666666666666,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767073137162672,
+            "maximum": 0.9799922797478904,
+            "median": 0.9779794819780235
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489268002340097,
+            "maximum": 0.9490823501186691,
+            "median": 0.949034614583611
+          },
+          "value": 3
+        },
+        {
+          "cycle": 9,
+          "cycle_start_h": 101.0,
+          "cycle_end_h": 111.6,
+          "trough_h": 105.89999999999999,
+          "window_start_h": 104.83333333333333,
+          "window_end_h": 106.96666666666667,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966954892515075,
+            "maximum": 0.07021836867674477,
+            "median": 0.07012650381344245
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07632800450428644,
+            "maximum": 0.07720722658617359,
+            "median": 0.07710286433969549
+          },
+          "value": 0
+        },
+        {
+          "cycle": 10,
+          "cycle_start_h": 111.6,
+          "cycle_end_h": 122.2,
+          "trough_h": 116.5,
+          "window_start_h": 115.43333333333334,
+          "window_end_h": 117.56666666666666,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.976689918152705,
+            "maximum": 0.9799560395869702,
+            "median": 0.9779521412981363
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.077286884155691,
+            "maximum": 0.07730452616696086,
+            "median": 0.07728949502505275
+          },
+          "value": 1
+        },
+        {
+          "cycle": 11,
+          "cycle_start_h": 122.2,
+          "cycle_end_h": 132.8,
+          "trough_h": 127.06666666666666,
+          "window_start_h": 126.0,
+          "window_end_h": 128.13333333333333,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0696531438232096,
+            "maximum": 0.07021744497904728,
+            "median": 0.07012429634695508
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508727112607755,
+            "maximum": 0.9678357694942508,
+            "median": 0.954192044565474
+          },
+          "value": 2
+        },
+        {
+          "cycle": 12,
+          "cycle_start_h": 132.8,
+          "cycle_end_h": 143.36666666666667,
+          "trough_h": 137.66666666666666,
+          "window_start_h": 136.6,
+          "window_end_h": 138.73333333333332,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767048250077744,
+            "maximum": 0.9799871113107124,
+            "median": 0.977975560684105
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489254903637704,
+            "maximum": 0.9490816062622388,
+            "median": 0.9490339023599903
+          },
+          "value": 3
+        },
+        {
+          "cycle": 13,
+          "cycle_start_h": 143.36666666666667,
+          "cycle_end_h": 153.96666666666667,
+          "trough_h": 148.26666666666665,
+          "window_start_h": 147.2,
+          "window_end_h": 149.33333333333334,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967223066591988,
+            "maximum": 0.07021852216533497,
+            "median": 0.07012686699062638
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07633261739871744,
+            "maximum": 0.07720753423086993,
+            "median": 0.07710363088528499
+          },
+          "value": 0
+        },
+        {
+          "cycle": 14,
+          "cycle_start_h": 153.96666666666667,
+          "cycle_end_h": 164.56666666666666,
+          "trough_h": 158.86666666666667,
+          "window_start_h": 157.8,
+          "window_end_h": 159.93333333333334,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766874388884864,
+            "maximum": 0.9799508533142711,
+            "median": 0.977948257739187
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728710177417976,
+            "maximum": 0.07730486069284145,
+            "median": 0.077289714293466
+          },
+          "value": 1
+        },
+        {
+          "cycle": 15,
+          "cycle_start_h": 164.56666666666666,
+          "cycle_end_h": 175.16666666666666,
+          "trough_h": 169.43333333333334,
+          "window_start_h": 168.36666666666667,
+          "window_end_h": 170.5,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965591488609323,
+            "maximum": 0.0702175992059419,
+            "median": 0.0701246675444101
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508694116044042,
+            "maximum": 0.967784091430031,
+            "median": 0.9541760880624806
+          },
+          "value": 2
+        },
+        {
+          "cycle": 16,
+          "cycle_start_h": 175.16666666666666,
+          "cycle_end_h": 185.73333333333332,
+          "trough_h": 180.03333333333333,
+          "window_start_h": 178.96666666666667,
+          "window_end_h": 181.1,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767023376721624,
+            "maximum": 0.9799819402181906,
+            "median": 0.9779716447944083
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489247324897853,
+            "maximum": 0.9490814204243553,
+            "median": 0.9490337476930814
+          },
+          "value": 3
+        },
+        {
+          "cycle": 17,
+          "cycle_start_h": 185.73333333333332,
+          "cycle_end_h": 196.33333333333334,
+          "trough_h": 190.63333333333333,
+          "window_start_h": 189.56666666666666,
+          "window_end_h": 191.7,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967489780845873,
+            "maximum": 0.0702186755335686,
+            "median": 0.07012722885805264
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07633701362936629,
+            "maximum": 0.07720764608857453,
+            "median": 0.07710419929327783
+          },
+          "value": 0
+        },
+        {
+          "cycle": 18,
+          "cycle_start_h": 196.33333333333334,
+          "cycle_end_h": 206.93333333333334,
+          "trough_h": 201.2,
+          "window_start_h": 200.13333333333333,
+          "window_end_h": 202.26666666666665,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.97671728561402,
+            "maximum": 0.9800129327849859,
+            "median": 0.9779952263065421
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728703765457409,
+            "maximum": 0.07730346310508994,
+            "median": 0.07728963273221356
+          },
+          "value": 1
+        },
+        {
+          "cycle": 19,
+          "cycle_start_h": 206.93333333333334,
+          "cycle_end_h": 217.53333333333333,
+          "trough_h": 211.79999999999998,
+          "window_start_h": 210.73333333333332,
+          "window_end_h": 212.86666666666667,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965867085902568,
+            "maximum": 0.07021775330786496,
+            "median": 0.07012503738613429
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508661650351319,
+            "maximum": 0.9677325268119197,
+            "median": 0.9541602312112523
+          },
+          "value": 2
+        },
+        {
+          "cycle": 20,
+          "cycle_start_h": 217.53333333333333,
+          "cycle_end_h": 228.1,
+          "trough_h": 222.4,
+          "window_start_h": 221.33333333333334,
+          "window_end_h": 223.46666666666667,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766998517014154,
+            "maximum": 0.9799767665062319,
+            "median": 0.9779677343042318
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489240103222453,
+            "maximum": 0.9490812759794192,
+            "median": 0.9490336340702108
+          },
+          "value": 3
+        },
+        {
+          "cycle": 21,
+          "cycle_start_h": 228.1,
+          "cycle_end_h": 238.7,
+          "trough_h": 233.0,
+          "window_start_h": 231.93333333333334,
+          "window_end_h": 234.06666666666666,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967755043333067,
+            "maximum": 0.0702188287822404,
+            "median": 0.07012758942326228
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07634137407857845,
+            "maximum": 0.07720774319101915,
+            "median": 0.07710475060836534
+          },
+          "value": 0
+        },
+        {
+          "cycle": 22,
+          "cycle_start_h": 238.7,
+          "cycle_end_h": 249.29999999999998,
+          "trough_h": 243.56666666666666,
+          "window_start_h": 242.5,
+          "window_end_h": 244.63333333333333,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767147913316856,
+            "maximum": 0.9800077753314409,
+            "median": 0.9779912833434853
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728704549523788,
+            "maximum": 0.07730357641016646,
+            "median": 0.07728964183202776
+          },
+          "value": 1
+        },
+        {
+          "cycle": 23,
+          "cycle_start_h": 249.29999999999998,
+          "cycle_end_h": 259.8666666666667,
+          "trough_h": 254.16666666666666,
+          "window_start_h": 253.1,
+          "window_end_h": 255.23333333333332,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966141182495598,
+            "maximum": 0.07021790728559174,
+            "median": 0.07012540587989963
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508629332144156,
+            "maximum": 0.9676810436964027,
+            "median": 0.954144436005019
+          },
+          "value": 2
+        },
+        {
+          "cycle": 24,
+          "cycle_start_h": 259.8666666666667,
+          "cycle_end_h": 270.46666666666664,
+          "trough_h": 264.76666666666665,
+          "window_start_h": 263.7,
+          "window_end_h": 265.8333333333333,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766973670875467,
+            "maximum": 0.9799715902107848,
+            "median": 0.9779638292088061
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489232856963874,
+            "maximum": 0.9490811347833693,
+            "median": 0.949033523354508
+          },
+          "value": 3
+        },
+        {
+          "cycle": 25,
+          "cycle_start_h": 270.46666666666664,
+          "cycle_end_h": 281.06666666666666,
+          "trough_h": 275.3666666666667,
+          "window_start_h": 274.3,
+          "window_end_h": 276.43333333333334,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06968018862067292,
+            "maximum": 0.07021898191211556,
+            "median": 0.07012794869372575
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07634571219206786,
+            "maximum": 0.07720783890584862,
+            "median": 0.07710529821053988
+          },
+          "value": 0
+        },
+        {
+          "cycle": 26,
+          "cycle_start_h": 281.06666666666666,
+          "cycle_end_h": 291.6666666666667,
+          "trough_h": 285.93333333333334,
+          "window_start_h": 284.8666666666667,
+          "window_end_h": 287.0,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767122984544918,
+            "maximum": 0.98000261507909,
+            "median": 0.9779873458026337
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0772870522613024,
+            "maximum": 0.07730368963308816,
+            "median": 0.07728964989190583
+          },
+          "value": 1
+        }
+      ],
+      "passed": true
+    },
+    "3": {
+      "initial_value": 3,
+      "initial_bits": "11",
+      "source_time_h": 197.7,
+      "decoded_initial": 3,
+      "expected_sequence": "012301230123012301230123012",
+      "observed_sequence": "012301230123012301230123012",
+      "sequence_relation_correct": true,
+      "cold_start": {
+        "drop_reads": 0,
+        "reads": 27,
+        "valid_windows": true,
+        "increments_mod4": true,
+        "passed": true,
+        "sequence": "012301230123012301230123012",
+        "minimum_commitment": 1.0
+      },
+      "steady_state": {
+        "drop_reads": 4,
+        "reads": 23,
+        "valid_windows": true,
+        "increments_mod4": true,
+        "passed": true,
+        "sequence": "01230123012301230123012",
+        "minimum_commitment": 1.0
+      },
+      "certified": true,
+      "causal_verdict": {
+        "exactly_one_gate_and_flip_per_late_reverse": true,
+        "causal_order_after_reverse_start": true,
+        "bit1_directions_alternate": true,
+        "unassigned_gate_events": [],
+        "unassigned_bit1_crossings": []
+      },
+      "margins": {
+        "bit0": {
+          "min_setup_h": 4.564873453914032,
+          "min_hold_h": 3.127542444690505
+        },
+        "bit1": {
+          "min_setup_h": 5.016989652742524,
+          "min_hold_h": 2.8134600487880164
+        }
+      },
+      "signal_ranges": {
+        "S0": [
+          0.01208588204487203,
+          0.9815390307511539
+        ],
+        "S1": [
+          0.0325775355043593,
+          0.9998751909420596
+        ],
+        "Jrev0": [
+          1.3321944834316597e-09,
+          0.9147746090873686
+        ],
+        "g0": [
+          3.645655166154292e-05,
+          0.40530369113557907
+        ],
+        "Int1_source_peak": 7.295466440440423
+      },
+      "reverse_events": 14,
+      "gate_events": 14,
+      "read_windows": [
+        {
+          "cycle": 0,
+          "cycle_start_h": 5.7,
+          "cycle_end_h": 16.3,
+          "trough_h": 10.566666666666666,
+          "window_start_h": 9.5,
+          "window_end_h": 11.633333333333333,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965430447053378,
+            "maximum": 0.07021729063166832,
+            "median": 0.07012425102370862
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07533554462120871,
+            "maximum": 0.07623499062256672,
+            "median": 0.07612830400951291
+          },
+          "value": 0
+        },
+        {
+          "cycle": 1,
+          "cycle_start_h": 16.3,
+          "cycle_end_h": 26.866666666666667,
+          "trough_h": 21.166666666666668,
+          "window_start_h": 20.1,
+          "window_end_h": 22.233333333333334,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767035807418378,
+            "maximum": 0.9799845209870967,
+            "median": 0.9779735999682434
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07631518916636948,
+            "maximum": 0.07633222642935474,
+            "median": 0.07631779453008228
+          },
+          "value": 1
+        },
+        {
+          "cycle": 2,
+          "cycle_start_h": 26.866666666666667,
+          "cycle_end_h": 37.46666666666667,
+          "trough_h": 31.766666666666666,
+          "window_start_h": 30.7,
+          "window_end_h": 32.833333333333336,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967356756799163,
+            "maximum": 0.0702185987760981,
+            "median": 0.07012704813189274
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9510536308588698,
+            "maximum": 0.9676242020416504,
+            "median": 0.9542767837313242
+          },
+          "value": 2
+        },
+        {
+          "cycle": 3,
+          "cycle_start_h": 37.46666666666667,
+          "cycle_end_h": 48.06666666666666,
+          "trough_h": 42.333333333333336,
+          "window_start_h": 41.266666666666666,
+          "window_end_h": 43.4,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767185317022627,
+            "maximum": 0.9800155071748587,
+            "median": 0.9779971973157128
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9491334447484264,
+            "maximum": 0.9492866622010575,
+            "median": 0.9492387357083188
+          },
+          "value": 3
+        },
+        {
+          "cycle": 4,
+          "cycle_start_h": 48.06666666666666,
+          "cycle_end_h": 58.666666666666664,
+          "trough_h": 52.93333333333333,
+          "window_start_h": 51.86666666666667,
+          "window_end_h": 54.0,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0696572965057285,
+            "maximum": 0.07021767636960428,
+            "median": 0.07012485286860685
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07623680447785498,
+            "maximum": 0.07713556812924918,
+            "median": 0.07702911098018501
+          },
+          "value": 0
+        },
+        {
+          "cycle": 5,
+          "cycle_start_h": 58.666666666666664,
+          "cycle_end_h": 69.23333333333333,
+          "trough_h": 63.53333333333333,
+          "window_start_h": 62.46666666666667,
+          "window_end_h": 64.6,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767010929354341,
+            "maximum": 0.9799793503965195,
+            "median": 0.9779696863873213
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07721564025988151,
+            "maximum": 0.07723277085024899,
+            "median": 0.07721824436441514
+          },
+          "value": 1
+        },
+        {
+          "cycle": 6,
+          "cycle_start_h": 69.23333333333333,
+          "cycle_end_h": 79.83333333333333,
+          "trough_h": 74.13333333333333,
+          "window_start_h": 73.06666666666666,
+          "window_end_h": 75.2,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0696762276178639,
+            "maximum": 0.07021875227028589,
+            "median": 0.07012740953231986
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508604696182987,
+            "maximum": 0.9674120451242392,
+            "median": 0.9540735107770991
+          },
+          "value": 2
+        },
+        {
+          "cycle": 7,
+          "cycle_start_h": 79.83333333333333,
+          "cycle_end_h": 90.43333333333334,
+          "trough_h": 84.7,
+          "window_start_h": 83.63333333333333,
+          "window_end_h": 85.76666666666667,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767160367101447,
+            "maximum": 0.9800103511297535,
+            "median": 0.9779932516389348
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489436276847938,
+            "maximum": 0.9490972486476184,
+            "median": 0.9490493970054821
+          },
+          "value": 3
+        },
+        {
+          "cycle": 8,
+          "cycle_start_h": 90.43333333333334,
+          "cycle_end_h": 101.0,
+          "trough_h": 95.3,
+          "window_start_h": 94.23333333333333,
+          "window_end_h": 96.36666666666666,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0696600449561542,
+            "maximum": 0.07021783041013818,
+            "median": 0.0701252220354101
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07630738518911055,
+            "maximum": 0.07720184028107871,
+            "median": 0.07709585288857092
+          },
+          "value": 0
+        },
+        {
+          "cycle": 9,
+          "cycle_start_h": 101.0,
+          "cycle_end_h": 111.6,
+          "trough_h": 105.89999999999999,
+          "window_start_h": 104.83333333333333,
+          "window_end_h": 106.96666666666667,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766986076449599,
+            "maximum": 0.9799741753866624,
+            "median": 0.9779657785985287
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728181584714076,
+            "maximum": 0.0772990572123758,
+            "median": 0.07728442124006817
+          },
+          "value": 1
+        },
+        {
+          "cycle": 10,
+          "cycle_start_h": 111.6,
+          "cycle_end_h": 122.2,
+          "trough_h": 116.5,
+          "window_start_h": 115.43333333333334,
+          "window_end_h": 117.56666666666666,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967887300480176,
+            "maximum": 0.07021890545939466,
+            "median": 0.07012776944840811
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508433190089239,
+            "maximum": 0.9673492007522276,
+            "median": 0.9540442585860731
+          },
+          "value": 2
+        },
+        {
+          "cycle": 11,
+          "cycle_start_h": 122.2,
+          "cycle_end_h": 132.8,
+          "trough_h": 127.06666666666666,
+          "window_start_h": 126.0,
+          "window_end_h": 128.13333333333333,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767135431322858,
+            "maximum": 0.9800051922705492,
+            "median": 0.9779893113909696
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489290079701396,
+            "maximum": 0.9490831658996058,
+            "median": 0.949035350018926
+          },
+          "value": 3
+        },
+        {
+          "cycle": 12,
+          "cycle_start_h": 132.8,
+          "cycle_end_h": 143.36666666666667,
+          "trough_h": 137.66666666666666,
+          "window_start_h": 136.6,
+          "window_end_h": 138.73333333333332,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966277844007514,
+            "maximum": 0.07021798432598439,
+            "median": 0.07012558985725008
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07631674050979627,
+            "maximum": 0.07720682211330805,
+            "median": 0.07710130195688208
+          },
+          "value": 0
+        },
+        {
+          "cycle": 13,
+          "cycle_start_h": 143.36666666666667,
+          "cycle_end_h": 153.96666666666667,
+          "trough_h": 148.26666666666665,
+          "window_start_h": 147.2,
+          "window_end_h": 149.33333333333334,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766961237073957,
+            "maximum": 0.979968997811332,
+            "median": 0.9779618762020892
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728670617252725,
+            "maximum": 0.07730406058122212,
+            "median": 0.07728931307431494
+          },
+          "value": 1
+        },
+        {
+          "cycle": 14,
+          "cycle_start_h": 153.96666666666667,
+          "cycle_end_h": 164.56666666666666,
+          "trough_h": 158.86666666666667,
+          "window_start_h": 157.8,
+          "window_end_h": 159.93333333333334,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0696815039941559,
+            "maximum": 0.07021905853006387,
+            "median": 0.07012812807344895
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508391405830344,
+            "maximum": 0.9672974417735994,
+            "median": 0.9540278763347326
+          },
+          "value": 2
+        },
+        {
+          "cycle": 15,
+          "cycle_start_h": 164.56666666666666,
+          "cycle_end_h": 175.16666666666666,
+          "trough_h": 169.43333333333334,
+          "window_start_h": 168.36666666666667,
+          "window_end_h": 170.5,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767110509555149,
+            "maximum": 0.980000030630465,
+            "median": 0.9779853765630312
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489272848952824,
+            "maximum": 0.9490819947171099,
+            "median": 0.949034211405275
+          },
+          "value": 3
+        },
+        {
+          "cycle": 16,
+          "cycle_start_h": 175.16666666666666,
+          "cycle_end_h": 185.73333333333332,
+          "trough_h": 180.03333333333333,
+          "window_start_h": 178.96666666666667,
+          "window_end_h": 181.1,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966549704073577,
+            "maximum": 0.0702181381188225,
+            "median": 0.07012595634273934
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07632155685720506,
+            "maximum": 0.07720728013123196,
+            "median": 0.077102224806864
+          },
+          "value": 0
+        },
+        {
+          "cycle": 17,
+          "cycle_start_h": 185.73333333333332,
+          "cycle_end_h": 196.33333333333334,
+          "trough_h": 190.63333333333333,
+          "window_start_h": 189.56666666666666,
+          "window_end_h": 191.7,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766936411147484,
+            "maximum": 0.9799638177064749,
+            "median": 0.977957979193078
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728707335467629,
+            "maximum": 0.07730454196159996,
+            "median": 0.07728968181499259
+          },
+          "value": 1
+        },
+        {
+          "cycle": 18,
+          "cycle_start_h": 196.33333333333334,
+          "cycle_end_h": 206.93333333333334,
+          "trough_h": 201.2,
+          "window_start_h": 200.13333333333333,
+          "window_end_h": 202.26666666666665,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06964895697077876,
+            "maximum": 0.07021721330440087,
+            "median": 0.07012373675379456
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508775758927893,
+            "maximum": 0.9679133743319184,
+            "median": 0.9542159924406103
+          },
+          "value": 2
+        },
+        {
+          "cycle": 19,
+          "cycle_start_h": 206.93333333333334,
+          "cycle_end_h": 217.53333333333333,
+          "trough_h": 211.79999999999998,
+          "window_start_h": 210.73333333333332,
+          "window_end_h": 212.86666666666667,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767085601717509,
+            "maximum": 0.9799948662453325,
+            "median": 0.9779814471507086
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.948926508940154,
+            "maximum": 0.9490817768444366,
+            "median": 0.9490340255549814
+          },
+          "value": 3
+        },
+        {
+          "cycle": 20,
+          "cycle_start_h": 217.53333333333333,
+          "cycle_end_h": 228.1,
+          "trough_h": 222.4,
+          "window_start_h": 221.33333333333334,
+          "window_end_h": 223.46666666666667,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06966820084004448,
+            "maximum": 0.07021829178939525,
+            "median": 0.0701263214995118
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07632601798066012,
+            "maximum": 0.0772074038470905,
+            "median": 0.07710281097276048
+          },
+          "value": 0
+        },
+        {
+          "cycle": 21,
+          "cycle_start_h": 228.1,
+          "cycle_end_h": 238.7,
+          "trough_h": 233.0,
+          "window_start_h": 231.93333333333334,
+          "window_end_h": 234.06666666666666,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766911598590766,
+            "maximum": 0.9799586351080863,
+            "median": 0.9779540875665232
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728710658079536,
+            "maximum": 0.07730469046726042,
+            "median": 0.07728971663687227
+          },
+          "value": 1
+        },
+        {
+          "cycle": 22,
+          "cycle_start_h": 238.7,
+          "cycle_end_h": 249.29999999999998,
+          "trough_h": 243.56666666666666,
+          "window_start_h": 242.5,
+          "window_end_h": 244.63333333333333,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06965175083474143,
+            "maximum": 0.07021736772031686,
+            "median": 0.07012411000041388
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508742975223418,
+            "maximum": 0.9678616117647338,
+            "median": 0.954199985872227
+          },
+          "value": 2
+        },
+        {
+          "cycle": 23,
+          "cycle_start_h": 249.29999999999998,
+          "cycle_end_h": 259.8666666666667,
+          "trough_h": 254.16666666666666,
+          "window_start_h": 253.1,
+          "window_end_h": 255.23333333333332,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9767060707729259,
+            "maximum": 0.979989699151,
+            "median": 0.9779775231495011
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9489257979770225,
+            "maximum": 0.9490816295505848,
+            "median": 0.949033909931175
+          },
+          "value": 3
+        },
+        {
+          "cycle": 24,
+          "cycle_start_h": 259.8666666666667,
+          "cycle_end_h": 270.46666666666664,
+          "trough_h": 264.76666666666665,
+          "window_start_h": 263.7,
+          "window_end_h": 265.8333333333333,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.06967088991956921,
+            "maximum": 0.07021844533850684,
+            "median": 0.07012668533522122
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07633043286479904,
+            "maximum": 0.07720750257717686,
+            "median": 0.07710336978418106
+          },
+          "value": 0
+        },
+        {
+          "cycle": 25,
+          "cycle_start_h": 270.46666666666664,
+          "cycle_end_h": 281.06666666666666,
+          "trough_h": 275.3666666666667,
+          "window_start_h": 274.3,
+          "window_end_h": 276.43333333333334,
+          "bit0": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9766886799324584,
+            "maximum": 0.9799534500521807,
+            "median": 0.9779502013173758
+          },
+          "bit1": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.07728711514178022,
+            "maximum": 0.07730481539301617,
+            "median": 0.0772897268301089
+          },
+          "value": 1
+        },
+        {
+          "cycle": 26,
+          "cycle_start_h": 281.06666666666666,
+          "cycle_end_h": 291.6666666666667,
+          "trough_h": 285.93333333333334,
+          "window_start_h": 284.8666666666667,
+          "window_end_h": 287.0,
+          "bit0": {
+            "label": "0",
+            "high_occupancy": 0.0,
+            "low_occupancy": 1.0,
+            "commitment": 1.0,
+            "minimum": 0.0696545294834909,
+            "maximum": 0.07021752201007453,
+            "median": 0.07012448187953602
+          },
+          "bit1": {
+            "label": "1",
+            "high_occupancy": 1.0,
+            "low_occupancy": 0.0,
+            "commitment": 1.0,
+            "minimum": 0.9508710361879683,
+            "maximum": 0.967809931723437,
+            "median": 0.9541840435419312
+          },
+          "value": 2
+        }
+      ],
+      "passed": true
+    }
+  },
+  "all_four_pass": true
+}

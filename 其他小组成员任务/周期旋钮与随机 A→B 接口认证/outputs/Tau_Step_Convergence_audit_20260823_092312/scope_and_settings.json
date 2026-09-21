@@ -1,0 +1,22 @@
+{
+  "version": "Tau_Leap_Time_Step_Convergence_Audit_20260823",
+  "mode": "audit",
+  "settings": {
+    "trajectories_per_setting": 8,
+    "duration_generations": 130.0,
+    "transient_generations": 25.0,
+    "sample_step_min": 1.0,
+    "tau_steps_min": [
+      0.2,
+      0.1,
+      0.05
+    ],
+    "random_seed": 20260823,
+    "maximum_small_step_relative_change": 0.02,
+    "maximum_small_step_mrna_balance_error": 0.015,
+    "minimum_resolved_fraction": 0.8
+  },
+  "library_csv": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Robust_Period_Knob_Redesign_confirmation_20260821_122304\\ranked_five_setting_libraries.csv",
+  "scope_boundary": "Numerical convergence audit only; no biological parameter fitting and no B certification.",
+  "decision_rule": "At the two smallest steps, flux and period change <=2%, smallest-step mRNA balance error <=1.5%, and resolved fraction >=0.8. CV change is reported diagnostically."
+}

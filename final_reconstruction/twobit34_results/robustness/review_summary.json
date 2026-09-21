@@ -1,0 +1,45 @@
+{
+  "rows": 75,
+  "certified": 53,
+  "steady_failed": 22,
+  "failed_but_all_causal": 2,
+  "failed_and_causal_failed": 20,
+  "strict_interior_definition": "point is not on any of the three grid boundaries and all six axis neighbours are certified",
+  "strict_interior_points": [
+    {
+      "uM_per_au": 5.75,
+      "carry_maturation_half_life_min": 32.5,
+      "carry_mrna_half_life_min": 2.0,
+      "timing_margin_h": 2.9137227753952324,
+      "bit1_setup_h": 4.637884499952506,
+      "bit1_hold_h": 2.9137227753952324,
+      "cold_passed": true,
+      "g0_peak": 0.4428342368108018
+    },
+    {
+      "uM_per_au": 5.75,
+      "carry_maturation_half_life_min": 30.0,
+      "carry_mrna_half_life_min": 2.0,
+      "timing_margin_h": 2.7047972544576133,
+      "bit1_setup_h": 4.727215346065208,
+      "bit1_hold_h": 2.7047972544576133,
+      "cold_passed": true,
+      "g0_peak": 0.4612647967284675
+    }
+  ],
+  "selected_nominal": {
+    "uM_per_au": 5.75,
+    "carry_maturation_half_life_min": 32.5,
+    "carry_mrna_half_life_min": 2.0,
+    "timing_margin_h": 2.9137227753952324,
+    "bit1_setup_h": 4.637884499952506,
+    "bit1_hold_h": 2.9137227753952324,
+    "cold_passed": true,
+    "g0_peak": 0.4428342368108018
+  },
+  "notes": [
+    "The earlier count of 22 uses all existing neighbours and includes grid-boundary points.",
+    "Causal fields were computed for readout failures; only the failure_reason label short-circuits.",
+    "The original timing heatmap displays margins for failed points; the reviewed heatmap masks them."
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "completeness": {
+    "rows": 35,
+    "unique": 35,
+    "expected": 35,
+    "duplicates": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "hours": 600.0,
+  "solver_failures": 0,
+  "nonfinite": 0,
+  "certified": 0,
+  "steady_passed": 0,
+  "gate_contrast_passed": 22,
+  "one_to_one": 0,
+  "by_mrna": {
+    "0.5": {
+      "points": 7,
+      "certified": 0
+    },
+    "1.0": {
+      "points": 7,
+      "certified": 0
+    },
+    "2.0": {
+      "points": 7,
+      "certified": 0
+    },
+    "4.0": {
+      "points": 7,
+      "certified": 0
+    },
+    "8.0": {
+      "points": 7,
+      "certified": 0
+    }
+  },
+  "by_maturation": {
+    "5.0": {
+      "points": 5,
+      "certified": 0
+    },
+    "10.0": {
+      "points": 5,
+      "certified": 0
+    },
+    "20.0": {
+      "points": 5,
+      "certified": 0
+    },
+    "30.0": {
+      "points": 5,
+      "certified": 0
+    },
+    "40.0": {
+      "points": 5,
+      "certified": 0
+    },
+    "50.0": {
+      "points": 5,
+      "certified": 0
+    },
+    "60.0": {
+      "points": 5,
+      "certified": 0
+    }
+  },
+  "best_points": [
+    {
+      "carry1_mrna_min": 4.0,
+      "carry1_maturation_min": 60.0,
+      "crossing_error": 2,
+      "bit2_crossings": 12,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.0163265519079841,
+      "s2_cycle_min_median": 0.6292416484364877,
+      "abs_net_ds2_median": 0.016501041452589,
+      "rev_over_fwd_median": 1.13444699599084,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 26,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx4567xxxx4567xxxx4567xxxx456x4567xxxx4567x"
+    },
+    {
+      "carry1_mrna_min": 4.0,
+      "carry1_maturation_min": 50.0,
+      "crossing_error": 4,
+      "bit2_crossings": 10,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.2491065063252848,
+      "s2_cycle_min_median": 0.6643658074899037,
+      "abs_net_ds2_median": 0.0177185854112758,
+      "rev_over_fwd_median": 1.7942322058193725,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 26,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx456x4567xxxx4567xxxx4567xxxx4567xxxx4567x"
+    },
+    {
+      "carry1_mrna_min": 8.0,
+      "carry1_maturation_min": 50.0,
+      "crossing_error": 5,
+      "bit2_crossings": 9,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.0162990719564346,
+      "s2_cycle_min_median": 0.6613327031574631,
+      "abs_net_ds2_median": 0.0134403607437459,
+      "rev_over_fwd_median": 1.1489597694396176,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 24,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx4567xxxx456x4567xxxx456x4567xxxx456xxxxxx"
+    },
+    {
+      "carry1_mrna_min": 2.0,
+      "carry1_maturation_min": 60.0,
+      "crossing_error": 5,
+      "bit2_crossings": 9,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.0185933067655337,
+      "s2_cycle_min_median": 0.6646095338608153,
+      "abs_net_ds2_median": 0.0127252714212882,
+      "rev_over_fwd_median": 1.1896370457097207,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 18,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx4567xxxx4567xxxx4567xxxx456xxxxxxxxxxxxxx"
+    },
+    {
+      "carry1_mrna_min": 0.5,
+      "carry1_maturation_min": 60.0,
+      "crossing_error": 5,
+      "bit2_crossings": 9,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.0204289076717411,
+      "s2_cycle_min_median": 0.7010404526480294,
+      "abs_net_ds2_median": 0.0184385945889645,
+      "rev_over_fwd_median": 1.7938835465532668,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 28,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx456x4567xxxx456x4567xxxx456x4567xxxx456x4"
+    },
+    {
+      "carry1_mrna_min": 1.0,
+      "carry1_maturation_min": 60.0,
+      "crossing_error": 6,
+      "bit2_crossings": 8,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.0197993877515624,
+      "s2_cycle_min_median": 0.686068120239322,
+      "abs_net_ds2_median": 0.0140556816177486,
+      "rev_over_fwd_median": 1.4128357171692434,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 28,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx456x4567xxxx4567xxxx456x4567xxxx456x4567x"
+    },
+    {
+      "carry1_mrna_min": 2.0,
+      "carry1_maturation_min": 50.0,
+      "crossing_error": 6,
+      "bit2_crossings": 8,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.2281372722933609,
+      "s2_cycle_min_median": 0.7405703621963329,
+      "abs_net_ds2_median": 0.0097096639107867,
+      "rev_over_fwd_median": 1.396137492550941,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 30,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx456x456x4567xxxx456x4567xxxx456x456x4567x"
+    },
+    {
+      "carry1_mrna_min": 1.0,
+      "carry1_maturation_min": 50.0,
+      "crossing_error": 7,
+      "bit2_crossings": 7,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.2109788511992327,
+      "s2_cycle_min_median": 0.7999231676103142,
+      "abs_net_ds2_median": 0.0101313762269696,
+      "rev_over_fwd_median": 1.619235176232764,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 30,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx456x456x4567xxxx456x456x4567xxxx456x456x4"
+    },
+    {
+      "carry1_mrna_min": 0.5,
+      "carry1_maturation_min": 50.0,
+      "crossing_error": 7,
+      "bit2_crossings": 7,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.2034221091867648,
+      "s2_cycle_min_median": 0.8211625344777633,
+      "abs_net_ds2_median": 0.0101644561919801,
+      "rev_over_fwd_median": 1.580330400987448,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 30,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx456x456x4567xxxx456x456x4567xxxx456x456x4"
+    },
+    {
+      "carry1_mrna_min": 8.0,
+      "carry1_maturation_min": 40.0,
+      "crossing_error": 8,
+      "bit2_crossings": 6,
+      "bit1_reverse_events": 14,
+      "gate_events": 14,
+      "off_on_peak_ratio": 0.1935090551415927,
+      "s2_cycle_min_median": 0.6952054735694935,
+      "abs_net_ds2_median": 0.0158551835967645,
+      "rev_over_fwd_median": 1.3794315618865651,
+      "bit2_low_cycles": 0,
+      "bit2_high_cycles": 25,
+      "minimum_commitment": 0.0,
+      "steady_sequence": "567xxxx456x456xxxx7xxxx4567xxxx456x4567xxxx4567x"
+    }
+  ]
+}

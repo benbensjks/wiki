@@ -1,0 +1,13 @@
+========== Sobol Results ==========
+
+MODE = rdf_waveform
+SOURCE_MODE = c31_waveform
+OUTPUT = bm3r1_design_score
+
+baseline_sub  S1 = 0.0805    ST = 0.6569
+waveform_scaleS1 = 0.0320    ST = 0.4697
+krep_tsl      S1 = 0.0381    ST = 0.3785
+krdf_tsl      S1 = 0.0062    ST = 0.2015
+k_tag_int     S1 = 0.0633    ST = 0.5974
+K_rep         S1 = 0.0175    ST = 0.4242
+n_rep         S1 = -0.0310    ST = 0.2535

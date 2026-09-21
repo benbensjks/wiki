@@ -1,0 +1,13 @@
+========== Sobol Results ==========
+
+MODE = bm3r1_promoter
+SOURCE_MODE = c31_waveform
+OUTPUT = rdf_max
+
+krep_tsl      S1 = 0.1046    ST = 0.2325
+K_rep         S1 = -0.0270    ST = 0.0986
+n_rep         S1 = 0.0350    ST = 0.0938
+krdf_tsl      S1 = 0.1154    ST = 0.2920
+k_tag_int     S1 = 0.5386    ST = 0.7447
+k_int         S1 = 0.0000    ST = 0.0000
+pulse_width   S1 = 0.0000    ST = 0.0000

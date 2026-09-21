@@ -1,0 +1,162 @@
+{
+  "upstream": {
+    "Td_min": 50.0,
+    "lambda_protein_scale": 1000.0,
+    "K_copies": 13.0,
+    "hill_n": 3.0,
+    "oscillator_plasmid_copies": 10.0,
+    "functional_tetO_per_plasmid": 4.0,
+    "functional_accessible_fraction": 1.0,
+    "sponge_plasmid_copies": 40.0,
+    "sponge_tetO_per_plasmid": 2.0,
+    "sponge_accessible_fraction": 1.0,
+    "oscillator_promoter_leak": 0.0,
+    "oscillator_tx_per_plasmid_per_min": 0.9609060278364028,
+    "oscillator_translation_per_mrna_per_min": 0.5,
+    "oscillator_mrna_intrinsic_loss_per_min": 0.33271064666877376,
+    "oscillator_protein_intrinsic_loss_per_min": 0.0,
+    "c31_promoter_leak": 0.005,
+    "c31_tx_per_plasmid_per_min": 5.0,
+    "c31_translation_per_mrna_per_min": 0.5,
+    "c31_mrna_intrinsic_loss_per_min": 0.33271064666877376,
+    "c31_protein_intrinsic_loss_per_min": 0.0,
+    "peak_load_fraction": 0.0
+  },
+  "zeng": {
+    "k_fwd": 7.0,
+    "k_rev": 5.0,
+    "K_D_int": [
+      1.0,
+      1.0,
+      0.6
+    ],
+    "K_D_comp": 1.2,
+    "K_inh": 0.1,
+    "k_int": 6.0,
+    "gamma_int": [
+      2.0,
+      1.4,
+      2.2
+    ],
+    "alpha_rep": 3.5,
+    "gamma_rep": 0.6,
+    "K_rep": 0.85,
+    "n_rep": 3.9,
+    "alpha_rdf": 6.0,
+    "gamma_rdf": 0.8,
+    "alpha_A": [
+      8.0,
+      16.0
+    ],
+    "gamma_A": [
+      1.9,
+      2.5
+    ],
+    "K_A": [
+      0.5,
+      1.2
+    ],
+    "n_A": [
+      2.0,
+      4.0
+    ],
+    "alpha_F": [
+      3.8,
+      5.0
+    ],
+    "gamma_F": [
+      0.6,
+      1.1
+    ],
+    "K_F": [
+      0.6,
+      0.4
+    ],
+    "n_F": [
+      4.0,
+      4.0
+    ],
+    "alpha_Int": [
+      18.0,
+      38.0
+    ],
+    "K_auto1": 0.6,
+    "n_auto1": 2.0
+  },
+  "extension_assumptions": {
+    "uM_per_au": 1.0,
+    "mrna_half_life_min": 2.0,
+    "maturation_half_life_min": 5.0,
+    "translation_h": 30.0,
+    "immature_decay_h": 0.0,
+    "complex_on_au_inv_h": 1.0,
+    "complex_off_h": 10.0,
+    "complex_decay_h": 1.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "add_growth": true
+  },
+  "derived": {
+    "mu_h": 0.8317766166719344,
+    "mRNA_loss_h": 21.626192033470293,
+    "maturation_h": 8.317766166719343,
+    "complex_QSS_factor": 0.08451816091515105,
+    "K_complex_au": 0.10142179309818125
+  },
+  "source": {
+    "path": "C:\\Users\\18633\\Desktop\\wiki\\其他小组成员任务\\Week4_振荡器-C31建模\\code\\Flux_Driven_Translation_Burden_Model.py",
+    "sha256": "456326a418c4c7ee23c75fa2dd4a86070f37caf820b5f863bbaa44fe9dce51bd"
+  },
+  "units": {
+    "time": "h",
+    "oscillator": "copies/cell",
+    "downstream": "a.u.",
+    "input_flux": "uM/h"
+  },
+  "unused_source_parameter": "k_int=6: square-input synthesis replaced by mechanistic upstream translation",
+  "state_names": [
+    "m_TetR",
+    "TetR_total",
+    "m_CI",
+    "CI",
+    "m_LacI",
+    "LacI",
+    "b0_M_I",
+    "b0_I_u",
+    "b0_I",
+    "b0_M_T",
+    "b0_T_u",
+    "b0_T",
+    "b0_M_R",
+    "b0_R_u",
+    "b0_R",
+    "b0_C",
+    "b0_S",
+    "b1_M_I",
+    "b1_I_u",
+    "b1_I",
+    "b1_M_T",
+    "b1_T_u",
+    "b1_T",
+    "b1_M_R",
+    "b1_R_u",
+    "b1_R",
+    "b1_C",
+    "b1_S",
+    "b2_M_I",
+    "b2_I_u",
+    "b2_I",
+    "b2_M_T",
+    "b2_T_u",
+    "b2_T",
+    "b2_M_R",
+    "b2_R_u",
+    "b2_R",
+    "b2_C",
+    "b2_S",
+    "A0",
+    "F0",
+    "A1",
+    "F1"
+  ]
+}

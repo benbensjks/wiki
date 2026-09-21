@@ -1,0 +1,6 @@
+target_period_generations,design_RBS_scale,design_oscillator_mRNA_half_life_min,B_pass,B_passing_Int_tag_rates_h_inv,source_period_tolerance_pass,complete_deterministic_knob_certification,best_worst_one_crossing_complete_fraction
+7.25458,0.6,1.0,False,,True,False,0.6
+8.31446,0.8,1.0,False,,True,False,0.4
+9.76918,1.2,1.0,False,,True,False,0.5
+11.2208,1.2,1.5,True,8;12,True,True,1.0
+12.5416,0.6,4.0,True,12,True,True,1.0

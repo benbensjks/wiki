@@ -1,0 +1,2 @@
+case,k_tx_factor,k_tx_value,period_min,period_generations,c31_peak_uM,c31_trough_copies,duty_above_half_peak,toggle_score,H_mean,L_mean,alternation_fidelity,Int_peak_uM,Int_final_uM,RDF_peak_uM,BM3R1_peak_uM,sample_count
+k_tx_1.2x,1.2,6.0,406.5677612935489,13.552258709784963,4.792482059303269,204.34041841390862,0.2853333333333333,0.0,,,0.0,0.7170773675822726,0.0722223828890429,1.6435506901368229,3.825,8

@@ -1,0 +1,10 @@
+{
+  "version": "Period_Knob_Robustness_Failure_Attribution_20260821",
+  "input_dir": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Period_Knob_Robustness_confirmation_20260820_234401",
+  "methods": [
+    "Spearman rank association",
+    "high-versus-low quartile failure-rate contrast",
+    "scenario-level common shift and adjacent gap decomposition"
+  ],
+  "limitations": "Associations diagnose the sampled uncertainty space and do not prove molecular causation. Parameter ranges are stress-test ranges unless experimentally calibrated."
+}

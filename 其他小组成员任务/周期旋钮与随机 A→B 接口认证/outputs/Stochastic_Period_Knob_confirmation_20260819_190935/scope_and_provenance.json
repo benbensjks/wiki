@@ -1,0 +1,24 @@
+{
+  "version": "Stochastic_Period_Knob_Library_Certification_20260819",
+  "mode": "confirmation",
+  "settings": {
+    "trajectories_per_setting": 50,
+    "duration_generations": 180.0,
+    "transient_generations": 30.0,
+    "tau_step_min": 0.2,
+    "sample_step_min": 1.0,
+    "bootstrap_replicates": 5000,
+    "random_seed": 20260819,
+    "minimum_cycles": 4,
+    "minimum_resolved_fraction": 0.8,
+    "maximum_mean_period_relative_error": 0.2,
+    "maximum_across_trajectory_cv": 0.3,
+    "minimum_adjacent_order_probability": 0.8
+  },
+  "library_path": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Certified_Period_Knob_Library_20260819_184900\\period_knob_library_for_stochastic_validation.csv",
+  "fixed_plasmids": false,
+  "method": "non-negative binomial tau-leap",
+  "primary_period_estimator": "three-repressor cyclic phase",
+  "scope_boundary": "Mechanistic period-knob stochastic certification; not the paper-SI sponge/no-sponge phenotype analysis.",
+  "wall_time_seconds": 506.0223968999999
+}

@@ -1,0 +1,213 @@
+{
+  "L_parity_with_consistent_starts": {
+    "hours": 180.0,
+    "codes_from_LR_init": "0101010101010101",
+    "codes_from_PB_init": "1x10101010101010",
+    "cycles": [
+      {
+        "cycle": 0,
+        "LR": "0",
+        "PB": "1",
+        "LR_med": 0.14271962996145118,
+        "PB_med": 0.7850862237700938
+      },
+      {
+        "cycle": 1,
+        "LR": "1",
+        "PB": "x",
+        "LR_med": 0.8364241095347241,
+        "PB_med": 0.5088761618287013
+      },
+      {
+        "cycle": 2,
+        "LR": "0",
+        "PB": "1",
+        "LR_med": 0.21479588552867596,
+        "PB_med": 0.8441725723460025
+      },
+      {
+        "cycle": 3,
+        "LR": "1",
+        "PB": "0",
+        "LR_med": 0.8458565488983348,
+        "PB_med": 0.16798655517130856
+      },
+      {
+        "cycle": 4,
+        "LR": "0",
+        "PB": "1",
+        "LR_med": 0.16923734959178002,
+        "PB_med": 0.8408793769946583
+      },
+      {
+        "cycle": 5,
+        "LR": "1",
+        "PB": "0",
+        "LR_med": 0.840940552688003,
+        "PB_med": 0.1925616637436404
+      },
+      {
+        "cycle": 6,
+        "LR": "0",
+        "PB": "1",
+        "LR_med": 0.19218272928356828,
+        "PB_med": 0.8435542112951795
+      },
+      {
+        "cycle": 7,
+        "LR": "1",
+        "PB": "0",
+        "LR_med": 0.843496780579296,
+        "PB_med": 0.17978000990527088
+      },
+      {
+        "cycle": 8,
+        "LR": "0",
+        "PB": "1",
+        "LR_med": 0.17997006185816278,
+        "PB_med": 0.8421370620253646
+      },
+      {
+        "cycle": 9,
+        "LR": "1",
+        "PB": "0",
+        "LR_med": 0.842173209669044,
+        "PB_med": 0.18640509516022585
+      },
+      {
+        "cycle": 10,
+        "LR": "0",
+        "PB": "1",
+        "LR_med": 0.18630346069465098,
+        "PB_med": 0.8428890995159312
+      },
+      {
+        "cycle": 11,
+        "LR": "1",
+        "PB": "0",
+        "LR_med": 0.8428557534642068,
+        "PB_med": 0.18291915641404236
+      },
+      {
+        "cycle": 12,
+        "LR": "0",
+        "PB": "1",
+        "LR_med": 0.1829719242756464,
+        "PB_med": 0.8424939388851294
+      },
+      {
+        "cycle": 13,
+        "LR": "1",
+        "PB": "0",
+        "LR_med": 0.842514301781509,
+        "PB_med": 0.1847398643109543
+      },
+      {
+        "cycle": 14,
+        "LR": "0",
+        "PB": "1",
+        "LR_med": 0.1847120068228642,
+        "PB_med": 0.8427056833335747
+      },
+      {
+        "cycle": 15,
+        "LR": "1",
+        "PB": "0",
+        "LR_med": 0.8426833333777636,
+        "PB_med": 0.1837850346146349
+      }
+    ],
+    "gap_max_last_40h": 0.6596744944937026,
+    "gap_median_20_40h": 0.6293480728337881,
+    "converged": false,
+    "same_branch": false,
+    "verdict": "PARITY STORED: two self-consistent opposite starts stay antiphase -> real toggle"
+  },
+  "M_carry_gate_window": {
+    "A0_steady_high": 3.453,
+    "A0_steady_low": 0.674,
+    "F0_floor_at_low_state": 4.084,
+    "F0_saturation": 6.333,
+    "F0_threshold": 0.6,
+    "F0_response_time_h": 1.67,
+    "toggle_dwell_h": 10.58,
+    "rows": [
+      {
+        "pulse_width_h": 0.05,
+        "peak_g0": 0.0003557846879521884,
+        "g0_at_pulse_end": 0.0003557846879521884,
+        "Int1_source_peak_au_per_h": 0.006404124383139391
+      },
+      {
+        "pulse_width_h": 0.1,
+        "peak_g0": 0.00037560754992764934,
+        "g0_at_pulse_end": 0.00037560754992764934,
+        "Int1_source_peak_au_per_h": 0.006760935898697688
+      },
+      {
+        "pulse_width_h": 0.25,
+        "peak_g0": 0.000378720721127045,
+        "g0_at_pulse_end": 0.00036326252907852556,
+        "Int1_source_peak_au_per_h": 0.00681697298028681
+      },
+      {
+        "pulse_width_h": 0.5,
+        "peak_g0": 0.000378720721127045,
+        "g0_at_pulse_end": 0.00030290095335872816,
+        "Int1_source_peak_au_per_h": 0.00681697298028681
+      },
+      {
+        "pulse_width_h": 1.0,
+        "peak_g0": 0.000378720721127045,
+        "g0_at_pulse_end": 0.00021494222626230016,
+        "Int1_source_peak_au_per_h": 0.00681697298028681
+      },
+      {
+        "pulse_width_h": 1.5,
+        "peak_g0": 0.000378720721127045,
+        "g0_at_pulse_end": 0.0001669178970570477,
+        "Int1_source_peak_au_per_h": 0.00681697298028681
+      },
+      {
+        "pulse_width_h": 2.0,
+        "peak_g0": 0.000378720721127045,
+        "g0_at_pulse_end": 0.00013921041765880697,
+        "Int1_source_peak_au_per_h": 0.00681697298028681
+      },
+      {
+        "pulse_width_h": 3.0,
+        "peak_g0": 0.000378720721127045,
+        "g0_at_pulse_end": 0.00011113431753453291,
+        "Int1_source_peak_au_per_h": 0.00681697298028681
+      },
+      {
+        "pulse_width_h": 5.0,
+        "peak_g0": 0.000378720721127045,
+        "g0_at_pulse_end": 9.253369860224866e-05,
+        "Int1_source_peak_au_per_h": 0.00681697298028681
+      },
+      {
+        "pulse_width_h": 8.0,
+        "peak_g0": 0.000378720721127045,
+        "g0_at_pulse_end": 8.679637143547495e-05,
+        "Int1_source_peak_au_per_h": 0.00681697298028681
+      },
+      {
+        "pulse_width_h": 10.6,
+        "peak_g0": 0.00037872443822781985,
+        "g0_at_pulse_end": 8.593824421715797e-05,
+        "Int1_source_peak_au_per_h": 0.006817039888100757
+      },
+      {
+        "pulse_width_h": 21.2,
+        "peak_g0": 0.00037872443822781985,
+        "g0_at_pulse_end": 8.570550576114273e-05,
+        "Int1_source_peak_au_per_h": 0.006817039888100757
+      }
+    ],
+    "A0_floor_for_open_gate": 0.1617,
+    "S_high_required_for_open_gate": 0.9616,
+    "S_high_observed": 0.843,
+    "verdict": "the gate never opens at any pulse width: F0 is already 4.08 at the low-A0 state, 6.8x its own threshold 0.6. To release the gate bit0 must reach S >= 0.962, not the 0.843 it reaches now. No pulse width from 0.05 h to 21.2 h opens it either."
+  }
+}

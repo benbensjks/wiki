@@ -1,0 +1,4 @@
+candidate,A0_maturation_min,F0_maturation_min,uM_per_au,bit_maturation_min,kon,koff,g0_peak,Int1_source_peak,S1_min,S1_max,cold_passed,steady_passed,steady_sequence,one_to_one,causal_order,directions_alternate,certified,bit1_setup_h,bit1_hold_h
+kinetic_centre,2.0,60.0,0.8,14.0,1.0,3.0,0.02011726431656794,0.36211075769822293,0.0,0.5459077117891369,False,False,xxxxxxxxxxxxxxxxxxxxxxxx,False,False,False,False,8.706905151925397,10.359761514741265
+kinetic_centre,20.0,30.0,0.8,14.0,1.0,3.0,0.01300538385268762,0.23409690934837718,0.0,0.5450574453185894,False,False,xxxxxxxxxxxxxxxxxxxxxxxx,False,False,False,False,4.900589567142987,3.5327437661903502
+highest_S_high,5.0,30.0,0.8,14.0,1.0,1.0,0.03380113467564119,0.6084204241615414,0.0,0.5471558403454445,False,False,xxxxxxxxxxxxxxxxxxxxxxxx,False,False,False,False,5.199602093983174,3.2670645726834806

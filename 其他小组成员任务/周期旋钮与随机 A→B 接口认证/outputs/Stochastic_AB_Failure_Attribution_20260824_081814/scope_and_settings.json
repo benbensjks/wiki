@@ -1,0 +1,10 @@
+{
+  "version": "Stochastic_AB_Cycle_Failure_Attribution_20260824",
+  "input_dir": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Stochastic_AB_Interface_Audit_audit_tau0.05min_20260823_112124",
+  "primary_inference_unit": "one stochastic A cycle paired across PB and LR starts",
+  "primary_success_definition": "both PB and LR initial-state B simulations are correct",
+  "bootstrap_unit": "A trajectory",
+  "bootstrap_replicates": 300,
+  "random_seed": 20260824,
+  "scope": "descriptive association; no causal claim and no parameter fitting"
+}

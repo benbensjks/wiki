@@ -1,0 +1,10 @@
+{
+  "pre_registered_primary_metrics": [
+    "three_repressor_phase_period_gen",
+    "reporter_PSD_period_gen"
+  ],
+  "minimum_meaningful_period_ratio": 1.1,
+  "period_lengthening_confirmation_pass": true,
+  "phase_noise_reduction_pass": true,
+  "important_scope_note": "This confirms the current paper-SI Gillespie model. It does not add explicit cell-division events or calibrate estimator choice to data."
+}

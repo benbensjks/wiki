@@ -1,0 +1,117 @@
+{
+  "states": 51,
+  "hours": 600,
+  "samples": 18001,
+  "cold_start": {
+    "drop_reads": 0,
+    "reads": 56,
+    "valid_windows": false,
+    "increments_mod8": false,
+    "passed": false,
+    "sequence": "123456x456x4567xxxx456x456x456x456x456x456x456x456x456x4",
+    "minimum_commitment": 0.0
+  },
+  "steady_state": {
+    "drop_reads": 8,
+    "reads": 48,
+    "valid_windows": false,
+    "increments_mod8": false,
+    "passed": false,
+    "sequence": "56x4567xxxx456x456x456x456x456x456x456x456x456x4",
+    "minimum_commitment": 0.0
+  },
+  "certified": false,
+  "causal_verdict": {
+    "exactly_one_gate_and_flip_per_late_reverse": false,
+    "causal_order_after_reverse_start": false,
+    "bit2_directions_alternate": false,
+    "unassigned_gate_events": [],
+    "unassigned_bit2_crossings": []
+  },
+  "gate_contrast": {
+    "on_cycle_peak_median": 0.13903100335343238,
+    "off_cycle_min_max": 2.016763789819971e-09,
+    "off_cycle_median_max": 4.723517881199556e-06,
+    "off_cycle_peak_max": 0.008748324390271603,
+    "off_min_to_on_peak": 1.4505856544048175e-08,
+    "off_median_to_on_peak": 3.3974565149269935e-05,
+    "off_peak_to_on_peak": 0.06292355071359432,
+    "threshold": 0.1,
+    "passed": true
+  },
+  "signal_ranges": {
+    "S0": [
+      0.0,
+      0.9854520765240272
+    ],
+    "S1": [
+      0.0,
+      0.99989638416105
+    ],
+    "J_fwd0": [
+      0.0,
+      0.5230167177760675
+    ],
+    "J_rev0": [
+      0.0,
+      0.931612519906861
+    ],
+    "g0": [
+      3.2960699024082924e-05,
+      0.44283427061137215
+    ],
+    "Int1_source": [
+      0.0005932925824334926,
+      7.971016871004698
+    ],
+    "J_fwd1": [
+      0.0,
+      1.2797255850378928
+    ],
+    "J_rev1": [
+      0.0,
+      0.7199524054573918
+    ],
+    "S2": [
+      0.0,
+      0.999897931714558
+    ],
+    "J_fwd2": [
+      0.0,
+      1.8749633027151344
+    ],
+    "J_rev2": [
+      0.0,
+      0.7580885958623381
+    ],
+    "g1": [
+      0.0,
+      0.1565426739597614
+    ],
+    "clock_gate": [
+      0.0,
+      0.7205296532799766
+    ],
+    "Int2_source": [
+      0.0,
+      5.9486216104709335
+    ]
+  },
+  "bit_margins": {
+    "bit0": {
+      "min_setup_h": 4.030390535172833,
+      "min_hold_h": 3.099760217198167
+    },
+    "bit1": {
+      "min_setup_h": 4.637884499952801,
+      "min_hold_h": 2.913722775395758
+    },
+    "bit2": {
+      "min_setup_h": 3.789207404783724,
+      "min_hold_h": 3.719748971807263
+    }
+  },
+  "reverse_events": 14,
+  "gate_events": 14,
+  "bit2_crossings": 3
+}

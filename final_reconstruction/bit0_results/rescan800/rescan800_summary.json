@@ -1,0 +1,534 @@
+{
+  "hours": 300.0,
+  "sample_min": 2.0,
+  "max_step_min": 4.0,
+  "points": 800,
+  "solver_failures": 0,
+  "nonfinite_columns": {},
+  "all_nan_columns_excluded": {
+    "error": 800
+  },
+  "all_runs_finite": true,
+  "completeness": {
+    "rows": 800,
+    "unique_points": 800,
+    "expected_points": 800,
+    "duplicates": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "criterion": {
+    "name": "finite read window (verify_twobit_causal geometry, mod-2 reduction)",
+    "window": "read window centred on the flux trough; total width = READ_WINDOW_FRACTION x clock period = 20% of the period, i.e. trough +/- 10% (measured: 2.133 h on a 10.600 h cycle)",
+    "bands": [
+      0.3,
+      0.7
+    ],
+    "min_occupancy": 0.8,
+    "min_reads": 8,
+    "cold_drop": 0,
+    "steady_drop": 4,
+    "source_module": "verify_twobit_causal._read_windows (imported verbatim)",
+    "reduction": "mod 2 instead of mod 4 for a single bit",
+    "burn_in_definition": "drop the first k reads, then require >=8 labelled alternating reads"
+  },
+  "pass_rates": {
+    "cold_start": {
+      "passed": 0,
+      "rate": 0.0
+    },
+    "steady_state": {
+      "passed": 22,
+      "rate": 0.0275
+    },
+    "drop2": 4,
+    "drop4": 22,
+    "drop6": 46,
+    "burn_in_only": 48,
+    "never_passed": 752
+  },
+  "criterion_contingency": {
+    "new_steady_vs_archived_rule_same_300h_trajectory": {
+      "both_pass": 2,
+      "new_only": 20,
+      "old_only": 0,
+      "both_fail": 778
+    },
+    "new_steady_vs_archived_100h_scan": {
+      "both_pass": 0,
+      "new_only": 22,
+      "old_only": 0,
+      "both_fail": 778
+    }
+  },
+  "failure_reasons": {
+    "steady_state": {
+      "unlabelled_window_x": 579,
+      "stuck_high": 176,
+      "stuck_low": 23,
+      "": 22
+    },
+    "cold_start": {
+      "unlabelled_window_x": 697,
+      "stuck_high": 98,
+      "stuck_low": 5
+    }
+  },
+  "first_pass_drop_histogram": {
+    "-1": 752,
+    "1": 4,
+    "3": 2,
+    "4": 16,
+    "5": 3,
+    "6": 21,
+    "8": 2
+  },
+  "environment_audit": {
+    "shards": 16,
+    "distinct_python_strings": [
+      "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+    ],
+    "distinct_platforms": [
+      "Windows-11-10.0.26200-SP0"
+    ],
+    "shard_hashes_uniform": true,
+    "hashes": {
+      "model_py": {
+        "unique_values": 1,
+        "value": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+        "all_values": null
+      },
+      "bit0_diagnostic_py": {
+        "unique_values": 1,
+        "value": "3CC30B0DA3F54C82198A3C4FC32F5A73608B46E2279845687377913BC72879C9",
+        "all_values": null
+      },
+      "verify_twobit_causal_py": {
+        "unique_values": 1,
+        "value": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+        "all_values": null
+      },
+      "scanner_py": {
+        "unique_values": 1,
+        "value": "95A2D740A1E8D1DAF10CE327B7A5BEB3761CB10D91ED327C3159606139D8C64F",
+        "all_values": null
+      },
+      "upstream_py": {
+        "unique_values": 1,
+        "value": "456326A418C4C7EE23C75FA2DD4A86070F37CAF820B5F863BBAA44FE9DCE51BD",
+        "all_values": null
+      }
+    },
+    "hours": [
+      300.0
+    ],
+    "sample_min": [
+      2.0
+    ],
+    "max_step_min": [
+      4.0
+    ],
+    "grid_identical_across_shards": true
+  },
+  "burn_in_sweep": {
+    "drop0": {
+      "passed": 0,
+      "rate": 0.0
+    },
+    "drop1": {
+      "passed": 4,
+      "rate": 0.005
+    },
+    "drop2": {
+      "passed": 4,
+      "rate": 0.005
+    },
+    "drop3": {
+      "passed": 6,
+      "rate": 0.0075
+    },
+    "drop4": {
+      "passed": 22,
+      "rate": 0.0275
+    },
+    "drop5": {
+      "passed": 25,
+      "rate": 0.03125
+    },
+    "drop6": {
+      "passed": 46,
+      "rate": 0.0575
+    },
+    "drop7": {
+      "passed": 46,
+      "rate": 0.0575
+    },
+    "drop8": {
+      "passed": 48,
+      "rate": 0.06
+    },
+    "drop9": {
+      "passed": 48,
+      "rate": 0.06
+    },
+    "drop10": {
+      "passed": 48,
+      "rate": 0.06
+    },
+    "drop11": {
+      "passed": 48,
+      "rate": 0.06
+    },
+    "drop12": {
+      "passed": 48,
+      "rate": 0.06
+    }
+  },
+  "by_axis": {
+    "uM_per_au": {
+      "0.1": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.0
+      },
+      "0.3": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.0
+      },
+      "1.0": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.0375
+      },
+      "3.0": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.0
+      },
+      "10.0": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.1
+      }
+    },
+    "maturation_half_life_min": {
+      "1.0": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.0
+      },
+      "2.5": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.00625
+      },
+      "5.0": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.0125
+      },
+      "10.0": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.075
+      },
+      "20.0": {
+        "points": 160,
+        "cold_rate": 0.0,
+        "steady_rate": 0.04375
+      }
+    },
+    "complex_on_au_inv_h": {
+      "0.1": {
+        "points": 200,
+        "cold_rate": 0.0,
+        "steady_rate": 0.05
+      },
+      "0.3": {
+        "points": 200,
+        "cold_rate": 0.0,
+        "steady_rate": 0.04
+      },
+      "1.0": {
+        "points": 200,
+        "cold_rate": 0.0,
+        "steady_rate": 0.01
+      },
+      "3.0": {
+        "points": 200,
+        "cold_rate": 0.0,
+        "steady_rate": 0.01
+      }
+    },
+    "complex_off_h": {
+      "1.0": {
+        "points": 200,
+        "cold_rate": 0.0,
+        "steady_rate": 0.04
+      },
+      "3.0": {
+        "points": 200,
+        "cold_rate": 0.0,
+        "steady_rate": 0.04
+      },
+      "10.0": {
+        "points": 200,
+        "cold_rate": 0.0,
+        "steady_rate": 0.025
+      },
+      "30.0": {
+        "points": 200,
+        "cold_rate": 0.0,
+        "steady_rate": 0.005
+      }
+    },
+    "add_growth": {
+      "False": {
+        "points": 400,
+        "cold_rate": 0.0,
+        "steady_rate": 0.04
+      },
+      "True": {
+        "points": 400,
+        "cold_rate": 0.0,
+        "steady_rate": 0.015
+      }
+    }
+  },
+  "criterion_change": {
+    "archived_100h_stable": 0,
+    "archived_rule_on_300h": 2,
+    "archived_100h_stable_but_steady_pass": 0,
+    "archived_100h_not_stable_but_steady_pass": 22,
+    "steady_pass_but_archived_rule_300h_fail": 20,
+    "archived_rule_300h_pass_but_steady_fail": 0
+  },
+  "dwell_levels": {
+    "S0_dwell_low_median": 0.29641383274384875,
+    "S0_dwell_high_median": 0.8194102821754805
+  },
+  "interpretation_caveat": "This grid only contains uM_per_au in {0.1, 0.3, 1, 3, 10} and maturation half-life in {1, 2.5, 5, 10, 20} min. The independently verified working band (uM_per_au ~ 6-10, maturation 12-32 min) is mostly NOT inside this grid, so the pass rate below measures the original grid, not the true width of the feasible window.",
+  "passing_points": [
+    {
+      "uM_per_au": 1.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 3.0,
+      "add_growth": true,
+      "first_pass_drop": 1,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 1.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 0.3,
+      "complex_off_h": 3.0,
+      "add_growth": true,
+      "first_pass_drop": 1,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 1.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 1.0,
+      "complex_off_h": 1.0,
+      "add_growth": true,
+      "first_pass_drop": 1,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 1.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 1.0,
+      "complex_off_h": 3.0,
+      "add_growth": true,
+      "first_pass_drop": 1,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 1.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 3.0,
+      "complex_off_h": 3.0,
+      "add_growth": true,
+      "first_pass_drop": 3,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 1.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 3.0,
+      "complex_off_h": 10.0,
+      "add_growth": true,
+      "first_pass_drop": 3,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 2.5,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 1.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 5.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 1.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 5.0,
+      "complex_on_au_inv_h": 0.3,
+      "complex_off_h": 1.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 1.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": true,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 3.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 10.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 0.3,
+      "complex_off_h": 1.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 0.3,
+      "complex_off_h": 3.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 10.0,
+      "complex_on_au_inv_h": 0.3,
+      "complex_off_h": 10.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 20.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 1.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": true,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 20.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 3.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 20.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 10.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 20.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 30.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 20.0,
+      "complex_on_au_inv_h": 0.3,
+      "complex_off_h": 1.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 20.0,
+      "complex_on_au_inv_h": 0.3,
+      "complex_off_h": 3.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    },
+    {
+      "uM_per_au": 10.0,
+      "maturation_half_life_min": 20.0,
+      "complex_on_au_inv_h": 0.3,
+      "complex_off_h": 10.0,
+      "add_growth": false,
+      "first_pass_drop": 4,
+      "archived_rule_stable_300h": false,
+      "min_commitment": 1.0
+    }
+  ]
+}

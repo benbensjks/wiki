@@ -1,0 +1,198 @@
+{
+  "control_reproduces": true,
+  "control": {
+    "crossings": 12.0,
+    "stage1_crossings": 12,
+    "reproduces": true,
+    "gate_width_h": 1.3333333333333215,
+    "stage1_gate_width_h": 1.333,
+    "off_on": 0.0163265519079841,
+    "s2_cycle_min_median": 0.6292416484364877
+  },
+  "probe_best_crossings": 1.0,
+  "stage1_best_crossings": 12,
+  "probe_grid": [
+    [
+      3.0,
+      70.0
+    ],
+    [
+      3.0,
+      85.0
+    ],
+    [
+      4.0,
+      70.0
+    ],
+    [
+      4.0,
+      85.0
+    ],
+    [
+      6.0,
+      70.0
+    ],
+    [
+      6.0,
+      85.0
+    ]
+  ],
+  "stage2_rows": [
+    {
+      "carry1_mrna_min": 3.0,
+      "carry1_maturation_min": 70.0,
+      "bit2_crossings": 1,
+      "s2_cycle_min_median": 0.6226736011475531,
+      "s2_cycle_min_min": 0.5936125298570822,
+      "I2_peak": 2.543731068021453,
+      "Int2_source_peak": 9.46965729011402,
+      "RDF2_median": 0.12184258905789,
+      "RDF2_max": 7.426998335780726,
+      "gate_duration_median_h": 1.4666666666666224,
+      "gate_delay_median_h": 1.666666666666643,
+      "rev_over_fwd_median": 0.0266450695550332,
+      "off_on_peak_ratio": 0.0135302547907357,
+      "gate_contrast_passed": true,
+      "steady_sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+      "carry1_mrna_min": 3.0,
+      "carry1_maturation_min": 85.0,
+      "bit2_crossings": 1,
+      "s2_cycle_min_median": 0.5575234924051061,
+      "s2_cycle_min_min": 0.533734700315903,
+      "I2_peak": 2.8995488701093604,
+      "Int2_source_peak": 10.1151867096601,
+      "RDF2_median": 0.0631424246610133,
+      "RDF2_max": 7.368609092232393,
+      "gate_duration_median_h": 1.6666666666666463,
+      "gate_delay_median_h": 1.7333333333333272,
+      "rev_over_fwd_median": 0.0046384680454779,
+      "off_on_peak_ratio": 0.010866558922887,
+      "gate_contrast_passed": true,
+      "steady_sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+      "carry1_mrna_min": 4.0,
+      "carry1_maturation_min": 60.0,
+      "bit2_crossings": 12,
+      "s2_cycle_min_median": 0.6292416484364877,
+      "s2_cycle_min_min": 0.214641240536629,
+      "I2_peak": 2.372571327282505,
+      "Int2_source_peak": 9.251124886596218,
+      "RDF2_median": 0.4241446502062777,
+      "RDF2_max": 7.446901396054977,
+      "gate_duration_median_h": 1.3333333333333215,
+      "gate_delay_median_h": 1.6333333333333258,
+      "rev_over_fwd_median": 1.13444699599084,
+      "off_on_peak_ratio": 0.0163265519079841,
+      "gate_contrast_passed": true,
+      "steady_sequence": "567xxxx4567xxxx4567xxxx4567xxxx456x4567xxxx4567x"
+    },
+    {
+      "carry1_mrna_min": 4.0,
+      "carry1_maturation_min": 70.0,
+      "bit2_crossings": 1,
+      "s2_cycle_min_median": 0.6141784379656205,
+      "s2_cycle_min_min": 0.5923272512462349,
+      "I2_peak": 2.649915472259692,
+      "Int2_source_peak": 9.822882942019293,
+      "RDF2_median": 0.1111936763933236,
+      "RDF2_max": 7.422350205010037,
+      "gate_duration_median_h": 1.4666666666666828,
+      "gate_delay_median_h": 1.6666666666666785,
+      "rev_over_fwd_median": 0.0232598006669523,
+      "off_on_peak_ratio": 0.0127259366826553,
+      "gate_contrast_passed": true,
+      "steady_sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+      "carry1_mrna_min": 4.0,
+      "carry1_maturation_min": 85.0,
+      "bit2_crossings": 1,
+      "s2_cycle_min_median": 0.5494387682281741,
+      "s2_cycle_min_min": 0.5233428668640014,
+      "I2_peak": 3.004895979114764,
+      "Int2_source_peak": 10.451374064587332,
+      "RDF2_median": 0.059569617551138,
+      "RDF2_max": 7.360171937797081,
+      "gate_duration_median_h": 1.6666666666666856,
+      "gate_delay_median_h": 1.7333333333333345,
+      "rev_over_fwd_median": 0.0036197631715682,
+      "off_on_peak_ratio": 0.0105262040880975,
+      "gate_contrast_passed": true,
+      "steady_sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+      "carry1_mrna_min": 6.0,
+      "carry1_maturation_min": 70.0,
+      "bit2_crossings": 1,
+      "s2_cycle_min_median": 0.5964226339396907,
+      "s2_cycle_min_min": 0.5817157033630365,
+      "I2_peak": 2.867575914255469,
+      "Int2_source_peak": 10.561976257358197,
+      "RDF2_median": 0.092274027014551,
+      "RDF2_max": 7.411547728273894,
+      "gate_duration_median_h": 1.533333333333303,
+      "gate_delay_median_h": 1.6999999999999955,
+      "rev_over_fwd_median": 0.0164109424871479,
+      "off_on_peak_ratio": 0.011297018305336,
+      "gate_contrast_passed": true,
+      "steady_sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+      "carry1_mrna_min": 6.0,
+      "carry1_maturation_min": 85.0,
+      "bit2_crossings": 1,
+      "s2_cycle_min_median": 0.5339707490337509,
+      "s2_cycle_min_min": 0.5026142129384549,
+      "I2_peak": 3.2243150365844864,
+      "Int2_source_peak": 11.151862859696635,
+      "RDF2_median": 0.0543240359901952,
+      "RDF2_max": 7.340574593108442,
+      "gate_duration_median_h": 1.7333333333333485,
+      "gate_delay_median_h": 1.75,
+      "rev_over_fwd_median": 0.0021956666476883,
+      "off_on_peak_ratio": 0.0099108888593631,
+      "gate_contrast_passed": true,
+      "steady_sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  ],
+  "decision_rule": [
+    [
+      "crossings keep rising and a point certifies (new points only)",
+      "NOT FIRED"
+    ],
+    [
+      "crossings saturate without exceeding the stage-1 best of 12",
+      "FIRED (worse: new points collapse to 1, control stays at 12)"
+    ],
+    [
+      "gate contrast degrades further",
+      "not fired (contrast improves: 0.0163 -> 0.0111)"
+    ]
+  ],
+  "verdict": "Common maturation is exhausted: 60 min is the optimum of the scanned range and 70/85 min collapse (crossings 12 -> 1, reverse/forward flux ratio 1.13 -> 0.003-0.027, free RDF2 median 0.42 -> 0.05-0.12) while the Int2 pulse grows. The next lever must sharpen the carry pulse rather than widen it, i.e. split the A1 and F1 maturation times. Mechanism wording: free RDF2 is lowered by Int2 binding it into C2, by sequestration and by complex loss, not by DNA reverse recombination; the reverse drive depends on the simultaneous product I2*R2, so a falling R2 alone is not proof of substrate shortage.",
+  "files": {
+    "meta_shard00of07.json": "00C4E769DFAF8653E56CDB5F0AD32E616C839B8BF80C63C5C3DC6FB282A7D9C5",
+    "meta_shard01of07.json": "2CB573EEC619ADDC14F176932649D675D768BC17DF21FCBBE9A95023E92C02F4",
+    "meta_shard02of07.json": "DC90C9C8DE6B10774140CA52DADB78CC5DACCE1D770CE5B8FDAA18E1655CD084",
+    "meta_shard03of07.json": "6EBB6C525194416EEF65031B7A5F2A657B94AAFFA05DB58897C4CA9CE43C8E2D",
+    "meta_shard04of07.json": "978D1A44E64933114EE61DD2CD6FA33496B7AD1CF0253AAFC87255E36285EC1F",
+    "meta_shard05of07.json": "3B0EF2BC0ED5F3DE29B239B48AFD77697740943F22FC9EEED7864C145C610EA7",
+    "meta_shard06of07.json": "D993C7D03E722D49EB590BF7E562B1C631B8DB8AC26C720FBE6837F158DF3F08",
+    "probe_all.csv": "76A8AF5B4E31C7C61A4884A5417B3E7F0D9E997B96C4B31D76379B29E7C707E9",
+    "probe_analysis.json": "BB911A67F1ED9AD751C6009DC637A466CB6880D752D7E619D95BE7AEE26ED9F8",
+    "probe_report.md": "7BF4EA2A90EBC6913E72C6517EA7BB6563D5260EC29DC844C578DD78EA4DE03D",
+    "probe_response.pdf": "95947CD4D3E2F53C58150E620E55EA33F28C367EDA2200EDD55351471B93E936",
+    "probe_response.png": "1DABF641C27141AA31CF73E3C6B61C2BE62C1F8D06A5B09BE972B36C69E7B850",
+    "probe_shard00of07.csv": "CCCE1202881DD1FDE5BF8486888C380D3ECE5D6969EAC75DD8C5D88F0ACC6586",
+    "probe_shard01of07.csv": "EEDB036B0BF484FBD06A018F44D08605B81E1B29F6B08A5370B9D2175EA4D952",
+    "probe_shard02of07.csv": "31A23FB346222AC495F8826350D7A2DD4CBD3F60C74541782DAF5B0D62AED360",
+    "probe_shard03of07.csv": "3C5F760118ABB9006D25BD8D0245BBC5D9506BB1F6E3278FDDD3A43DF30E4068",
+    "probe_shard04of07.csv": "923A0D3C2F5520BACE780032AEAD5B557AA1D2343EDAB4012AA2C8133B5C590E",
+    "probe_shard05of07.csv": "D303B53A27E64BEBEB2870E1E90D650D25B62E5E75F286FCA87B46AFFB12E964",
+    "probe_shard06of07.csv": "1C4A7AF68F32F94C898EECF85B01D08C21EDC162143068BE8CDF7FC60BCD7B6D",
+    "probe_summary.json": "DB5DA376E3C435DA5C29AB6F30D7A5F7FF259FCCEBC369827E4A9ADD602C970B"
+  }
+}

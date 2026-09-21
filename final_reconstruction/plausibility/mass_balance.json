@@ -1,0 +1,18 @@
+{
+  "implementation_ok": true,
+  "worst_rhs_relative": 8.404426818534686e-17,
+  "rhs_tolerance": 1e-09,
+  "finite_difference_dominated_by_truncation": true,
+  "worst_fd_relative": 0.01147498062261936,
+  "fd_note": "at 2 min sampling the central-difference truncation error is O(h^2) and roughly 1 % for the Int pool; only the RHS-level identity is conclusive about the implementation",
+  "max_sequestered_fraction": 0.16080104788883276,
+  "sequestered_by_pool": {
+    "bit0.Int": 0.1608,
+    "bit0.RDF": 0.0126,
+    "bit1.Int": 0.1361,
+    "bit1.RDF": 0.0447,
+    "bit2.Int": 0.0259,
+    "bit2.RDF": 0.0069
+  },
+  "declaration": "the explicit complex is a structural addition relative to Zeng's reduced model; it sequesters up to 16.1 % of the peak free Int pool"
+}

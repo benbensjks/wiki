@@ -1,0 +1,153 @@
+{
+  "hours": 80.0,
+  "points": [
+    {
+      "index": 0,
+      "point": {
+        "name": "growth_pass_low_kon",
+        "uM_per_au": 1.0,
+        "maturation_half_life_min": 10.0,
+        "complex_on_au_inv_h": 0.1,
+        "complex_off_h": 3.0,
+        "add_growth": true
+      },
+      "runs": [
+        {
+          "setting": "archived_4min",
+          "rtol": 2e-07,
+          "atol": 2e-09,
+          "max_step_min": 4.0,
+          "solver_success": true,
+          "windows": 7,
+          "clock_period_h": 10.600000000000001,
+          "cold_passed": false,
+          "cold_sequence": "x101010",
+          "steady_passed": false,
+          "steady_sequence": "010",
+          "steady_min_commitment": 1.0,
+          "steady_median_commitment": 1.0,
+          "S_min": 0.0,
+          "S_max": 0.9642318820986224,
+          "S_dwell_low": 0.14583625079721368,
+          "S_dwell_high": 0.8830370450430516
+        },
+        {
+          "setting": "default_2min",
+          "rtol": 2e-07,
+          "atol": 2e-09,
+          "max_step_min": 2.0,
+          "solver_success": true,
+          "windows": 7,
+          "clock_period_h": 10.600000000000001,
+          "cold_passed": false,
+          "cold_sequence": "x101010",
+          "steady_passed": false,
+          "steady_sequence": "010",
+          "steady_min_commitment": 1.0,
+          "steady_median_commitment": 1.0,
+          "S_min": 0.0,
+          "S_max": 0.964231882102073,
+          "S_dwell_low": 0.1458362508378799,
+          "S_dwell_high": 0.8830370451697931
+        },
+        {
+          "setting": "default_1min",
+          "rtol": 2e-07,
+          "atol": 2e-09,
+          "max_step_min": 1.0,
+          "solver_success": true,
+          "windows": 7,
+          "clock_period_h": 10.600000000000001,
+          "cold_passed": false,
+          "cold_sequence": "x101010",
+          "steady_passed": false,
+          "steady_sequence": "010",
+          "steady_min_commitment": 1.0,
+          "steady_median_commitment": 1.0,
+          "S_min": 0.0,
+          "S_max": 0.9642318821019659,
+          "S_dwell_low": 0.14583625085688964,
+          "S_dwell_high": 0.8830370451840995
+        },
+        {
+          "setting": "strict_1min",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "max_step_min": 1.0,
+          "solver_success": true,
+          "windows": 7,
+          "clock_period_h": 10.600000000000001,
+          "cold_passed": false,
+          "cold_sequence": "x101010",
+          "steady_passed": false,
+          "steady_sequence": "010",
+          "steady_min_commitment": 1.0,
+          "steady_median_commitment": 1.0,
+          "S_min": 0.0,
+          "S_max": 0.9642318821019664,
+          "S_dwell_low": 0.14583625085692842,
+          "S_dwell_high": 0.8830370451840988
+        }
+      ],
+      "convergence": {
+        "reference": "strict_1min",
+        "comparisons": [
+          {
+            "setting": "archived_4min",
+            "same_cold_sequence": true,
+            "same_steady_sequence": true,
+            "same_verdict": true,
+            "absolute_differences": {
+              "clock_period_h": 0.0,
+              "steady_min_commitment": 0.0,
+              "steady_median_commitment": 0.0,
+              "S_min": 0.0,
+              "S_max": 3.3439917501709715e-12,
+              "S_dwell_low": 5.971473315824483e-11,
+              "S_dwell_high": 1.410471739404784e-10
+            },
+            "max_state_metric_difference": 1.410471739404784e-10
+          },
+          {
+            "setting": "default_2min",
+            "same_cold_sequence": true,
+            "same_steady_sequence": true,
+            "same_verdict": true,
+            "absolute_differences": {
+              "clock_period_h": 0.0,
+              "steady_min_commitment": 0.0,
+              "steady_median_commitment": 0.0,
+              "S_min": 0.0,
+              "S_max": 1.0658141036401503e-13,
+              "S_dwell_low": 1.9048512767128045e-11,
+              "S_dwell_high": 1.4305667761504992e-11
+            },
+            "max_state_metric_difference": 1.9048512767128045e-11
+          },
+          {
+            "setting": "default_1min",
+            "same_cold_sequence": true,
+            "same_steady_sequence": true,
+            "same_verdict": true,
+            "absolute_differences": {
+              "clock_period_h": 0.0,
+              "steady_min_commitment": 0.0,
+              "steady_median_commitment": 0.0,
+              "S_min": 0.0,
+              "S_max": 5.551115123125783e-16,
+              "S_dwell_low": 3.877453913503359e-14,
+              "S_dwell_high": 7.771561172376096e-16
+            },
+            "max_state_metric_difference": 3.877453913503359e-14
+          }
+        ],
+        "converged": true
+      }
+    }
+  ],
+  "sha256": {
+    "model_py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "verifier_py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+    "this_script": "31657808F9CE656936141A0A3D2EFCB0DD680152F953D7946BD256A7A91EC85B"
+  }
+}

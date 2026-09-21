@@ -1,0 +1,46 @@
+{
+  "version": "v53g_fixed_PLtetO1_RBS_tag_window_20260814",
+  "settings": {
+    "v53d_output_directory": null,
+    "C31_RBS_scales": [
+      0.45,
+      0.6,
+      0.7,
+      0.8,
+      1.0
+    ],
+    "Int_tag_rates_h_inv": [
+      4.0,
+      8.0,
+      12.0,
+      16.0,
+      20.0
+    ],
+    "A_transient_h": 25.0,
+    "minimum_peak_distance_h": 5.0,
+    "B_duration_h": 90.0,
+    "B_sample_step_h": 0.02,
+    "B_max_step_h": 0.05,
+    "DNA_midpoint": 0.5,
+    "complete_state_threshold": 0.95,
+    "success_target": 0.95,
+    "alternation_target": 0.95,
+    "DNA_conservation_tolerance": 1e-08,
+    "expected_Td_min": 50.0,
+    "make_plots": true
+  },
+  "source_v53d_directory": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\40_iGEM_A_Module_Reproducible_Delivery_20260815\\data\\reference_inputs",
+  "source_trajectory": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\40_iGEM_A_Module_Reproducible_Delivery_20260815\\data\\reference_inputs\\unloaded_C31_translation_trajectory.csv",
+  "fixed_period_h": 10.59,
+  "fixed_PLtetO1_FWHM_h": 3.6083333333331282,
+  "fixed_source_peak_uM_h": 6.639270640730661,
+  "enforced_construct_constraint": "C31 and cI share the same PLtetO1; K, n, leak and normalized pulse shape are not scanned",
+  "RBS_model": "int_production(t)=RBS_scale*source_C31_flux(t)",
+  "tag_model": "k_tag_int is varied inside the Zhao B ODE",
+  "acceptance": "one-and-complete >=0.95, endpoint complete >=0.95, alternation >=0.95, DNA conservation <=1e-8",
+  "interpretation_limits": [
+    "RBS scales and tag rates are candidate designs, not measurements",
+    "RBS scaling is first screened open-loop; any candidate must later be rechecked with resource feedback",
+    "if no point passes, the fixed-promoter topology needs an added post-transcriptional pulse-shaping element or B redesign"
+  ]
+}

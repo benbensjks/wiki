@@ -1,0 +1,17 @@
+{
+  "kind": "check",
+  "mode": "grid",
+  "shard": 0,
+  "nshards": 1,
+  "hours": 600.0,
+  "points": 1,
+  "combined_from": {
+    "grid_1min": "strict_tolerance_grid_partA_grid1min.csv",
+    "grid_0p5min": "strict_tolerance_grid_shard00of01.csv:pre-combine"
+  },
+  "combined_from_sha256": {
+    "grid_1min": "D5C1E73F5F682690EAD3A15DD3819F59A42D80BAC3F7ED9831EECBAA7AFBF18D"
+  },
+  "note": "the first grid_0p5min attempt was lost to a reporting bug in the trajectory comparison (shape mismatch 72001 vs 18001); the integration had succeeded but the row metrics were discarded. The level was re-run alone with the fix and its row is concatenated here with the preserved grid_1min row. No integration result was recomputed or edited.",
+  "csv": "strict_tolerance_grid_shard00of01.csv"
+}

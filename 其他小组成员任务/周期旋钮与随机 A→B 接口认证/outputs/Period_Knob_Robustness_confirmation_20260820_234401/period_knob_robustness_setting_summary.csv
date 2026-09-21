@@ -1,0 +1,5 @@
+﻿setting_id,target_period_generations,n_scenarios,resolved_fraction,period_within_tolerance_fraction,amplitude_pass_fraction,period_mean_across_scenarios,period_sd_across_scenarios,period_min_across_scenarios,period_max_across_scenarios,clock_robust_pass,nominal_stochastic_status,nominal_stochastic_period_cv,B_robust_pass_fraction,B_robust_status,complete_system_status,library_adjacent_ordering_fraction,library_ordering_pass
+Certified_T10,10.0,128,1.0,0.3671875,1.0,9.753640875593105,1.0918563504971746,7.067259332606171,12.593671982484512,False,pass,0.0370180054067107,,pending,fail,0.7265625,False
+Certified_T11,11.0,128,1.0,0.3359375,1.0,10.446643559494113,1.332666412696383,6.437362557026707,13.590321369514552,False,pass,0.0342527225827166,,pending,fail,0.7265625,False
+Certified_T12,12.0,128,0.9921875,0.21875,0.9921875,11.09678978649903,1.891709926219939,6.201073816737373,14.852916059301313,False,pass,0.0371012610230225,,pending,fail,0.7265625,False
+Certified_T13,13.0,128,0.921875,0.1875,0.8984375,11.970393963048483,2.168106888553228,6.8584385905914,16.122133580285148,False,pass,0.0365021569701258,,pending,fail,0.7265625,False

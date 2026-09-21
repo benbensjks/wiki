@@ -1,0 +1,37 @@
+{
+  "version": "v54s0_paper_aligned_period_estimator_audit_20260815",
+  "run_mode": "audit",
+  "settings": {
+    "trajectories_per_condition": 12,
+    "total_time_lifetimes": 160.0,
+    "transient_lifetimes": 30.0,
+    "sample_dt_lifetimes": 0.1,
+    "random_seed": 20260815,
+    "bootstrap_replicates": 2000
+  },
+  "parameters": {
+    "lambda_events_per_promoter_per_lifetime": 60.0,
+    "mean_original_plasmids": 10,
+    "mean_sponge_plasmids": 40,
+    "sites_per_promoter": 2,
+    "effective_sponge_fraction": 1.0,
+    "hill_n": 1.5,
+    "burst_mean": 10.0,
+    "K_copies": [
+      5.0,
+      10.0,
+      10.0
+    ],
+    "doubling_time_min": 50.0
+  },
+  "construct_modes": [
+    "paper_si"
+  ],
+  "analysis": {
+    "min_period_lifetimes": 4.0,
+    "max_period_lifetimes": 16.0,
+    "activity_on_threshold": 0.5,
+    "activity_off_threshold": 0.25
+  },
+  "wall_time_seconds": 100.5245071000536
+}

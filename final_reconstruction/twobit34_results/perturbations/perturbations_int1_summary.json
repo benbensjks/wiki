@@ -1,0 +1,24 @@
+{
+  "completeness": {
+    "rows": 20,
+    "expected": 20,
+    "unique": 20,
+    "duplicates": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "solver_failures": 0,
+  "outcomes": {
+    "recovered_same_phase": 20
+  },
+  "by_group": {
+    "INT1": {
+      "recovered_same_phase": 20
+    }
+  },
+  "by_target": {
+    "Int1_pool": {
+      "recovered_same_phase": 20
+    }
+  }
+}

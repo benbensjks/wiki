@@ -1,0 +1,23 @@
+{
+  "version": "Morris_GSA_interface_leak_postprocess_20260819",
+  "source_result_directory": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Morris_GSA_full_20260819_132518",
+  "ODE_simulations_run": 0,
+  "derived_metrics": [
+    "C31_flux_trough_fraction_of_peak_when_resolved",
+    "C31_flux_residual_duty_above_0p5_uM_h_when_resolved"
+  ],
+  "normalization_scale_overrides": {
+    "resolved_oscillation": 1.0,
+    "C31_flux_trough_uM_h": 1.0,
+    "C31_flux_trough_fraction_of_peak": 1.0,
+    "C31_flux_residual_duty_above_0p5_uM_h": 1.0,
+    "C31_flux_trough_fraction_of_peak_when_resolved": 1.0,
+    "C31_flux_residual_duty_above_0p5_uM_h_when_resolved": 1.0
+  },
+  "residual_flux_reporting_threshold_uM_h": 0.5,
+  "interpretation": [
+    "All-state residual metrics include clock failure and describe complete-system risk.",
+    "Conditional residual metrics isolate C31 leakage only where the upstream clock remains resolved.",
+    "The 0.5 uM/h threshold is a reporting convention, not a fitted B kinetic threshold."
+  ]
+}

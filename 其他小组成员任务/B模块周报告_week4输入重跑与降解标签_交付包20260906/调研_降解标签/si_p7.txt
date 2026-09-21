@@ -1,0 +1,53 @@
+ 
+S6
+Table S7. Strains used to measure degradation of different tags. 
+Strain 
+Plasmid name Description 
+E. coli 
+(DH5alphaZ1) 
+p24KmNB83 
+Plac/ara-1- CFPNo tag 
+p31CmPJ254 
+Plac/ara-1- CFP-AANDENYALAA  
+p24KmPJ129 
+Plac/ara-1-CFP-AANDENYALAA-AANDENYALAA 
+p24KmPJ152 
+Plac/ara-1-CFP-LAA 
+p24KmPJ153 
+Plac/ara-1-CFP-LAA-LAA 
+p24KmPJ154 
+Plac/ara-1-CFP-AANDENY 
+p24KmPJ155 
+Plac/ara-1-CFP-AANDENY-AANDENY 
+p24KmPJ211 
+Plac/ara-1-CFP-AANDENYDLAA 
+p24KmPJ215  
+Plac/ara-1-CFP-LAALAALAA 
+p24KmPJ267 
+Plac/ara-1-CFP-LAA+4 
+p24KmPJ268 
+Plac/ara-1-CFP-DAS+4 
+p24KmPJ131 
+Plac/ara-1-CFP-AANDENYADAS 
+p24KmPJ132 
+Plac/ara-1-CFP-AANDENYALDD 
+ 
+Table S8. Strains used for quantify self-crosstalk of CFPNo tag, CFP-SsrA and CFP-LAA-LAA tags. 
+Strain 
+Name 
+Plasmid 1 
+Plasmid 2 
+E.coli (DH5alphaZ1) 
+DZ60 
+Plac/ara-1- CFPNo tag 
+PLtetO-1-YFPNo tag 
+AI083 
+Plac/ara-1- CFP-SsrA 
+PLtetO-1-YFP-SsrA 
+AI094 
+Plac/ara-1- CFP-LAA-LAA 
+PLtetO-1-YFP-LAA-LAA 
+ 
+ 
+ 
+Downloaded from pubs.​acs.​org/​asbcd6/​article-supplement/​3734401/​pdf/​sb4c00612_si_001/​ by UNIV SCIENCE AND TECHNOLOGY CHINA user on 06 September 2026

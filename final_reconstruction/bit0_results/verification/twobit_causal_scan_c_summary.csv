@@ -1,0 +1,4 @@
+﻿uM_per_au,cold_start_passed,steady_state_passed,causal_passed,causal_order,directions_alternate,certified,steady_sequence,min_commitment,g0_peak,Jrev0_peak,bit1_min_setup_h,bit1_min_hold_h
+7.0,False,False,False,False,False,False,3xx230123xx230123xx230x2,0.0,0.046401620781284944,0.8332102850920396,5.279572510782543,2.572855263684943
+7.25,False,False,False,False,False,False,xxxxx2323232323232323232,0.0,0.023247264036079,0.8090117271130084,5.506917824887687,2.9264155084456434
+7.5,False,False,False,False,False,False,101xxxxxxxxxxxxxxxxxx232,0.0,0.011796971196674498,0.782564490556787,5.464982355821931,3.0016843108447375

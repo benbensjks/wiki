@@ -1,0 +1,5 @@
+knob_setting_id,condition,smallest_tau_step_min,next_smallest_tau_step_min,small_step_flux_relative_change,small_step_period_relative_change,small_step_CV_relative_change_diagnostic,smallest_step_mRNA_balance_error,smallest_step_resolved_fraction,provisional_convergence_pass
+Robust_K4,stochastic_fixed_plasmids,0.05,0.1,0.03855001115131602,0.008184121037148174,0.056617238786843715,0.010288743621637675,1.0,False
+Robust_K4,stochastic_fluctuating_plasmids,0.05,0.1,0.04519593346445806,0.010823803881078327,0.010797961999637241,0.007224901203277012,1.0,False
+Robust_K5,stochastic_fixed_plasmids,0.05,0.1,0.01265186165873818,0.020839208324158552,0.014064172736951324,0.008898205041746543,1.0,False
+Robust_K5,stochastic_fluctuating_plasmids,0.05,0.1,0.03078128315189878,0.01146209589091285,0.04282455244670801,0.007972330013810147,1.0,False

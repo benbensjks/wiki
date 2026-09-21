@@ -1,0 +1,180 @@
+{
+  "completeness": {
+    "rows": 75,
+    "unique_points": 75,
+    "expected_points": 75,
+    "duplicates": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "solver_failures": 0,
+  "nonfinite_runs": 0,
+  "cold_passed": 34,
+  "steady_passed": 53,
+  "certified": 53,
+  "rate": 0.7066666666666667,
+  "failure_reasons": {
+    "": 53,
+    "readout_unlabelled_window": 22
+  },
+  "by_carry_mrna": {
+    "1.0": {
+      "points": 25,
+      "certified": 19,
+      "rate": 0.76
+    },
+    "2.0": {
+      "points": 25,
+      "certified": 18,
+      "rate": 0.72
+    },
+    "4.0": {
+      "points": 25,
+      "certified": 16,
+      "rate": 0.64
+    }
+  },
+  "best_points": [
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 4.0,
+      "timing_margin_h": 3.508840639223976,
+      "bit1_setup_h": 4.56074274931899,
+      "bit1_hold_h": 3.508840639223976,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.1840769380558907,
+      "Int1_source_peak": 3.313384885006034,
+      "cold_sequence": "1012301230123012301230123012"
+    },
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 2.0,
+      "timing_margin_h": 3.430554896459796,
+      "bit1_setup_h": 4.613201220024479,
+      "bit1_hold_h": 3.430554896459796,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.1779934062535843,
+      "Int1_source_peak": 3.2038813125645182,
+      "cold_sequence": "1012301230123012301230123012"
+    },
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 1.0,
+      "timing_margin_h": 3.390627832750269,
+      "bit1_setup_h": 4.639246406302021,
+      "bit1_hold_h": 3.390627832750269,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.1735305952650031,
+      "Int1_source_peak": 3.123550714770057,
+      "cold_sequence": "1012301230123012301230123012"
+    },
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 32.5,
+      "carry_mrna_half_life_min": 4.0,
+      "timing_margin_h": 3.3387538680044315,
+      "bit1_setup_h": 4.655167190967632,
+      "bit1_hold_h": 3.3387538680044315,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.2043831416416934,
+      "Int1_source_peak": 3.6788965495504815,
+      "cold_sequence": "1012301230123012301230123012"
+    },
+    {
+      "uM_per_au": 6.0,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 4.0,
+      "timing_margin_h": 3.2815669956037823,
+      "bit1_setup_h": 4.120888311674058,
+      "bit1_hold_h": 3.2815669956037823,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.3718097409138107,
+      "Int1_source_peak": 6.692575336448593,
+      "cold_sequence": "1230123012301230123012301230"
+    },
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 32.5,
+      "carry_mrna_half_life_min": 2.0,
+      "timing_margin_h": 3.25105586308797,
+      "bit1_setup_h": 4.708563988535701,
+      "bit1_hold_h": 3.25105586308797,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.1969597723965387,
+      "Int1_source_peak": 3.545275903137697,
+      "cold_sequence": "1012301230123012301230123012"
+    },
+    {
+      "uM_per_au": 6.5,
+      "carry_maturation_half_life_min": 32.5,
+      "carry_mrna_half_life_min": 1.0,
+      "timing_margin_h": 3.207052325073405,
+      "bit1_setup_h": 4.735395566274008,
+      "bit1_hold_h": 3.207052325073405,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.1916508821643474,
+      "Int1_source_peak": 3.449715878958254,
+      "cold_sequence": "1012301230123012301230123012"
+    },
+    {
+      "uM_per_au": 5.75,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 4.0,
+      "timing_margin_h": 3.199952079139564,
+      "bit1_setup_h": 4.487610829918364,
+      "bit1_hold_h": 3.199952079139564,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.4337900726307498,
+      "Int1_source_peak": 7.808221307353498,
+      "cold_sequence": "1230123012301230123012301230"
+    },
+    {
+      "uM_per_au": 6.0,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 2.0,
+      "timing_margin_h": 3.1963683772906397,
+      "bit1_setup_h": 4.164374230555135,
+      "bit1_hold_h": 3.1963683772906397,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.358827771611425,
+      "Int1_source_peak": 6.45889988900565,
+      "cold_sequence": "1230123012301230123012301230"
+    },
+    {
+      "uM_per_au": 6.0,
+      "carry_maturation_half_life_min": 35.0,
+      "carry_mrna_half_life_min": 1.0,
+      "timing_margin_h": 3.153258376268468,
+      "bit1_setup_h": 4.182017630268955,
+      "bit1_hold_h": 3.153258376268468,
+      "minimum_commitment": 1.0,
+      "g0_peak": 0.3497020446706073,
+      "Int1_source_peak": 6.294636804070932,
+      "cold_sequence": "1230123012301230123012301230"
+    }
+  ],
+  "environment": {
+    "shards": 15,
+    "uniform": true,
+    "python": [
+      "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+    ],
+    "platform": [
+      "Windows-11-10.0.26200-SP0"
+    ],
+    "versions": {
+      "numpy": [
+        "2.3.5"
+      ],
+      "pandas": [
+        "2.3.3"
+      ],
+      "scipy": [
+        "1.16.3"
+      ]
+    }
+  }
+}

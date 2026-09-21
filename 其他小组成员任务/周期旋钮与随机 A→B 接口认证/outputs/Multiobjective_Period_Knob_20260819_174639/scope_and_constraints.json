@@ -1,0 +1,28 @@
+{
+  "version": "Shared_PLtetO1_Multiobjective_Period_Knob_Designer_20260819",
+  "input_csv": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Shared_PLtetO1_RBS_mRNA_2D_full_20260819_155941\\RBS_mRNA_2D_all_conditions.csv",
+  "target_periods_generations": [
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0
+  ],
+  "period_tolerance_generations": 0.35,
+  "minimum_relative_amplitude": 0.9,
+  "maximum_residual_duty_above_0p5_uM_h": 0.55,
+  "maximum_stochastic_period_cv_if_supplied": 0.2,
+  "B_validation_supplied": true,
+  "stochastic_validation_supplied": false,
+  "baseline_for_effect_decomposition": {
+    "RBS_scale": 1.0,
+    "oscillator_mRNA_half_life_min": 2.0
+  },
+  "interpretation": [
+    "This is a calibrated period-knob library, not optimisation to one preferred period.",
+    "Representative rows are provisional until B and stochastic validation are supplied.",
+    "Deterministic period CV is not used as biological noise.",
+    "The contribution fractions are design-specific; no universal RBS:mRNA ratio is assumed."
+  ]
+}

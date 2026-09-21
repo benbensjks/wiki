@@ -1,0 +1,29 @@
+{
+  "version": "Robust_Continuous_Period_Knob_AB_Certification_20260821",
+  "mode": "full",
+  "representative_csv": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Robust_Period_Knob_Redesign_confirmation_20260821_122304\\ranked_five_setting_libraries.csv",
+  "zhao_core": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\code\\zhao_core.py",
+  "tag_rates_h_inv": [
+    8.0,
+    12.0
+  ],
+  "DNA_initial_states": [
+    "PB",
+    "LR"
+  ],
+  "duration_h": 168.23333333333332,
+  "transient_h": 30.0,
+  "audited_cycles": 10,
+  "success_target": 0.95,
+  "alternation_target": 0.95,
+  "DNA_conservation_tolerance": 1e-08,
+  "interface_equation": "int_production = rho * beta31 * m31 converted to uM/h",
+  "shared_PLtetO1_constraint": true,
+  "resource_load_fraction": 0.0,
+  "interpretation": [
+    "This is deterministic A-to-B interface certification, not stochastic fidelity.",
+    "A period-knob setting passes B only if PB and LR initial states both pass.",
+    "The five A-clock settings were selected by shared-scenario robust ordering.",
+    "Resource-load robustness is a later test and is not mixed into this first certification."
+  ]
+}

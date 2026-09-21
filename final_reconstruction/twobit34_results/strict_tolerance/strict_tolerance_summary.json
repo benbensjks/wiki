@@ -1,0 +1,521 @@
+{
+  "rows": 27,
+  "expected": 27,
+  "solver_failures": 0,
+  "points": [
+    {
+      "point_id": 0,
+      "point_name": "selected_centre",
+      "kind": "centre",
+      "uM": 5.75,
+      "mat": 32.5,
+      "mrna": 2.0,
+      "ultra_certified": true,
+      "ultra_reason": "",
+      "comparisons": [
+        {
+          "setting": "baseline",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 9.732730177347548e-10,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 9.732730177347548e-10,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 6.439293542825908e-15,
+            "bit1_min": 0.0,
+            "bit1_max": 1.199040866595169e-14,
+            "Jrev0_peak": 3.336997345115833e-12,
+            "g0_peak": 2.14572803969304e-12,
+            "Int1_source_peak": 3.8622438580659946e-11,
+            "bit1_setup_h": 2.398525822400188e-10,
+            "bit1_hold_h": 7.944365165712952e-10
+          }
+        },
+        {
+          "setting": "tight",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 3.979039320256561e-12,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 3.979039320256561e-12,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 4.440892098500626e-16,
+            "bit1_min": 0.0,
+            "bit1_max": 0.0,
+            "Jrev0_peak": 1.099120794378905e-14,
+            "g0_peak": 4.829470157119431e-15,
+            "Int1_source_peak": 8.704148513061227e-14,
+            "bit1_setup_h": 1.1386447340555605e-12,
+            "bit1_hold_h": 3.772981926886132e-12
+          }
+        }
+      ],
+      "converged": true
+    },
+    {
+      "point_id": 1,
+      "point_name": "pass_low_uM_edge",
+      "kind": "pass_boundary",
+      "uM": 5.5,
+      "mat": 30.0,
+      "mrna": 2.0,
+      "ultra_certified": true,
+      "ultra_reason": "",
+      "comparisons": [
+        {
+          "setting": "baseline",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 9.740688255988061e-10,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 9.740688255988061e-10,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 6.772360450213455e-15,
+            "bit1_min": 0.0,
+            "bit1_max": 5.654365864415922e-13,
+            "Jrev0_peak": 2.683742117426391e-12,
+            "g0_peak": 2.1645962799965446e-11,
+            "Int1_source_peak": 3.8962610915405094e-10,
+            "bit1_setup_h": 3.9615244418200746e-10,
+            "bit1_hold_h": 7.946816538151324e-10
+          }
+        },
+        {
+          "setting": "tight",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 4.774847184307873e-12,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 4.774847184307873e-12,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 7.771561172376096e-16,
+            "bit1_min": 0.0,
+            "bit1_max": 2.4424906541753444e-15,
+            "Jrev0_peak": 8.548717289613705e-15,
+            "g0_peak": 9.425793479067579e-14,
+            "Int1_source_peak": 1.6964207816272392e-12,
+            "bit1_setup_h": 1.9166890297128703e-12,
+            "bit1_hold_h": 3.815614491031738e-12
+          }
+        }
+      ],
+      "converged": true
+    },
+    {
+      "point_id": 2,
+      "point_name": "pass_low_mat_edge",
+      "kind": "pass_boundary",
+      "uM": 6.0,
+      "mat": 25.0,
+      "mrna": 2.0,
+      "ultra_certified": true,
+      "ultra_reason": "",
+      "comparisons": [
+        {
+          "setting": "baseline",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 1.0142571227333974e-09,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 9.740688255988061e-10,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 1.5987211554602254e-14,
+            "bit1_min": 0.0,
+            "bit1_max": 1.2945200467129325e-13,
+            "Jrev0_peak": 1.1641798636219391e-11,
+            "g0_peak": 1.333377852574813e-12,
+            "Int1_source_peak": 2.4002133613976184e-11,
+            "bit1_setup_h": 1.0142571227333974e-09,
+            "bit1_hold_h": 7.824922931831679e-10
+          }
+        },
+        {
+          "setting": "tight",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 4.842348744205083e-12,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 4.774847184307873e-12,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 5.551115123125783e-16,
+            "bit1_min": 0.0,
+            "bit1_max": 9.992007221626409e-16,
+            "Jrev0_peak": 6.272760089132134e-14,
+            "g0_peak": 1.3877787807814457e-14,
+            "Int1_source_peak": 2.504663143554353e-13,
+            "bit1_setup_h": 4.842348744205083e-12,
+            "bit1_hold_h": 3.772981926886132e-12
+          }
+        }
+      ],
+      "converged": true
+    },
+    {
+      "point_id": 3,
+      "point_name": "pass_notch_lip",
+      "kind": "pass_boundary",
+      "uM": 6.25,
+      "mat": 35.0,
+      "mrna": 2.0,
+      "ultra_certified": true,
+      "ultra_reason": "",
+      "comparisons": [
+        {
+          "setting": "baseline",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 3.58258915866827e-08,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 9.739551387610845e-10,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 1.787459069646502e-14,
+            "bit1_min": 0.0,
+            "bit1_max": 1.3322676295501878e-15,
+            "Jrev0_peak": 3.3175684421848928e-12,
+            "g0_peak": 1.7097989690739723e-12,
+            "Int1_source_peak": 3.077804677786844e-11,
+            "bit1_setup_h": 7.95580490375869e-10,
+            "bit1_hold_h": 3.58258915866827e-08
+          }
+        },
+        {
+          "setting": "tight",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 1.7053736200978165e-10,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 4.774847184307873e-12,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 2.220446049250313e-15,
+            "bit1_min": 0.0,
+            "bit1_max": 0.0,
+            "Jrev0_peak": 1.9539925233402755e-14,
+            "g0_peak": 1.687538997430238e-14,
+            "Int1_source_peak": 3.0464519795714295e-13,
+            "bit1_setup_h": 4.177991286269389e-12,
+            "bit1_hold_h": 1.7053736200978165e-10
+          }
+        }
+      ],
+      "converged": true
+    },
+    {
+      "point_id": 4,
+      "point_name": "pass_high_corner",
+      "kind": "pass_boundary",
+      "uM": 6.5,
+      "mat": 25.0,
+      "mrna": 4.0,
+      "ultra_certified": true,
+      "ultra_reason": "",
+      "comparisons": [
+        {
+          "setting": "baseline",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 9.74409886111971e-10,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 9.74409886111971e-10,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 4.218847493575595e-14,
+            "bit1_min": 0.0,
+            "bit1_max": 1.6653345369377348e-15,
+            "Jrev0_peak": 1.724176357242868e-13,
+            "g0_peak": 2.4703017409422046e-12,
+            "Int1_source_peak": 4.446576440386707e-11,
+            "bit1_setup_h": 8.091376457741717e-10,
+            "bit1_hold_h": 7.860592177166836e-10
+          }
+        },
+        {
+          "setting": "tight",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 4.661160346586257e-12,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 4.661160346586257e-12,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 2.7755575615628914e-15,
+            "bit1_min": 0.0,
+            "bit1_max": 4.440892098500626e-16,
+            "Jrev0_peak": 6.106226635438361e-15,
+            "g0_peak": 4.690692279041286e-15,
+            "Int1_source_peak": 8.43769498715119e-14,
+            "bit1_setup_h": 4.234834705130197e-12,
+            "bit1_hold_h": 3.808953152883987e-12
+          }
+        }
+      ],
+      "converged": true
+    },
+    {
+      "point_id": 5,
+      "point_name": "fail_low_uM",
+      "kind": "fail_boundary",
+      "uM": 5.5,
+      "mat": 27.5,
+      "mrna": 2.0,
+      "ultra_certified": false,
+      "ultra_reason": "readout_unlabelled_window",
+      "comparisons": [
+        {
+          "setting": "baseline",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 9.86745796183186e-10,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 9.740688255988061e-10,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 7.216449660063518e-15,
+            "bit1_min": 0.0,
+            "bit1_max": 3.540501225529624e-13,
+            "Jrev0_peak": 2.685518474265791e-12,
+            "g0_peak": 1.6088796961355456e-11,
+            "Int1_source_peak": 2.8959945552742283e-10,
+            "bit1_setup_h": 9.86745796183186e-10,
+            "bit1_hold_h": 7.950511360377277e-10
+          }
+        },
+        {
+          "setting": "tight",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 5.115907697472721e-12,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 4.774847184307873e-12,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 4.440892098500626e-16,
+            "bit1_min": 0.0,
+            "bit1_max": 1.6653345369377348e-15,
+            "Jrev0_peak": 8.326672684688674e-15,
+            "g0_peak": 8.298917109073045e-14,
+            "Int1_source_peak": 1.4956924587750109e-12,
+            "bit1_setup_h": 5.115907697472721e-12,
+            "bit1_hold_h": 3.8191672047105385e-12
+          }
+        }
+      ],
+      "converged": true
+    },
+    {
+      "point_id": 6,
+      "point_name": "fail_low_mat",
+      "kind": "fail_boundary",
+      "uM": 5.75,
+      "mat": 25.0,
+      "mrna": 2.0,
+      "ultra_certified": false,
+      "ultra_reason": "readout_unlabelled_window",
+      "comparisons": [
+        {
+          "setting": "baseline",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 9.736140782479197e-10,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 9.736140782479197e-10,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 6.439293542825908e-15,
+            "bit1_min": 0.0,
+            "bit1_max": 8.992806499463768e-15,
+            "Jrev0_peak": 3.3357760997887453e-12,
+            "g0_peak": 1.8807733148662464e-12,
+            "Int1_source_peak": 3.3853808645289973e-11,
+            "bit1_setup_h": 9.523830613034079e-10,
+            "bit1_hold_h": 7.938041335364687e-10
+          }
+        },
+        {
+          "setting": "tight",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 5.144329406903125e-12,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 4.206412995699793e-12,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 4.440892098500626e-16,
+            "bit1_min": 0.0,
+            "bit1_max": 0.0,
+            "Jrev0_peak": 7.549516567451064e-15,
+            "g0_peak": 4.030109579389318e-14,
+            "Int1_source_peak": 7.265299473147024e-13,
+            "bit1_setup_h": 5.144329406903125e-12,
+            "bit1_hold_h": 3.75877107217093e-12
+          }
+        }
+      ],
+      "converged": true
+    },
+    {
+      "point_id": 7,
+      "point_name": "fail_notch_mid",
+      "kind": "fail_boundary",
+      "uM": 6.25,
+      "mat": 32.5,
+      "mrna": 2.0,
+      "ultra_certified": false,
+      "ultra_reason": "readout_unlabelled_window",
+      "comparisons": [
+        {
+          "setting": "baseline",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 2.3352075828597663e-08,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 9.741825124365278e-10,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 1.787459069646502e-14,
+            "bit1_min": 0.0,
+            "bit1_max": 8.659739592076221e-15,
+            "Jrev0_peak": 3.318234575999668e-12,
+            "g0_peak": 7.047695760320494e-13,
+            "Int1_source_peak": 1.2685852368576889e-11,
+            "bit1_setup_h": 2.3352075828597663e-08,
+            "bit1_hold_h": 7.996727724446373e-10
+          }
+        },
+        {
+          "setting": "tight",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 1.1116618736650707e-10,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 4.774847184307873e-12,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 2.220446049250313e-15,
+            "bit1_min": 0.0,
+            "bit1_max": 0.0,
+            "Jrev0_peak": 2.0650148258027912e-14,
+            "g0_peak": 8.326672684688674e-15,
+            "Int1_source_peak": 1.4921397450962104e-13,
+            "bit1_setup_h": 1.1116618736650707e-10,
+            "bit1_hold_h": 4.263700503770451e-12
+          }
+        }
+      ],
+      "converged": true
+    },
+    {
+      "point_id": 8,
+      "point_name": "fail_notch_low",
+      "kind": "fail_boundary",
+      "uM": 6.25,
+      "mat": 30.0,
+      "mrna": 2.0,
+      "ultra_certified": false,
+      "ultra_reason": "readout_unlabelled_window",
+      "comparisons": [
+        {
+          "setting": "baseline",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 1.0530144312070888e-08,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 9.73841451923363e-10,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 1.787459069646502e-14,
+            "bit1_min": 0.0,
+            "bit1_max": 1.8132118029257072e-09,
+            "Jrev0_peak": 3.3183455983021304e-12,
+            "g0_peak": 1.0074718836960983e-12,
+            "Int1_source_peak": 1.8133938795017457e-11,
+            "bit1_setup_h": 1.0530144312070888e-08,
+            "bit1_hold_h": 1.0530143867981678e-08
+          }
+        },
+        {
+          "setting": "tight",
+          "same_certified": true,
+          "same_reason": true,
+          "same_cold_sequence": true,
+          "same_steady_sequence": true,
+          "max_numeric_difference": 5.012035231288792e-11,
+          "differences": {
+            "minimum_state": 0.0,
+            "maximum_state": 4.661160346586257e-12,
+            "minimum_commitment": 0.0,
+            "bit0_min": 0.0,
+            "bit0_max": 2.220446049250313e-15,
+            "bit1_min": 0.0,
+            "bit1_max": 8.629763570411342e-12,
+            "Jrev0_peak": 2.1760371282653068e-14,
+            "g0_peak": 4.418687638008123e-14,
+            "Int1_source_peak": 7.966960424710123e-13,
+            "bit1_setup_h": 5.012035231288792e-11,
+            "bit1_hold_h": 5.011990822367807e-11
+          }
+        }
+      ],
+      "converged": true
+    }
+  ],
+  "all_points_converged": true
+}

@@ -1,0 +1,7 @@
+﻿.python_deps/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+.env

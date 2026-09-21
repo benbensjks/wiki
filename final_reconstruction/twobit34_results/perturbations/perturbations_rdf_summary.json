@@ -1,0 +1,27 @@
+{
+  "completeness": {
+    "rows": 40,
+    "expected": 40,
+    "unique": 40,
+    "duplicates": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "solver_failures": 0,
+  "outcomes": {
+    "recovered_same_phase": 40
+  },
+  "by_group": {
+    "RDF": {
+      "recovered_same_phase": 40
+    }
+  },
+  "by_target": {
+    "RDF0": {
+      "recovered_same_phase": 20
+    },
+    "RDF1": {
+      "recovered_same_phase": 20
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "rows": 44,
+  "verdict": {
+    "R1_success": false,
+    "R1_points": [],
+    "R2_arm_A_saturation": [
+      {
+        "mrna": 2.0,
+        "crossings_at_first": 3,
+        "crossings_at_last": 24,
+        "saturated": false,
+        "overshoots_required": true
+      },
+      {
+        "mrna": 3.0,
+        "crossings_at_first": 3,
+        "crossings_at_last": 26,
+        "saturated": false,
+        "overshoots_required": true
+      },
+      {
+        "mrna": 4.0,
+        "crossings_at_first": 1,
+        "crossings_at_last": 26,
+        "saturated": false,
+        "overshoots_required": true
+      },
+      {
+        "mrna": 5.0,
+        "crossings_at_first": 1,
+        "crossings_at_last": 27,
+        "saturated": false,
+        "overshoots_required": true
+      }
+    ],
+    "R2_arm_A_overshoot": {
+      "points_above_required": 15,
+      "points_at_required": 0,
+      "note": "arm A does not saturate below the required count; past mat~90 it overshoots to 20-27 crossings, i.e. ringing rather than counting"
+    },
+    "R3_sharpen_certifies_at_frozen_maturation": true,
+    "R3_arm_A_has_any_certified": false,
+    "R4_both_arms_fail": false,
+    "projection_guard": {
+      "expected_reverse_events": 14,
+      "violations": []
+    }
+  }
+}

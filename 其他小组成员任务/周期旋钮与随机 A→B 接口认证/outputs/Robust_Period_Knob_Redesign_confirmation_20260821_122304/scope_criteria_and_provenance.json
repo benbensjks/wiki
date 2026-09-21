@@ -1,0 +1,26 @@
+{
+  "version": "Robust_Continuous_Period_Knob_Library_Redesign_20260821",
+  "input_grid": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Shared_PLtetO1_RBS_mRNA_2D_full_20260819_155941\\RBS_mRNA_2D_all_conditions.csv",
+  "mode_settings": {
+    "n_scenarios": 64,
+    "duration_min": 6000.0,
+    "transient_min": 1500.0,
+    "sample_step_min": 1.0,
+    "random_seed": 20260821
+  },
+  "PR_leak_gate": 0.0044891988797823,
+  "PR_leak_gate_status": "model-derived provisional requirement, not measured",
+  "ranking_rule": [
+    "maximize strict adjacent ordering fraction",
+    "maximize fraction with every adjacent gap >= 0.5 generations",
+    "require at least 4 generations of operational span",
+    "minimize CV of the median adjacent gaps for a continuous knob",
+    "minimize maximum candidate period CV",
+    "maximize median period span after continuity criteria pass",
+    "maximize minimum median gap"
+  ],
+  "pending": [
+    "B-interface recertification",
+    "SSA recertification"
+  ]
+}

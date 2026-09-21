@@ -1,0 +1,76 @@
+{
+  "points": 63,
+  "certified": 0,
+  "classification": {
+    "substrate_timing": 37,
+    "partial_reverse_write": 24,
+    "flux_tug_of_war": 2
+  },
+  "classification_as_recorded_by_scanner": {
+    "gate_not_formed": 63
+  },
+  "expected_gates_after_burn_in": 12,
+  "points_reaching_substrate": 26,
+  "substrate_lowband_concordance": 0.9206349206349206,
+  "best_split_crossings": 11,
+  "best_common_control_crossings": 12,
+  "deepest_write": 0.2117786193846506,
+  "classifier_note": "Two scanner thresholds were mis-specified and are corrected here: (1) gate_not_formed compared against the whole-run gate count 14 while episodes start after the 100 h burn-in (true count 12); (2) gate_leak used \"the dwell moves S2 by more than 0.10\", which is true for a working toggle as well (observed 0.11-0.43), so it is dropped and the classes are outcome based. Both label sets are reported.",
+  "points_entering_low_band": 27,
+  "best_episodes_entering_low_band": 4,
+  "max_substrate_ratio_reached": 1.591806513891895,
+  "controls": [
+    {
+      "carry1_a1_mat_min": 60.0,
+      "bit2_crossings": 12,
+      "episodes_entering_low_band": 2,
+      "max_I2R2_over_KD_best": 1.5613587048959396,
+      "S2_min_in_episode_best": 0.214641240536629,
+      "classification": "partial_reverse_write"
+    },
+    {
+      "carry1_a1_mat_min": 65.0,
+      "bit2_crossings": 1,
+      "episodes_entering_low_band": 0,
+      "max_I2R2_over_KD_best": 0.5836668770785703,
+      "S2_min_in_episode_best": 0.5863797920304733,
+      "classification": "substrate_timing"
+    },
+    {
+      "carry1_a1_mat_min": 70.0,
+      "bit2_crossings": 1,
+      "episodes_entering_low_band": 0,
+      "max_I2R2_over_KD_best": 0.4767040225850676,
+      "S2_min_in_episode_best": 0.5923272512462349,
+      "classification": "substrate_timing"
+    }
+  ],
+  "frozen_files_unchanged": true,
+  "environment": {
+    "python": [
+      "3.13.9 | packaged by A"
+    ],
+    "numpy": [
+      "2.3.5"
+    ]
+  },
+  "preregistered": {
+    "substrate_ratio_min": 1.0,
+    "leak_dwell_ds2_max": 0.1,
+    "tug_net_ds2_max": 0.05,
+    "low_band": 0.3,
+    "expected_gates": 14
+  },
+  "verdict": "PARTIAL: 27/63 points do write bit2 into the S2 <= 0.3 band (best 4 of 12 carry episodes), so the pre-registered \"no point enters the low band\" trigger does NOT fire. But none of them counts: the best split point reaches 11 crossings against 12 for the un-split 60/60 control, and the deepest write anywhere is only 0.21 against the 0.30 band edge. Expression-time tuning is therefore saturated at partial reverse writes, not exhausted at zero: one bounded local refinement is defensible, but the evidence already points at structure (RDF2/T2 feedback or an independent gate exponent) as the lever that can move 4/12 writes to 12/12.",
+  "files": {
+    "SOURCE_HASHES.json": "8B0462119E4BF37CE4F9BE1DB076C86F90552FEE0DDB26801717B8C46BA5492E",
+    "split_all.csv": "C4BB91AEF2AD38C8584C979948E650576E43FF3A71BD93B552A2A92E0E8BEA10",
+    "split_analysis.json": "EFC4BE43C3188C412D03338A13C317DE185F4F75CD2E1FC5AA00DA0B68975E25",
+    "split_heatmaps.pdf": "703B10B441CCC0B08B17E0B8D53943FEA7BE343807B1F786BB44E20C9C4406AB",
+    "split_heatmaps.png": "3B85C5A99642958043BB31A515C4A6BA2AC5E08B37A5E556A4513DCEC33DF76F",
+    "split_report.md": "99C8A713078064630D7D250806086E3AA8812449A31BE69B014EC0037C83045A",
+    "split_summary.json": "EBF3F84AEE13572846FB20ACDFDC059D4894EAC9D5DC814F955BCB3DE9F7E981",
+    "split_synthesis.pdf": "F3E8D30CCC237175F929F2B311543517759FDA5D8ECE1A60DDBB022108C4617D",
+    "split_synthesis.png": "5E94EF10B3B43EADD84566EAF70009417572743774FA76BADA4500A92FBB7EF0"
+  }
+}

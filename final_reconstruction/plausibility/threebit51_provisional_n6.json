@@ -1,0 +1,190 @@
+{
+  "status": "PROVISIONAL",
+  "name": "threebit51_provisional_n6",
+  "not_a_frozen_working_point": true,
+  "model": {
+    "file": "final_reconstruction/model_threebit51.py",
+    "sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "n_state": 51,
+    "layout": {
+      "0:34": "exact frozen TwoBit34Model prefix",
+      "34:45": "bit2 eleven-state module",
+      "45:51": "A1/F1 mature + four expression precursors"
+    }
+  },
+  "selected_parameters": {
+    "n_A1_gate": 6.0,
+    "carry1_mrna_half_life_min": 2.0,
+    "a1_f1_maturation_half_life_min": 32.5,
+    "f1_production_exponent": "frozen ZENG value",
+    "frozen_f1_drive_exponent": 4.0,
+    "f1_drive_exponent_note": "n_A1_gate only changes the A1 arm inside the carry-2 gate; the F1 production Hill keeps the frozen table exponent, so the two uses of ZENG[\"n_A\"][1] are decoupled by construction",
+    "carry0_parameters": "twobit34_results/selected_profile.json -> carry_expression (unchanged)",
+    "extension": "twobit34_results/selected_profile.json -> extension (unchanged)",
+    "zeng_table": "unmodified"
+  },
+  "selection_evidence": {
+    "certified_grid": {
+      "grid": "n_A1_gate in {4,5,6,7,8} x carry1 mRNA in {2,4} min x A1/F1 maturation in {32.5,60} min",
+      "hours": 600,
+      "certified": "2 points; n in {5,6,7,8} all pass, n=4 all fail",
+      "per_point": {
+        "n=5": {
+          "certified": true,
+          "crossings": 14.0,
+          "gates": 14.0,
+          "reverse_events": 14.0,
+          "leak5pct_ratio": 0.1236441009405973,
+          "leak1pct_ratio": 0.1228152298473607,
+          "leak10pct_ratio": 0.1238011358592195
+        },
+        "n=6": {
+          "certified": true,
+          "crossings": 14.0,
+          "gates": 14.0,
+          "reverse_events": 14.0,
+          "leak5pct_ratio": 0.038640162443829,
+          "leak1pct_ratio": 0.0380319548241298,
+          "leak10pct_ratio": 0.0387607493877986
+        }
+      }
+    },
+    "why_n6_over_n5": {
+      "far_off_leak_ratio_worst": {
+        "n5": 0.1236441009405973,
+        "n6": 0.038640162443829,
+        "note": "n=6 is ~3x lower; ordering identical at the 1 %, 5 % and 10 % tail cuts"
+      },
+      "margin_to_band_low": {
+        "n5": 0.2676214068931516,
+        "n6": 0.2828228503899858,
+        "larger": "n=6"
+      },
+      "margin_to_band_high": {
+        "n5": 0.2211224103904155,
+        "n6": 0.2783721280149123,
+        "larger": "n=6"
+      },
+      "bit2_hold_min_h": {
+        "n5": 3.748053408075236,
+        "n6": 3.819403857071791,
+        "larger": "n=6"
+      },
+      "bit2_setup_min_h": {
+        "n5": 4.602671199458769,
+        "n6": 4.539428285816513,
+        "larger": "n=5",
+        "note": "the ONLY metric where n=5 wins; it is 0.063 h and does not bind, because the global setup minimum is set by bit0 (4.030 h) and is identical for both"
+      },
+      "global_timing_identical": {
+        "setup_min_h_global": 4.030390535172833,
+        "hold_min_h_global": 2.913722775395758,
+        "note": "bit0 and bit1 setup/hold are bit-identical between n=5 and n=6, so the binding timing margins of the whole 3-bit counter are set by the frozen prefix and the gate exponent does not move them"
+      },
+      "reading_of_commitment": "commitment is 1.0 (its ceiling) for both points and therefore has NO ranking power; it only proves both are far from the readout boundary. The ranking comes from the band-edge distances and the leak interval."
+    },
+    "readout_margins_n6": {
+      "clock_period_h": 10.599999999999994,
+      "read_window_h_median": 2.1333333333333258,
+      "reads_total": 56,
+      "reads_steady_drop8": 48,
+      "reads_steady_drop4": 52,
+      "read_windows_clipped": 0.0,
+      "unlabelled_reads": 0.0,
+      "bit2_low_reads": 24,
+      "bit2_high_reads": 24,
+      "commitment_min_all_bits": 1.0,
+      "bit2_low_window_max_max": 0.0171771496100142,
+      "bit2_high_window_min_min": 0.9783721280149122
+    },
+    "layer_derivation": {
+      "D1": "34-state two-bit prefix frozen",
+      "D2": "51-state model: states 0..33 have no dependence on states 34..50",
+      "D3": "default n_A1_gate=4 fails the three-bit count",
+      "D4": "shared-maturation route excluded",
+      "D5": "independent gate exponent n=5..8 gives 16/16 mod-8 certification",
+      "D6": "three-segment split shows the old R1 mostly measured the legitimate Int2 tail",
+      "D7": "n=6 beats n=5 on leak, both band-edge margins and bit2 hold",
+      "D8": "commitment recomputation: neither point is near the readout boundary"
+    }
+  },
+  "provenance": {
+    "structural_guards": {
+      "prefix_guard_passed": true,
+      "prefix_guard_rhs_gap_states_0_33": {
+        "rhs_gap_n=4": 0.0,
+        "rhs_gap_n=5": 0.0,
+        "rhs_gap_n=6": 0.0,
+        "rhs_gap_n=7": 0.0,
+        "rhs_gap_n=8": 0.0
+      },
+      "prefix_guard_note": "states 0..33 must be independent of n_A1_gate; the structural RHS test is used because the adaptive step-size controller makes a trajectory comparison show ~1e-13 round-off",
+      "decoupling_verification_passed": true
+    },
+    "script_versions": {
+      "check_read_commitment.py v1 (produced the archived v1 shard CSVs)": "B508EB62CF878F285C8FB4DA52FDCAEF3DA8FD54B7BBC8CF983ABC9FD4903421",
+      "check_read_commitment.py v2 (merge column-name fix only)": "769BD9DF26B8D1F234375C5187A4D1FB6D2CF6BD8504A9660DEAB72DDFCAE146",
+      "check_read_commitment.py v3 (adds setup/hold and per-bit margins)": "0D22F8CCBE67E50C1568B465FE0922EA6D5457847003AE9DEE65F95647B0CD0B",
+      "v1_hash_source": "reconstructed by reversing the single merge-path edit; the scan ran with exactly this content and a byte-identical copy is kept under plausibility/read_commitment_v1/",
+      "merge_bug": "v1 read the margin columns without the drop8_/drop4_ prefix, so merge raised KeyError. Only the reporting path was affected; the scanner did NOT re-integrate anything.",
+      "v1_vs_v3_shared_columns": 122,
+      "v1_vs_v3_differing_columns": [
+        "ref_bit2_hold_h (v1 placeholder None -> v3 measured value)",
+        "runtime_s (v3 is ~11 s slower because it adds one analyse pass)"
+      ],
+      "v1_vs_v3_verdict": "every one of the 122 shared columns is reproduced exactly; the setup/hold extension perturbed no data"
+    },
+    "evidence_sha256": {
+      "gate_segments_all.csv": "4AF667985EEE0434CA310D9D67F4C22C5A397F31534656DC8701A4E5C835E2BA",
+      "gate_segments_verdict.json": "1846F67923B723E34F5130827346D1D8339DF1C56233908F540D833B69E2573A",
+      "gate_segments_prefix_guard.json": "E99DB445754E6BE1BA428576EB24952F9930765137478395732E0B2909CBA2FA",
+      "read_commitment_all.csv": "1CFF0835B64F8124CD127F141B415A06C3FDCAE168FD8894F1722CDBAC9B5217",
+      "read_commitment_verdict.json": "468CD8DA6AC2CF1EA36B0201BB9A76D60D1720B410281B9E41FB3DF82AD6DA25",
+      "read_commitment_shard00of02.csv": "144D293111A455F188D3496C7D1B0ACA842AA3A878BBF59A3C1E5C0B63F35F34",
+      "read_commitment_shard01of02.csv": "25FA7286C594A336EE3DBD6F6B9B08F80EB9F10651DF8CCF130ECCF8BA760387",
+      "meta_read_commitment_shard00of02.json": "ABC8109DEA83E486D951707D1376550B78DE5889EB920A0A3D8A2C877D18B642",
+      "meta_read_commitment_shard01of02.json": "D2E7FB2445B833A1CCCB2EAE0F0E04322587C910A1DBAF403B3C60FF0DE9458F",
+      "check_read_commitment.py": "0D22F8CCBE67E50C1568B465FE0922EA6D5457847003AE9DEE65F95647B0CD0B",
+      "read_commitment_v1/check_read_commitment_v1.py.txt": "F2120638D5185F50CC3E44F386BDBB8DC69D6B30EB9619002402F1837FD51A00",
+      "read_commitment_v1/read_commitment_shard00of02.csv": "A380C4D16B0F4B15E58740795A64E2B160BF5B9E24304C24B1B48B412799739F",
+      "read_commitment_v1/read_commitment_shard01of02.csv": "86236B5F45ABD99629371AD77FCA7B949ED4235D129C900752959C6EA64A17FC",
+      "decoupling_verification.json": "3D08AE91307D6D85BDAFA66EBF8E03AF5F7E347939833433C825AF268FEDA7F4"
+    },
+    "frozen_source_sha256": {
+      "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+      "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+      "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+      "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+      "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+      "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+      "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+    },
+    "gate_segments_crosscheck": {
+      "leak_ratio_gap_n5": 5.551115123125783e-17,
+      "leak_ratio_gap_n6": 6.245004513516506e-17,
+      "crossings_gap": 0.0,
+      "bit2_hold_gap": 4.440892098500626e-16,
+      "note": "the commitment stage re-integrated the same two points and reproduced the gate-segment row to round-off, so the margins and the certification come from the same trajectory"
+    }
+  },
+  "still_open_before_frozen": [
+    "eight phase-consistent initial states (values 000..111) of the 51-state model",
+    "strict-tolerance re-verification at the selected point",
+    "molecular-pool perturbations (S / RDF / A1-F1 / Int2)",
+    "final source and result hashes for the frozen candidate",
+    "written statement of the unreconciled growth condition"
+  ],
+  "limitations": [
+    "gamma = intrinsic decay + growth dilution is confirmed, so add_growth=False is the consistent choice; however mu < 0.6/h is required for the selected point while the upstream oscillator uses Td = 50 min (mu = 0.8318/h). The two authors growth conditions are NOT reconciled and this must be stated with any frozen profile.",
+    "k_int = 6 is a square-wave-specific tuning value and must not be applied to the real C31 flux.",
+    "uM_per_au = 5.75 is an uncalibrated interface scale, not a measured conversion.",
+    "the explicit complex is a structural addition relative to Zeng reduced model and sequesters part of the free Int pool.",
+    "alpha_rep / gamma_rep remain 3.5 / 0.6 from the PDF; they are NOT changed to the square-wave code 3.2 / 0.7 without Zeng confirmation."
+  ],
+  "upgrade_policy": {
+    "this_file_is_read_only": true,
+    "superseded_by": null,
+    "formal_candidate_file": "plausibility/threebit51_selected_v1.json",
+    "condition": "created only after the eight initial states, the strict-tolerance ring and the molecular-pool perturbations have all passed"
+  }
+}

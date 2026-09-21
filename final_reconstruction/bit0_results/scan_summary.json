@@ -1,0 +1,35 @@
+{
+  "grid_size": 800,
+  "solved": 800,
+  "stable_bit0_candidates": 0,
+  "varied_parameters": [
+    "uM_per_au",
+    "maturation_half_life_min",
+    "complex_on_au_inv_h",
+    "complex_off_h",
+    "add_growth"
+  ],
+  "zeng_parameters_varied": false,
+  "top_candidate": {
+    "uM_per_au": 10.0,
+    "mrna_half_life_min": 2.0,
+    "maturation_half_life_min": 20.0,
+    "translation_h": 30.0,
+    "immature_decay_h": 0.0,
+    "complex_on_au_inv_h": 0.1,
+    "complex_off_h": 1.0,
+    "complex_decay_h": 1.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "add_growth": false
+  },
+  "top_candidate_score": {
+    "alternation_accuracy": 0.6666666666666666,
+    "confident_fraction": 0.7142857142857143,
+    "dynamic_range": 0.3587177779094901,
+    "stable_alternation": false,
+    "codes": "xx10101"
+  },
+  "twobit_test": null,
+  "interpretation": "No stable bit0 in the declared extension grid; carry test correctly skipped."
+}

@@ -1,0 +1,47 @@
+{
+  "verdict": {
+    "baseline_crossings": 5,
+    "baseline_reverse_events": 14,
+    "baseline_S2_min_late": 0.5035682936252067,
+    "baseline_R2_at_S2min": 0.12870335188158127,
+    "R_ss_of_stall_point": 0.031426617996364314,
+    "R_ss_at_S_0p95": 7.016741948012752,
+    "rdf_map": {
+      "baseline": {
+        "S_turn_on": 1e-09,
+        "max_log_slope": 26248.629621247128,
+        "S_at_half_plateau": 0.866000000134,
+        "R_plateau": 7.5
+      },
+      "bit2_soft_repression_n2": {
+        "S_turn_on": 1e-09,
+        "max_log_slope": 26246.689666041893,
+        "S_at_half_plateau": 0.874000000126,
+        "R_plateau": 7.5
+      },
+      "bit2_no_repression_Krep100": {
+        "S_turn_on": 1e-09,
+        "max_log_slope": 26244.73083900344,
+        "S_at_half_plateau": 0.5005000004994999,
+        "R_plateau": 7.5
+      }
+    },
+    "probes_preserving_prefix": [
+      "bit2_soft_repression_n2",
+      "bit2_no_repression_Krep100"
+    ],
+    "probes_confounded": [],
+    "probes_that_recover": [],
+    "rdf_collapse_is_load_bearing": false,
+    "verdict": "not binding: prefix-preserving collapse probes do not recover bit2"
+  },
+  "source_sha256": {
+    "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+    "model_threebit51.py": "9226D6D26C4013B13BB34806D517D73CBE508F58A75D100F217C048DF9ABCB0A",
+    "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+    "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+    "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+    "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+  }
+}

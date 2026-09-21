@@ -1,0 +1,5 @@
+design_RBS_scale,design_oscillator_mRNA_half_life_min,stochastic_period_cv,stochastic_mean_period_generations,stochastic_resolved_fraction,stochastic_validation_status
+0.6,2.0,0.03701800540671075,10.247263319577016,1.0,pass
+0.8,2.0,0.034252722582716666,11.22172687955786,1.0,pass
+1.2,2.0,0.03710126102302256,12.256432947811879,1.0,pass
+1.2,3.0,0.03650215697012582,13.312883831545255,1.0,pass

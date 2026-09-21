@@ -1,0 +1,41 @@
+{
+  "completeness": {
+    "rows": 40,
+    "expected": 40,
+    "unique": 40,
+    "duplicates": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "solver_failures": 0,
+  "outcomes": {
+    "recovered_same_phase": 27,
+    "stable_phase_shift_2": 5,
+    "lost_counting": 5,
+    "stable_phase_shift_3": 2,
+    "stable_phase_shift_1": 1
+  },
+  "by_group": {
+    "S": {
+      "recovered_same_phase": 27,
+      "stable_phase_shift_2": 5,
+      "lost_counting": 5,
+      "stable_phase_shift_3": 2,
+      "stable_phase_shift_1": 1
+    }
+  },
+  "by_target": {
+    "S0": {
+      "recovered_same_phase": 13,
+      "lost_counting": 3,
+      "stable_phase_shift_3": 2,
+      "stable_phase_shift_2": 1,
+      "stable_phase_shift_1": 1
+    },
+    "S1": {
+      "recovered_same_phase": 14,
+      "stable_phase_shift_2": 4,
+      "lost_counting": 2
+    }
+  }
+}

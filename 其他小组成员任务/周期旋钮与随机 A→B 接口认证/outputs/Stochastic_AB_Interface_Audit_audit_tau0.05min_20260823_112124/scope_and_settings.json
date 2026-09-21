@@ -1,0 +1,25 @@
+{
+  "version": "Stochastic_AB_Interface_Consistency_Audit_v2_20260823",
+  "mode": "audit",
+  "settings": {
+    "trajectories_per_setting": 12,
+    "duration_generations": 150.0,
+    "transient_generations": 25.0,
+    "audited_cycles": 7,
+    "tau_step_min": 0.05,
+    "sample_step_min": 1.0,
+    "random_seed": 20260822
+  },
+  "library_csv": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\outputs\\Robust_Period_Knob_Redesign_confirmation_20260821_122304\\ranked_five_setting_libraries.csv",
+  "zhao_core": "D:\\CodexWork\\iGEM_A模块_Week1模型审计\\41_Mechanistic_ODE_Global_Sensitivity_Analysis_20260819\\code\\zhao_core.py",
+  "tag_rate_h_inv": 12.0,
+  "Td_min": 50.0,
+  "smoothing_windows_min": [
+    0.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "interpretation": "Sensitivity to short causal averaging supports a hybrid-interface time-resolution artifact; persistent failure after averaging supports a biological waveform/noise limitation."
+}

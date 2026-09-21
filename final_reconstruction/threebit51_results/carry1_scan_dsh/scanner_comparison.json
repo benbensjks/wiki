@@ -1,0 +1,394 @@
+{
+  "A_shards_gpt": {
+    "grid_size": 35,
+    "shard_union_size": 35,
+    "union_equals_grid": true,
+    "duplicates": 0,
+    "per_shard": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "A_shards_dsh": {
+    "grid_size": 35,
+    "shard_union_size": 35,
+    "union_equals_grid": true,
+    "duplicates": 0,
+    "per_shard": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "A_grids_identical": true,
+  "A_mrna_values": {
+    "gpt": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "dsh": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "equal": true
+  },
+  "A_mat_values": {
+    "gpt": [
+      5.0,
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0,
+      60.0
+    ],
+    "dsh": [
+      5.0,
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0,
+      60.0
+    ],
+    "equal": true
+  },
+  "A_hours_default": {
+    "gpt": 600.0,
+    "dsh": 600.0
+  },
+  "A_output_dirs_differ": true,
+  "B_model_config": [
+    {
+      "job": {
+        "carry1_mrna_min": 2.0,
+        "carry1_maturation_min": 20.0
+      },
+      "extension_equal": true,
+      "carry0_equal": true,
+      "carry1_equal": true,
+      "shape_gpt": [
+        51
+      ],
+      "shape_dsh": [
+        51
+      ],
+      "init_state_max_abs_diff": 0.0
+    },
+    {
+      "job": {
+        "carry1_mrna_min": 0.5,
+        "carry1_maturation_min": 5.0
+      },
+      "extension_equal": true,
+      "carry0_equal": true,
+      "carry1_equal": true,
+      "shape_gpt": [
+        51
+      ],
+      "shape_dsh": [
+        51
+      ],
+      "init_state_max_abs_diff": 0.0
+    },
+    {
+      "job": {
+        "carry1_mrna_min": 8.0,
+        "carry1_maturation_min": 60.0
+      },
+      "extension_equal": true,
+      "carry0_equal": true,
+      "carry1_equal": true,
+      "shape_gpt": [
+        51
+      ],
+      "shape_dsh": [
+        51
+      ],
+      "init_state_max_abs_diff": 0.0
+    }
+  ],
+  "C_initial_state_max_abs_diff": 0.0,
+  "D_row_equivalence": [
+    {
+      "job": {
+        "carry1_mrna_min": 2.0,
+        "carry1_maturation_min": 20.0
+      },
+      "hours": 100.0,
+      "shared_fields": 25,
+      "identical": true,
+      "differences": [],
+      "fields_only_gpt": [
+        "on_g1_peak"
+      ],
+      "fields_only_dsh": [
+        "I2_peak",
+        "RDF2_max",
+        "RDF2_median",
+        "abs_net_ds2_max",
+        "abs_net_ds2_median",
+        "bit2_high_cycles",
+        "bit2_labelled_cycles",
+        "bit2_low_cycles",
+        "crossing_error",
+        "crossing_ratio",
+        "cycle_metrics",
+        "cycles",
+        "fwd2_integral_median",
+        "off_median_to_on_peak",
+        "on_g1_peak_median",
+        "rev2_integral_median",
+        "rev_over_fwd_median",
+        "s2_cycle_max_median",
+        "s2_cycle_min_median",
+        "s2_cycle_min_min",
+        "unassigned_crossings",
+        "unassigned_gates",
+        "windows"
+      ],
+      "gpt_certified": false,
+      "dsh_certified": false,
+      "gpt_crossings": 1,
+      "dsh_crossings": 1,
+      "gpt_runtime_s": 27.204,
+      "dsh_runtime_s": 29.48
+    },
+    {
+      "job": {
+        "carry1_mrna_min": 2.0,
+        "carry1_maturation_min": 20.0
+      },
+      "hours": 200.0,
+      "shared_fields": 25,
+      "identical": true,
+      "differences": [],
+      "fields_only_gpt": [
+        "on_g1_peak"
+      ],
+      "fields_only_dsh": [
+        "I2_peak",
+        "RDF2_max",
+        "RDF2_median",
+        "abs_net_ds2_max",
+        "abs_net_ds2_median",
+        "bit2_high_cycles",
+        "bit2_labelled_cycles",
+        "bit2_low_cycles",
+        "crossing_error",
+        "crossing_ratio",
+        "cycle_metrics",
+        "cycles",
+        "fwd2_integral_median",
+        "off_median_to_on_peak",
+        "on_g1_peak_median",
+        "rev2_integral_median",
+        "rev_over_fwd_median",
+        "s2_cycle_max_median",
+        "s2_cycle_min_median",
+        "s2_cycle_min_min",
+        "unassigned_crossings",
+        "unassigned_gates",
+        "windows"
+      ],
+      "gpt_certified": false,
+      "dsh_certified": false,
+      "gpt_crossings": 1,
+      "dsh_crossings": 1,
+      "gpt_runtime_s": 66.783,
+      "dsh_runtime_s": 66.54
+    },
+    {
+      "job": {
+        "carry1_mrna_min": 0.5,
+        "carry1_maturation_min": 5.0
+      },
+      "hours": 100.0,
+      "shared_fields": 25,
+      "identical": true,
+      "differences": [],
+      "fields_only_gpt": [
+        "on_g1_peak"
+      ],
+      "fields_only_dsh": [
+        "I2_peak",
+        "RDF2_max",
+        "RDF2_median",
+        "abs_net_ds2_max",
+        "abs_net_ds2_median",
+        "bit2_high_cycles",
+        "bit2_labelled_cycles",
+        "bit2_low_cycles",
+        "crossing_error",
+        "crossing_ratio",
+        "cycle_metrics",
+        "cycles",
+        "fwd2_integral_median",
+        "off_median_to_on_peak",
+        "on_g1_peak_median",
+        "rev2_integral_median",
+        "rev_over_fwd_median",
+        "s2_cycle_max_median",
+        "s2_cycle_min_median",
+        "s2_cycle_min_min",
+        "unassigned_crossings",
+        "unassigned_gates",
+        "windows"
+      ],
+      "gpt_certified": false,
+      "dsh_certified": false,
+      "gpt_crossings": 1,
+      "dsh_crossings": 1,
+      "gpt_runtime_s": 28.284,
+      "dsh_runtime_s": 29.4
+    },
+    {
+      "job": {
+        "carry1_mrna_min": 0.5,
+        "carry1_maturation_min": 5.0
+      },
+      "hours": 200.0,
+      "shared_fields": 25,
+      "identical": true,
+      "differences": [],
+      "fields_only_gpt": [
+        "on_g1_peak"
+      ],
+      "fields_only_dsh": [
+        "I2_peak",
+        "RDF2_max",
+        "RDF2_median",
+        "abs_net_ds2_max",
+        "abs_net_ds2_median",
+        "bit2_high_cycles",
+        "bit2_labelled_cycles",
+        "bit2_low_cycles",
+        "crossing_error",
+        "crossing_ratio",
+        "cycle_metrics",
+        "cycles",
+        "fwd2_integral_median",
+        "off_median_to_on_peak",
+        "on_g1_peak_median",
+        "rev2_integral_median",
+        "rev_over_fwd_median",
+        "s2_cycle_max_median",
+        "s2_cycle_min_median",
+        "s2_cycle_min_min",
+        "unassigned_crossings",
+        "unassigned_gates",
+        "windows"
+      ],
+      "gpt_certified": false,
+      "dsh_certified": false,
+      "gpt_crossings": 1,
+      "dsh_crossings": 1,
+      "gpt_runtime_s": 62.602,
+      "dsh_runtime_s": 56.67
+    },
+    {
+      "job": {
+        "carry1_mrna_min": 8.0,
+        "carry1_maturation_min": 60.0
+      },
+      "hours": 100.0,
+      "shared_fields": 25,
+      "identical": true,
+      "differences": [],
+      "fields_only_gpt": [
+        "on_g1_peak"
+      ],
+      "fields_only_dsh": [
+        "I2_peak",
+        "RDF2_max",
+        "RDF2_median",
+        "abs_net_ds2_max",
+        "abs_net_ds2_median",
+        "bit2_high_cycles",
+        "bit2_labelled_cycles",
+        "bit2_low_cycles",
+        "crossing_error",
+        "crossing_ratio",
+        "cycle_metrics",
+        "cycles",
+        "fwd2_integral_median",
+        "off_median_to_on_peak",
+        "on_g1_peak_median",
+        "rev2_integral_median",
+        "rev_over_fwd_median",
+        "s2_cycle_max_median",
+        "s2_cycle_min_median",
+        "s2_cycle_min_min",
+        "unassigned_crossings",
+        "unassigned_gates",
+        "windows"
+      ],
+      "gpt_certified": false,
+      "dsh_certified": false,
+      "gpt_crossings": 1,
+      "dsh_crossings": 1,
+      "gpt_runtime_s": 28.287,
+      "dsh_runtime_s": 27.64
+    },
+    {
+      "job": {
+        "carry1_mrna_min": 8.0,
+        "carry1_maturation_min": 60.0
+      },
+      "hours": 200.0,
+      "shared_fields": 25,
+      "identical": true,
+      "differences": [],
+      "fields_only_gpt": [
+        "on_g1_peak"
+      ],
+      "fields_only_dsh": [
+        "I2_peak",
+        "RDF2_max",
+        "RDF2_median",
+        "abs_net_ds2_max",
+        "abs_net_ds2_median",
+        "bit2_high_cycles",
+        "bit2_labelled_cycles",
+        "bit2_low_cycles",
+        "crossing_error",
+        "crossing_ratio",
+        "cycle_metrics",
+        "cycles",
+        "fwd2_integral_median",
+        "off_median_to_on_peak",
+        "on_g1_peak_median",
+        "rev2_integral_median",
+        "rev_over_fwd_median",
+        "s2_cycle_max_median",
+        "s2_cycle_min_median",
+        "s2_cycle_min_min",
+        "unassigned_crossings",
+        "unassigned_gates",
+        "windows"
+      ],
+      "gpt_certified": false,
+      "dsh_certified": false,
+      "gpt_crossings": 1,
+      "dsh_crossings": 1,
+      "gpt_runtime_s": 84.424,
+      "dsh_runtime_s": 110.55
+    }
+  ],
+  "D_all_identical": true
+}

@@ -1,0 +1,873 @@
+{
+  "hours": 350.0,
+  "analysis_start_h": 200.0,
+  "sample_min": 2.0,
+  "experimental_sample_min": 30.0,
+  "steps": [
+    0.01,
+    0.02,
+    0.05
+  ],
+  "rank_tol": 0.001,
+  "parameters": [
+    "uM_per_au",
+    "n_A1_gate",
+    "carry1_mrna_half_life_min",
+    "A1_maturation_half_life_min",
+    "F1_maturation_half_life_min",
+    "complex_on",
+    "complex_off",
+    "complex_decay",
+    "K_D_comp_scale"
+  ],
+  "nominal_values": {
+    "uM_per_au": 5.75,
+    "n_A1_gate": 6.0,
+    "carry1_mrna_half_life_min": 2.0,
+    "A1_maturation_half_life_min": 32.5,
+    "F1_maturation_half_life_min": 32.5,
+    "complex_on": 0.1,
+    "complex_off": 1.0,
+    "complex_decay": 1.0,
+    "K_D_comp_scale": 1.0
+  },
+  "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+  "source_sha256": {
+    "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+    "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+    "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+    "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+    "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+  },
+  "observation_models": {
+    "theoretical": {
+      "observables": [
+        "S0",
+        "S1",
+        "S2",
+        "I0",
+        "R0",
+        "C0",
+        "I1",
+        "R1",
+        "C1",
+        "I2",
+        "R2",
+        "C2",
+        "A1",
+        "F1",
+        "g1",
+        "J_rev1",
+        "J_rev2"
+      ],
+      "sample_min": 2.0
+    },
+    "experimental": {
+      "observables": [
+        "S0",
+        "S1",
+        "S2",
+        "I0",
+        "A1"
+      ],
+      "sample_min": 30.0,
+      "excluded": [
+        "RDF pools",
+        "complexes",
+        "immature and mRNA states",
+        "internal gate g1",
+        "all fluxes"
+      ]
+    }
+  },
+  "conditional_on": {
+    "perturbation_scale_pct": [
+      1.0,
+      2.0,
+      5.0
+    ],
+    "observables": "listed under observation_models; the experimental set is a subset",
+    "sampling": "2 min theoretical / 30 min experimental",
+    "noise": "IDEALIZED NOISELESS observation; no measurement-error model",
+    "quantitation": "states treated as absolutely quantified in model a.u.; scale_i is the baseline trajectory maximum of each observable",
+    "initial_condition": "the frozen model default initial state, not fitted; a different or unknown initial condition changes the sensitivities",
+    "note": "these are assumptions of the EXPERIMENT, not of the model; identifiability holds only within them"
+  },
+  "results": {
+    "theoretical": {
+      "observables": [
+        "S0",
+        "S1",
+        "S2",
+        "I0",
+        "R0",
+        "C0",
+        "I1",
+        "R1",
+        "C1",
+        "I2",
+        "R2",
+        "C2",
+        "A1",
+        "F1",
+        "g1",
+        "J_rev1",
+        "J_rev2"
+      ],
+      "n_observables": 17,
+      "n_timepoints": 4501,
+      "per_step": {
+        "0.01": {
+          "singular_values": [
+            2481.0287295296744,
+            956.4472196780977,
+            468.63389328879117,
+            83.81543730736453,
+            27.229077051524005,
+            23.99599548017982,
+            10.044943350271197,
+            8.719268819070132,
+            2.0062251729497045
+          ],
+          "effective_rank": 8,
+          "condition_number": 1236.665137583673,
+          "weakest_direction": {
+            "uM_per_au": 0.0002869110758505592,
+            "n_A1_gate": -0.008991425169116682,
+            "carry1_mrna_half_life_min": -0.9324961378842105,
+            "A1_maturation_half_life_min": 0.33348640529362783,
+            "F1_maturation_half_life_min": 0.021791402904423187,
+            "complex_on": 0.08650846272871916,
+            "complex_off": 0.015208409687584622,
+            "complex_decay": 0.1047139911731219,
+            "K_D_comp_scale": 0.0013954332547177833
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.3855042903350056,
+            0.18888692731003948,
+            0.03378253395850572,
+            0.010974914045709494,
+            0.009671792669941679,
+            0.0040487009403455815,
+            0.003514376401728743,
+            0.0008086263367575038
+          ]
+        },
+        "0.02": {
+          "singular_values": [
+            1571.7402227131734,
+            1114.495283570194,
+            370.4682048626832,
+            106.9860674683724,
+            57.18051719550939,
+            23.968204405767008,
+            19.3923977751798,
+            9.500662966438584,
+            2.7350478413963395
+          ],
+          "effective_rank": 9,
+          "condition_number": 574.6664460211942,
+          "weakest_direction": {
+            "uM_per_au": -0.0006660099797275628,
+            "n_A1_gate": 0.012311628573784672,
+            "carry1_mrna_half_life_min": 0.8920440515962489,
+            "A1_maturation_half_life_min": -0.440902562733207,
+            "F1_maturation_half_life_min": 0.00919224198547135,
+            "complex_on": -0.037655786450423084,
+            "complex_off": 0.005616825323046197,
+            "complex_decay": -0.08994471463907407,
+            "K_D_comp_scale": -0.009287864957784766
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.7090836433811735,
+            0.23570574800406432,
+            0.06806854333961794,
+            0.03638038676442542,
+            0.015249469383937096,
+            0.012338169816449824,
+            0.006044677631293501,
+            0.0017401398792702767
+          ]
+        },
+        "0.05": {
+          "singular_values": [
+            987.6221291943185,
+            535.6863560188108,
+            302.34212885838144,
+            102.31081301385856,
+            93.19510622937715,
+            35.17388222668003,
+            23.734675269119588,
+            16.575434690347173,
+            11.724470120211796
+          ],
+          "effective_rank": 9,
+          "condition_number": 84.23597135462508,
+          "weakest_direction": {
+            "uM_per_au": -0.007055584994756125,
+            "n_A1_gate": 0.037060696021211766,
+            "carry1_mrna_half_life_min": 0.9359381192934917,
+            "A1_maturation_half_life_min": -0.1585142522272538,
+            "F1_maturation_half_life_min": -0.033470932754969235,
+            "complex_on": -0.09016058058161001,
+            "complex_off": -0.14991880789194623,
+            "complex_decay": 0.2523196971822328,
+            "K_D_comp_scale": -0.04560350917226764
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.5424001145618441,
+            0.30613138357382275,
+            0.1035930747089695,
+            0.09436312074680198,
+            0.03561471658737957,
+            0.024032142018204715,
+            0.016783174657972747,
+            0.011871412935812176
+          ]
+        }
+      },
+      "pairwise_correlations": [
+        [
+          1.0,
+          0.04270716034464474,
+          -0.21605286815457034,
+          0.042402015688067056,
+          0.2169634455836171,
+          0.15337211451075727,
+          0.13738096108601272,
+          0.09210979754951694,
+          -0.009067444739054437
+        ],
+        [
+          0.042707160344614976,
+          1.0,
+          0.09979109731082983,
+          -0.126854588966041,
+          0.06184244675584636,
+          -0.07352730162385246,
+          0.04671025742356103,
+          -0.08356638555079327,
+          0.009380029404972715
+        ],
+        [
+          -0.21605286815466418,
+          0.09979109731076993,
+          1.0,
+          -0.8208961073826984,
+          -0.2603409192741464,
+          -0.6336060606579897,
+          -0.34049129009933965,
+          -0.5009622406202034,
+          -0.3434632855489138
+        ],
+        [
+          0.04240201568818813,
+          -0.1268545889660134,
+          -0.8208961073829236,
+          1.0000000000000002,
+          -0.15007024500652624,
+          0.34068204433103105,
+          -0.0860006383735117,
+          0.4428285642380049,
+          0.031213345248943192
+        ],
+        [
+          0.21696344558359307,
+          0.06184244675589088,
+          -0.2603409192738552,
+          -0.1500702450068325,
+          1.0,
+          -0.1017814687235544,
+          0.9794623683357679,
+          -0.30276389284248995,
+          0.6656196725125908
+        ],
+        [
+          0.1533721145107867,
+          -0.0735273016238059,
+          -0.6336060606578762,
+          0.3406820443308034,
+          -0.101781468723414,
+          0.9999999999999998,
+          0.029208095345965593,
+          0.7854369645530838,
+          0.22299294044984497
+        ],
+        [
+          0.13738096108599407,
+          0.046710257423609215,
+          -0.34049129009904094,
+          -0.08600063837384166,
+          0.9794623683357888,
+          0.029208095345829285,
+          1.0,
+          -0.1912337730351313,
+          0.7661404157495072
+        ],
+        [
+          0.09210979754956009,
+          -0.08356638555076576,
+          -0.5009622406202177,
+          0.44282856423791156,
+          -0.3027638928423501,
+          0.7854369645531454,
+          -0.19123377303498676,
+          0.9999999999999998,
+          0.030416058849700438
+        ],
+        [
+          -0.009067444739061169,
+          0.009380029405011755,
+          -0.34346328554868966,
+          0.031213345248676916,
+          0.6656196725126305,
+          0.22299294044975237,
+          0.7661404157495322,
+          0.030416058849591567,
+          1.0000000000000002
+        ]
+      ],
+      "finite_difference_convergence": [
+        {
+          "from_pct": 1.0,
+          "to_pct": 2.0,
+          "relative_matrix_change": 0.5066381169586885
+        },
+        {
+          "from_pct": 2.0,
+          "to_pct": 5.0,
+          "relative_matrix_change": 0.6799470021358758
+        }
+      ],
+      "observable_contribution": [
+        {
+          "observable": "S0",
+          "row_norm": 16.745734829683858,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.9950202283317977,
+          "sigma_min_gain": -0.011204944617906776,
+          "rank_without": 8,
+          "variance_fraction_lost": 3.842188156721882e-05
+        },
+        {
+          "observable": "S1",
+          "row_norm": 37.64517626332102,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.9712192223328662,
+          "sigma_min_gain": -0.03500595061683831,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.00019417301725810354
+        },
+        {
+          "observable": "S2",
+          "row_norm": 1155.9376305876494,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.8391752432331254,
+          "sigma_min_gain": -0.16704992971657906,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.18307920310440828
+        },
+        {
+          "observable": "I0",
+          "row_norm": 32.92980278681464,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.9966410178951917,
+          "sigma_min_gain": -0.009584155054512822,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.00014857593392014756
+        },
+        {
+          "observable": "R0",
+          "row_norm": 19.567168341645896,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 2.0028192702183585,
+          "sigma_min_gain": -0.003405902731346,
+          "rank_without": 8,
+          "variance_fraction_lost": 5.245974461731695e-05
+        },
+        {
+          "observable": "C0",
+          "row_norm": 31.63481152583995,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.9244646443410278,
+          "sigma_min_gain": -0.08176052860867666,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.0001371199707690396
+        },
+        {
+          "observable": "I1",
+          "row_norm": 35.98652531802185,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.98923846974642,
+          "sigma_min_gain": -0.016986703203284437,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.00017743939169778677
+        },
+        {
+          "observable": "R1",
+          "row_norm": 52.72131689664655,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 2.0003051267082035,
+          "sigma_min_gain": -0.005920046241500998,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.0003808401334978173
+        },
+        {
+          "observable": "C1",
+          "row_norm": 25.08334777564365,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.9571074096329586,
+          "sigma_min_gain": -0.04911776331674589,
+          "rank_without": 8,
+          "variance_fraction_lost": 8.620673729664574e-05
+        },
+        {
+          "observable": "I2",
+          "row_norm": 37.431131795996755,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.8503830806305241,
+          "sigma_min_gain": -0.15584209231918034,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.00019197122102643238
+        },
+        {
+          "observable": "R2",
+          "row_norm": 2373.6322560072344,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.5690356206831824,
+          "sigma_min_gain": -0.4371895522665221,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.7719640563474415
+        },
+        {
+          "observable": "C2",
+          "row_norm": 413.17932555633695,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.9524763609491331,
+          "sigma_min_gain": -0.053748812000571355,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.02339092379558705
+        },
+        {
+          "observable": "A1",
+          "row_norm": 54.71635040827801,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.6790671027170077,
+          "sigma_min_gain": -0.32715807023269683,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.0004102083095394171
+        },
+        {
+          "observable": "F1",
+          "row_norm": 28.37120005245882,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.9669666999598503,
+          "sigma_min_gain": -0.03925847298985419,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.00011028732965812083
+        },
+        {
+          "observable": "g1",
+          "row_norm": 48.34055429324339,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.836975489548332,
+          "sigma_min_gain": -0.16924968340137259,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.00032017945503126644
+        },
+        {
+          "observable": "J_rev1",
+          "row_norm": 38.150750148824706,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.989749100481548,
+          "sigma_min_gain": -0.016476072468156522,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.00019942351780288803
+        },
+        {
+          "observable": "J_rev2",
+          "row_norm": 373.5441314835738,
+          "sigma_min_full": 2.0062251729497045,
+          "sigma_min_without": 1.9735455579154877,
+          "sigma_min_gain": -0.03267961503421679,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.019118510108916187
+        }
+      ]
+    },
+    "experimental": {
+      "observables": [
+        "S0",
+        "S1",
+        "S2",
+        "I0",
+        "A1"
+      ],
+      "n_observables": 5,
+      "n_timepoints": 301,
+      "per_step": {
+        "0.01": {
+          "singular_values": [
+            268.59956851178686,
+            107.34551929609945,
+            78.413419773058,
+            7.417304159703408,
+            1.7165614596676175,
+            1.2679288026335893,
+            0.9314260949724317,
+            0.8576488403283242,
+            0.16169457986464283
+          ],
+          "effective_rank": 8,
+          "condition_number": 1661.153816885117,
+          "weakest_direction": {
+            "uM_per_au": 0.0003166542241640651,
+            "n_A1_gate": 0.010377165922585953,
+            "carry1_mrna_half_life_min": -0.9747030338935805,
+            "A1_maturation_half_life_min": 0.0817774981106981,
+            "F1_maturation_half_life_min": 0.048349490213003984,
+            "complex_on": 0.19923167872478834,
+            "complex_off": 0.033546311919652474,
+            "complex_decay": -0.001074904863171992,
+            "K_D_comp_scale": 0.0010978176952628094
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.3996488895751478,
+            0.2919342730426501,
+            0.027614728500123847,
+            0.006390782640413252,
+            0.0047205169005249134,
+            0.003467712551189591,
+            0.0031930387866229513,
+            0.0006019912122738471
+          ]
+        },
+        "0.02": {
+          "singular_values": [
+            187.33121509143191,
+            156.51285038653518,
+            28.495356848874156,
+            19.617883917151506,
+            1.9927958719941896,
+            1.2934339871649636,
+            1.100777309630388,
+            0.9748115974756649,
+            0.3522828962390417
+          ],
+          "effective_rank": 9,
+          "condition_number": 531.763582880045,
+          "weakest_direction": {
+            "uM_per_au": 0.0010110213798131976,
+            "n_A1_gate": 0.004551936621260991,
+            "carry1_mrna_half_life_min": -0.9376470904283027,
+            "A1_maturation_half_life_min": 0.27159633170422404,
+            "F1_maturation_half_life_min": -0.0532262330157137,
+            "complex_on": 0.16601787524185338,
+            "complex_off": -0.03697686256615466,
+            "complex_decay": 0.12255868609082253,
+            "K_D_comp_scale": 0.01577141219120866
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.8354872961782956,
+            0.15211216579664125,
+            0.10472298440799886,
+            0.01063782066977761,
+            0.006904529960656419,
+            0.005876101903749061,
+            0.005203679466873059,
+            0.0018805349448414179
+          ]
+        },
+        "0.05": {
+          "singular_values": [
+            131.9522972790217,
+            56.98013346428747,
+            31.574370505779303,
+            11.387355270004246,
+            5.555157436797642,
+            2.006313929402876,
+            1.2845999181750913,
+            1.1761804835118874,
+            0.7469479408334099
+          ],
+          "effective_rank": 9,
+          "condition_number": 176.6552795256326,
+          "weakest_direction": {
+            "uM_per_au": 0.005437998874568945,
+            "n_A1_gate": -0.19073528217332772,
+            "carry1_mrna_half_life_min": 0.15194607847265182,
+            "A1_maturation_half_life_min": -0.011977872543699466,
+            "F1_maturation_half_life_min": -0.005380605494568801,
+            "complex_on": -0.07187230479702968,
+            "complex_off": -0.5282954227965818,
+            "complex_decay": 0.8062185169160183,
+            "K_D_comp_scale": -0.07797736998772316
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.4318237320552235,
+            0.23928625084119032,
+            0.08629903006481913,
+            0.042099740219383223,
+            0.015204842740709507,
+            0.009735335758942653,
+            0.008913679471792578,
+            0.005660742224547557
+          ]
+        }
+      },
+      "pairwise_correlations": [
+        [
+          1.0,
+          -0.06424898162625987,
+          -0.30551744885068144,
+          0.030112402973991977,
+          -0.10123819553636276,
+          0.3607740152139557,
+          -0.14699144345728343,
+          0.18031721777621093,
+          0.1874543320871004
+        ],
+        [
+          -0.06424898162619838,
+          0.9999999999999998,
+          -0.07997951879105683,
+          0.07962744674257767,
+          0.04111558711855339,
+          0.04488621255977829,
+          0.04544867455364086,
+          -0.06931351685899853,
+          0.09814792318206407
+        ],
+        [
+          -0.3055174488509718,
+          -0.07997951879096256,
+          1.0,
+          -0.4420832421987037,
+          -0.4788288045611017,
+          -0.861145006188257,
+          -0.5813764913673035,
+          0.014441814629180639,
+          -0.5625321824977475
+        ],
+        [
+          0.030112402974273544,
+          0.07962744674257898,
+          -0.4420832421992347,
+          1.0,
+          0.11127225886460315,
+          0.09770739304980332,
+          0.13446893710206667,
+          0.21717264566684633,
+          0.1030858821035619
+        ],
+        [
+          -0.10123819553623047,
+          0.04111558711859811,
+          -0.47882880456111093,
+          0.1112722588643203,
+          1.0,
+          0.12178517563298906,
+          0.9755743876274204,
+          -0.39402861558246305,
+          0.425313237803442
+        ],
+        [
+          0.36077401521416536,
+          0.04488621255964503,
+          -0.8611450061881001,
+          0.09770739304929157,
+          0.1217851756328906,
+          1.0,
+          0.2702012714218906,
+          0.1372325243304736,
+          0.49415108051943235
+        ],
+        [
+          -0.14699144345710535,
+          0.04544867455366499,
+          -0.5813764913673581,
+          0.13446893710175345,
+          0.9755743876274376,
+          0.270201271422044,
+          1.0000000000000002,
+          -0.34861327348093313,
+          0.48964561090227826
+        ],
+        [
+          0.18031721777630988,
+          -0.06931351685898667,
+          0.014441814628822016,
+          0.2171726456670314,
+          -0.3940286155822859,
+          0.13723252433077066,
+          -0.34861327348071897,
+          1.0,
+          -0.06236165729906953
+        ],
+        [
+          0.18745433208726742,
+          0.09814792318203625,
+          -0.5625321824977616,
+          0.1030858821032646,
+          0.42531323780343105,
+          0.4941510805195405,
+          0.4896456109022456,
+          -0.06236165729926998,
+          1.0000000000000002
+        ]
+      ],
+      "finite_difference_convergence": [
+        {
+          "from_pct": 1.0,
+          "to_pct": 2.0,
+          "relative_matrix_change": 0.4580551466716904
+        },
+        {
+          "from_pct": 2.0,
+          "to_pct": 5.0,
+          "relative_matrix_change": 0.6199880732850208
+        }
+      ],
+      "observable_contribution": [
+        {
+          "observable": "S0",
+          "row_norm": 4.3586704315855425,
+          "sigma_min_full": 0.16169457986464283,
+          "sigma_min_without": 0.15860377021732014,
+          "sigma_min_gain": -0.0030908096473226954,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.00021137397252279921
+        },
+        {
+          "observable": "S1",
+          "row_norm": 9.746171355409441,
+          "sigma_min_full": 0.16169457986464283,
+          "sigma_min_without": 0.15019730485910918,
+          "sigma_min_gain": -0.011497275005533658,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.0010568455680072253
+        },
+        {
+          "observable": "S2",
+          "row_norm": 299.1519105595269,
+          "sigma_min_full": 0.16169457986464283,
+          "sigma_min_without": 1.3379837369708594e-17,
+          "sigma_min_gain": -0.16169457986464283,
+          "rank_without": 7,
+          "variance_fraction_lost": 0.9956965597197018
+        },
+        {
+          "observable": "I0",
+          "row_norm": 8.506632653609099,
+          "sigma_min_full": 0.16169457986464283,
+          "sigma_min_without": 0.13329146141325948,
+          "sigma_min_gain": -0.028403118451383352,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.0008051166398501675
+        },
+        {
+          "observable": "A1",
+          "row_norm": 14.157639371240164,
+          "sigma_min_full": 0.16169457986464283,
+          "sigma_min_without": 0.0967135486135048,
+          "sigma_min_gain": -0.06498103125113804,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.0022301040999153088
+        }
+      ]
+    }
+  },
+  "predicted_confusions": {
+    "q_vs_kd_comp": {
+      "note": "model.py: q = kon/(koff+complex_decay+growth) and K_complex = q*K_D_comp; the reverse Hill reads C/K_complex, so q and K_D_comp enter ONLY as a product. Only K_complex is identifiable; the individual factors are not.",
+      "rho_K_D_comp_scale_vs_complex_on": 0.22299294044975237,
+      "rho_K_D_comp_scale_vs_complex_off": 0.7661404157495322,
+      "rho_K_D_comp_scale_vs_complex_decay": 0.030416058849591567
+    },
+    "kon_koff_decay": {
+      "correlations": {
+        "complex_off~complex_on": 0.029208095345829285,
+        "complex_decay~complex_on": 0.7854369645531454,
+        "complex_decay~complex_off": -0.19123377303498676
+      },
+      "note": "these three reach the reverse Hill only through q"
+    },
+    "uM_per_au_vs_translation": {
+      "tested": false,
+      "reason": "translation_h is not in the 9-parameter set; rerun with --with-translation to test this confusion"
+    },
+    "mRNA_vs_maturation": {
+      "rho_mRNA_vs_A1_mat": -0.8208961073826984,
+      "rho_mRNA_vs_F1_mat": -0.2603409192741464,
+      "rho_A1mat_vs_F1mat": -0.15007024500652624
+    },
+    "n_A1_gate_vs_scale": {
+      "rho_vs_uM_per_au": 0.042707160344614976,
+      "rho_vs_complex_on": -0.07352730162385246,
+      "note": "n_A1_gate is an exponent; a scale confusion shows as large |rho| with a scale"
+    }
+  },
+  "headline": {
+    "theoretical": {
+      "effective_rank": 8,
+      "condition_number": 1236.665137583673,
+      "singular_values": [
+        2481.0287295296744,
+        956.4472196780977,
+        468.63389328879117,
+        83.81543730736453,
+        27.229077051524005,
+        23.99599548017982,
+        10.044943350271197,
+        8.719268819070132,
+        2.0062251729497045
+      ],
+      "weakest_direction": {
+        "uM_per_au": 0.0002869110758505592,
+        "n_A1_gate": -0.008991425169116682,
+        "carry1_mrna_half_life_min": -0.9324961378842105,
+        "A1_maturation_half_life_min": 0.33348640529362783,
+        "F1_maturation_half_life_min": 0.021791402904423187,
+        "complex_on": 0.08650846272871916,
+        "complex_off": 0.015208409687584622,
+        "complex_decay": 0.1047139911731219,
+        "K_D_comp_scale": 0.0013954332547177833
+      }
+    },
+    "experimental": {
+      "effective_rank": 8,
+      "condition_number": 1661.153816885117,
+      "singular_values": [
+        268.59956851178686,
+        107.34551929609945,
+        78.413419773058,
+        7.417304159703408,
+        1.7165614596676175,
+        1.2679288026335893,
+        0.9314260949724317,
+        0.8576488403283242,
+        0.16169457986464283
+      ],
+      "weakest_direction": {
+        "uM_per_au": 0.0003166542241640651,
+        "n_A1_gate": 0.010377165922585953,
+        "carry1_mrna_half_life_min": -0.9747030338935805,
+        "A1_maturation_half_life_min": 0.0817774981106981,
+        "F1_maturation_half_life_min": 0.048349490213003984,
+        "complex_on": 0.19923167872478834,
+        "complex_off": 0.033546311919652474,
+        "complex_decay": -0.001074904863171992,
+        "K_D_comp_scale": 0.0010978176952628094
+      }
+    },
+    "rank_lost_by_restricting_to_experimental": 0
+  }
+}

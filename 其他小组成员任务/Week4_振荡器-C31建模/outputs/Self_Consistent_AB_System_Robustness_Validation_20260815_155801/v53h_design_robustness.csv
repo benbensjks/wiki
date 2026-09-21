@@ -1,0 +1,5 @@
+﻿C31_RBS_scale,Int_tag_rate_h_inv,nominal_peak_load_fraction,A_period_change_percent,A_TetR_peak_change_percent,A_clock_pass,both_initial_states_B_pass,complete_system_pass,worst_one_crossing_complete_fraction,worst_alternation_fidelity,max_DNA_conservation_residual
+0.6,12.0,0.0,0.0,0.0,True,True,True,1.0,1.0,9.578371429341814e-11
+0.6,12.0,0.1,-0.4895104895104918,-0.4810441029290846,True,False,False,0.9,1.0,5.115707857328289e-11
+0.6,12.0,0.2,-0.9790209790209836,-1.0702496422073882,True,False,False,0.7,1.0,2.000071219754318e-10
+0.6,12.0,0.3,-1.6433566433566638,-1.807496514331941,True,True,True,1.0,1.0,8.876155366266403e-11

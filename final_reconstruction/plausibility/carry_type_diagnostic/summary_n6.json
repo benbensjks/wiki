@@ -1,0 +1,45 @@
+{
+  "n_A1_gate": 6.0,
+  "hours": 600.0,
+  "windows": 14,
+  "n_R": 7,
+  "n_F": 7,
+  "pattern": "FRFRFRFRFRFRFR",
+  "parity_balanced": true,
+  "raw_leak_ratio_5pct": 0.03864016244382906,
+  "raw_gate_on_rev_5pct": 0.4976818667040858,
+  "raw_far_off_rev_5pct": 0.019230508174793957,
+  "raw_far_off_fwd_5pct": 2.8900235124359924e-06,
+  "per_type": {
+    "R": {
+      "windows": 7,
+      "gate_on_rev_median": 0.9980864632534684,
+      "gate_on_rev_min": 0.9953633847460914,
+      "gate_on_rev_max": 1.0013235810961123,
+      "far_off_rev_median": 0.0023596590942632865,
+      "far_off_fwd_median": 0.0065735961712904455,
+      "tail_rev_median": 0.17819309625132282
+    },
+    "F": {
+      "windows": 7,
+      "gate_on_rev_median": 3.090184617652466e-07,
+      "gate_on_rev_min": 2.5069018662852615e-07,
+      "gate_on_rev_max": 3.4866208015472145e-07,
+      "far_off_rev_median": 0.021527626109430913,
+      "far_off_fwd_median": 2.3873564640777456e-06,
+      "tail_rev_median": 0.00012434606150075474
+    }
+  },
+  "paired": {
+    "n_pairs": 6,
+    "all_pairs_are_one_of_each_type": true,
+    "gate_on_rev_median": 0.9983172362650572,
+    "far_off_rev_median": 0.023849951870702497,
+    "far_off_fwd_median": 0.006575967061479103,
+    "tail_rev_median": 0.17882031930890313,
+    "ratio_median": 0.023909972016373855,
+    "ratio_min": 0.021677072596867547,
+    "ratio_max": 0.02397981004372022
+  },
+  "note": "the raw median-of-medians ratio is parity-unstable because consecutive carries alternate between two types; the paired statistic integrates one full 8-read super-period and is the comparable quantity"
+}

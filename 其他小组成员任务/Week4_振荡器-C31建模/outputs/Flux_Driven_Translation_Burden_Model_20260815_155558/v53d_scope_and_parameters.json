@@ -1,0 +1,59 @@
+{
+  "version": "v53d_flux_driven_shared_translation_resource_20260814",
+  "settings": {
+    "duration_min": 6000.0,
+    "sample_step_min": 1.0,
+    "transient_min": 1500.0,
+    "peak_load_fractions": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "timebase_tolerance_percent": 5.0,
+    "amplitude_tolerance_percent": 10.0,
+    "minimum_relative_amplitude": 0.01,
+    "minimum_peaks": 4,
+    "cell_volume_fL": 1.0,
+    "active_C31_fraction": 1.0,
+    "molecules_per_uM_per_fL": 602.214076,
+    "save_trajectories": true,
+    "make_plots": true
+  },
+  "frozen_parameters": {
+    "Td_min": 50.0,
+    "lambda_protein_scale": 1000.0,
+    "K_copies": 13.0,
+    "hill_n": 3.0,
+    "oscillator_plasmid_copies": 10.0,
+    "functional_tetO_per_plasmid": 4.0,
+    "functional_accessible_fraction": 1.0,
+    "sponge_plasmid_copies": 40.0,
+    "sponge_tetO_per_plasmid": 2.0,
+    "sponge_accessible_fraction": 1.0,
+    "oscillator_promoter_leak": 0.0,
+    "oscillator_tx_per_plasmid_per_min": 0.9609060278364028,
+    "oscillator_translation_per_mrna_per_min": 0.5,
+    "oscillator_mrna_intrinsic_loss_per_min": 0.33271064666877376,
+    "oscillator_protein_intrinsic_loss_per_min": 0.0,
+    "c31_promoter_leak": 0.005,
+    "c31_tx_per_plasmid_per_min": 5.0,
+    "c31_translation_per_mrna_per_min": 0.5,
+    "c31_mrna_intrinsic_loss_per_min": 0.33271064666877376,
+    "c31_protein_intrinsic_loss_per_min": 0.0,
+    "peak_load_fraction": 0.0
+  },
+  "reference_C31_demand_peak_molecules_min": 66.63770390369238,
+  "resource_equation": "q31=beta31*m31/Jref; b=L/(1-L); rho=1/(1+b*q31)",
+  "translation_equation": "all protein synthesis beta_i*m_i is multiplied by rho(t)",
+  "not_included_to_avoid_double_counting": [
+    "extra TetO pool beyond the already audited 4*No plus sponge sites",
+    "Int-att sequestration, which belongs to the Zhao B ODE",
+    "growth-rate burden, pending construct-specific Td measurements",
+    "explicit RNAP competition and protease saturation without calibration data"
+  ],
+  "interpretation_limit": "L_peak is a boundary parameter until resource usage is calibrated with expression and growth measurements"
+}

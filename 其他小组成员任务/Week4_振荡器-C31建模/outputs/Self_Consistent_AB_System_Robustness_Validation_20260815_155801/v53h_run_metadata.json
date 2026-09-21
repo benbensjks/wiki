@@ -1,0 +1,84 @@
+{
+  "version": "v53h_self_consistent_load_long_AB_validation_20260815",
+  "settings": {
+    "candidate_panel": "main",
+    "main_candidate": [
+      0.6,
+      12.0
+    ],
+    "full_candidates": [
+      [
+        0.45,
+        8.0
+      ],
+      [
+        0.6,
+        8.0
+      ],
+      [
+        0.6,
+        12.0
+      ],
+      [
+        0.7,
+        16.0
+      ]
+    ],
+    "peak_load_fractions": [
+      0.0,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "DNA_initial_states": [
+      "PB",
+      "LR"
+    ],
+    "duration_h": 160.0,
+    "A_sample_step_min": 2.0,
+    "A_transient_h": 30.0,
+    "minimum_peak_distance_h": 5.0,
+    "minimum_audited_cycles": 10,
+    "B_sample_step_h": 0.04,
+    "B_max_step_h": 0.08,
+    "DNA_midpoint": 0.5,
+    "complete_state_threshold": 0.95,
+    "success_target": 0.95,
+    "alternation_target": 0.95,
+    "DNA_conservation_tolerance": 1e-08,
+    "A_period_tolerance_percent": 5.0,
+    "A_TetR_peak_tolerance_percent": 10.0,
+    "expected_Td_min": 50.0,
+    "cell_volume_fL": 1.0,
+    "active_C31_fraction": 1.0,
+    "molecules_per_uM_per_fL": 602.214076,
+    "make_plots": true,
+    "save_A_trajectories": true
+  },
+  "A_reference_parameters": {
+    "Td_min": 50.0,
+    "lambda_protein_scale": 1000.0,
+    "K_copies": 13.0,
+    "hill_n": 3.0,
+    "oscillator_plasmid_copies": 10.0,
+    "functional_tetO_per_plasmid": 4.0,
+    "functional_accessible_fraction": 1.0,
+    "sponge_plasmid_copies": 40.0,
+    "sponge_tetO_per_plasmid": 2.0,
+    "sponge_accessible_fraction": 1.0,
+    "oscillator_promoter_leak": 0.0,
+    "oscillator_tx_per_plasmid_per_min": 0.9609060278364028,
+    "oscillator_translation_per_mrna_per_min": 0.5,
+    "oscillator_mrna_intrinsic_loss_per_min": 0.33271064666877376,
+    "oscillator_protein_intrinsic_loss_per_min": 0.0,
+    "c31_promoter_leak": 0.005,
+    "c31_tx_per_plasmid_per_min": 5.0,
+    "c31_translation_per_mrna_per_min": 0.5,
+    "c31_mrna_intrinsic_loss_per_min": 0.33271064666877376,
+    "c31_protein_intrinsic_loss_per_min": 0.0,
+    "peak_load_fraction": 0.0
+  },
+  "reference_C31_demand_peak_copies_per_min": 66.63768826326645,
+  "resource_equation": "rho=1/(1+[L/(1-L)]*(beta31*m31/Jref))",
+  "interface_equation": "int_production=rho*beta31*m31 converted to uM/h"
+}

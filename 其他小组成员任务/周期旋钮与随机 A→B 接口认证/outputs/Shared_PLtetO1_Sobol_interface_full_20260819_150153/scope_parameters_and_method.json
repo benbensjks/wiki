@@ -1,0 +1,85 @@
+{
+  "version": "Shared_PLtetO1_Sobol_GSA_20260819",
+  "analysis": "interface",
+  "mode": "full",
+  "base_samples": 64,
+  "dimension": 8,
+  "total_ode_evaluations": 640,
+  "factors": [
+    {
+      "name": "Td_min",
+      "label": "doubling time",
+      "lower": 40.0,
+      "upper": 60.0,
+      "scale": "linear",
+      "meaning": "shared A/B doubling time (min)"
+    },
+    {
+      "name": "hill_n",
+      "label": "common Hill n",
+      "lower": 2.0,
+      "upper": 4.0,
+      "scale": "linear",
+      "meaning": "shared transfer steepness"
+    },
+    {
+      "name": "shared_PLtetO1_leak",
+      "label": "shared PLtetO1 leak",
+      "lower": 0.001,
+      "upper": 0.02,
+      "scale": "log",
+      "meaning": "same lower asymptote for cI and C31"
+    },
+    {
+      "name": "shared_PLtetO1_tx_scale",
+      "label": "shared PLtetO1 tx scale",
+      "lower": 0.5,
+      "upper": 1.5,
+      "scale": "linear",
+      "meaning": "same multiplicative promoter scale for cI and C31"
+    },
+    {
+      "name": "oscillator_mrna_total_half_life_min",
+      "label": "oscillator mRNA half-life",
+      "lower": 1.0,
+      "upper": 5.0,
+      "scale": "log",
+      "meaning": "sets the upstream waveform recovery"
+    },
+    {
+      "name": "c31_translation_scale",
+      "label": "C31 RBS scale",
+      "lower": 0.3,
+      "upper": 1.2,
+      "scale": "linear",
+      "meaning": "C31-specific translation/RBS choice"
+    },
+    {
+      "name": "c31_mrna_total_half_life_min",
+      "label": "C31 mRNA half-life",
+      "lower": 0.5,
+      "upper": 5.0,
+      "scale": "log",
+      "meaning": "C31-specific mRNA persistence and flux tail"
+    },
+    {
+      "name": "peak_load_fraction",
+      "label": "peak shared-resource load",
+      "lower": 0.0,
+      "upper": 0.3,
+      "scale": "linear",
+      "meaning": "uncalibrated scenario for dynamic translation burden"
+    }
+  ],
+  "shared_PLtetO1_constraint": {
+    "c31_promoter_leak_equals_oscillator_promoter_leak": true,
+    "c31_tx_scale_equals_oscillator_tx_scale": true,
+    "K_and_hill_n_are_shared": true
+  },
+  "effective_sponge_definition": "S_eff = 2 * Nt * eta; eta is fixed to 1 in the clock Sobol parameterization.",
+  "limitations": [
+    "Sobol indices are conditional on the stated uncertainty ranges, not fitted biological truths.",
+    "NaN conditional interface metrics for lost oscillations reduce valid support; inspect valid_fraction.",
+    "peak_load_fraction remains a scenario variable until cellular burden is measured."
+  ]
+}
