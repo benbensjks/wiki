@@ -1,0 +1,14 @@
+{
+  "sequence": "12345670123456701234567012345670123456701234567012345670",
+  "certified": true,
+  "reads": 56,
+  "minimum_commitment": 1.0,
+  "bit2_setup_hold": {
+    "min_setup_h": 4.539428285816513,
+    "min_hold_h": 3.8194038570717908
+  },
+  "actual_clock_gate": {
+    "K": 0.3,
+    "n": 2.0
+  }
+}

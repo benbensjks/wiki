@@ -1,0 +1,104 @@
+{
+  "purpose": "Machine-readable index of artefacts in plausibility/ that were produced at the WRONG working point (n_A1_gate = 4, the ZENG table default) and therefore must not be cited as results at the frozen point n_A1_gate = 6.",
+  "why_this_file_exists": "These artefacts previously carried no status field and looked fully authoritative. One of them (rdf_collapse.json, whose verdict reads 'not binding: prefix-preserving collapse probes do not recover bit2') was in fact obtained at n=4, i.e. a configuration the project's own 20-point grid shows always fails. A reviewer was misled by it into retracting a hypothesis that should have stayed open. This index exists so that cannot happen again.",
+  "root_cause": {
+    "mechanism": "ThreeBit51Model(..., n_A1_gate=None) makes n_A1_gate_effective fall back to ZENG['n_A'][1], which is 4.0. Any code path that does not pass n_A1_gate explicitly therefore runs at n=4.",
+    "helper": "plausibility_common.build_threebit() and build_decoupled() both leave n_A1_gate as None; measured: build_threebit() -> 4.0, build_decoupled() -> 4.0",
+    "detection": "construct the model and print model.n_A1_gate_effective, or read resolved_params / n_A1_gate_effective in the job metadata where available",
+    "guard_added": "check_local_identifiability.build_with now resolves the COMPLETE parameter vector, passes n_A1_gate explicitly and asserts the realised value; load_jobs refuses to analyse old-format runs"
+  },
+  "status": "INVALID_AT_FROZEN_POINT",
+  "invalidated_artifacts": [
+    {
+      "paths": ["rdf_collapse.json", "rdf_collapse.csv", "rdf_collapse_curve.csv",
+                "rdf_collapse_rescored.json", "rdf_collapse_rescored.csv"],
+      "script": "check_rdf_collapse.py",
+      "working_point": "n_A1_gate = 4 (Bit2RdfProbe.__init__ calls super().__init__(extension=..., carry=...) with no n_A1_gate)",
+      "must_not_be_cited_for": "the claim that RDF-pool depletion is not the binding mechanism",
+      "note": "the file itself records baseline_crossings = 5, not the 14 expected at the frozen point - the failure is visible inside the artefact",
+      "consequence": "'is the RDF pool load-bearing?' is an OPEN question again, not a refuted hypothesis"
+    },
+    {
+      "paths": ["mass_balance.json", "mass_balance.csv"],
+      "script": "check_mass_balance.py",
+      "working_point": "n_A1_gate = 4",
+      "must_not_be_cited_for": "the numeric residual / mass-balance magnitudes at the frozen point",
+      "note": "the identity being tested is a structural RHS identity and is very likely n-independent, so the qualitative conclusion probably survives; the numbers must be re-taken"
+    },
+    {
+      "paths": ["absolute_scale.json", "absolute_scale_pools.csv",
+                "absolute_scale_burden.csv", "absolute_scale_thresholds.csv"],
+      "script": "check_absolute_scale.py",
+      "working_point": "n_A1_gate = 4",
+      "must_not_be_cited_for": "pool magnitudes in uM, the synthesis-burden fraction",
+      "note": "n-dependent: the gate exponent changes the carry dose and therefore the Int pools"
+    },
+    {
+      "paths": ["threshold_margin/threshold_margin_baseline.json",
+                "threshold_margin/threshold_margin_baseline.csv",
+                "threshold_margin/threshold_margin_baseline_rescored_v2.json",
+                "threshold_margin/threshold_margin_baseline_rescored_v2.csv"],
+      "script": "check_threshold_margin.py",
+      "working_point": "n_A1_gate = 4",
+      "must_not_be_cited_for": "operating ratios x/K and the distance to every Hill threshold",
+      "note": "strongly n-dependent: n_A1_gate IS a Hill exponent"
+    },
+    {
+      "paths": ["sharpen_vs_lengthen_verdict.json", "sharpen_vs_lengthen_all.csv",
+                "sharpen_vs_lengthen_shard00of10.csv ... sharpen_vs_lengthen_shard09of10.csv"],
+      "script": "scan_sharpen_vs_lengthen.py",
+      "working_point": "MIXED: arm A builds via build_threebit(carry1=...) -> n_A1_gate = 4; arm B builds via build_decoupled(n_A1_gate=p['n_A1']) -> explicit n in {4,5,6,7,8}",
+      "must_not_be_cited_for": "the arm A versus arm B comparison as a like-for-like test of two levers from a common baseline",
+      "note": "arm A tests the mRNA x maturation lever ONLY at n=4, so the two arms are not varied from a common point. The qualitative conclusion (lengthening does not rescue the count, sharpening does) is independently supported by the 20-point gate-exponent grid, but must be re-derived there before being cited.",
+      "superseded_by": "plausibility/scan_gate_segments.py (20-point n grid) and plausibility/scan_carry_pairing.py (current paired metric)",
+      "additional_note": "arm B is now UNRUNNABLE: plausibility_common.py was edited after decoupling_verification.json was written, so implementation_sha256 no longer matches and the arm-B gate refuses. Do not re-run this scan; use the superseding scans."
+    }
+  ],
+  "not_affected_verified": {
+    "method": "constructed each model and read n_A1_gate_effective; every script below passes n_A1_gate explicitly from its point definition",
+    "artifacts": [
+      "gate_segments_verdict.json / gate_segments_all.csv / gate_segments_prefix_guard.json",
+      "carry_pairing_grid_verdict.json / carry_pairing_eight_verdict.json",
+      "read_commitment_verdict.json",
+      "strict_tolerance_tol_verdict.json / strict_tolerance_grid_verdict.json",
+      "eight_initial_verdict.json / eight_initial_states.json / eight_initial_prefix_guard.json",
+      "pool_perturbations_all_verdict.json",
+      "threebit51_results/postfreeze_peak_perturbation/ (all)"
+    ],
+    "frozen_chain": "threebit51_selected_v1.json (6BFD7FF6...), threebit51_provisional_n6.json (7CE9D5EB...), threebit51_leak_correction.json (484745AF...) are unaffected; selected_v1 remains valid"
+  },
+  "already_marked": {
+    "plausibility/local_identifiability/": "status FAILED_ACCEPTANCE (see ANALYSIS_STATUS.json + RETRACTION.md). Reason: 49 of 55 runs were taken at n=4 while the analysis treated them as n=6, so the 9-column matrix is not a Jacobian at one parameter point."
+  },
+  "also_affected_by_the_same_class_of_defect": [
+    "check_identifiability.py (the ORIGINAL script): run_threebit never passes n_A1_gate, so it also runs at n=4; it was never executed, so it produced no artefact",
+    "plausibility_common.py build_threebit / build_decoupled: default to n_A1_gate = None. NOTE editing this file invalidates decoupling_verification.json (implementation_sha256 covers model_threebit51.py + plausibility_common.py), so any fix must be accompanied by re-running the decoupling verification."
+  ],
+  "related_hazard_discovered": {
+    "hazard": "ThreeBit51Model._carry1_sources is a STATICMETHOD that reads the global ZENG['n_A'][1] at CALL time, so a global ZENG patch leaks into every other live model instance",
+    "evidence": "an A/B equivalence test was first run with arm B's ZENG patch active; arm A's source_F1 then used n=6 instead of 4, showing a spurious difference confined to M_F1 (index 49) and inflated to ~1.0 in the trajectory",
+    "rule": "never hold two models whose semantics depend on ZENG at the same time; construct, simulate and compare strictly serially, restoring ZENG between phases",
+    "same_root_as": "the retracted check_rdf_collapse v1, which patched ZENG['n_rep']/['K_rep'] globally and destroyed the frozen prefix (reverse_events 14 -> 0)"
+  },
+  "verified_equivalence": {
+    "question": "is the model-class parameter n_A1_gate = 6 equivalent to the old global ZENG['n_A'] patch to 6 with the F1 drive pinned at 4?",
+    "result": "YES, to round-off",
+    "method": "run model A (class parameter, ZENG clean at n_A[1]=4) and model B (build_decoupled, ZENG patched to 6) in separate ZENG contexts, then compare",
+    "measurements": {
+      "rhs_gap_at_same_states": [0.0, 2.134e-22, 1.323e-23],
+      "rhs_gap_argmax_index": "b2_M_I (index 34), i.e. last-bit noise in the one corrected derivative",
+      "trajectory_200h_prefix_0_34": 0.0,
+      "trajectory_200h_states_34_51": 4.441e-15,
+      "trajectory_200h_S2": 3.331e-16,
+      "certification": "identical (crossings = gates = reverse_events, same steady sequence)"
+    },
+    "implication": "the old arm-B runs used a model semantically equivalent to the frozen one, so their gate parameter setting is reproducible on the frozen model; the only remaining obstacle to re-running arm B is the stale decoupling_verification.json gate, not model semantics"
+  },
+  "next_agent_actions": [
+    "Do not cite any artefact listed under invalidated_artifacts as a frozen-point result.",
+    "Do not re-run scan_sharpen_vs_lengthen; it is superseded and its arm-B gate currently refuses.",
+    "If any invalidated check is needed at the frozen point, re-run it with an explicit n_A1_gate=6 construction and record resolved_params + n_A1_gate_effective in the output.",
+    "Before fixing the shared helpers, note that editing plausibility_common.py invalidates decoupling_verification.json and requires re-running the decoupling verification.",
+    "Keep the RDF-pool question OPEN: the artefact that appeared to refute it was taken at n=4."
+  ]
+}

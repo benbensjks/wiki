@@ -126,36 +126,58 @@ def job_file(label):
     return JOBS / (label.replace('|', '__') + '.npz')
 
 
-def build_with(overrides):
-    """Build the frozen working point with the given overrides.
+def resolved_params(overrides):
+    """The COMPLETE parameter vector actually sent to the model.
 
-    No global patch is left behind: the only table entry that must be patched
-    (ZENG['K_D_comp']) is read in Model.__init__, so it is restored immediately
-    after construction.
+    Every field is resolved from the frozen working point first, so no parameter
+    can silently fall back to a library default.  This exists because the first
+    version of this script left n_A1_gate=None for every run except the
+    n_A1_gate perturbations, and n_A1_gate_effective then returned
+    ZENG['n_A'][1] = 4 - i.e. 49 of the 55 runs were taken at n=4 while the
+    analysis treated them as the frozen n=6 point, which invalidated the matrix.
+    """
+    rp = dict(NOMINAL)
+    rp.update(overrides)
+    return rp
+
+
+def build_with(overrides):
+    """Build the frozen working point at the RESOLVED parameter vector.
+
+    n_A1_gate is always passed explicitly, never left as None, so the ZENG table
+    default (4.0) can never leak into a run.  The only global entry that must be
+    patched (ZENG['K_D_comp']) is read in Model.__init__ and is restored
+    immediately after construction.  The realised values are asserted against the
+    resolved values before the model is returned.
     """
     import model as M
-    kinds = {n: k for n, k, _ in param_table(True)}
-    attrs = {n: a for n, _, a in param_table(True)}
-    ext, carry1, n_gate = frozen_extension(), frozen_carry0(), None
-    for name, value in overrides.items():
-        k = kinds[name]
-        if k == 'extension':
-            ext = replace(ext, **{attrs[name]: value})
-        elif k == 'carry1':
-            carry1 = replace(carry1, **{attrs[name]: value})
-        elif k == 'ctor':
-            n_gate = float(value)
-    kd_scale = float(overrides.get('K_D_comp_scale', 1.0))
+    rp = resolved_params(overrides)
+    ext = replace(frozen_extension(),
+                  uM_per_au=rp['uM_per_au'],
+                  complex_on_au_inv_h=rp['complex_on'],
+                  complex_off_h=rp['complex_off'],
+                  complex_decay_h=rp['complex_decay'],
+                  translation_h=rp['translation_h'])
+    carry1 = replace(frozen_carry0(),
+                     mrna_half_life_min=rp['carry1_mrna_half_life_min'],
+                     activator_maturation_half_life_min=rp['A1_maturation_half_life_min'],
+                     repressor_maturation_half_life_min=rp['F1_maturation_half_life_min'])
     saved = M.ZENG['K_D_comp']
-    M.ZENG['K_D_comp'] = saved * kd_scale
+    M.ZENG['K_D_comp'] = saved * rp['K_D_comp_scale']
     try:
         model = ThreeBit51Model(
             extension=ext,
             carry=ThreeBitCarryParameters(carry0=frozen_carry0(), carry1=carry1),
-            n_A1_gate=n_gate)
+            n_A1_gate=rp['n_A1_gate'])
     finally:
         M.ZENG['K_D_comp'] = saved
-    return dict(model=model, k_D_comp_used=float(saved * kd_scale),
+    realised = float(model.n_A1_gate_effective)
+    if realised != float(rp['n_A1_gate']):
+        raise RuntimeError(f'n_A1_gate not realised: asked {rp["n_A1_gate"]}, got {realised}')
+    if float(model.e.uM_per_au) != float(rp['uM_per_au']):
+        raise RuntimeError('uM_per_au not realised')
+    return dict(model=model, resolved=rp, n_A1_gate_effective=realised,
+                k_D_comp_used=float(saved * rp['K_D_comp_scale']),
                 q=float(model.base.q), K_complex=float(model.base.K_complex))
 
 
@@ -188,7 +210,9 @@ def run_one(overrides, hours, t_min):
         experimental=extract_observables(sol, sig, EXPERIMENTAL_OBS, (), t_min,
                                          EXPERIMENTAL_SAMPLE_MIN),
         meta=dict(q=r['q'], K_complex=r['K_complex'],
-                  k_D_comp_used=r['k_D_comp_used']))
+                  k_D_comp_used=r['k_D_comp_used'],
+                  resolved_params={k: float(v) for k, v in r['resolved'].items()},
+                  n_A1_gate_effective=r['n_A1_gate_effective']))
 
 
 # ------------------------------------------------------------------ run/merge
@@ -205,12 +229,15 @@ def run(args):
                             exp_Y=res['experimental']['Y'])
         job_file(label).with_suffix('.json').write_text(json.dumps(dict(
             label=label, overrides={k: float(v) for k, v in ov.items()},
+            resolved_params=res['meta']['resolved_params'],
+            n_A1_gate_effective=res['meta']['n_A1_gate_effective'],
             theo_names=res['theoretical']['names'],
             exp_names=res['experimental']['names'],
             theo_n=int(res['theoretical']['Y'].shape[0]),
             exp_n=int(res['experimental']['Y'].shape[0]),
             meta=res['meta']), ensure_ascii=False, indent=2), encoding='utf-8')
-        print(f'[{tag}] {label:<44} done ({time.perf_counter()-started:.0f}s)', flush=True)
+        print(f'[{tag}] {label:<44} n_A1_gate_eff={res["meta"]["n_A1_gate_effective"]:g} '
+              f'({time.perf_counter()-started:.0f}s)', flush=True)
     (OUT / f'meta_li_{tag}.json').write_text(json.dumps(dict(
         shard=args.shard, nshards=args.nshards, jobs=len(mine), hours=args.hours,
         analysis_start_h=args.analysis_start_h, steps=list(STEPS),
@@ -221,16 +248,44 @@ def run(args):
 
 
 def load_jobs(params):
-    theo, exp = {}, {}
+    """Load every job and REFUSE to proceed if any run is off the working point.
+
+    Guard added after the first version silently ran 49 of 55 jobs at
+    n_A1_gate = 4 (the ZENG default) while the analysis treated them as n = 6.
+    A run may only differ from the frozen value of a parameter that is actually
+    being perturbed.
+    """
+    theo, exp, audit = {}, {}, []
     for label, _ in build_jobs(params):
         f = job_file(label)
         if not f.exists():
             raise SystemExit(f'missing job file {f}')
-        z = np.load(f)
         meta = json.loads(f.with_suffix('.json').read_text(encoding='utf-8'))
+        rp = meta.get('resolved_params')
+        if rp is None:
+            raise SystemExit(f'{f.name} has no resolved_params - produced by the OLD '
+                             f'build_with; rerun the integrations')
+        perturbed = label.split('|')[0]
+        for key, frozen_value in NOMINAL.items():
+            got = float(rp[key])
+            if key == perturbed:
+                continue
+            if not np.isclose(got, float(frozen_value), rtol=0, atol=1e-12):
+                raise SystemExit(
+                    f'{label}: parameter {key} is {got}, but only {perturbed} may be '
+                    f'perturbed from the frozen point ({frozen_value})')
+        audit.append(dict(label=label, perturbed=perturbed,
+                          n_A1_gate_effective=float(meta['n_A1_gate_effective'])))
+        z = np.load(f)
         theo[label] = dict(Y=z['theo_Y'], names=meta['theo_names'])
         exp[label] = dict(Y=z['exp_Y'], names=meta['exp_names'])
-    return theo, exp
+    bad = [a for a in audit if a['perturbed'] != 'n_A1_gate'
+           and not np.isclose(a['n_A1_gate_effective'], float(NOMINAL['n_A1_gate']),
+                              rtol=0, atol=1e-12)]
+    if bad:
+        raise SystemExit(f'{len(bad)} run(s) are not at n_A1_gate = '
+                         f'{NOMINAL["n_A1_gate"]}: e.g. {bad[:3]}')
+    return theo, exp, audit
 
 
 def select_params(args):
@@ -321,7 +376,7 @@ def observable_contribution(S, names):
 def merge(args):
     params = select_params(args)
     names_all = [n for n, _, _ in params]
-    theo, exp = load_jobs(params)
+    theo, exp, run_audit = load_jobs(params)
     verdict = dict(
         hours=args.hours, analysis_start_h=args.analysis_start_h,
         sample_min=SAMPLE_MIN, experimental_sample_min=EXPERIMENTAL_SAMPLE_MIN,
@@ -352,10 +407,11 @@ def merge(args):
         names = res['baseline']['names']
         entry = dict(observables=list(names), n_observables=len(names),
                      n_timepoints=int(res['baseline']['Y'].shape[0]), per_step={})
-        sens_frames, corr_frames = {}, {}
+        sens_frames, corr_frames, full_S = {}, {}, {}
         contrib_rows = []
         for h in STEPS:
             a = analyse(res, names_all, names, h)
+            full_S[f'{h:g}'] = a['S']
             entry['per_step'][f'{h:g}'] = dict(
                 singular_values=[float(x) for x in a['sv']],
                 effective_rank=a['rank'], condition_number=a['cond'],
@@ -369,12 +425,23 @@ def merge(args):
                 entry['pairwise_correlations'] = a['corr'].tolist()
         entry['finite_difference_convergence'] = []
         for h1, h2 in zip(STEPS, STEPS[1:]):
-            S1 = sens_frames[f'{h1:g}'].drop(columns=['observable', 'n_timepoints']).to_numpy()
-            S2 = sens_frames[f'{h2:g}'].drop(columns=['observable', 'n_timepoints']).to_numpy()
+            # convergence is judged on the FULL (time x observable) x parameter
+            # matrix; the RMS summary drops sign and time position, so comparing
+            # only the summary understates (or misstates) the disagreement.
+            S1_full, S2_full = full_S[f'{h1:g}'], full_S[f'{h2:g}']
+            n = min(S1_full.shape[0], S2_full.shape[0])
+            full_rel = float(np.linalg.norm(S1_full[:n] - S2_full[:n]) /
+                             max(np.linalg.norm(S1_full[:n]), 1e-300))
+            R1 = sens_frames[f'{h1:g}'].drop(columns=['observable', 'n_timepoints']).to_numpy()
+            R2 = sens_frames[f'{h2:g}'].drop(columns=['observable', 'n_timepoints']).to_numpy()
+            rms_rel = float(np.linalg.norm(R1 - R2) / max(np.linalg.norm(R1), 1e-300))
             entry['finite_difference_convergence'].append(dict(
                 from_pct=h1 * 100, to_pct=h2 * 100,
-                relative_matrix_change=float(np.linalg.norm(S1 - S2) /
-                                             max(np.linalg.norm(S1), 1e-300))))
+                full_matrix_relative_change=full_rel,
+                rms_summary_relative_change=rms_rel,
+                converged=bool(full_rel < 0.05)))
+        entry['convergence_criterion'] = ('full_matrix_relative_change < 0.05 between '
+                                          'consecutive steps')
         entry['observable_contribution'] = contrib_rows
         verdict['results'][tag] = entry
         for h in STEPS:

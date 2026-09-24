@@ -1,0 +1,44 @@
+{
+  "cache_key": "6c34c111eaf47a0394ec69ce9f0921837d987544d0e44e040f6ea1150928b7da",
+  "extension": {
+    "uM_per_au": 5.75,
+    "mrna_half_life_min": 2.0,
+    "maturation_half_life_min": 20.0,
+    "translation_h": 30.0,
+    "immature_decay_h": 0.0,
+    "complex_on_au_inv_h": 0.1,
+    "complex_off_h": 1.0,
+    "complex_decay_h": 1.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "add_growth": false
+  },
+  "carry0": {
+    "mrna_half_life_min": 2.0,
+    "activator_maturation_half_life_min": 32.5,
+    "repressor_maturation_half_life_min": 32.5
+  },
+  "carry1": {
+    "mrna_half_life_min": 2.0,
+    "activator_maturation_half_life_min": 32.5,
+    "repressor_maturation_half_life_min": 32.5
+  },
+  "n_A1_gate": 6.0,
+  "F1_production_exponent": 4.0,
+  "hours": 600,
+  "sample_min": 2,
+  "max_step_min": 2,
+  "rtol": 2e-07,
+  "atol": 2e-09,
+  "initial_condition": "PB DNA with pre-equilibrated regulatory pools (cold=False)",
+  "source_hashes": {
+    "C:\\Users\\18633\\Desktop\\wiki\\final_reconstruction\\model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "C:\\Users\\18633\\Desktop\\wiki\\final_reconstruction\\model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+    "C:\\Users\\18633\\Desktop\\wiki\\final_reconstruction\\model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "C:\\Users\\18633\\Desktop\\wiki\\final_reconstruction\\verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+    "C:\\Users\\18633\\Desktop\\wiki\\final_reconstruction\\verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+    "C:\\Users\\18633\\Desktop\\wiki\\final_reconstruction\\twobit34_results\\selected_profile.json": "0571047D63AD0FABCD67A0B0E833C716A01C8E923AAC0F1860DEB2A302B2A768",
+    "C:\\Users\\18633\\Desktop\\wiki\\final_reconstruction\\plausibility\\threebit51_selected_v1.json": "6BFD7FF6F0A4D897753D02789E5B22879D1A9DE94D53C4C8253F63D52E953A36",
+    "C:\\Users\\18633\\Desktop\\wiki\\其他小组成员任务\\Week4_振荡器-C31建模\\code\\Flux_Driven_Translation_Burden_Model.py": "456326A418C4C7EE23C75FA2DD4A86070F37CAF820B5F863BBAA44FE9DCE51BD"
+  }
+}

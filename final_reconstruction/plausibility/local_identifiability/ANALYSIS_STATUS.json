@@ -1,0 +1,57 @@
+{
+  "status": "FAILED_ACCEPTANCE",
+  "classification": "diagnostic_archive",
+  "artifact": "plausibility/local_identifiability/",
+  "must_not_be_cited_for": [
+    "effective rank of the sensitivity matrix",
+    "condition number",
+    "weakest identifiable direction",
+    "any pairwise parameter correlation",
+    "any claim that q and K_D_comp are exactly degenerate",
+    "any claim that a parameter is or is not confounded with another"
+  ],
+  "reason_primary": {
+    "defect": "mixed working point: the parameter matrix was assembled from runs at two different gate exponents",
+    "evidence": {
+      "build_with_old_behaviour": "n_gate stayed None unless n_A1_gate was itself the perturbed parameter; n_A1_gate_effective then returns ZENG['n_A'][1]",
+      "zeng_n_A_1": 4.0,
+      "nominal_used_in_analysis": 6.0,
+      "runs_at_n4": 49,
+      "runs_at_n6": 6,
+      "verified_by": "constructing the model exactly as the script did and printing n_A1_gate_effective for baseline / complex_on / uM_per_au / n_A1_gate overrides",
+      "consequence": "the 9-column matrix is not a Jacobian at one parameter point, so no linear-algebra summary of it is meaningful"
+    }
+  },
+  "reason_secondary": {
+    "defect": "the finite-difference convergence check compared the RMS sensitivity summary, not the full (time x observable) x parameter matrix",
+    "consequence": "the reported 0.507 / 0.680 are summary-table differences and were mislabelled as full-matrix changes; the convergence verdict itself (not converged) still stands"
+  },
+  "retracted_claims": [
+    "that the phase shift of the limit cycle is the LOCATED root cause of the non-convergence. Timing sensitivity is a genuine part of dS/dp, and the working-point mixing was a confirmed confound that had to be excluded first. Correct statement: no trustworthy local sensitivity estimate was obtained under this implementation and perturbation scale; working-point mixing is a confirmed error, while timing sensitivity versus finite-amplitude nonlinearity remain to be separated.",
+    "that 'local sensitivity is unusable for this system'. Not established.",
+    "that q and K_D_comp are exactly degenerate. The product form K_complex = q*K_D_comp makes q cancel from the reverse Hill ONLY in the quasi-steady-state limit C ~ q*I*R. The model integrates C explicitly, so kon, koff and complex_decay also set complex relaxation, sequestration of free Int and RDF, and complex loss. Structural non-identifiability must be proven on the full equations under a specified observation model.",
+    "that n_A1_gate is not confounded with uM_per_au (the two columns came from different working points)",
+    "that mRNA half-life and A1 maturation are strongly anti-correlated at the frozen point (the runs were at n=4; retain only as a hypothesis to retest)",
+    "that S2 is the single observable carrying the weak direction (same n=4/n=6 mixture)"
+  ],
+  "still_valid": {
+    "convergence_check_fired": "the per-step singular spectra and condition numbers differ by ~15x across 1/2/5 %, so no converged local estimate exists from these runs",
+    "freeze_and_postfreeze_results_unaffected": "every other script in this project passes n_A1_gate explicitly: scan_gate_segments, scan_carry_pairing, scan_strict_tolerance (and therefore postfreeze_peak_perturbation) all build the model with n_A1_gate from the point definition, so the frozen working point and all freeze/post-freeze conclusions are untouched",
+    "check_identifiability_py_audit": "the pre-existing check_identifiability.py also runs at the ZENG default because it never passes n_A1_gate; it covers only 5 of the 9 parameters and implements no sensitivity/rank/correlation machinery"
+  },
+  "fixes_applied_and_verified": {
+    "resolved_params": "every run now resolves the COMPLETE parameter vector from the frozen point before construction, so no field can fall back to a library default",
+    "n_A1_gate_always_explicit": "passed explicitly on every construction; realised value asserted against the resolved value",
+    "per_run_audit": "each job json records resolved_params and n_A1_gate_effective",
+    "load_jobs_guard": "merge refuses to proceed if any run is off the frozen point in a parameter it is not perturbing, or if resolved_params is absent (i.e. old-format artifacts)",
+    "convergence_metric": "now computed on the full stacked matrix AND on the RMS summary, reported separately, with an explicit criterion (full_matrix_relative_change < 0.05)",
+    "verification": "baseline and the five sampled overrides all realise n_A1_gate_effective = 6.0 (only the n_A1_gate perturbations move it, to 6.12 / 5.70); the old construction reproduces 4.0"
+  },
+  "before_any_rerun": [
+    "re-integrate all 55 runs with the corrected constructor (the 49 n=4 trajectories are usable only as a failure-configuration diagnostic; the 6 n~6 trajectories are only reusable once the rest is rechecked)",
+    "verify the per-run audit for all 55 runs before any analysis",
+    "then decide between the local finite-difference route and an event-based route",
+    "if the event-based route is taken: keep continuous features only (flip delay relative to the external clock, gate width and dose separately for forward and reverse events, plateau levels, pool peaks and their timing); event counts, pass booleans and saturated commitment have zero local derivative in the success region and cannot carry identifiability"
+  ],
+  "new_integrations_started_in_this_round": 0
+}
