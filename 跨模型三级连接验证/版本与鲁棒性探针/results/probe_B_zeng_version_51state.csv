@@ -1,0 +1,4 @@
+tag,certified,steady_passed,steady_reads,minimum_commitment,bit0_hold_h,bit1_hold_h,bit2_hold_h,bit0_setup_h,bit1_setup_h,bit2_setup_h,margins_defined_for,all_bits_crossed,binding_min_hold_h,binding_is_the_binding_bit,carry1_gate_events,bit1_reverse_events,bit2_crossings,exactly_one,causal_order,alternating,off_to_on_peak_ratio,runtime_s
+baseline_frozen_zeng,True,True,48,1.0,3.099760217198167,2.913722775395758,3.8194038570717908,4.030390535172833,4.637884499952801,4.539428285816513,bit0+bit1+bit2,True,2.913722775395758,True,14,14,14,True,True,True,0.05452393307249197,163.13999990000048
+zmh_bit1_block,False,False,48,0.0,4.238833862842398,,,2.5212866078011302,,,bit0,False,4.238833862842398,False,0,0,0,False,False,True,,153.7148344999987
+zmh_bit0_block,False,False,48,0.0,3.308919496422021,,,1.7052271089657154,,,bit0,False,3.308919496422021,False,0,0,0,False,False,True,,158.56146830000034

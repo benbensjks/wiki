@@ -1,0 +1,481 @@
+{
+  "cases": [
+    {
+      "mode": "normalized_concentration",
+      "hours": 120.0,
+      "certified": null,
+      "low_state_max_abs_gap": 8.313935175863207e-07,
+      "health": {
+        "finite": true,
+        "minimum_by_state": {
+          "pb0": 0.0008642547414860467,
+          "int0": 0.0,
+          "rep0": 1.9963456130954553,
+          "rdf0": 0.0,
+          "a0": 0.0043213512503920545,
+          "r0": 0.7691705279764408,
+          "pb1": 0.012736642567157036,
+          "int1": 0.0,
+          "rep1": 2.7485276864486146,
+          "rdf1": 0.0,
+          "A1": 0.08482714763547337,
+          "F1": 0.0007228522135096276,
+          "M_A1": 0.006644517943700725,
+          "A1_u": 0.16331748589817474,
+          "M_F1": 4.166145721376678e-06,
+          "F1_u": 0.00017868031090287687,
+          "b2_M_I": 0.0,
+          "b2_I_u": 0.0,
+          "b2_I": 0.0,
+          "b2_M_T": 0.0007919196221493348,
+          "b2_T_u": 0.013644060176312221,
+          "b2_T": 0.44022025500616724,
+          "b2_M_R": 0.0,
+          "b2_R_u": 0.0,
+          "b2_R": 0.0,
+          "b2_C": 0.0,
+          "b2_S": 0.0
+        },
+        "maximum_by_state": {
+          "pb0": 1.0,
+          "int0": 2.999934722699037,
+          "rep0": 15.302521008403362,
+          "rdf0": 0.8918565687030828,
+          "a0": 1.9329685362517102,
+          "r0": 6.657771604876878,
+          "pb1": 1.0,
+          "int1": 1.2805528316434225,
+          "rep1": 40.0,
+          "rdf1": 0.5764438849826142,
+          "A1": 1.2300679737379923,
+          "F1": 2.3851258395219976,
+          "M_A1": 0.10250566447816603,
+          "A1_u": 2.4031217243422693,
+          "M_F1": 0.08745461411580659,
+          "F1_u": 2.0502679939256465,
+          "b2_M_I": 0.040812635282453415,
+          "b2_I_u": 0.48448285587396434,
+          "b2_I": 0.40883443606691167,
+          "b2_M_T": 0.11666666666666667,
+          "b2_T_u": 1.6831442143704574,
+          "b2_T": 5.833333333333334,
+          "b2_M_R": 0.1676854108803055,
+          "b2_R_u": 2.2688403363612912,
+          "b2_R": 4.635002110022131,
+          "b2_C": 0.014654133616438858,
+          "b2_S": 0.9932190955756864
+        },
+        "fractions_within_tolerance": true,
+        "nonnegative_within_tolerance": true
+      },
+      "extrema": {
+        "pb0": {
+          "minimum": 0.0008642547414860467,
+          "maximum": 1.0
+        },
+        "int0": {
+          "minimum": 0.0,
+          "maximum": 2.999934722699037
+        },
+        "rep0": {
+          "minimum": 1.9963456130954553,
+          "maximum": 15.302521008403362
+        },
+        "rdf0": {
+          "minimum": 0.0,
+          "maximum": 0.8918565687030828
+        },
+        "a0": {
+          "minimum": 0.0043213512503920545,
+          "maximum": 1.9329685362517102
+        },
+        "r0": {
+          "minimum": 0.7691705279764408,
+          "maximum": 6.657771604876878
+        },
+        "pb1": {
+          "minimum": 0.012736642567157036,
+          "maximum": 1.0
+        },
+        "int1": {
+          "minimum": 0.0,
+          "maximum": 1.2805528316434225
+        },
+        "rep1": {
+          "minimum": 2.7485276864486146,
+          "maximum": 40.0
+        },
+        "rdf1": {
+          "minimum": 0.0,
+          "maximum": 0.5764438849826142
+        },
+        "A1": {
+          "minimum": 0.08482714763547337,
+          "maximum": 1.2300679737379923
+        },
+        "F1": {
+          "minimum": 0.0007228522135096276,
+          "maximum": 2.3851258395219976
+        },
+        "M_A1": {
+          "minimum": 0.006644517943700725,
+          "maximum": 0.10250566447816603
+        },
+        "A1_u": {
+          "minimum": 0.16331748589817474,
+          "maximum": 2.4031217243422693
+        },
+        "M_F1": {
+          "minimum": 4.166145721376678e-06,
+          "maximum": 0.08745461411580659
+        },
+        "F1_u": {
+          "minimum": 0.00017868031090287687,
+          "maximum": 2.0502679939256465
+        },
+        "b2_M_I": {
+          "minimum": 0.0,
+          "maximum": 0.040812635282453415
+        },
+        "b2_I_u": {
+          "minimum": 0.0,
+          "maximum": 0.48448285587396434
+        },
+        "b2_I": {
+          "minimum": 0.0,
+          "maximum": 0.40883443606691167
+        },
+        "b2_M_T": {
+          "minimum": 0.0007919196221493348,
+          "maximum": 0.11666666666666667
+        },
+        "b2_T_u": {
+          "minimum": 0.013644060176312221,
+          "maximum": 1.6831442143704574
+        },
+        "b2_T": {
+          "minimum": 0.44022025500616724,
+          "maximum": 5.833333333333334
+        },
+        "b2_M_R": {
+          "minimum": 0.0,
+          "maximum": 0.1676854108803055
+        },
+        "b2_R_u": {
+          "minimum": 0.0,
+          "maximum": 2.2688403363612912
+        },
+        "b2_R": {
+          "minimum": 0.0,
+          "maximum": 4.635002110022131
+        },
+        "b2_C": {
+          "minimum": 0.0,
+          "maximum": 0.014654133616438858
+        },
+        "b2_S": {
+          "minimum": 0.0,
+          "maximum": 0.9932190955756864
+        }
+      },
+      "source_peak_au_per_h": 360.0001259107584,
+      "source_trough_au_per_h": 0.0,
+      "g1_peak": 0.03231826992674146,
+      "u2_peak_au_per_h": 1.2280942572161755,
+      "matched_2000min": {
+        "cold_mod4": {
+          "drop": 0,
+          "reads": 2,
+          "sequence": "x3",
+          "observed_increments": false,
+          "enough_reads": false
+        },
+        "cold_mod8": {
+          "drop": 0,
+          "reads": 2,
+          "sequence": "x3",
+          "observed_increments": false,
+          "enough_reads": false
+        }
+      },
+      "extended": {
+        "cold_mod4": {
+          "drop": 0,
+          "reads": 10,
+          "sequence": "x3333xxxxx",
+          "observed_increments": false,
+          "enough_reads": true
+        },
+        "cold_mod8": {
+          "drop": 0,
+          "reads": 10,
+          "sequence": "x3x77xxxxx",
+          "observed_increments": false,
+          "enough_reads": false
+        },
+        "steady_mod4": {
+          "drop": 4,
+          "reads": 6,
+          "sequence": "3xxxxx",
+          "observed_increments": false,
+          "enough_reads": false
+        },
+        "steady_mod8": {
+          "drop": 8,
+          "reads": 2,
+          "sequence": "xx",
+          "observed_increments": false,
+          "enough_reads": false
+        }
+      },
+      "event_counts": {
+        "bit0": 1,
+        "bit1": 1,
+        "bit2": 1
+      }
+    },
+    {
+      "mode": "absolute_translation_flux",
+      "hours": 120.0,
+      "certified": null,
+      "low_state_max_abs_gap": 0.0,
+      "health": {
+        "finite": true,
+        "minimum_by_state": {
+          "pb0": 0.9999998487422175,
+          "int0": 0.0,
+          "rep0": 15.302518763899748,
+          "rdf0": 0.0,
+          "a0": 1.9329682444873943,
+          "r0": 6.657771195135645,
+          "pb1": 0.999970281811688,
+          "int1": 0.0,
+          "rep1": 39.998844412090435,
+          "rdf1": 0.0,
+          "A1": 1.230054052648154,
+          "F1": 2.385075271728448,
+          "M_A1": 0.10250449287901058,
+          "A1_u": 2.4030944360672866,
+          "M_F1": 0.0874527332539252,
+          "F1_u": 2.0502241888348935,
+          "b2_M_I": 0.0,
+          "b2_I_u": 0.0,
+          "b2_I": 0.0,
+          "b2_M_T": 0.11666666387082922,
+          "b2_T_u": 1.6831441747203635,
+          "b2_T": 5.833333200509387,
+          "b2_M_R": 0.0,
+          "b2_R_u": 0.0,
+          "b2_R": 0.0,
+          "b2_C": 0.0,
+          "b2_S": 0.0
+        },
+        "maximum_by_state": {
+          "pb0": 1.0,
+          "int0": 0.00962200932633445,
+          "rep0": 15.302521008403362,
+          "rdf0": 1.3761425633212499e-09,
+          "a0": 1.9329685362517102,
+          "r0": 6.657771604876878,
+          "pb1": 1.0,
+          "int1": 0.024638800204279266,
+          "rep1": 40.0,
+          "rdf1": 1.395254475639492e-08,
+          "A1": 1.2300679737379923,
+          "F1": 2.3851258395219976,
+          "M_A1": 0.10250566447816603,
+          "A1_u": 2.4031217243422693,
+          "M_F1": 0.08745461411580659,
+          "F1_u": 2.0502679939256465,
+          "b2_M_I": 5.523098625623936e-07,
+          "b2_I_u": 7.645804491713373e-06,
+          "b2_I": 6.934335133499902e-06,
+          "b2_M_T": 0.11666666666666667,
+          "b2_T_u": 1.6831442143704574,
+          "b2_T": 5.833333333333334,
+          "b2_M_R": 2.618280405489098e-12,
+          "b2_R_u": 3.7132010041007326e-11,
+          "b2_R": 9.369502975149099e-11,
+          "b2_C": 3.0484486375163837e-17,
+          "b2_S": 2.400182103392979e-08
+        },
+        "fractions_within_tolerance": true,
+        "nonnegative_within_tolerance": true
+      },
+      "extrema": {
+        "pb0": {
+          "minimum": 0.9999998487422175,
+          "maximum": 1.0
+        },
+        "int0": {
+          "minimum": 0.0,
+          "maximum": 0.00962200932633445
+        },
+        "rep0": {
+          "minimum": 15.302518763899748,
+          "maximum": 15.302521008403362
+        },
+        "rdf0": {
+          "minimum": 0.0,
+          "maximum": 1.3761425633212499e-09
+        },
+        "a0": {
+          "minimum": 1.9329682444873943,
+          "maximum": 1.9329685362517102
+        },
+        "r0": {
+          "minimum": 6.657771195135645,
+          "maximum": 6.657771604876878
+        },
+        "pb1": {
+          "minimum": 0.999970281811688,
+          "maximum": 1.0
+        },
+        "int1": {
+          "minimum": 0.0,
+          "maximum": 0.024638800204279266
+        },
+        "rep1": {
+          "minimum": 39.998844412090435,
+          "maximum": 40.0
+        },
+        "rdf1": {
+          "minimum": 0.0,
+          "maximum": 1.395254475639492e-08
+        },
+        "A1": {
+          "minimum": 1.230054052648154,
+          "maximum": 1.2300679737379923
+        },
+        "F1": {
+          "minimum": 2.385075271728448,
+          "maximum": 2.3851258395219976
+        },
+        "M_A1": {
+          "minimum": 0.10250449287901058,
+          "maximum": 0.10250566447816603
+        },
+        "A1_u": {
+          "minimum": 2.4030944360672866,
+          "maximum": 2.4031217243422693
+        },
+        "M_F1": {
+          "minimum": 0.0874527332539252,
+          "maximum": 0.08745461411580659
+        },
+        "F1_u": {
+          "minimum": 2.0502241888348935,
+          "maximum": 2.0502679939256465
+        },
+        "b2_M_I": {
+          "minimum": 0.0,
+          "maximum": 5.523098625623936e-07
+        },
+        "b2_I_u": {
+          "minimum": 0.0,
+          "maximum": 7.645804491713373e-06
+        },
+        "b2_I": {
+          "minimum": 0.0,
+          "maximum": 6.934335133499902e-06
+        },
+        "b2_M_T": {
+          "minimum": 0.11666666387082922,
+          "maximum": 0.11666666666666667
+        },
+        "b2_T_u": {
+          "minimum": 1.6831441747203635,
+          "maximum": 1.6831442143704574
+        },
+        "b2_T": {
+          "minimum": 5.833333200509387,
+          "maximum": 5.833333333333334
+        },
+        "b2_M_R": {
+          "minimum": 0.0,
+          "maximum": 2.618280405489098e-12
+        },
+        "b2_R_u": {
+          "minimum": 0.0,
+          "maximum": 3.7132010041007326e-11
+        },
+        "b2_R": {
+          "minimum": 0.0,
+          "maximum": 9.369502975149099e-11
+        },
+        "b2_C": {
+          "minimum": 0.0,
+          "maximum": 3.0484486375163837e-17
+        },
+        "b2_S": {
+          "minimum": 0.0,
+          "maximum": 2.400182103392979e-08
+        }
+      },
+      "source_peak_au_per_h": 1.1546557688548615,
+      "source_trough_au_per_h": 0.006255276062551135,
+      "g1_peak": 4.362488114590377e-07,
+      "u2_peak_au_per_h": 1.6577454835443432e-05,
+      "matched_2000min": {
+        "cold_mod4": {
+          "drop": 0,
+          "reads": 2,
+          "sequence": "00",
+          "observed_increments": false,
+          "enough_reads": false
+        },
+        "cold_mod8": {
+          "drop": 0,
+          "reads": 2,
+          "sequence": "00",
+          "observed_increments": false,
+          "enough_reads": false
+        }
+      },
+      "extended": {
+        "cold_mod4": {
+          "drop": 0,
+          "reads": 11,
+          "sequence": "00000000000",
+          "observed_increments": false,
+          "enough_reads": true
+        },
+        "cold_mod8": {
+          "drop": 0,
+          "reads": 11,
+          "sequence": "00000000000",
+          "observed_increments": false,
+          "enough_reads": false
+        },
+        "steady_mod4": {
+          "drop": 4,
+          "reads": 7,
+          "sequence": "0000000",
+          "observed_increments": false,
+          "enough_reads": false
+        },
+        "steady_mod8": {
+          "drop": 8,
+          "reads": 3,
+          "sequence": "000",
+          "observed_increments": false,
+          "enough_reads": false
+        }
+      },
+      "event_counts": {
+        "bit0": 0,
+        "bit1": 0,
+        "bit2": 0
+      }
+    }
+  ],
+  "source_hashes": {
+    "C:\\Users\\18633\\Desktop\\wiki\\其他小组成员任务\\Week4_振荡器-C31建模\\code\\Flux_Driven_Translation_Burden_Model.py": "456326A418C4C7EE23C75FA2DD4A86070F37CAF820B5F863BBAA44FE9DCE51BD",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hybrid_model.py": "33168F82A1E17778589824F66DEE2ACA06833C7F113EF723B5C7F9FEA4E7B058",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\diagnostics.py": "CAF04F1E1621E407199A475634F4F7FB6A3FB02016A2A209D42FC93BDF7D423A",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\run_han_comparison.py": "0043F0B22347F963745D2B54C5CCE471425E0E57E9B4C6D8E8D22421DDCF57DF",
+    "wiki任务\\完整二级级联.py": "E790743F493F415E43296CD10911BB6C2A4E5A024F70E807A40267E9705A0E2B",
+    "final_reconstruction\\model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A"
+  },
+  "note": "Primary test retains normalized-concentration interface. Absolute flux changes the source mapping; not an upstream-only comparison."
+}

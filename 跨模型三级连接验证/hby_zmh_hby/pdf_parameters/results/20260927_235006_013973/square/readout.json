@@ -1,0 +1,807 @@
+{
+  "status": "EXPLORATORY_ONLY_NOT_CERTIFIED",
+  "rule": "Int0 peak prominence=10% full range; trough between peaks; total window 20% period; no phase fitting",
+  "reads": [
+    {
+      "trough_h": 15.0,
+      "window_start_h": 13.998333333333333,
+      "window_end_h": 16.001666666666665,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        0,
+        0
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.8429752066115702,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 25.0,
+      "window_start_h": 24.001666666666665,
+      "window_end_h": 25.998333333333335,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        1,
+        0
+      ],
+      "commitment": [
+        0.7647058823529411,
+        1.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 35.0,
+      "window_start_h": 33.998333333333335,
+      "window_end_h": 36.001666666666665,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        0
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.06611570247933884,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 45.0,
+      "window_start_h": 44.001666666666665,
+      "window_end_h": 45.998333333333335,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        null,
+        0
+      ],
+      "commitment": [
+        0.7647058823529411,
+        0.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 55.0,
+      "window_start_h": 53.998333333333335,
+      "window_end_h": 56.001666666666665,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        0
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.14049586776859505,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 65.0,
+      "window_start_h": 64.00166666666667,
+      "window_end_h": 65.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        1,
+        0
+      ],
+      "commitment": [
+        0.7647058823529411,
+        1.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 75.0,
+      "window_start_h": 73.99833333333333,
+      "window_end_h": 76.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        1
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.04132231404958678,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 85.0,
+      "window_start_h": 84.00166666666667,
+      "window_end_h": 85.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7647058823529411,
+        0.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 95.0,
+      "window_start_h": 93.99833333333333,
+      "window_end_h": 96.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.1322314049586777,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 105.0,
+      "window_start_h": 104.00166666666667,
+      "window_end_h": 105.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        1,
+        null
+      ],
+      "commitment": [
+        0.7647058823529411,
+        1.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 115.0,
+      "window_start_h": 113.99833333333333,
+      "window_end_h": 116.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 125.0,
+      "window_start_h": 124.00166666666667,
+      "window_end_h": 125.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7647058823529411,
+        0.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 135.0,
+      "window_start_h": 133.99833333333333,
+      "window_end_h": 136.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.14049586776859505,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 145.0,
+      "window_start_h": 144.00166666666667,
+      "window_end_h": 145.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        1,
+        null
+      ],
+      "commitment": [
+        0.7647058823529411,
+        1.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 155.0,
+      "window_start_h": 153.99833333333333,
+      "window_end_h": 156.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        1
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.7355371900826446,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 165.0,
+      "window_start_h": 164.00166666666667,
+      "window_end_h": 165.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        null,
+        0
+      ],
+      "commitment": [
+        0.7647058823529411,
+        0.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 175.0,
+      "window_start_h": 173.99833333333333,
+      "window_end_h": 176.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        0
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.12396694214876033,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 185.0,
+      "window_start_h": 184.00166666666667,
+      "window_end_h": 185.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        1,
+        0
+      ],
+      "commitment": [
+        0.7647058823529411,
+        1.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 195.0,
+      "window_start_h": 193.99833333333333,
+      "window_end_h": 196.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 205.0,
+      "window_start_h": 204.00166666666667,
+      "window_end_h": 205.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7647058823529411,
+        0.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 215.0,
+      "window_start_h": 213.99833333333333,
+      "window_end_h": 216.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.1487603305785124,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 225.0,
+      "window_start_h": 224.00166666666667,
+      "window_end_h": 225.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        1,
+        null
+      ],
+      "commitment": [
+        0.7647058823529411,
+        1.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 235.0,
+      "window_start_h": 233.99833333333333,
+      "window_end_h": 236.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        1
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.7851239669421488,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 245.0,
+      "window_start_h": 244.00166666666667,
+      "window_end_h": 245.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        null,
+        0
+      ],
+      "commitment": [
+        0.7647058823529411,
+        0.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 255.0,
+      "window_start_h": 253.99833333333333,
+      "window_end_h": 256.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        0
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.12396694214876033,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 265.0,
+      "window_start_h": 264.00166666666667,
+      "window_end_h": 265.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        1,
+        0
+      ],
+      "commitment": [
+        0.7647058823529411,
+        1.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 275.0,
+      "window_start_h": 273.99833333333333,
+      "window_end_h": 276.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        0
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 285.0,
+      "window_start_h": 284.00166666666667,
+      "window_end_h": 285.99833333333333,
+      "boundary_crossed": false,
+      "samples": 119,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7647058823529411,
+        0.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 295.0,
+      "window_start_h": 293.99833333333333,
+      "window_end_h": 296.00166666666667,
+      "boundary_crossed": false,
+      "samples": 121,
+      "labels": [
+        null,
+        null,
+        null
+      ],
+      "commitment": [
+        0.7520661157024794,
+        0.1487603305785124,
+        0.0
+      ],
+      "value": null
+    }
+  ],
+  "clock_peak_times_h": [
+    6.766666666666667,
+    16.78333333333333,
+    26.766666666666666,
+    36.78333333333333,
+    46.766666666666666,
+    56.78333333333333,
+    66.76666666666667,
+    76.78333333333333,
+    86.76666666666667,
+    96.78333333333333,
+    106.76666666666667,
+    116.78333333333333,
+    126.76666666666667,
+    136.78333333333333,
+    146.76666666666665,
+    156.78333333333333,
+    166.76666666666665,
+    176.78333333333333,
+    186.76666666666665,
+    196.78333333333333,
+    206.76666666666665,
+    216.78333333333333,
+    226.76666666666665,
+    236.78333333333333,
+    246.76666666666665,
+    256.7833333333333,
+    266.76666666666665,
+    276.7833333333333,
+    286.76666666666665,
+    296.7833333333333
+  ],
+  "cold_mod8": {
+    "drop": 0,
+    "reads": 29,
+    "sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "observed_increments": false,
+    "enough_reads": true
+  },
+  "steady_mod8": {
+    "drop": 8,
+    "reads": 21,
+    "sequence": "xxxxxxxxxxxxxxxxxxxxx",
+    "observed_increments": false,
+    "enough_reads": true
+  },
+  "cold_mod4": {
+    "drop": 0,
+    "reads": 29,
+    "sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "observed_increments": false,
+    "enough_reads": true
+  },
+  "steady_mod4": {
+    "drop": 4,
+    "reads": 25,
+    "sequence": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+    "observed_increments": false,
+    "enough_reads": true
+  },
+  "crossings": {
+    "bit0": [
+      {
+        "time_h": 5.6309761385901895,
+        "direction": "up"
+      },
+      {
+        "time_h": 15.611892805871772,
+        "direction": "down"
+      },
+      {
+        "time_h": 25.634880448004232,
+        "direction": "up"
+      },
+      {
+        "time_h": 35.61176010564185,
+        "direction": "down"
+      },
+      {
+        "time_h": 45.6348638504824,
+        "direction": "up"
+      },
+      {
+        "time_h": 55.61175980107477,
+        "direction": "down"
+      },
+      {
+        "time_h": 65.63486381758824,
+        "direction": "up"
+      },
+      {
+        "time_h": 75.61175980047278,
+        "direction": "down"
+      },
+      {
+        "time_h": 85.63486381752323,
+        "direction": "up"
+      },
+      {
+        "time_h": 95.6117598004716,
+        "direction": "down"
+      },
+      {
+        "time_h": 105.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 115.61175980047159,
+        "direction": "down"
+      },
+      {
+        "time_h": 125.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 135.6117598004716,
+        "direction": "down"
+      },
+      {
+        "time_h": 145.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 155.6117598004716,
+        "direction": "down"
+      },
+      {
+        "time_h": 165.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 175.6117598004716,
+        "direction": "down"
+      },
+      {
+        "time_h": 185.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 195.6117598004716,
+        "direction": "down"
+      },
+      {
+        "time_h": 205.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 215.6117598004716,
+        "direction": "down"
+      },
+      {
+        "time_h": 225.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 235.6117598004716,
+        "direction": "down"
+      },
+      {
+        "time_h": 245.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 255.6117598004716,
+        "direction": "down"
+      },
+      {
+        "time_h": 265.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 275.6117598004716,
+        "direction": "down"
+      },
+      {
+        "time_h": 285.6348638175231,
+        "direction": "up"
+      },
+      {
+        "time_h": 295.6117598004716,
+        "direction": "down"
+      }
+    ],
+    "bit1": [
+      {
+        "time_h": 15.74927957407205,
+        "direction": "up"
+      },
+      {
+        "time_h": 32.83412710575842,
+        "direction": "down"
+      },
+      {
+        "time_h": 36.553804791238996,
+        "direction": "up"
+      },
+      {
+        "time_h": 75.78055254289941,
+        "direction": "down"
+      },
+      {
+        "time_h": 95.61093227015704,
+        "direction": "up"
+      },
+      {
+        "time_h": 115.72721372731921,
+        "direction": "down"
+      },
+      {
+        "time_h": 116.33477553061486,
+        "direction": "up"
+      },
+      {
+        "time_h": 155.78879403492598,
+        "direction": "down"
+      },
+      {
+        "time_h": 175.6408584089369,
+        "direction": "up"
+      },
+      {
+        "time_h": 194.38995996104117,
+        "direction": "down"
+      },
+      {
+        "time_h": 196.28772808308656,
+        "direction": "up"
+      },
+      {
+        "time_h": 235.80308149341442,
+        "direction": "down"
+      },
+      {
+        "time_h": 255.6381609392069,
+        "direction": "up"
+      },
+      {
+        "time_h": 274.6912745802797,
+        "direction": "down"
+      },
+      {
+        "time_h": 276.28942475487435,
+        "direction": "up"
+      }
+    ],
+    "bit2": [
+      {
+        "time_h": 67.38486806317401,
+        "direction": "up"
+      },
+      {
+        "time_h": 77.73351636747469,
+        "direction": "down"
+      },
+      {
+        "time_h": 108.73179009344891,
+        "direction": "up"
+      },
+      {
+        "time_h": 157.26469245017208,
+        "direction": "down"
+      },
+      {
+        "time_h": 207.9369344514918,
+        "direction": "up"
+      },
+      {
+        "time_h": 236.8307219986153,
+        "direction": "down"
+      },
+      {
+        "time_h": 289.0559348034912,
+        "direction": "up"
+      }
+    ]
+  },
+  "causal_certification": null,
+  "paired_leakage": null,
+  "limitation": "Formal carry association and paired leakage are not implemented in this preliminary version."
+}

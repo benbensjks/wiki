@@ -1,0 +1,250 @@
+{
+  "status": "EXPLORATORY_ONLY_NOT_CERTIFIED",
+  "rule": "Int0 peak prominence=10% full range; trough between peaks; total window 20% period; no phase fitting",
+  "reads": [
+    {
+      "trough_h": 9.383333333333333,
+      "window_start_h": 8.34,
+      "window_end_h": 10.426666666666666,
+      "boundary_crossed": false,
+      "samples": 125,
+      "labels": [
+        null,
+        1,
+        0
+      ],
+      "commitment": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 19.966666666666665,
+      "window_start_h": 18.90833333333333,
+      "window_end_h": 21.025,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        1,
+        1,
+        0
+      ],
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "value": 3
+    },
+    {
+      "trough_h": 30.55,
+      "window_start_h": 29.491666666666667,
+      "window_end_h": 31.608333333333334,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        1,
+        1,
+        null
+      ],
+      "commitment": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 41.15,
+      "window_start_h": 40.089999999999996,
+      "window_end_h": 42.21,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "value": 7
+    },
+    {
+      "trough_h": 51.733333333333334,
+      "window_start_h": 50.675000000000004,
+      "window_end_h": 52.791666666666664,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "value": 7
+    },
+    {
+      "trough_h": 62.333333333333336,
+      "window_start_h": 61.27333333333333,
+      "window_end_h": 63.39333333333334,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        null,
+        1,
+        null
+      ],
+      "commitment": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 72.91666666666667,
+      "window_start_h": 71.85833333333333,
+      "window_end_h": 73.97500000000001,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        null,
+        1,
+        null
+      ],
+      "commitment": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 83.51666666666667,
+      "window_start_h": 82.45666666666666,
+      "window_end_h": 84.57666666666667,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        null,
+        1,
+        1
+      ],
+      "commitment": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 94.1,
+      "window_start_h": 93.04166666666666,
+      "window_end_h": 95.15833333333333,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        null,
+        1,
+        1
+      ],
+      "commitment": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "value": null
+    },
+    {
+      "trough_h": 104.7,
+      "window_start_h": 103.64,
+      "window_end_h": 105.76,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        null,
+        1,
+        1
+      ],
+      "commitment": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "value": null
+    }
+  ],
+  "clock_peak_times_h": [
+    3.1333333333333333,
+    13.566666666666666,
+    24.15,
+    34.733333333333334,
+    45.333333333333336,
+    55.916666666666664,
+    66.51666666666667,
+    77.1,
+    87.7,
+    98.28333333333333,
+    108.88333333333333
+  ],
+  "cold_mod8": {
+    "drop": 0,
+    "reads": 10,
+    "sequence": "x3x77xxxxx",
+    "observed_increments": false,
+    "enough_reads": false
+  },
+  "steady_mod8": {
+    "drop": 8,
+    "reads": 2,
+    "sequence": "xx",
+    "observed_increments": false,
+    "enough_reads": false
+  },
+  "cold_mod4": {
+    "drop": 0,
+    "reads": 10,
+    "sequence": "x3333xxxxx",
+    "observed_increments": false,
+    "enough_reads": true
+  },
+  "steady_mod4": {
+    "drop": 4,
+    "reads": 6,
+    "sequence": "3xxxxx",
+    "observed_increments": false,
+    "enough_reads": false
+  },
+  "crossings": {
+    "bit0": [
+      {
+        "time_h": 1.310221141296346,
+        "direction": "up"
+      }
+    ],
+    "bit1": [
+      {
+        "time_h": 6.764771758822597,
+        "direction": "up"
+      }
+    ],
+    "bit2": [
+      {
+        "time_h": 21.759672543559553,
+        "direction": "up"
+      }
+    ]
+  },
+  "causal_certification": null,
+  "paired_leakage": null,
+  "limitation": "Formal carry association and paired leakage are not implemented in this preliminary version."
+}

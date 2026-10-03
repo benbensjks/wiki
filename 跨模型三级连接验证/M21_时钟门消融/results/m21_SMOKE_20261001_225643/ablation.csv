@@ -1,0 +1,3 @@
+tag,arm,clock_K,hours,certified,counting,events,steady_reads,sequence,cold_reads,s2_crossings,stage0,stage1,gate_segments,gate_dose_min,gate_dose_max,gate_dur_min,gate_dur_max,gate_peak,clock_signal_min,clock_signal_max,S0_min,S0_max,S1_min,S1_max,S2_min,S2_max,margin_h
+kept_K0.30,kept,0.3,10,False,False,False,0,,0,0,"[0, 0, 0]","[0, 0, 0]",0,nan,nan,nan,nan,0.000318338,0,0.749927,0,0.97226,0,2.14181e-06,0,0.00134554,
+removed_K0.30,removed,0.3,10,False,False,False,0,,0,0,"[0, 0, 0]","[0, 0, 0]",0,nan,nan,nan,nan,0.000424493,1,1,0,0.97226,0,2.14181e-06,0,0.00901389,

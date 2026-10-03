@@ -1,0 +1,160 @@
+{
+  "hours": 300.0,
+  "sample_min": 1.0,
+  "max_step_min": 1.0,
+  "rtol": 2e-07,
+  "atol": 2e-09,
+  "frozen_config": {
+    "n_A1_gate": 6.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "clock_scale": 1.0,
+    "carry_mrna_min": 2.0,
+    "carry_maturation_min": 32.5,
+    "bit_mrna_min": 2.0,
+    "bit_maturation_min": 20.0,
+    "translation_h": 30.0,
+    "kon": 0.1,
+    "koff": 1.0,
+    "complex_decay": 1.0,
+    "receiver_uM_per_au": 5.75
+  },
+  "reference": {
+    "certified": true,
+    "steady_reads": 19,
+    "clock_peak_count": 28,
+    "sequence": "1234567012345670123",
+    "margin_h": 1.1784609018563117,
+    "stage0": {
+      "reverse": 14,
+      "gate": 14,
+      "flip": 14
+    },
+    "stage1": {
+      "reverse": 7,
+      "gate": 7,
+      "flip": 7
+    }
+  },
+  "controls": {},
+  "harness_timing": {
+    "han_s": 5.500673900001857,
+    "prototype_s": 1.5599280999995244
+  },
+  "rows": [
+    {
+      "label": "BASELINE",
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "cold_reads": 27,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "cold_sequence": "123456701234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "runtime_s": 58.293820799997775
+    },
+    {
+      "label": "clock_K_au=x0.5",
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.15,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.15,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "cold_reads": 27,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "cold_sequence": "123456701234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "runtime_s": 53.847753199999715,
+      "tier": "A",
+      "kind": "config",
+      "target": "clock_K_au",
+      "value": 0.15
+    }
+  ]
+}

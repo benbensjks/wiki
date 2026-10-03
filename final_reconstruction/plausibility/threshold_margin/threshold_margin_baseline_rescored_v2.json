@@ -2,7 +2,7 @@
   "hours": 300.0,
   "tag": "baseline_rescored_v2",
   "terms": 18,
-  "flagged": 2,
+  "flagged": 1,
   "rule": {
     "primary": "frac_time_near_threshold >= 0.25",
     "secondary": "role startswith 'gate' and ratio_median > 0.1",
@@ -14,12 +14,23 @@
       "role": "gate arm (must be ~0 between carries)",
       "ratio_median": 0.9417446621709316,
       "frac_time_near_threshold": 0.5274969447839128
-    },
-    {
-      "term": "bit2.RDF gate T vs K_rep",
-      "role": "switch (must fall for RDF)",
-      "ratio_median": 1.249048749334102,
-      "frac_time_near_threshold": 0.2530829907788023
     }
-  ]
+  ],
+  "working_point": {
+    "model_file": "final_reconstruction/model_threebit51.py",
+    "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "zeng_n_A1_table": 4.0,
+    "selected_n_A1_gate": 6.0,
+    "live_zeng_n_A1": 4.0,
+    "source_sha256": {
+      "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+      "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+      "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+      "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+      "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+      "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+      "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+    },
+    "note": "no model object was available: this artefact was rescored from an existing CSV, so its working point is inherited from that CSV and is NOT independently recorded here"
+  }
 }

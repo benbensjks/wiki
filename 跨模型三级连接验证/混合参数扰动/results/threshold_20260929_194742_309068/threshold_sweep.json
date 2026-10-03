@@ -1,0 +1,1551 @@
+{
+  "defaults": {
+    "JREV_THRESHOLD_H": 0.1,
+    "GATE_THRESHOLD": 0.05,
+    "GATE_MIN_DOSE_H": 0.02
+  },
+  "jrev_sweep": [
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.4
+  ],
+  "gate_sweep": [
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "cases": {
+    "uM_per_au=x0.8": {
+      "config": {
+        "receiver_uM_per_au": 4.6000000000000005
+      },
+      "clock_range": [
+        0.0,
+        0.8392727520793859
+      ],
+      "sweeps": [
+        {
+          "jrev": 0.02,
+          "gate": 0.02,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.02,
+          "gate": 0.05,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.02,
+          "gate": 0.1,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.02,
+          "gate": 0.2,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.02,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.05,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.1,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.2,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.1,
+          "gate": 0.02,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.1,
+          "gate": 0.1,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.1,
+          "gate": 0.2,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.02,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.05,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.1,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.2,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.02,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.05,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.1,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.2,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        }
+      ],
+      "at_default": {
+        "certified": false,
+        "counts": true,
+        "reads": 19,
+        "sequence": "1234567012345670123",
+        "min_commitment": 1.0,
+        "s0": {
+          "reverse": 28,
+          "gate": 14,
+          "flip": 14,
+          "one_to_one": false,
+          "order": false,
+          "alt": false
+        },
+        "s1": {
+          "reverse": 7,
+          "gate": 7,
+          "flip": 7,
+          "one_to_one": true,
+          "order": true,
+          "alt": true
+        }
+      }
+    },
+    "clock_K_au=x4": {
+      "config": {
+        "clock_K_au": 1.2
+      },
+      "clock_range": [
+        0.0,
+        0.17280932218897121
+      ],
+      "sweeps": [
+        {
+          "jrev": 0.02,
+          "gate": 0.02,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.02,
+          "gate": 0.05,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.02,
+          "gate": 0.1,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.02,
+          "gate": 0.2,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.02,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.05,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.1,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.2,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 28,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.1,
+          "gate": 0.02,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.1,
+          "gate": 0.1,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.1,
+          "gate": 0.2,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.02,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.05,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.1,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.2,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.02,
+          "certified": true,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 7,
+            "flip": 7,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.05,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.1,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.2,
+          "certified": false,
+          "counts": true,
+          "reads": 19,
+          "sequence": "1234567012345670123",
+          "min_commitment": 1.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 14,
+            "one_to_one": true,
+            "order": true,
+            "alt": true
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 7,
+            "one_to_one": false,
+            "order": false,
+            "alt": true
+          }
+        }
+      ],
+      "at_default": {
+        "certified": false,
+        "counts": true,
+        "reads": 19,
+        "sequence": "1234567012345670123",
+        "min_commitment": 1.0,
+        "s0": {
+          "reverse": 14,
+          "gate": 14,
+          "flip": 14,
+          "one_to_one": true,
+          "order": true,
+          "alt": true
+        },
+        "s1": {
+          "reverse": 7,
+          "gate": 0,
+          "flip": 7,
+          "one_to_one": false,
+          "order": false,
+          "alt": true
+        }
+      }
+    },
+    "uM_per_au=x1.5": {
+      "config": {
+        "receiver_uM_per_au": 8.625
+      },
+      "clock_range": [
+        0.0,
+        0.5977180214119705
+      ],
+      "sweeps": [
+        {
+          "jrev": 0.02,
+          "gate": 0.02,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 14,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.02,
+          "gate": 0.05,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 14,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.02,
+          "gate": 0.1,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 14,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.02,
+          "gate": 0.2,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 14,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.02,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 13,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.05,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 13,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.1,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 13,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.05,
+          "gate": 0.2,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 13,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.1,
+          "gate": 0.02,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 13,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.1,
+          "gate": 0.1,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 13,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.1,
+          "gate": 0.2,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 13,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.02,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.05,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.1,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.2,
+          "gate": 0.2,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 14,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 7,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.02,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 13,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 0,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.05,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 13,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 0,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.1,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 13,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 0,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        },
+        {
+          "jrev": 0.4,
+          "gate": 0.2,
+          "certified": false,
+          "counts": false,
+          "reads": 19,
+          "sequence": "xxxxxxxxxxxxxxxxxxx",
+          "min_commitment": 0.0,
+          "s0": {
+            "reverse": 13,
+            "gate": 14,
+            "flip": 1,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          },
+          "s1": {
+            "reverse": 0,
+            "gate": 0,
+            "flip": 3,
+            "one_to_one": false,
+            "order": false,
+            "alt": false
+          }
+        }
+      ],
+      "at_default": {
+        "certified": false,
+        "counts": false,
+        "reads": 19,
+        "sequence": "xxxxxxxxxxxxxxxxxxx",
+        "min_commitment": 0.0,
+        "s0": {
+          "reverse": 14,
+          "gate": 14,
+          "flip": 1,
+          "one_to_one": false,
+          "order": false,
+          "alt": false
+        },
+        "s1": {
+          "reverse": 13,
+          "gate": 0,
+          "flip": 3,
+          "one_to_one": false,
+          "order": false,
+          "alt": false
+        }
+      }
+    }
+  },
+  "hours": 300.0,
+  "note": "The trajectory is integrated once per case and held fixed; only the two segmentation thresholds of the event arm change."
+}

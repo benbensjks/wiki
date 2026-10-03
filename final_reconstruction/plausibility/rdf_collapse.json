@@ -1,10 +1,10 @@
 {
   "verdict": {
-    "baseline_crossings": 5,
+    "baseline_crossings": 14,
     "baseline_reverse_events": 14,
-    "baseline_S2_min_late": 0.5035682936252067,
-    "baseline_R2_at_S2min": 0.12870335188158127,
-    "R_ss_of_stall_point": 0.031426617996364314,
+    "baseline_S2_min_late": 0.012960789186970013,
+    "baseline_R2_at_S2min": 1.1312502140891376,
+    "R_ss_of_stall_point": 5.5872693697701607e-05,
     "R_ss_at_S_0p95": 7.016741948012752,
     "rdf_map": {
       "baseline": {
@@ -31,17 +31,57 @@
       "bit2_no_repression_Krep100"
     ],
     "probes_confounded": [],
-    "probes_that_recover": [],
-    "rdf_collapse_is_load_bearing": false,
-    "verdict": "not binding: prefix-preserving collapse probes do not recover bit2"
+    "probes_that_recover_strict": [
+      "bit2_soft_repression_n2"
+    ],
+    "probes_that_recover_counting": [
+      "bit2_soft_repression_n2"
+    ],
+    "longest_correct_mod8_run": {
+      "baseline": 48,
+      "bit2_soft_repression_n2": 48,
+      "bit2_no_repression_Krep100": 4
+    },
+    "baseline_already_counts": true,
+    "vacuous_at_this_working_point": true,
+    "rdf_collapse_is_load_bearing": null,
+    "rdf_collapse_supported_by_counting": null,
+    "counting_is_rdf_dependent": true,
+    "probes_that_break_counting": [
+      "bit2_no_repression_Krep100"
+    ],
+    "longest_mod8_run_baseline": 48,
+    "rdf_dependence_finding": "the state-dependent T -> RDF feedback IS necessary for counting: probe(s) ['bit2_no_repression_Krep100'] cut the longest correct mod-8 run from 48 to [4] and lose certification, while ['bit2_soft_repression_n2'] leave it at 48. This holds regardless of whether RDF collapse explains the n_A1_gate=4 stall.",
+    "verdict": "VACUOUS AT THIS WORKING POINT: the baseline already counts (certified=True, crossings=14, longest correct mod-8 run=48), so a collapse probe has nothing to rescue. The load-bearing fields are reported as null rather than true, and this check does NOT answer the RDF question here. To ask it, run at a working point where the baseline FAILS to count (the archived n_A1_gate=4 artefacts were such a point), or redesign the check to force the RDF pool down or up starting from a WORKING counter.",
+    "note": "v2: the strict field still requires certified=True, which is blocked by readout labelling; rdf_collapse_supported_by_counting is the informative one. The v1 global n_rep/K_rep probes were confounded and have been replaced by bit2-only probes."
   },
   "source_sha256": {
     "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
     "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
-    "model_threebit51.py": "9226D6D26C4013B13BB34806D517D73CBE508F58A75D100F217C048DF9ABCB0A",
+    "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
     "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
     "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
     "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
     "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+  },
+  "working_point": {
+    "model_file": "final_reconstruction/model_threebit51.py",
+    "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "zeng_n_A1_table": 4.0,
+    "selected_n_A1_gate": 6.0,
+    "live_zeng_n_A1": 4.0,
+    "source_sha256": {
+      "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+      "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+      "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+      "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+      "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+      "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+      "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+    },
+    "note": "every probe row records n_A1_gate_effective; this check builds ThreeBit51Model directly through Bit2RdfProbe, so it did NOT inherit the helper default and the exponent is asserted per run",
+    "gate_exponents_used": [
+      6.0
+    ]
   }
 }

@@ -146,7 +146,56 @@ powershell -ExecutionPolicy Bypass -File .\run_plausibility.ps1 manifest
 2. **这些检查回答的是"参数是否合理"，不是"计数器是否成立"。**
    它们不替代四初态、严格容差、扰动扫描，也不构成 γ 语义或 a.u. 标定的实验依据。
 
+## 随机性预审的收尾（2026-09-26）
+
+复核要求把单一 `certified` 布尔拆成分项，并收紧几处过度解读。本轮**没有重新积分任何轨迹**。
+
+| 文件 | 作用 |
+|---|---|
+| `PREAUDIT_STOCHASTICITY_REPORT.md` | 预审报告 **v2**。改了 6 处：小数字改为「门相 最小 20 / p05 38.6 / **中位 2160**」并声明**尚未确定**主要写入是否发生在低拷贝时段；`1/√N` 降级为**泊松参考量级**而非已算出的 CV；补上「改 `uM_per_au` 会改变动力学，不能只按比例换算」；结论由「随机性研究是必需的」改为「**值得进一步评估随机效应**」；旋钮名改为「`uM_per_au` 接口参数扰动」；指向新的分项验收表 |
+| `make_acceptance_breakdown.py` | 生成器。**纯后处理**：只读 `preaudit_stochasticity_all.csv`，不建模型、不积分。与 verdict 的 `certification_table`/`leak_table`/`off_on_gate_peak_ratio_table`/`failures_by_arm` **逐点交叉核对** |
+| `preaudit_acceptance_breakdown.{md,json,csv}` | 21 点分项验收表：历史 `certified`（原值原定义）、数字计数（码串 / 未标注窗 / 模 8 递增）、进位因果（一一对应 / 因果顺序 / 方向交替）、门对比度（原始 off/on 比值 + 是否超 0.10）、配对泄漏（`L_symmetric` + 切尾档 + 输出网格）、时序与读窗（setup/hold、commitment） |
+| `archive_preaudit_report.py` + `preaudit_report_archive/` | v1 报告与**两套旧清单**的逐字归档 + `ARCHIVED_HASHES.json`（存档前后哈希必须相等，否则报错退出） |
+
+**新增标签 `counting_and_causality_passed`**，定义恰为 `steady ∧ one ∧ order ∧ alt`。
+它**不是** `certified` 的改名，也**不附带任何泄漏阈值** —— H4 的配对 `L_symmetric` 只作数字列出。
+实测：历史 `certified` 通过 **14/21**，新标签通过 **18/21**；4 个点是 **contrast 臂单独失败**
+（计数与因果全过），其中 `conc_scale|1.05`/`|1.10` 的泄漏（0.010691 / 0.009785）**优于冻结点 0.014218**。
+
+**离散通过点，不是连续可靠范围**：`uM_per_au` 那一维在历史谓词下通过 {0.95, 1.00}、
+在计数+因果下通过 {0.95, 1.00, 1.05, 1.10}；`clock_K` 全 7 点；`K_A1` 分别为前 5 点 / 全 7 点。
+两者都**只是已测网格点**，未采样因子从未运行。另：`uM_per_au` 的**失败原因随因子变化**
+（< 0.95 失败在 steady/causality，> 1.00 只失败在 contrast），读成"某区间可靠"是不对的。
+
+**一处如实报告的不一致**：v1 写的「3 个点的数字读出完美却未认证」**无法从产物复现**；
+两个清晰定义都给 4 且成员不同（分项表 §1 有 A/B 两式与差异点）。分项表只报这两个可复现说法。
+
+**认证规则的版本纪律**：历史结果**保留原定义**；要调整认证谓词（例如按 H4 配对泄漏口径重定
+contrast 臂），必须**建立新版本、并列重评**，**不能删掉失败项后沿用原认证名称**。
+
 ## 交付物
 
 运行后本目录会出现：各检查的 CSV/JSON、`sharpen_vs_lengthen_all.csv` 与 `_verdict.json`、
 分片 CSV 与 meta（含源文件哈希）、`SHA256SUMS.json/.txt`、以及各次运行的日志。
+
+## 两份必读文档（不在本目录的清单里，各有自己的清单）
+
+| 文档 | 内容 | 谁在管它的哈希 |
+|---|---|---|
+| `plausibility/HARD_CONSTRAINTS.md` | H1–H8 硬约束全文与故障记录 | 本目录 `SHA256SUMS.json` |
+| `plausibility/N6_FREEZE_JUSTIFICATION.md` | 为什么冻结在 n=6 的正式论证（含它不声称什么） | 本目录 `SHA256SUMS.json` |
+| `plausibility/RDF_PROBE_DESIGN.md` | RDF 承重性探针的预登记设计（尚未实现） | 本目录 `SHA256SUMS.json` |
+| `plausibility/PREAUDIT_STOCHASTICITY_REPORT.md` | 随机性预审报告 **v2**（含 v1 的归档指针与 6 处修订） | 本目录 `SHA256SUMS.json` |
+| `plausibility/preaudit_acceptance_breakdown.md` | 21 点分项验收表（纯后处理；唯一可引用的分项口径） | 本目录 `SHA256SUMS.json` |
+| `../CURRENT_BASELINE.md` | 项目权威基线；**§11「判据与验证纪律」**是 H1–H8 的交付版 | wiki 根 `SHA256SUMS_authority.json` |
+
+`SHA256SUMS.json` 只覆盖 `plausibility/**` 与少数具名源文件，**不覆盖 wiki 根目录的权威文档**。
+后者由根级清单覆盖，用下面这条命令生成并校验：
+
+```powershell
+& 'D:\aconade\python.exe' .\make_authority_manifest.py write   # 重新生成根级清单
+& 'D:\aconade\python.exe' .\make_authority_manifest.py check   # 只读校验（含本目录清单是否过期）
+```
+
+`check` 会重算本目录 `SHA256SUMS.json` 里的每一条，因此**任何本目录内的改动都会让根级清单的
+校验失败**，必须重新 `write`。这是有意的：清单过期必须报错，不能静默通过。

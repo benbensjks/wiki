@@ -1,0 +1,32 @@
+{
+  "K0.40|off": {
+    "ok": true,
+    "want": {
+      "counting": false,
+      "events": false,
+      "s2_flips": 1,
+      "steady": "xxx4567456745674567"
+    },
+    "got": {
+      "counting": false,
+      "events": false,
+      "s2_flips": 1,
+      "steady": "xxx4567456745674567"
+    }
+  },
+  "K0.20|off": {
+    "ok": true,
+    "want": {
+      "counting": true,
+      "events": true,
+      "s2_flips": 7,
+      "steady": "1234567012345670123"
+    },
+    "got": {
+      "counting": true,
+      "events": true,
+      "s2_flips": 7,
+      "steady": "1234567012345670123"
+    }
+  }
+}

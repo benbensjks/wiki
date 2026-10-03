@@ -1,0 +1,25 @@
+{
+  "hours": 300.0,
+  "tag": "baseline_rescored_v2",
+  "terms": 18,
+  "flagged": 2,
+  "rule": {
+    "primary": "frac_time_near_threshold >= 0.25",
+    "secondary": "role startswith 'gate' and ratio_median > 0.1",
+    "note": "straddles_threshold is descriptive only in v2"
+  },
+  "flagged_terms": [
+    {
+      "term": "carry1 H(A1 ; K_A1)",
+      "role": "gate arm (must be ~0 between carries)",
+      "ratio_median": 0.9417446621709316,
+      "frac_time_near_threshold": 0.5274969447839128
+    },
+    {
+      "term": "bit2.RDF gate T vs K_rep",
+      "role": "switch (must fall for RDF)",
+      "ratio_median": 1.249048749334102,
+      "frac_time_near_threshold": 0.2530829907788023
+    }
+  ]
+}

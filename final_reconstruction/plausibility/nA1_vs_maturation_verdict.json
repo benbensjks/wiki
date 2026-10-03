@@ -1,0 +1,390 @@
+{
+  "hours": 400.0,
+  "grid": {
+    "n_A1_gate": [
+      5.0,
+      5.5,
+      6.0,
+      6.5,
+      7.0
+    ],
+    "a1_mat": [
+      25.0,
+      30.0,
+      32.5,
+      38.0,
+      45.0
+    ],
+    "f1_mat_frozen": 32.5,
+    "carry1_mrna": 2.0
+  },
+  "points": 25,
+  "ok": 25,
+  "certified": 25,
+  "all_steady_reads_sufficient": true,
+  "min_steady_reads": 29,
+  "gate_dose_table": {
+    "25.0": {
+      "5.0": 0.145484,
+      "5.5": 0.139618,
+      "6.0": 0.134317,
+      "6.5": 0.129498,
+      "7.0": 0.125093
+    },
+    "30.0": {
+      "5.0": 0.149403,
+      "5.5": 0.143293,
+      "6.0": 0.137784,
+      "6.5": 0.13279,
+      "7.0": 0.128239
+    },
+    "32.5": {
+      "5.0": 0.150935,
+      "5.5": 0.144681,
+      "6.0": 0.139055,
+      "6.5": 0.133965,
+      "7.0": 0.129327
+    },
+    "38.0": {
+      "5.0": 0.154147,
+      "5.5": 0.147218,
+      "6.0": 0.141305,
+      "6.5": 0.135968,
+      "7.0": 0.131113
+    },
+    "45.0": {
+      "5.0": 0.157302,
+      "5.5": 0.149915,
+      "6.0": 0.143616,
+      "6.5": 0.13793,
+      "7.0": 0.132767
+    }
+  },
+  "gate_peak_table": {
+    "25.0": {
+      "5.0": 0.193856,
+      "5.5": 0.190425,
+      "6.0": 0.187203,
+      "6.5": 0.184312,
+      "7.0": 0.181452
+    },
+    "30.0": {
+      "5.0": 0.197765,
+      "5.5": 0.194434,
+      "6.0": 0.191223,
+      "6.5": 0.188116,
+      "7.0": 0.185111
+    },
+    "32.5": {
+      "5.0": 0.199415,
+      "5.5": 0.195823,
+      "6.0": 0.192429,
+      "6.5": 0.18941,
+      "7.0": 0.186424
+    },
+    "38.0": {
+      "5.0": 0.201559,
+      "5.5": 0.197927,
+      "6.0": 0.194417,
+      "6.5": 0.191033,
+      "7.0": 0.187754
+    },
+    "45.0": {
+      "5.0": 0.203036,
+      "5.5": 0.198834,
+      "6.0": 0.194917,
+      "6.5": 0.191338,
+      "7.0": 0.187832
+    }
+  },
+  "certified_table": {
+    "25.0": {
+      "5.0": 1.0,
+      "5.5": 1.0,
+      "6.0": 1.0,
+      "6.5": 1.0,
+      "7.0": 1.0
+    },
+    "30.0": {
+      "5.0": 1.0,
+      "5.5": 1.0,
+      "6.0": 1.0,
+      "6.5": 1.0,
+      "7.0": 1.0
+    },
+    "32.5": {
+      "5.0": 1.0,
+      "5.5": 1.0,
+      "6.0": 1.0,
+      "6.5": 1.0,
+      "7.0": 1.0
+    },
+    "38.0": {
+      "5.0": 1.0,
+      "5.5": 1.0,
+      "6.0": 1.0,
+      "6.5": 1.0,
+      "7.0": 1.0
+    },
+    "45.0": {
+      "5.0": 1.0,
+      "5.5": 1.0,
+      "6.0": 1.0,
+      "6.5": 1.0,
+      "7.0": 1.0
+    }
+  },
+  "dose_vs_maturation_slope": {
+    "n=5": 0.0005834507433618017,
+    "n=5.5": 0.0005025617460583943,
+    "n=6": 0.0004522609131085814,
+    "n=6.5": 0.0004085314202656275,
+    "n=7": 0.0003702122260905051
+  },
+  "dose_vs_maturation_slope_kind": "least-squares slope of the gate dose against A1 maturation over the scanned 25-45 min range at fixed n; NOT a point derivative",
+  "equivalent_maturation_for_frozen_dose": {
+    "n=5": {
+      "state": "below_grid",
+      "extrapolated_maturation_min": 13.982312070099129,
+      "note": "the scanned maturation range is 25-45 min, so the compensation point is an EXTRAPOLATION and was not measured"
+    },
+    "n=5.5": {
+      "state": "below_grid",
+      "extrapolated_maturation_min": 23.881320115213715,
+      "note": "the scanned maturation range is 25-45 min, so the compensation point is an EXTRAPOLATION and was not measured"
+    },
+    "n=6": {
+      "state": "in_grid",
+      "maturation_min": 32.5
+    },
+    "n=6.5": {
+      "state": "above_grid",
+      "extrapolated_maturation_min": 48.39468671919266,
+      "note": "the scanned maturation range is 25-45 min, so the compensation point is an EXTRAPOLATION and was not measured"
+    },
+    "n=7": {
+      "state": "above_grid",
+      "extrapolated_maturation_min": 62.71440642015519,
+      "note": "the scanned maturation range is 25-45 min, so the compensation point is an EXTRAPOLATION and was not measured"
+    }
+  },
+  "compensation": {
+    "n=5.5": {
+      "d_dose_dn": -0.011879579694526604,
+      "d_dose_dmat": 0.0005025617460583943,
+      "maturation_min_per_unit_n": 23.63805002608829
+    },
+    "n=6": {
+      "d_dose_dn": -0.01071607339410019,
+      "d_dose_dmat": 0.0004522609131085814,
+      "maturation_min_per_unit_n": 23.694449561082042
+    },
+    "n=6.5": {
+      "d_dose_dn": -0.00972803287607768,
+      "d_dose_dmat": 0.0004085314202656275,
+      "maturation_min_per_unit_n": 23.81220242436311
+    }
+  },
+  "compensation_range_min_per_unit_n": [
+    23.63805002608829,
+    23.81220242436311
+  ],
+  "compensation_kind": "tangent-type: ratio of two LOCAL linearisations (central difference in n over +-0.5 divided by the least-squares maturation slope). Valid only for infinitesimal steps - see compensation_secant for the finite answer.",
+  "compensation_secant": {
+    "5->5.5": {
+      "d_n": 0.5,
+      "maturation_min_per_unit_n": 19.798016090229172,
+      "uses_extrapolated_endpoint": true
+    },
+    "5.5->6": {
+      "d_n": 0.5,
+      "maturation_min_per_unit_n": 17.23735976957257,
+      "uses_extrapolated_endpoint": true
+    },
+    "6->6.5": {
+      "d_n": 0.5,
+      "maturation_min_per_unit_n": 31.789373438385326,
+      "uses_extrapolated_endpoint": true
+    },
+    "6.5->7": {
+      "d_n": 0.5,
+      "maturation_min_per_unit_n": 28.63943940192506,
+      "uses_extrapolated_endpoint": true
+    }
+  },
+  "compensation_secant_range_min_per_unit_n": [
+    17.23735976957257,
+    31.789373438385326
+  ],
+  "compensation_secant_vs_tangent": {
+    "tangent_mean_min_per_unit_n": 23.714900670511145,
+    "tangent_range_min_per_unit_n": [
+      23.63805002608829,
+      23.81220242436311
+    ],
+    "secant_range_min_per_unit_n": [
+      17.23735976957257,
+      31.789373438385326
+    ],
+    "tangent_inside_secant_range": true,
+    "half_step_6_to_6p5_total_min": {
+      "from_tangent": 44.34722478054102,
+      "from_grid_equivalent_maturation": 48.39468671919266,
+      "gap_min": 4.047461938651644
+    },
+    "note": "tangent is valid only for INFINITESIMAL steps. secant is the finite answer for one scanned n step and is what to quote when asking \"if I move n by half a step, how much maturation buys back the frozen dose\". Intervals flagged uses_extrapolated_endpoint rest on an off-grid compensation point and are themselves approximations."
+  },
+  "tradeoff_does_not_reach_the_function": {
+    "per_n_across_maturation": {
+      "n=5": {
+        "leak_min": 0.0495308899056588,
+        "leak_max": 0.0496104697021898,
+        "spread_pct": 0.1606670033237334,
+        "best_maturation": 32.5,
+        "best_maturation_is_grid_edge": false
+      },
+      "n=5.5": {
+        "leak_min": 0.0213999657881148,
+        "leak_max": 0.021726954643418,
+        "spread_pct": 1.5279877479281057,
+        "best_maturation": 25.0,
+        "best_maturation_is_grid_edge": true
+      },
+      "n=6": {
+        "leak_min": 0.0140698016365263,
+        "leak_max": 0.0143989862659282,
+        "spread_pct": 2.3396536632564358,
+        "best_maturation": 25.0,
+        "best_maturation_is_grid_edge": true
+      },
+      "n=6.5": {
+        "leak_min": 0.0120427645779455,
+        "leak_max": 0.0123617511302475,
+        "spread_pct": 2.6487817663244373,
+        "best_maturation": 25.0,
+        "best_maturation_is_grid_edge": true
+      },
+      "n=7": {
+        "leak_min": 0.0114536843521011,
+        "leak_max": 0.0116599047979017,
+        "spread_pct": 1.800472576867973,
+        "best_maturation": 25.0,
+        "best_maturation_is_grid_edge": true
+      }
+    },
+    "per_maturation_across_n": {
+      "mat=25": {
+        "leak_min": 0.0114536843521011,
+        "leak_max": 0.049552532330277,
+        "ratio": 4.32633996249311
+      },
+      "mat=30": {
+        "leak_min": 0.0115409045020286,
+        "leak_max": 0.0495338312620762,
+        "ratio": 4.292023320474526
+      },
+      "mat=32.5": {
+        "leak_min": 0.0115357183388651,
+        "leak_max": 0.0495308899056588,
+        "ratio": 4.293697925926624
+      },
+      "mat=38": {
+        "leak_min": 0.0116432622147717,
+        "leak_max": 0.0495962983842975,
+        "ratio": 4.25965656956305
+      },
+      "mat=45": {
+        "leak_min": 0.0116599047979017,
+        "leak_max": 0.0496104697021898,
+        "ratio": 4.254792004058012
+      }
+    },
+    "max_maturation_effect_pct": 2.6487817663244373,
+    "min_n_effect_ratio": 4.254792004058012,
+    "max_leak_change_from_maturation": {
+      "n=5": 7.957979653099717e-05,
+      "n=5.5": 0.00032698885530320007,
+      "n=6": 0.0003291846294019001,
+      "n=6.5": 0.00031898655230199954,
+      "n=7": 0.00020622044580059957
+    },
+    "leak_change_per_half_step_in_n": {
+      "5->5.5": {
+        "min_leak_change": 0.027883515058771798,
+        "max_leak_change": 0.028152566542162197,
+        "ratio_to_maturation_buy": 84.70479046799275
+      },
+      "5.5->6": {
+        "min_leak_change": 0.007271703271255101,
+        "max_leak_change": 0.0073691936998443,
+        "ratio_to_maturation_buy": 22.090044983166905
+      },
+      "6->6.5": {
+        "min_leak_change": 0.0019765531026036,
+        "max_leak_change": 0.002089072094362701,
+        "ratio_to_maturation_buy": 6.0043906247834995
+      },
+      "6.5->7": {
+        "min_leak_change": 0.0005890802258443992,
+        "max_leak_change": 0.0007018463323457992,
+        "ratio_to_maturation_buy": 1.7895131583595105
+      }
+    },
+    "grid_edge_caveat_that_bounds_all_of_the_above": {
+      "rows_with_minimum_on_grid_edge": [
+        "n=5.5",
+        "n=6",
+        "n=6.5",
+        "n=7"
+      ],
+      "leak_vs_maturation_slope_per_min": {
+        "n=5": 3.867515764360126e-06,
+        "n=5.5": 1.659575424956566e-05,
+        "n=6": 1.7212932372723418e-05,
+        "n=6.5": 1.592973675323704e-05,
+        "n=7": 1.0577051355278463e-05
+      },
+      "linear_to_zero_maturation_budget": {
+        "n=5": 9.668789410900315e-05,
+        "n=5.5": 0.0004148938562391415,
+        "n=6": 0.00043032330931808545,
+        "n=6.5": 0.00039824341883092605,
+        "n=7": 0.00026442628388196156
+      },
+      "smallest_half_step_in_n": 0.0005890802258443992,
+      "maturation_budget_over_smallest_n_step": 0.7305003468776287,
+      "extrapolation_is_not_a_measurement": true,
+      "note": "best_maturation is reported for COMPLETENESS ONLY and does NOT supersede the frozen 32.5 min; it is never a recommendation. Where it equals the grid floor (25 min) the true minimum may lie below the grid, so max_maturation_effect_pct is an upper bound on the GRID and a lower bound on the FULL-range effect.",
+      "verdict": "Even the pessimistic linear extrapolation of every row to maturation = 0 (not a measurement) stays below the SMALLEST leak change produced by a half step in n (0.00043 vs 0.00059, ratio 0.73), so the conclusion does not depend on the grid floor."
+    },
+    "reading": "The dose trade-off does NOT propagate to the far-off leak. At fixed n, sweeping maturation over the scanned range moves the leak by at most 2.65 % (0.00033 absolute); a half step in n moves it by 0.00059 to 0.02815. Maturation therefore cannot substitute for the gate exponent on the functional axis over the scanned range, so the iso-dose contours are a trade-off in a local observable, not a functional degeneracy. The steps are unequal (5->5.5: 0.02788, 5.5->6: 0.00727, 6->6.5: 0.00198, 6.5->7: 0.00059). Even the pessimistic linear extrapolation of every row to maturation = 0 (not a measurement) stays below the SMALLEST leak change produced by a half step in n (0.00043 vs 0.00059, ratio 0.73), so the conclusion does not depend on the grid floor."
+  },
+  "reading": "equivalent_maturation_for_frozen_dose gives, for each gate exponent, the A1 maturation half-life that reproduces the frozen point gate dose. Each row carries an explicit state: in_grid (measured, interpolated), below_grid or above_grid (NOT measured - the quoted value is a linear extrapolation off the end of the 25-45 min scan and must be reported as such); only the reference row n=6 is in_grid, every other row is an extrapolation. Two DIFFERENT trade-off numbers exist in this artefact and must not be mixed: compensation_range_min_per_unit_n is the tangent-type ratio (infinitesimal steps only), compensation_secant_range_min_per_unit_n is the chord of the iso-dose curve between adjacent scanned n (the finite answer). Quote the secant for any finite question.",
+  "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+  "source_sha256": {
+    "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+    "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+    "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+    "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+    "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+  },
+  "working_point": {
+    "model_file": "final_reconstruction/model_threebit51.py",
+    "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "zeng_n_A1_table": 4.0,
+    "selected_n_A1_gate": 6.0,
+    "live_zeng_n_A1": 4.0,
+    "source_sha256": {
+      "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+      "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+      "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+      "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+      "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+      "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+      "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+    },
+    "note": "n_A1_gate is a constructor parameter that overrides ONLY the carry-2 gate arm; leaving it unset falls back to ZENG[\"n_A\"][1] = 4.0, which is NOT the frozen working point. Every artefact must show which value was in force."
+  }
+}

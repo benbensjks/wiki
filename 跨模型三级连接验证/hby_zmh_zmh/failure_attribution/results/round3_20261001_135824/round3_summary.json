@@ -1,0 +1,706 @@
+{
+  "working_point": {
+    "arm": "off",
+    "clock_K": 0.1
+  },
+  "hours_long": 600.0,
+  "hours_short": 300.0,
+  "n_phase": 8,
+  "period_h": 10.516666666666666,
+  "phase_align_gap_h": 0.008333333333325754,
+  "prefix_guard": {
+    "certified": true,
+    "reads": true,
+    "sequence": true,
+    "margin": true
+  },
+  "work300": {
+    "counting": true,
+    "events": true,
+    "sequence": "1234567012345670123",
+    "reads": 19
+  },
+  "work600": {
+    "counting": true,
+    "events": true,
+    "sequence": "123456701234567012345670123456701234567012345670",
+    "reads": 48,
+    "s2_flips": 14,
+    "stage1": [
+      14,
+      14,
+      14
+    ]
+  },
+  "phases": [
+    {
+      "phase_index": 0,
+      "source_time_h": 267.81666666666666,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "7012345670123456701",
+      "s2_flips": 6,
+      "S2_band_margin": 0.27312160852226675,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0,
+      "stage1": [
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "phase_index": 1,
+      "source_time_h": 269.1333333333333,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "3456701234567012345",
+      "s2_flips": 7,
+      "S2_band_margin": 0.2731166313147413,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0,
+      "stage1": [
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "phase_index": 2,
+      "source_time_h": 270.45,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "3456701234567012345",
+      "s2_flips": 7,
+      "S2_band_margin": 0.2731210894759949,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0,
+      "stage1": [
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "phase_index": 3,
+      "source_time_h": 271.76666666666665,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "3456701234567012345",
+      "s2_flips": 7,
+      "S2_band_margin": 0.27312172031471615,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0,
+      "stage1": [
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "phase_index": 4,
+      "source_time_h": 273.06666666666666,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "3456701234567012345",
+      "s2_flips": 7,
+      "S2_band_margin": 0.27312195030732,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0,
+      "stage1": [
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "phase_index": 5,
+      "source_time_h": 274.3833333333333,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "3456701234567012345",
+      "s2_flips": 7,
+      "S2_band_margin": 0.27312206691016183,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0,
+      "stage1": [
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "phase_index": 6,
+      "source_time_h": 275.7,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "3456701234567012345",
+      "s2_flips": 7,
+      "S2_band_margin": 0.2731223228240458,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0,
+      "stage1": [
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "phase_index": 7,
+      "source_time_h": 277.01666666666665,
+      "counting": true,
+      "events": false,
+      "full": false,
+      "sequence": "6701234567012345670",
+      "s2_flips": 6,
+      "S2_band_margin": 0.22545358309718644,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0,
+      "stage1": [
+        7,
+        6,
+        6
+      ]
+    }
+  ],
+  "phases_all_pass": false,
+  "phase_sequences": [
+    "3456701234567012345",
+    "6701234567012345670",
+    "7012345670123456701"
+  ],
+  "threshold_sensitivity_pass": [
+    {
+      "jrev": 0.02,
+      "gate": 0.02,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.02,
+      "gate": 0.05,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.02,
+      "gate": 0.1,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.02,
+      "gate": 0.2,
+      "counting": true,
+      "events": false,
+      "full": false,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        0,
+        14
+      ]
+    },
+    {
+      "jrev": 0.05,
+      "gate": 0.02,
+      "counting": true,
+      "events": false,
+      "full": false,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.05,
+      "gate": 0.05,
+      "counting": true,
+      "events": false,
+      "full": false,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.05,
+      "gate": 0.1,
+      "counting": true,
+      "events": false,
+      "full": false,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.05,
+      "gate": 0.2,
+      "counting": true,
+      "events": false,
+      "full": false,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        0,
+        14
+      ]
+    },
+    {
+      "jrev": 0.1,
+      "gate": 0.02,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.1,
+      "gate": 0.05,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.1,
+      "gate": 0.1,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.1,
+      "gate": 0.2,
+      "counting": true,
+      "events": false,
+      "full": false,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        0,
+        14
+      ]
+    },
+    {
+      "jrev": 0.2,
+      "gate": 0.02,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.2,
+      "gate": 0.05,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.2,
+      "gate": 0.1,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.2,
+      "gate": 0.2,
+      "counting": true,
+      "events": false,
+      "full": false,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        0,
+        14
+      ]
+    },
+    {
+      "jrev": 0.4,
+      "gate": 0.02,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.4,
+      "gate": 0.05,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.4,
+      "gate": 0.1,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "jrev": 0.4,
+      "gate": 0.2,
+      "counting": true,
+      "events": false,
+      "full": false,
+      "sequence": "123456701234567012345670123456701234567012345670",
+      "stage1": [
+        14,
+        0,
+        14
+      ]
+    }
+  ],
+  "threshold_sensitivity_fail": [
+    {
+      "jrev": 0.02,
+      "gate": 0.02,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.02,
+      "gate": 0.05,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.02,
+      "gate": 0.1,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "jrev": 0.02,
+      "gate": 0.2,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "jrev": 0.05,
+      "gate": 0.02,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.05,
+      "gate": 0.05,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.05,
+      "gate": 0.1,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "jrev": 0.05,
+      "gate": 0.2,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "jrev": 0.1,
+      "gate": 0.02,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.1,
+      "gate": 0.05,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.1,
+      "gate": 0.1,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "jrev": 0.1,
+      "gate": 0.2,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "jrev": 0.2,
+      "gate": 0.02,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.2,
+      "gate": 0.05,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.2,
+      "gate": 0.1,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "jrev": 0.2,
+      "gate": 0.2,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "jrev": 0.4,
+      "gate": 0.02,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.4,
+      "gate": 0.05,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        7,
+        3
+      ]
+    },
+    {
+      "jrev": 0.4,
+      "gate": 0.1,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    },
+    {
+      "jrev": 0.4,
+      "gate": 0.2,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "sequence": "xxx456701234567xxxx",
+      "stage1": [
+        7,
+        0,
+        3
+      ]
+    }
+  ],
+  "sensitivity_pass_full_count": 12,
+  "sensitivity_fail_full_count": 0,
+  "note": "phase initial states are taken from ONE converged orbit period at the tail of the 300 h run, so they are genuine orbit phases rather than random perturbations"
+}

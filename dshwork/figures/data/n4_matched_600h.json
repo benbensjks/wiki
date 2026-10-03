@@ -1,0 +1,952 @@
+{
+  "purpose": "matched n=4 comparison run for Figure 4-3 Panel A: the frozen expression settings with n_A1_gate = 4 instead of 6",
+  "status": "NEW DETERMINISTIC RUN made for this figure - not a pre-existing artefact",
+  "gate_exponent": {
+    "requested": 4.0,
+    "realised_by_model": 4.0,
+    "checked_by": "plausibility_common.build_threebit assert"
+  },
+  "excursion": {
+    "band_low": 0.3,
+    "band_high": 0.7,
+    "t_first_high_h": 33.13333333333333,
+    "s2_min_after_first_high": 0.30870495104722107,
+    "s2_max_after_first_high": 0.9999736944302888,
+    "returns_to_low_band_after_first_high": false,
+    "n_samples_after_first_high": 17007,
+    "int_J_fwd2_whole": 8.419005255119849,
+    "int_J_rev2_whole": 7.580047051707929,
+    "int_J_fwd2_after_first_high": 7.696409326847169,
+    "int_J_rev2_after_first_high": 7.58004705168039,
+    "max_J_rev2_whole": 0.9456823813251604,
+    "max_J_rev2_after_first_high": 0.9456823813251604,
+    "bit2_crossings": [
+      {
+        "time_h": 33.00566913023793,
+        "direction": "up"
+      },
+      {
+        "time_h": 203.223750970768,
+        "direction": "down"
+      },
+      {
+        "time_h": 244.54378020656154,
+        "direction": "up"
+      },
+      {
+        "time_h": 280.81098614797344,
+        "direction": "down"
+      },
+      {
+        "time_h": 286.8083196800994,
+        "direction": "up"
+      }
+    ],
+    "carry1_gate_events": [
+      {
+        "start_h": 32.46666666666667,
+        "peak_h": 33.06666666666666,
+        "end_h": 33.53333333333333
+      },
+      {
+        "start_h": 74.83333333333333,
+        "peak_h": 75.43333333333334,
+        "end_h": 75.9
+      },
+      {
+        "start_h": 117.2,
+        "peak_h": 117.8,
+        "end_h": 118.26666666666667
+      },
+      {
+        "start_h": 159.56666666666666,
+        "peak_h": 160.16666666666666,
+        "end_h": 160.63333333333333
+      },
+      {
+        "start_h": 201.93333333333334,
+        "peak_h": 202.53333333333333,
+        "end_h": 203.0
+      },
+      {
+        "start_h": 244.29999999999998,
+        "peak_h": 244.9,
+        "end_h": 245.36666666666667
+      },
+      {
+        "start_h": 286.6333333333333,
+        "peak_h": 287.26666666666665,
+        "end_h": 287.73333333333335
+      },
+      {
+        "start_h": 329.0,
+        "peak_h": 329.6,
+        "end_h": 330.06666666666666
+      },
+      {
+        "start_h": 371.3666666666667,
+        "peak_h": 371.96666666666664,
+        "end_h": 372.43333333333334
+      },
+      {
+        "start_h": 413.73333333333335,
+        "peak_h": 414.3333333333333,
+        "end_h": 414.8
+      },
+      {
+        "start_h": 456.09999999999997,
+        "peak_h": 456.7,
+        "end_h": 457.1666666666667
+      },
+      {
+        "start_h": 498.46666666666664,
+        "peak_h": 499.06666666666666,
+        "end_h": 499.5333333333333
+      },
+      {
+        "start_h": 540.8333333333334,
+        "peak_h": 541.4333333333333,
+        "end_h": 541.9
+      },
+      {
+        "start_h": 583.2,
+        "peak_h": 583.8,
+        "end_h": 584.2666666666667
+      }
+    ]
+  },
+  "excursion_reading": "the figure caption states that bit 2 enters the high band and never returns to the low band, and that the reverse write is insufficient. Both clauses are measured here on the saved column over the WHOLE 600 h run: see returns_to_low_band_after_first_high and the J_rev2 integrals. This script refuses to finish if the first clause does not hold.",
+  "state_index": {
+    "b0_S": 16,
+    "b1_S": 27,
+    "b2_S": 44,
+    "A1": 45,
+    "F1": 46,
+    "b2_I": 36,
+    "b2_R": 42,
+    "b2_C": 43
+  },
+  "state_index_source": "model.state_names, looked up by name and asserted against the documented 51-state layout (b0_S=16, b1_S=27, b2_S=44, A1=45, F1=46); no bare integer slicing anywhere in this script",
+  "expression_settings": {
+    "source": "plausibility_common.frozen_extension() + frozen_carry0() (identical to the frozen n=6 run)",
+    "extension": {
+      "uM_per_au": 5.75,
+      "mrna_half_life_min": 2.0,
+      "maturation_half_life_min": 20.0,
+      "translation_h": 30.0,
+      "immature_decay_h": 0.0,
+      "complex_on_au_inv_h": 0.1,
+      "complex_off_h": 1.0,
+      "complex_decay_h": 1.0,
+      "clock_K_au": 0.3,
+      "clock_n": 2.0,
+      "add_growth": false
+    }
+  },
+  "hours": 600.0,
+  "sample_min": 2.0,
+  "max_step_min": 2.0,
+  "n_samples": 18001,
+  "certified": false,
+  "crossings": 5,
+  "gates": 14,
+  "reverse_events": 14,
+  "steady_reads": 48,
+  "unlabelled_reads": 17,
+  "undefined_bit_labels": 17,
+  "read_windows": [
+    {
+      "trough_h": 7.066666666666666,
+      "window_start_h": 6.033333333333333,
+      "window_end_h": 8.1,
+      "value": 1,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 0,
+      "raw_labels": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "trough_h": 17.633333333333333,
+      "window_start_h": 16.566666666666666,
+      "window_end_h": 18.7,
+      "value": 2,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 0,
+      "raw_labels": [
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "trough_h": 28.233333333333334,
+      "window_start_h": 27.166666666666668,
+      "window_end_h": 29.3,
+      "value": 3,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": 0,
+      "raw_labels": [
+        "1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "trough_h": 38.833333333333336,
+      "window_start_h": 37.766666666666666,
+      "window_end_h": 39.9,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 49.43333333333333,
+      "window_start_h": 48.36666666666667,
+      "window_end_h": 50.5,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 60.0,
+      "window_start_h": 58.93333333333333,
+      "window_end_h": 61.06666666666666,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 70.6,
+      "window_start_h": 69.53333333333333,
+      "window_end_h": 71.66666666666667,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 81.2,
+      "window_start_h": 80.13333333333333,
+      "window_end_h": 82.26666666666667,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 91.8,
+      "window_start_h": 90.73333333333333,
+      "window_end_h": 92.86666666666666,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 102.36666666666666,
+      "window_start_h": 101.3,
+      "window_end_h": 103.43333333333334,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 112.96666666666667,
+      "window_start_h": 111.89999999999999,
+      "window_end_h": 114.03333333333333,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 123.56666666666666,
+      "window_start_h": 122.5,
+      "window_end_h": 124.63333333333333,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 134.13333333333333,
+      "window_start_h": 133.06666666666666,
+      "window_end_h": 135.2,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 144.73333333333332,
+      "window_start_h": 143.66666666666666,
+      "window_end_h": 145.8,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 155.33333333333334,
+      "window_start_h": 154.26666666666665,
+      "window_end_h": 156.4,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 165.93333333333334,
+      "window_start_h": 164.86666666666667,
+      "window_end_h": 167.0,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 176.5,
+      "window_start_h": 175.43333333333334,
+      "window_end_h": 177.56666666666666,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 187.1,
+      "window_start_h": 186.03333333333333,
+      "window_end_h": 188.16666666666666,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 197.7,
+      "window_start_h": 196.63333333333333,
+      "window_end_h": 198.76666666666665,
+      "value": 7,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 208.29999999999998,
+      "window_start_h": 207.23333333333332,
+      "window_end_h": 209.36666666666667,
+      "value": null,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": null,
+      "raw_labels": [
+        "0",
+        "0",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 218.86666666666667,
+      "window_start_h": 217.79999999999998,
+      "window_end_h": 219.93333333333334,
+      "value": null,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "0",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 229.46666666666667,
+      "window_start_h": 228.4,
+      "window_end_h": 230.53333333333333,
+      "value": null,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "0",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 240.06666666666666,
+      "window_start_h": 239.0,
+      "window_end_h": 241.13333333333333,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 250.63333333333333,
+      "window_start_h": 249.56666666666666,
+      "window_end_h": 251.7,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 261.23333333333335,
+      "window_start_h": 260.1666666666667,
+      "window_end_h": 262.3,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 271.8333333333333,
+      "window_start_h": 270.76666666666665,
+      "window_end_h": 272.9,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 282.43333333333334,
+      "window_start_h": 281.3666666666667,
+      "window_end_h": 283.5,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 293.0,
+      "window_start_h": 291.93333333333334,
+      "window_end_h": 294.06666666666666,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 303.6,
+      "window_start_h": 302.5333333333333,
+      "window_end_h": 304.6666666666667,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 314.2,
+      "window_start_h": 313.1333333333333,
+      "window_end_h": 315.26666666666665,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 324.8,
+      "window_start_h": 323.73333333333335,
+      "window_end_h": 325.8666666666667,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 335.3666666666667,
+      "window_start_h": 334.3,
+      "window_end_h": 336.43333333333334,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 345.96666666666664,
+      "window_start_h": 344.9,
+      "window_end_h": 347.0333333333333,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 356.56666666666666,
+      "window_start_h": 355.5,
+      "window_end_h": 357.6333333333333,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 367.1666666666667,
+      "window_start_h": 366.1,
+      "window_end_h": 368.23333333333335,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 377.73333333333335,
+      "window_start_h": 376.6666666666667,
+      "window_end_h": 378.8,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 388.3333333333333,
+      "window_start_h": 387.26666666666665,
+      "window_end_h": 389.4,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 398.93333333333334,
+      "window_start_h": 397.8666666666667,
+      "window_end_h": 400.0,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 409.5,
+      "window_start_h": 408.43333333333334,
+      "window_end_h": 410.56666666666666,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 420.09999999999997,
+      "window_start_h": 419.0333333333333,
+      "window_end_h": 421.1666666666667,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 430.7,
+      "window_start_h": 429.6333333333333,
+      "window_end_h": 431.76666666666665,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 441.3,
+      "window_start_h": 440.23333333333335,
+      "window_end_h": 442.3666666666667,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 451.8666666666667,
+      "window_start_h": 450.8,
+      "window_end_h": 452.93333333333334,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 462.46666666666664,
+      "window_start_h": 461.4,
+      "window_end_h": 463.5333333333333,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 473.06666666666666,
+      "window_start_h": 472.0,
+      "window_end_h": 474.1333333333333,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 483.6666666666667,
+      "window_start_h": 482.59999999999997,
+      "window_end_h": 484.73333333333335,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 494.23333333333335,
+      "window_start_h": 493.1666666666667,
+      "window_end_h": 495.3,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 504.8333333333333,
+      "window_start_h": 503.76666666666665,
+      "window_end_h": 505.9,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 515.4333333333333,
+      "window_start_h": 514.3666666666667,
+      "window_end_h": 516.5,
+      "value": 5,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 526.0,
+      "window_start_h": 524.9333333333333,
+      "window_end_h": 527.0666666666666,
+      "value": 6,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 536.6,
+      "window_start_h": 535.5333333333333,
+      "window_end_h": 537.6666666666666,
+      "value": 7,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": 1,
+      "raw_labels": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "trough_h": 547.2,
+      "window_start_h": 546.1333333333333,
+      "window_end_h": 548.2666666666667,
+      "value": null,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": null,
+      "raw_labels": [
+        "0",
+        "0",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 557.8,
+      "window_start_h": 556.7333333333333,
+      "window_end_h": 558.8666666666667,
+      "value": null,
+      "bit0": 1,
+      "bit1": 0,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "0",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 568.3666666666667,
+      "window_start_h": 567.3,
+      "window_end_h": 569.4333333333333,
+      "value": null,
+      "bit0": 0,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "0",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 578.9666666666667,
+      "window_start_h": 577.9,
+      "window_end_h": 580.0333333333333,
+      "value": null,
+      "bit0": 1,
+      "bit1": 1,
+      "bit2": null,
+      "raw_labels": [
+        "1",
+        "1",
+        "x"
+      ]
+    },
+    {
+      "trough_h": 589.5666666666666,
+      "window_start_h": 588.5,
+      "window_end_h": 590.6333333333333,
+      "value": 4,
+      "bit0": 0,
+      "bit1": 0,
+      "bit2": 1,
+      "raw_labels": [
+        "0",
+        "0",
+        "1"
+      ]
+    }
+  ],
+  "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+  "source_sha256": {
+    "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+    "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827"
+  },
+  "csv_sha256": "9EC87687BEB6DE68D327E5E7BAD23C04C7EFF53459FA9B21A51EEC4867A08F31",
+  "runtime_s": 191.1
+}

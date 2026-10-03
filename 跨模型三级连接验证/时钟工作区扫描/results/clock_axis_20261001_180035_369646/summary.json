@@ -1,0 +1,190 @@
+{
+  "dir": "clock_axis_20261001_180035_369646",
+  "int0_peak": 0.5484815380117275,
+  "groups": {
+    "hzh|base|n=2": {
+      "k_min": 0.075,
+      "k_max": 0.6,
+      "pass_lo": 0.075,
+      "pass_hi": 0.6,
+      "n_pass": 10,
+      "n_rows": 10,
+      "fail_high_mode": "-",
+      "fail_low_mode": null,
+      "r_lo": 0.13674115681610485,
+      "r_hi": 1.0939292545288388
+    },
+    "hzh|base|n=3": {
+      "k_min": 0.075,
+      "k_max": 0.6,
+      "pass_lo": 0.075,
+      "pass_hi": 0.6,
+      "n_pass": 10,
+      "n_rows": 10,
+      "fail_high_mode": "-",
+      "fail_low_mode": null,
+      "r_lo": 0.13674115681610485,
+      "r_hi": 1.0939292545288388
+    },
+    "hzz|off|n=2": {
+      "k_min": 0.075,
+      "k_max": 0.6,
+      "pass_lo": 0.075,
+      "pass_hi": 0.22,
+      "n_pass": 4,
+      "n_rows": 10,
+      "fail_high_mode": "both",
+      "fail_low_mode": null,
+      "r_lo": 0.13674115681610485,
+      "r_hi": 0.4011073933272409
+    },
+    "hzz|off|n=3": {
+      "k_min": 0.075,
+      "k_max": 0.6,
+      "pass_lo": 0.075,
+      "pass_hi": 0.22,
+      "n_pass": 4,
+      "n_rows": 10,
+      "fail_high_mode": "both",
+      "fail_low_mode": null,
+      "r_lo": 0.13674115681610485,
+      "r_hi": 0.4011073933272409
+    },
+    "hzz|on|n=2": {
+      "k_min": 0.075,
+      "k_max": 0.6,
+      "pass_lo": 0.075,
+      "pass_hi": 0.26,
+      "n_pass": 6,
+      "n_rows": 10,
+      "fail_high_mode": "both",
+      "fail_low_mode": null,
+      "r_lo": 0.13674115681610485,
+      "r_hi": 0.47403601029583015
+    },
+    "hzz|on|n=3": {
+      "k_min": 0.075,
+      "k_max": 0.6,
+      "pass_lo": 0.075,
+      "pass_hi": 0.26,
+      "n_pass": 6,
+      "n_rows": 10,
+      "fail_high_mode": "both",
+      "fail_low_mode": null,
+      "r_lo": 0.13674115681610485,
+      "r_hi": 0.47403601029583015
+    }
+  },
+  "guards": {
+    "structural": {
+      "original_tail_rhs_gap": 7.105427357601002e-15,
+      "prefix_rhs_gap": 0.0,
+      "toggle_only_A1_gap": 1.7763568394002505e-15,
+      "initial_tail_residuals": {
+        "off": 4.440892098500626e-16,
+        "on": 4.440892098500626e-16
+      },
+      "original_tail_autoregulation": false,
+      "probes": 40
+    },
+    "parity": {
+      "ok": true,
+      "hours": 300.0,
+      "fields": 15,
+      "read_windows": 27,
+      "events": {
+        "bit0_to_bit1": [
+          14,
+          14,
+          14
+        ],
+        "bit1_to_bit2": [
+          7,
+          7,
+          7
+        ]
+      }
+    },
+    "reproduction_hzh": {
+      "ok": true,
+      "want": {
+        "certified_v1": true,
+        "steady": "1234567012345670123",
+        "stage0": [
+          14,
+          14,
+          14
+        ],
+        "stage1": [
+          7,
+          7,
+          7
+        ],
+        "margin_h": 1.1784609018563117
+      },
+      "got": {
+        "certified_v1": true,
+        "steady": "1234567012345670123",
+        "stage0": [
+          14,
+          14,
+          14
+        ],
+        "stage1": [
+          7,
+          7,
+          7
+        ],
+        "margin_h": 1.178460901856866
+      }
+    },
+    "reproduction_hzz": {
+      "off": {
+        "ok": true,
+        "want": {
+          "steady": "xxx4567456745674567",
+          "stage1": [
+            7,
+            0,
+            1
+          ],
+          "s2_flips": 1
+        },
+        "got": {
+          "steady": "xxx4567456745674567",
+          "stage1": [
+            7,
+            0,
+            1
+          ],
+          "s2_flips": 1
+        }
+      },
+      "on": {
+        "ok": true,
+        "want": {
+          "steady": "5674567456745674567",
+          "stage1": [
+            7,
+            0,
+            1
+          ],
+          "s2_flips": 1
+        },
+        "got": {
+          "steady": "5674567456745674567",
+          "stage1": [
+            7,
+            0,
+            1
+          ],
+          "s2_flips": 1
+        }
+      }
+    }
+  },
+  "autoregulation_effect": {
+    "same": 16,
+    "differ": 4
+  }
+}

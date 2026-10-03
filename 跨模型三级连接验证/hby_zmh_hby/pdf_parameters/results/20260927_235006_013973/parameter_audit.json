@@ -1,0 +1,232 @@
+{
+  "pdf_sha256": "4EF770A748C77C977887B62EDDC1209CA87C070BDAD17C7EFB5A94D84A26473D",
+  "pages": [
+    1,
+    2
+  ],
+  "rows": [
+    {
+      "parameter": "k_fwd",
+      "old_code_per_hour_or_dimensionless": 7.08,
+      "pdf": 7.0,
+      "used_after_conversion": 7.0,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.11666666666666667,
+      "is_rate": true
+    },
+    {
+      "parameter": "k_rev",
+      "old_code_per_hour_or_dimensionless": 4.8,
+      "pdf": 5.0,
+      "used_after_conversion": 5.0,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.08333333333333333,
+      "is_rate": true
+    },
+    {
+      "parameter": "K_D_comp",
+      "old_code_per_hour_or_dimensionless": 3.2,
+      "pdf": 1.2,
+      "used_after_conversion": 1.2,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 1.2,
+      "is_rate": false
+    },
+    {
+      "parameter": "Kinh",
+      "old_code_per_hour_or_dimensionless": 0.1026,
+      "pdf": 0.1,
+      "used_after_conversion": 0.1,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.1,
+      "is_rate": false
+    },
+    {
+      "parameter": "K_D_int1",
+      "old_code_per_hour_or_dimensionless": 1.8,
+      "pdf": 1.0,
+      "used_after_conversion": 1.0,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 1.0,
+      "is_rate": false
+    },
+    {
+      "parameter": "alpha_rep1",
+      "old_code_per_hour_or_dimensionless": 12.0,
+      "pdf": 3.5,
+      "used_after_conversion": 3.5,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.058333333333333334,
+      "is_rate": true
+    },
+    {
+      "parameter": "gamma_rep1",
+      "old_code_per_hour_or_dimensionless": 0.3,
+      "pdf": 0.6,
+      "used_after_conversion": 0.6,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.01,
+      "is_rate": true
+    },
+    {
+      "parameter": "alpha_rdf1",
+      "old_code_per_hour_or_dimensionless": 1.5899999999999999,
+      "pdf": 6.0,
+      "used_after_conversion": 6.0,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.1,
+      "is_rate": true
+    },
+    {
+      "parameter": "gamma_rdf1",
+      "old_code_per_hour_or_dimensionless": 0.3,
+      "pdf": 0.8,
+      "used_after_conversion": 0.8,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.013333333333333334,
+      "is_rate": true
+    },
+    {
+      "parameter": "K_rep",
+      "old_code_per_hour_or_dimensionless": 1.8,
+      "pdf": 0.85,
+      "used_after_conversion": 0.85,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.85,
+      "is_rate": false
+    },
+    {
+      "parameter": "n",
+      "old_code_per_hour_or_dimensionless": 3.0,
+      "pdf": 3.9,
+      "used_after_conversion": 3.9,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 3.9,
+      "is_rate": false
+    },
+    {
+      "parameter": "alpha_A0",
+      "old_code_per_hour_or_dimensionless": 8.478,
+      "pdf": 8.0,
+      "used_after_conversion": 8.0,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.13333333333333333,
+      "is_rate": true
+    },
+    {
+      "parameter": "gamma_A0",
+      "old_code_per_hour_or_dimensionless": 4.386,
+      "pdf": 1.9,
+      "used_after_conversion": 1.8999999999999997,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.03166666666666666,
+      "is_rate": true
+    },
+    {
+      "parameter": "K_A0",
+      "old_code_per_hour_or_dimensionless": 1.0,
+      "pdf": 0.5,
+      "used_after_conversion": 0.5,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.5,
+      "is_rate": false
+    },
+    {
+      "parameter": "n_A0",
+      "old_code_per_hour_or_dimensionless": 2.0,
+      "pdf": 2.0,
+      "used_after_conversion": 2.0,
+      "changed": false,
+      "matches_pdf": true,
+      "stored_internal_value": 2.0,
+      "is_rate": false
+    },
+    {
+      "parameter": "alpha_R0",
+      "old_code_per_hour_or_dimensionless": 5.874,
+      "pdf": 3.8,
+      "used_after_conversion": 3.7999999999999994,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.06333333333333332,
+      "is_rate": true
+    },
+    {
+      "parameter": "gamma_R0",
+      "old_code_per_hour_or_dimensionless": 0.696,
+      "pdf": 0.6,
+      "used_after_conversion": 0.6,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.01,
+      "is_rate": true
+    },
+    {
+      "parameter": "K_R0",
+      "old_code_per_hour_or_dimensionless": 2.6454,
+      "pdf": 0.6,
+      "used_after_conversion": 0.6,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.6,
+      "is_rate": false
+    },
+    {
+      "parameter": "n_R0",
+      "old_code_per_hour_or_dimensionless": 5.4332,
+      "pdf": 4.0,
+      "used_after_conversion": 4.0,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 4.0,
+      "is_rate": false
+    },
+    {
+      "parameter": "alpha_Int1",
+      "old_code_per_hour_or_dimensionless": 22.728,
+      "pdf": 18.0,
+      "used_after_conversion": 18.0,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.3,
+      "is_rate": true
+    },
+    {
+      "parameter": "gamma_int1",
+      "old_code_per_hour_or_dimensionless": 4.8,
+      "pdf": 1.4,
+      "used_after_conversion": 1.4,
+      "changed": true,
+      "matches_pdf": true,
+      "stored_internal_value": 0.02333333333333333,
+      "is_rate": true
+    }
+  ],
+  "matching_count": 21,
+  "changed_count": 20,
+  "not_in_pdf": {
+    "n_int1": 4.0
+  },
+  "retained_hby_extension": {
+    "n_A1_gate": 6.0,
+    "F1_production_exponent": 4.0,
+    "clock_K": 0.3,
+    "clock_n": 2.0
+  },
+  "scope": "Replace all PDF-listed parameters used by ZMH carry0/bit1. HBY bit0/carry1/bit2 remain unchanged; this is not a full reconstruction of the PDF circuit.",
+  "dimensional_note": "K_D_comp numeric value 1.2 retained; because the original reverse Hill argument is I*R, its threshold has product-concentration dimensions despite the PDF a.u. label."
+}

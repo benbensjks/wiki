@@ -1,0 +1,31 @@
+{
+  "parameters": {
+    "Td_min": 50.0,
+    "lambda_protein_scale": 1000.0,
+    "K_copies": 13.0,
+    "hill_n": 3.0,
+    "oscillator_plasmid_copies": 10.0,
+    "functional_tetO_per_plasmid": 4.0,
+    "functional_accessible_fraction": 1.0,
+    "sponge_plasmid_copies": 40.0,
+    "sponge_tetO_per_plasmid": 2.0,
+    "sponge_accessible_fraction": 1.0,
+    "oscillator_promoter_leak": 0.0,
+    "oscillator_tx_per_plasmid_per_min": 0.9609060278364028,
+    "oscillator_translation_per_mrna_per_min": 0.5,
+    "oscillator_mrna_intrinsic_loss_per_min": 0.33271064666877376,
+    "oscillator_protein_intrinsic_loss_per_min": 0.0,
+    "c31_promoter_leak": 0.005,
+    "c31_tx_per_plasmid_per_min": 5.0,
+    "c31_translation_per_mrna_per_min": 0.5,
+    "c31_mrna_intrinsic_loss_per_min": 0.33271064666877376,
+    "c31_protein_intrinsic_loss_per_min": 0.0,
+    "peak_load_fraction": 0.0
+  },
+  "solver": {
+    "method": "LSODA",
+    "rtol": 1e-09,
+    "atol": 1e-11,
+    "max_step_min": 1
+  }
+}

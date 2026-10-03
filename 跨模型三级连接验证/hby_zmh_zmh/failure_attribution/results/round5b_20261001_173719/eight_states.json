@@ -1,0 +1,246 @@
+{
+  "clock_K": 0.1,
+  "source_hours": 300.0,
+  "continuation_hours": 300.0,
+  "upstream_hours": 620.0,
+  "prefix_guard": {
+    "certified": true,
+    "reads": true,
+    "sequence": true,
+    "margin": true
+  },
+  "construction": "eight consecutive read windows covering values 0-7 in a converged 300 h orbit; snapshot at each window trough; continued with dy/dt = f(t + t_start, y) so the upstream oscillator keeps its phase",
+  "chosen": [
+    {
+      "value": 1,
+      "trough_h": 93.71666666666667
+    },
+    {
+      "value": 2,
+      "trough_h": 104.28333333333333
+    },
+    {
+      "value": 3,
+      "trough_h": 114.89999999999999
+    },
+    {
+      "value": 4,
+      "trough_h": 125.46666666666667
+    },
+    {
+      "value": 5,
+      "trough_h": 136.06666666666666
+    },
+    {
+      "value": 6,
+      "trough_h": 146.65
+    },
+    {
+      "value": 7,
+      "trough_h": 157.25
+    },
+    {
+      "value": 0,
+      "trough_h": 167.83333333333334
+    }
+  ],
+  "continuations": [
+    {
+      "target_value": 1,
+      "t_start_h": 93.71666666666667,
+      "horizon_h": 300.0,
+      "snapshot_S0": 0.9775053237364787,
+      "snapshot_S1": 0.014347790292101426,
+      "snapshot_S2": 0.006722469208599757,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "all_reads": 27,
+      "steady_reads": 19,
+      "steady_sequence": "2345670123456701234",
+      "increments_mod8": true,
+      "s2_flips": 7,
+      "stage1": [
+        7,
+        7,
+        7
+      ],
+      "S2_band_margin": 0.27312234122222456,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0
+    },
+    {
+      "target_value": 2,
+      "t_start_h": 104.28333333333333,
+      "horizon_h": 300.0,
+      "snapshot_S0": 0.07505172262634156,
+      "snapshot_S1": 0.9925838704344199,
+      "snapshot_S2": 0.006728263696812897,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "all_reads": 27,
+      "steady_reads": 19,
+      "steady_sequence": "3456701234567012345",
+      "increments_mod8": true,
+      "s2_flips": 7,
+      "stage1": [
+        7,
+        7,
+        7
+      ],
+      "S2_band_margin": 0.27312234122222456,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0
+    },
+    {
+      "target_value": 3,
+      "t_start_h": 114.89999999999999,
+      "horizon_h": 300.0,
+      "snapshot_S0": 0.9775039510851524,
+      "snapshot_S1": 0.986795747909772,
+      "snapshot_S2": 0.006728616695067524,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "all_reads": 27,
+      "steady_reads": 19,
+      "steady_sequence": "4567012345670123456",
+      "increments_mod8": true,
+      "s2_flips": 8,
+      "stage1": [
+        8,
+        8,
+        8
+      ],
+      "S2_band_margin": 0.27312234122222456,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0
+    },
+    {
+      "target_value": 4,
+      "t_start_h": 125.46666666666667,
+      "horizon_h": 300.0,
+      "snapshot_S0": 0.0750517997767632,
+      "snapshot_S1": 0.014336777188075578,
+      "snapshot_S2": 0.9752567639365816,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "all_reads": 27,
+      "steady_reads": 19,
+      "steady_sequence": "5670123456701234567",
+      "increments_mod8": true,
+      "s2_flips": 7,
+      "stage1": [
+        7,
+        7,
+        7
+      ],
+      "S2_band_margin": 0.27312234122222456,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0
+    },
+    {
+      "target_value": 5,
+      "t_start_h": 136.06666666666666,
+      "horizon_h": 300.0,
+      "snapshot_S0": 0.9775204211218848,
+      "snapshot_S1": 0.014336916561173307,
+      "snapshot_S2": 0.9736093508067872,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "all_reads": 27,
+      "steady_reads": 19,
+      "steady_sequence": "6701234567012345670",
+      "increments_mod8": true,
+      "s2_flips": 7,
+      "stage1": [
+        7,
+        7,
+        7
+      ],
+      "S2_band_margin": 0.2731223412222247,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0
+    },
+    {
+      "target_value": 6,
+      "t_start_h": 146.65,
+      "horizon_h": 300.0,
+      "snapshot_S0": 0.07505187694190035,
+      "snapshot_S1": 0.9925830889022133,
+      "snapshot_S2": 0.973150434711845,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "all_reads": 27,
+      "steady_reads": 19,
+      "steady_sequence": "7012345670123456701",
+      "increments_mod8": true,
+      "s2_flips": 7,
+      "stage1": [
+        7,
+        7,
+        7
+      ],
+      "S2_band_margin": 0.2731223412222247,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0
+    },
+    {
+      "target_value": 7,
+      "t_start_h": 157.25,
+      "horizon_h": 300.0,
+      "snapshot_S0": 0.977519049366547,
+      "snapshot_S1": 0.9868044839251363,
+      "snapshot_S2": 0.9731225545746043,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "all_reads": 27,
+      "steady_reads": 19,
+      "steady_sequence": "0123456701234567012",
+      "increments_mod8": true,
+      "s2_flips": 8,
+      "stage1": [
+        8,
+        8,
+        8
+      ],
+      "S2_band_margin": 0.2731223414778037,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0
+    },
+    {
+      "target_value": 0,
+      "t_start_h": 167.83333333333334,
+      "horizon_h": 300.0,
+      "snapshot_S0": 0.07505195411840328,
+      "snapshot_S1": 0.014337003203722332,
+      "snapshot_S2": 0.006691884485898081,
+      "counting": true,
+      "events": true,
+      "full": true,
+      "all_reads": 27,
+      "steady_reads": 19,
+      "steady_sequence": "1234567012345670123",
+      "increments_mod8": true,
+      "s2_flips": 7,
+      "stage1": [
+        7,
+        7,
+        7
+      ],
+      "S2_band_margin": 0.2731223414778039,
+      "S2_unlabelled": 0,
+      "S2_commitment": 1.0
+    }
+  ],
+  "counting_passed": 8,
+  "event_passed": 8,
+  "increments_mod8": 8,
+  "full_passed": 8,
+  "supersedes": "round 5 PART D (150 h: only ~5 windows, so DROP=8 + MIN_STEADY=16 could not be satisfied) and the round-3/4 \"eight phases\" (9.20 h inside one 10.52 h clock cycle, all one digital value, upstream restarted at t=0)"
+}

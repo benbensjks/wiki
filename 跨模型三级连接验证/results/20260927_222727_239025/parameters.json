@@ -1,0 +1,233 @@
+{
+  "arguments": {
+    "hours": 33.333333333333336,
+    "sample_min": 1.0,
+    "max_step_min": 1.0,
+    "upstream_mode": "original",
+    "n_gate": 6.0,
+    "clock_scale": 1.0,
+    "no_plot": false
+  },
+  "donor": {
+    "source_sha256": "E790743F493F415E43296CD10911BB6C2A4E5A024F70E807A40267E9705A0E2B",
+    "parameters_per_minute": {
+      "k_fwd": 0.118,
+      "k_rev": 0.08,
+      "Kinh": 0.1026,
+      "K_D_comp": 3.2,
+      "k_int": 6.0,
+      "gamma_int": 2.0,
+      "K_D_int0": 1.8,
+      "n_int0": 4.0,
+      "alpha_rep0": 0.1821,
+      "gamma_rep0": 0.0119,
+      "alpha_rdf0": 0.0325,
+      "gamma_rdf0": 0.0055,
+      "K_D_int1": 1.8,
+      "n_int1": 4.0,
+      "alpha_rep1": 0.2,
+      "gamma_rep1": 0.005,
+      "alpha_rdf1": 0.0265,
+      "gamma_rdf1": 0.005,
+      "K_rep": 1.8,
+      "n": 3.0,
+      "alpha_A0": 0.1413,
+      "gamma_A0": 0.0731,
+      "n_A0": 2.0,
+      "K_A0": 1.0,
+      "alpha_R0": 0.0979,
+      "gamma_R0": 0.0116,
+      "n_R0": 5.4332,
+      "K_R0": 2.6454,
+      "alpha_Int1": 0.3788,
+      "gamma_int1": 0.08
+    },
+    "oscillator_parameters": {
+      "lambd": 1000,
+      "K": 13,
+      "n": 3,
+      "Td": 30,
+      "gamma": 0.023104906018664842,
+      "S_eff": 40,
+      "Kd": 6,
+      "n_s": 1.5,
+      "K_R": 6,
+      "n_R": 2,
+      "H_leak": 0.05,
+      "N_C": 10,
+      "k_tx": 5,
+      "gamma_m": 0.34657359027997264,
+      "beta": 0.5,
+      "mu": 0.023104906018664842
+    },
+    "upstream_options": {
+      "method": "BDF",
+      "rtol": 0.001,
+      "atol": 1e-06
+    },
+    "c31_max": 2401.0637167358345,
+    "normalization": "max(C31[1000:]) on original 3000-sample 0..3000 min grid",
+    "input": "normalized C31 protein concentration, NOT translation flux",
+    "table_max_TetR": 3000.0,
+    "max_TetR": 876.044890827532,
+    "free_TetR_table_exceeded": false,
+    "counter_time_original": "min",
+    "adapter_time": "h"
+  },
+  "receiver": {
+    "n_A1_gate": 6.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "clock_scale": 1.0,
+    "carry_mrna_min": 2.0,
+    "carry_maturation_min": 32.5,
+    "bit_mrna_min": 2.0,
+    "bit_maturation_min": 20.0,
+    "translation_h": 30.0,
+    "kon": 0.1,
+    "koff": 1.0,
+    "complex_decay": 1.0,
+    "receiver_uM_per_au": 5.75
+  },
+  "receiver_table": {
+    "k_fwd": 7.0,
+    "k_rev": 5.0,
+    "K_D_int": [
+      1.0,
+      1.0,
+      0.6
+    ],
+    "K_D_comp": 1.2,
+    "K_inh": 0.1,
+    "k_int": 6.0,
+    "gamma_int": [
+      2.0,
+      1.4,
+      2.2
+    ],
+    "alpha_rep": 3.5,
+    "gamma_rep": 0.6,
+    "K_rep": 0.85,
+    "n_rep": 3.9,
+    "alpha_rdf": 6.0,
+    "gamma_rdf": 0.8,
+    "alpha_A": [
+      8.0,
+      16.0
+    ],
+    "gamma_A": [
+      1.9,
+      2.5
+    ],
+    "K_A": [
+      0.5,
+      1.2
+    ],
+    "n_A": [
+      2.0,
+      4.0
+    ],
+    "alpha_F": [
+      3.8,
+      5.0
+    ],
+    "gamma_F": [
+      0.6,
+      1.1
+    ],
+    "K_F": [
+      0.6,
+      0.4
+    ],
+    "n_F": [
+      4.0,
+      4.0
+    ],
+    "alpha_Int": [
+      18.0,
+      38.0
+    ],
+    "K_auto1": 0.6,
+    "n_auto1": 2.0
+  },
+  "initial_state": {
+    "pb0": 1.0,
+    "int0": 0.0,
+    "rep0": 15.302521008403362,
+    "rdf0": 0.0,
+    "a0": 1.9329685362517102,
+    "r0": 6.657771604876878,
+    "pb1": 1.0,
+    "int1": 0.0,
+    "rep1": 40.0,
+    "rdf1": 0.0,
+    "A1": 1.2300679737379923,
+    "F1": 2.3851258395219976,
+    "M_A1": 0.10250566447816603,
+    "A1_u": 2.4031217243422693,
+    "M_F1": 0.08745461411580659,
+    "F1_u": 2.0502679939256465,
+    "b2_M_I": 0.0,
+    "b2_I_u": 0.0,
+    "b2_I": 0.0,
+    "b2_M_T": 0.11666666666666667,
+    "b2_T_u": 1.6831442143704574,
+    "b2_T": 5.833333333333334,
+    "b2_M_R": 0.0,
+    "b2_R_u": 0.0,
+    "b2_R": 0.0,
+    "b2_C": 0.0,
+    "b2_S": 0.0
+  },
+  "state_names": [
+    "pb0",
+    "int0",
+    "rep0",
+    "rdf0",
+    "a0",
+    "r0",
+    "pb1",
+    "int1",
+    "rep1",
+    "rdf1",
+    "A1",
+    "F1",
+    "M_A1",
+    "A1_u",
+    "M_F1",
+    "F1_u",
+    "b2_M_I",
+    "b2_I_u",
+    "b2_I",
+    "b2_M_T",
+    "b2_T_u",
+    "b2_T",
+    "b2_M_R",
+    "b2_R_u",
+    "b2_R",
+    "b2_C",
+    "b2_S"
+  ],
+  "source_hashes": {
+    "wiki任务\\完整二级级联.py": "E790743F493F415E43296CD10911BB6C2A4E5A024F70E807A40267E9705A0E2B",
+    "final_reconstruction\\model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A"
+  },
+  "input_assumption": "clock_scale=1 assumes compatible donor Int0 and receiver clock-threshold a.u.; uncalibrated",
+  "solver": {
+    "method": "DOP853",
+    "rtol": 2e-07,
+    "atol": 2e-09,
+    "max_step_min": 1.0
+  },
+  "original_counter_solver": {
+    "method": "RK45",
+    "rtol": 0.001,
+    "atol": 1e-06
+  },
+  "environment": {
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

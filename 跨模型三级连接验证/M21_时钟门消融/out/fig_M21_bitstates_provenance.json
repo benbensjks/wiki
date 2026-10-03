@@ -1,0 +1,64 @@
+{
+  "style_reference": "wiki_submission_assets/plot_hybrid_submission.py",
+  "inputs": {
+    "kept": {
+      "file": "M21_时钟门消融\\results\\m21_20261001_225706\\traj_kept_K0.30.npz",
+      "sha256": "BFD0790721BAA34593CD8ED562395EAB5871EC2A94B6AF740A0579CC5DF88102"
+    },
+    "removed": {
+      "file": "M21_时钟门消融\\results\\m21_20261001_225706\\traj_removed_K0.30.npz",
+      "sha256": "516A482040EE08B04327CB85444671A414E27812758DC979C1BBDAD132E1CA30"
+    },
+    "matched": {
+      "file": "M21_时钟门消融\\results\\m21matched_20261002_151312\\traj_matched_K0.30.npz",
+      "sha256": "6A10C048E747BD57CADB950D8796F40473CA9D3837AA4BA6AF833D704A13A064"
+    }
+  },
+  "hours": 300.0,
+  "n_samples": 18001,
+  "state_definitions": {
+    "bit0": "b0_S",
+    "bit1": "1 - pb1_zmh",
+    "bit2": "b2_S",
+    "int0_translation": "30 * b0_M_I"
+  },
+  "identity_checks": {
+    "S0_kept_vs_removed_maxabs": 0.0,
+    "S0_kept_vs_matched_maxabs": 0.0,
+    "S1_kept_vs_removed_maxabs": 0.0,
+    "S1_kept_vs_matched_maxabs": 0.0,
+    "S2_kept_vs_removed_maxabs": 0.23054774159030395,
+    "S2_kept_vs_matched_maxabs": 0.04271863454383251
+  },
+  "identity_asserted": true,
+  "read_count": 27,
+  "sequence": "123456701234567012345670123",
+  "band_edge_distance": {
+    "kept": 0.2821,
+    "removed": 0.1857,
+    "matched": 0.2524
+  },
+  "zoom": {
+    "definition": "one carry period = one bit1->bit2 carry cycle = 2 clock read windows",
+    "clock_period_h": 10.500000000000007,
+    "carry_period_h": 21.000000000000014,
+    "anchor_steady_index": 14,
+    "anchor_cycle": 22,
+    "anchor_t0_h": 235.96666666666667,
+    "anchor_removed_margin": 0.18568146300695065,
+    "variants": {
+      "fig_M21_bitstates_3arm": "full 300 h run",
+      "fig_M21_bitstates_1p5cyc": "1.5 carry periods = 31.5 h   (236.0 – 267.5 h)",
+      "fig_M21_bitstates_1cyc": "1 carry period = 21.0 h   (236.0 – 257.0 h)"
+    }
+  },
+  "note": "saved trajectories only; no integration, smoothing or resampling.  bit0/bit1 identity across arms is ASSERTED in this script, not drawn.",
+  "outputs": {
+    "fig_M21_bitstates_1cyc.png": "BE5C537D1B00512A16D7F05A065A8F4A1A270AB7A5EFA841B00A1345BF210212",
+    "fig_M21_bitstates_1cyc.svg": "F567531DA9F7EAF6F4D6AD6B36DF177DB22065887367F76D55CB3D6F98F68476",
+    "fig_M21_bitstates_1p5cyc.png": "9DDF96758853B3C0386B632B9435B1F745E3E7D20DFE0C41620C5E23C2C85914",
+    "fig_M21_bitstates_1p5cyc.svg": "25926E6E26879CE416811ECF4F56263E2E0F109DB770E2D8C7B05581299ACF35",
+    "fig_M21_bitstates_3arm.png": "73F2C580066818FE7D73E2B1CD137DAC73AB5BF7B799632CA7D04B2024F48C3E",
+    "fig_M21_bitstates_3arm.svg": "DDDB90C1EA022A8BADAA6E0351B8E9D8F673D9C5B3D6E048FABD92D2E27DED44"
+  }
+}

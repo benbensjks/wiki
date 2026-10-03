@@ -1,0 +1,1656 @@
+{
+  "hours": 300.0,
+  "sample_min": 1.0,
+  "rtol": 2e-07,
+  "atol": 2e-09,
+  "frozen_config": {
+    "n_A1_gate": 6.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "clock_scale": 1.0,
+    "carry_mrna_min": 2.0,
+    "carry_maturation_min": 32.5,
+    "bit_mrna_min": 2.0,
+    "bit_maturation_min": 20.0,
+    "translation_h": 30.0,
+    "kon": 0.1,
+    "koff": 1.0,
+    "complex_decay": 1.0,
+    "receiver_uM_per_au": 5.75
+  },
+  "design": {
+    "ums": [
+      1.3,
+      1.35,
+      1.4,
+      1.45
+    ],
+    "levels": [
+      "none",
+      "comp",
+      "comp_x0.9",
+      "comp_x1.1"
+    ],
+    "compensation": "clock_K_au -> clock_K_au / uM_fold"
+  },
+  "identity": "H(Int0/f ; K/f, n) = H(Int0 ; K, n)",
+  "caveat": "(1) the identity needs I0_new(t) = I0_base(t)/f, which does NOT follow from rescaling uM_per_au because bit0 keeps fixed K_D_int[0]/K_inh/k_complex; int0_scale_deviation and clock_pointwise_dev_vs_baseline measure the departure. (2) restoring counting shows clock adjustment is SUFFICIENT to rescue the point, not that the clock was the original cause. (3) a failure of compensation does not mean the clock is unimportant.",
+  "rows": [
+    {
+      "label": "uM=x1.30 clock_K=none",
+      "uM_fold": 1.3,
+      "level": "none",
+      "clock_K_requested": 0.3,
+      "clock_K_readback": 0.3,
+      "clock_K_effective": 0.3,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.20112059945667748,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.59313100299482,
+          "hold_h": 1.3684068954464692
+        },
+        "S1": {
+          "band_margin": 0.12773165567436845,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 6.544250802368394,
+          "hold_h": 1.6361599177533783
+        },
+        "S2": {
+          "band_margin": 0.2821568108142949,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.719216689738516,
+          "hold_h": 2.5816654973226
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "clock_wave": {
+        "peak_max": 0.6642150802495594,
+        "peak_min": 0.6439361031932678,
+        "width_max": 10.716666666666669,
+        "integral_min": 2.1523913438308466,
+        "integral_max": 2.243322190221493,
+        "far_dwell_median": 7.29955156484462e-05
+      },
+      "g1_wave": {
+        "peak_max": 0.21783328768255314,
+        "peak_min": 5.199854478674273e-07,
+        "width_max": 9.216666666666667,
+        "integral_min": 1.5405682796299885e-07,
+        "integral_max": 0.15164954247202037,
+        "far_dwell_median": 2.0504473051735612e-08
+      },
+      "int2_source_wave": {
+        "peak_max": 8.27766493193702,
+        "peak_min": 1.9759447018962236e-05,
+        "width_max": 9.216666666666667,
+        "integral_min": 5.854159462593957e-06,
+        "integral_max": 5.762682613936775,
+        "far_dwell_median": 7.791699759659533e-07
+      },
+      "b2_I_wave": {
+        "peak_max": 1.7009415064658708,
+        "peak_min": 0.0007520882454299553,
+        "width_max": 9.766666666666666,
+        "integral_min": 0.0005243968046853931,
+        "integral_max": 1.6165540704183918,
+        "far_dwell_median": 1.2141759319363341e-07
+      },
+      "b2_I_peak": 1.7009415064658708,
+      "int2_source_peak": 8.27766493193702,
+      "int0_scale_deviation": 0.01307058386808091,
+      "clock_pointwise_dev_vs_baseline": 0.13130975873337797,
+      "clock_range": [
+        0.0,
+        0.6642150802495594
+      ],
+      "j_fwd2_integral": 4.582485507558314,
+      "j_rev2_integral": 3.5882283533691277,
+      "int0_range": [
+        0.0,
+        0.4219344893949011
+      ],
+      "runtime_s": 47.24150870000085
+    },
+    {
+      "label": "uM=x1.30 clock_K=comp",
+      "uM_fold": 1.3,
+      "level": "comp",
+      "clock_K_requested": 0.23076923076923075,
+      "clock_K_readback": 0.23076923076923075,
+      "clock_K_effective": 0.23076923076923075,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.20112059945667748,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.59313100299482,
+          "hold_h": 1.3684068954464692
+        },
+        "S1": {
+          "band_margin": 0.12773165567436845,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 6.544250802368394,
+          "hold_h": 1.6361599177533783
+        },
+        "S2": {
+          "band_margin": 0.27291600139443495,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.7723484824123545,
+          "hold_h": 2.5326251811948346
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "clock_wave": {
+        "peak_max": 0.7697435477204562,
+        "peak_min": 0.753472288129768,
+        "width_max": 10.716666666666669,
+        "integral_min": 2.7189242898117847,
+        "integral_max": 2.823060281737238,
+        "far_dwell_median": 0.00012335620830885067
+      },
+      "g1_wave": {
+        "peak_max": 0.2654689801865077,
+        "peak_min": 6.09320144972549e-07,
+        "width_max": 9.25,
+        "integral_min": 1.837880303827301e-07,
+        "integral_max": 0.1855182882812186,
+        "far_dwell_median": 2.6190575856390044e-08
+      },
+      "int2_source_wave": {
+        "peak_max": 10.087821247087293,
+        "peak_min": 2.315416550895686e-05,
+        "width_max": 9.25,
+        "integral_min": 6.983945154543744e-06,
+        "integral_max": 7.0496949546863075,
+        "far_dwell_median": 9.952418825428216e-07
+      },
+      "b2_I_wave": {
+        "peak_max": 2.0799426267846837,
+        "peak_min": 0.0009731585013342779,
+        "width_max": 9.899999999999999,
+        "integral_min": 0.000676309455901963,
+        "integral_max": 1.9883230046434281,
+        "far_dwell_median": 1.4379838378036115e-07
+      },
+      "b2_I_peak": 2.0799426267846837,
+      "int2_source_peak": 10.087821247087293,
+      "int0_scale_deviation": 0.01307058386808091,
+      "clock_pointwise_dev_vs_baseline": 0.023108851088466054,
+      "clock_range": [
+        0.0,
+        0.7697435477204562
+      ],
+      "j_fwd2_integral": 4.7306471982580725,
+      "j_rev2_integral": 3.7397657346068858,
+      "int0_range": [
+        0.0,
+        0.4219344893949011
+      ],
+      "runtime_s": 43.248767700000826
+    },
+    {
+      "label": "uM=x1.30 clock_K=comp_x0.9",
+      "uM_fold": 1.3,
+      "level": "comp_x0.9",
+      "clock_K_requested": 0.2076923076923077,
+      "clock_K_readback": 0.2076923076923077,
+      "clock_K_effective": 0.2076923076923077,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.20112059945667748,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.59313100299482,
+          "hold_h": 1.3684068954464692
+        },
+        "S1": {
+          "band_margin": 0.12773165567436845,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 6.544250802368394,
+          "hold_h": 1.6361599177533783
+        },
+        "S2": {
+          "band_margin": 0.268871200827552,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.79014929495321,
+          "hold_h": 2.5170798762329163
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "clock_wave": {
+        "peak_max": 0.8049595002857117,
+        "peak_min": 0.7904994941184935,
+        "width_max": 10.716666666666669,
+        "integral_min": 2.944401767364072,
+        "integral_max": 3.0531203088460144,
+        "far_dwell_median": 0.00015228720865660572
+      },
+      "g1_wave": {
+        "peak_max": 0.282590009674144,
+        "peak_min": 6.395771859558274e-07,
+        "width_max": 9.25,
+        "integral_min": 1.942912405407985e-07,
+        "integral_max": 0.19773097891102312,
+        "far_dwell_median": 2.8355919558121235e-08
+      },
+      "int2_source_wave": {
+        "peak_max": 10.738420367617472,
+        "peak_min": 2.430393306632144e-05,
+        "width_max": 9.25,
+        "integral_min": 7.383067140550344e-06,
+        "integral_max": 7.513777198618879,
+        "far_dwell_median": 1.077524943208607e-06
+      },
+      "b2_I_wave": {
+        "peak_max": 2.2164781692987936,
+        "peak_min": 0.0010610866930344256,
+        "width_max": 9.933333333333334,
+        "integral_min": 0.0007364706773091747,
+        "integral_max": 2.1234061730019884,
+        "far_dwell_median": 1.515280727284565e-07
+      },
+      "b2_I_peak": 2.2164781692987936,
+      "int2_source_peak": 10.738420367617472,
+      "int0_scale_deviation": 0.01307058386808091,
+      "clock_pointwise_dev_vs_baseline": 0.07555795366769835,
+      "clock_range": [
+        0.0,
+        0.8049595002857117
+      ],
+      "j_fwd2_integral": 4.784005767851641,
+      "j_rev2_integral": 3.7946598002946095,
+      "int0_range": [
+        0.0,
+        0.4219344893949011
+      ],
+      "runtime_s": 45.332099400000516
+    },
+    {
+      "label": "uM=x1.30 clock_K=comp_x1.1",
+      "uM_fold": 1.3,
+      "level": "comp_x1.1",
+      "clock_K_requested": 0.25384615384615383,
+      "clock_K_readback": 0.25384615384615383,
+      "clock_K_effective": 0.25384615384615383,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.20112059945667748,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.59313100299482,
+          "hold_h": 1.3684068954464692
+        },
+        "S1": {
+          "band_margin": 0.12773165567436845,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 6.544250802368394,
+          "hold_h": 1.6361599177533783
+        },
+        "S2": {
+          "band_margin": 0.276441614961512,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.754563723428163,
+          "hold_h": 2.5486307517083837
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "clock_wave": {
+        "peak_max": 0.7342402034054547,
+        "peak_min": 0.7163844766991682,
+        "width_max": 10.716666666666669,
+        "integral_min": 2.5128155954895064,
+        "integral_max": 2.6124548011435644,
+        "far_dwell_median": 0.00010194946224622171
+      },
+      "g1_wave": {
+        "peak_max": 0.2488926353896174,
+        "peak_min": 5.790433260251489e-07,
+        "width_max": 9.233333333333333,
+        "integral_min": 1.7352103710609475e-07,
+        "integral_max": 0.17368892305056458,
+        "far_dwell_median": 2.4152137081092695e-08
+      },
+      "int2_source_wave": {
+        "peak_max": 9.457920144805462,
+        "peak_min": 2.2003646388955655e-05,
+        "width_max": 9.233333333333333,
+        "integral_min": 6.5937994100316024e-06,
+        "integral_max": 6.600179075921454,
+        "far_dwell_median": 9.177812090815225e-07
+      },
+      "b2_I_wave": {
+        "peak_max": 1.9476444894027651,
+        "peak_min": 0.0008924946345638698,
+        "width_max": 9.85,
+        "integral_min": 0.0006209882008968965,
+        "integral_max": 1.8580074045670543,
+        "far_dwell_median": 1.361426972743519e-07
+      },
+      "b2_I_peak": 1.9476444894027651,
+      "int2_source_peak": 9.457920144805462,
+      "int0_scale_deviation": 0.01307058386808091,
+      "clock_pointwise_dev_vs_baseline": 0.048458350804507444,
+      "clock_range": [
+        0.0,
+        0.7342402034054547
+      ],
+      "j_fwd2_integral": 4.679167628590508,
+      "j_rev2_integral": 3.6869739188086026,
+      "int0_range": [
+        0.0,
+        0.4219344893949011
+      ],
+      "runtime_s": 44.278004099998725
+    },
+    {
+      "label": "uM=x1.35 clock_K=none",
+      "uM_fold": 1.35,
+      "level": "none",
+      "clock_K_requested": 0.3,
+      "clock_K_readback": 0.3,
+      "clock_K_effective": 0.3,
+      "counting_passed": false,
+      "event_causality_passed": true,
+      "full_certified": false,
+      "sequence": "x23xx67xx23xx67xx23",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.18554854088667683,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.530986860359395,
+          "hold_h": 1.4213638450632402
+        },
+        "S1": {
+          "band_margin": -0.15171657412785905,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 10,
+          "n_windows": 27,
+          "setup_h": 6.2589451089507975,
+          "hold_h": 1.5016935432777245
+        },
+        "S2": {
+          "band_margin": 0.19906904562675176,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.506805152840087,
+          "hold_h": 2.745589049310855
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "clock_wave": {
+        "peak_max": 0.6471797454073104,
+        "peak_min": 0.6275836986908185,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.085662732324061,
+        "integral_max": 2.1554625805979226,
+        "far_dwell_median": 6.913368165692907e-05
+      },
+      "g1_wave": {
+        "peak_max": 0.15154229348308984,
+        "peak_min": 7.440766305583689e-07,
+        "width_max": 9.35,
+        "integral_min": 2.069507453715107e-07,
+        "integral_max": 0.11890799983449404,
+        "far_dwell_median": 8.090186193578162e-08
+      },
+      "int2_source_wave": {
+        "peak_max": 5.758607152357414,
+        "peak_min": 2.827491196121802e-05,
+        "width_max": 9.35,
+        "integral_min": 7.864128324117408e-06,
+        "integral_max": 4.518503993710774,
+        "far_dwell_median": 3.0742707535597016e-06
+      },
+      "b2_I_wave": {
+        "peak_max": 1.2820988093555177,
+        "peak_min": 0.0010346802940429858,
+        "width_max": 10.0,
+        "integral_min": 0.0007219610641392652,
+        "integral_max": 1.1097451770114264,
+        "far_dwell_median": 2.3946961367296893e-07
+      },
+      "b2_I_peak": 1.2820988093555177,
+      "int2_source_peak": 5.758607152357414,
+      "int0_scale_deviation": 0.01806902620825318,
+      "clock_pointwise_dev_vs_baseline": 0.14977248016919437,
+      "clock_range": [
+        0.0,
+        0.6471797454073104
+      ],
+      "j_fwd2_integral": 4.354370894962777,
+      "j_rev2_integral": 3.3882849990466983,
+      "int0_range": [
+        0.0,
+        0.4063094830294991
+      ],
+      "runtime_s": 58.771106500000315
+    },
+    {
+      "label": "uM=x1.35 clock_K=comp",
+      "uM_fold": 1.35,
+      "level": "comp",
+      "clock_K_requested": 0.2222222222222222,
+      "clock_K_readback": 0.2222222222222222,
+      "clock_K_effective": 0.2222222222222222,
+      "counting_passed": false,
+      "event_causality_passed": true,
+      "full_certified": false,
+      "sequence": "x23xx67xx23xx67xx23",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.18554854088667683,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.530986860359395,
+          "hold_h": 1.4213638450632402
+        },
+        "S1": {
+          "band_margin": -0.15171657412785905,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 10,
+          "n_windows": 27,
+          "setup_h": 6.2589451089507975,
+          "hold_h": 1.5016935432777245
+        },
+        "S2": {
+          "band_margin": 0.1508059546487711,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.416028622185706,
+          "hold_h": 2.6755525793562036
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "clock_wave": {
+        "peak_max": 0.7697454644026042,
+        "peak_min": 0.754373203400652,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.733369302695931,
+        "integral_max": 2.8161852437053057,
+        "far_dwell_median": 0.00012598897077401402
+      },
+      "g1_wave": {
+        "peak_max": 0.1890325028897321,
+        "peak_min": 8.96333610922731e-07,
+        "width_max": 9.383333333333333,
+        "integral_min": 2.534281277600542e-07,
+        "integral_max": 0.14927778867787633,
+        "far_dwell_median": 1.3146073504489408e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 7.183235109809821,
+        "peak_min": 3.4060677215063774e-05,
+        "width_max": 9.383333333333333,
+        "integral_min": 9.630268854882058e-06,
+        "integral_max": 5.672555969759301,
+        "far_dwell_median": 4.995507931705975e-06
+      },
+      "b2_I_wave": {
+        "peak_max": 1.6053770797279538,
+        "peak_min": 0.0013951554609824548,
+        "width_max": 10.083333333333332,
+        "integral_min": 0.0009692096580191312,
+        "integral_max": 1.4066432475940656,
+        "far_dwell_median": 2.9748839686868835e-07
+      },
+      "b2_I_peak": 1.6053770797279538,
+      "int2_source_peak": 7.183235109809821,
+      "int0_scale_deviation": 0.01806902620825318,
+      "clock_pointwise_dev_vs_baseline": 0.030805910158229144,
+      "clock_range": [
+        0.0,
+        0.7697454644026042
+      ],
+      "j_fwd2_integral": 4.628659278960087,
+      "j_rev2_integral": 3.6825530227927987,
+      "int0_range": [
+        0.0,
+        0.4063094830294991
+      ],
+      "runtime_s": 55.87081430000035
+    },
+    {
+      "label": "uM=x1.35 clock_K=comp_x0.9",
+      "uM_fold": 1.35,
+      "level": "comp_x0.9",
+      "clock_K_requested": 0.2,
+      "clock_K_readback": 0.2,
+      "clock_K_effective": 0.2,
+      "counting_passed": false,
+      "event_causality_passed": true,
+      "full_certified": false,
+      "sequence": "x23xx67xx23xx67xx23",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.18554854088667683,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.530986860359395,
+          "hold_h": 1.4213638450632402
+        },
+        "S1": {
+          "band_margin": -0.15171657412785905,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 10,
+          "n_windows": 27,
+          "setup_h": 6.2589451089507975,
+          "hold_h": 1.5016935432777245
+        },
+        "S2": {
+          "band_margin": 0.13357382412150087,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.33332471342959,
+          "hold_h": 2.656025256535113
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "clock_wave": {
+        "peak_max": 0.8049611981027895,
+        "peak_min": 0.7913025755893905,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.958764383134059,
+        "integral_max": 3.0457306471044,
+        "far_dwell_median": 0.00015553734263456636
+      },
+      "g1_wave": {
+        "peak_max": 0.20051187783609123,
+        "peak_min": 9.408045876946049e-07,
+        "width_max": 9.383333333333333,
+        "integral_min": 2.674837573359986e-07,
+        "integral_max": 0.15871436980983777,
+        "far_dwell_median": 1.6229289546751322e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 7.619451357771466,
+        "peak_min": 3.5750574332394985e-05,
+        "width_max": 9.383333333333333,
+        "integral_min": 1.0164382778767948e-05,
+        "integral_max": 6.031146052773835,
+        "far_dwell_median": 6.167130027765502e-06
+      },
+      "b2_I_wave": {
+        "peak_max": 1.7050581834081169,
+        "peak_min": 0.0015210463167875685,
+        "width_max": 10.116666666666665,
+        "integral_min": 0.0010549792408340996,
+        "integral_max": 1.500286652266355,
+        "far_dwell_median": 3.1521763682067983e-07
+      },
+      "b2_I_peak": 1.7050581834081169,
+      "int2_source_peak": 7.619451357771466,
+      "int0_scale_deviation": 0.01806902620825318,
+      "clock_pointwise_dev_vs_baseline": 0.08337836261807385,
+      "clock_range": [
+        0.0,
+        0.8049611981027895
+      ],
+      "j_fwd2_integral": 4.73102654194617,
+      "j_rev2_integral": 3.7937573858773845,
+      "int0_range": [
+        0.0,
+        0.4063094830294991
+      ],
+      "runtime_s": 57.86798359999921
+    },
+    {
+      "label": "uM=x1.35 clock_K=comp_x1.1",
+      "uM_fold": 1.35,
+      "level": "comp_x1.1",
+      "clock_K_requested": 0.24444444444444444,
+      "clock_K_readback": 0.24444444444444444,
+      "clock_K_effective": 0.24444444444444444,
+      "counting_passed": false,
+      "event_causality_passed": true,
+      "full_certified": false,
+      "sequence": "x23xx67xx23xx67xx23",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.18554854088667683,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.530986860359395,
+          "hold_h": 1.4213638450632402
+        },
+        "S1": {
+          "band_margin": -0.15171657412785905,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 10,
+          "n_windows": 27,
+          "setup_h": 6.2589451089507975,
+          "hold_h": 1.5016935432777245
+        },
+        "S2": {
+          "band_margin": 0.16641915586656897,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.468619616948303,
+          "hold_h": 2.695323794906667
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "clock_wave": {
+        "peak_max": 0.7342423135871035,
+        "peak_min": 0.7173700869495908,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.527172759401305,
+        "integral_max": 2.6060493606998776,
+        "far_dwell_median": 0.00010412539313405355
+      },
+      "g1_wave": {
+        "peak_max": 0.17780188236104238,
+        "peak_min": 8.518299399315178e-07,
+        "width_max": 9.366666666666665,
+        "integral_min": 2.396041591116368e-07,
+        "integral_max": 0.1401068118302544,
+        "far_dwell_median": 1.0864736955329514e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 6.756471529719611,
+        "peak_min": 3.2369537717397675e-05,
+        "width_max": 9.366666666666665,
+        "integral_min": 9.104958046242199e-06,
+        "integral_max": 5.324058849549668,
+        "far_dwell_median": 4.128600043025215e-06
+      },
+      "b2_I_wave": {
+        "peak_max": 1.5080808978413578,
+        "peak_min": 0.0012797854696376873,
+        "width_max": 10.066666666666666,
+        "integral_min": 0.0008903321475586697,
+        "integral_max": 1.3163010525559364,
+        "far_dwell_median": 2.801146122863335e-07
+      },
+      "b2_I_peak": 1.5080808978413578,
+      "int2_source_peak": 6.756471529719611,
+      "int0_scale_deviation": 0.01806902620825318,
+      "clock_pointwise_dev_vs_baseline": 0.04842766148734534,
+      "clock_range": [
+        0.0,
+        0.7342423135871035
+      ],
+      "j_fwd2_integral": 4.533952970482099,
+      "j_rev2_integral": 3.5805916844059302,
+      "int0_range": [
+        0.0,
+        0.4063094830294991
+      ],
+      "runtime_s": 54.66201050000018
+    },
+    {
+      "label": "uM=x1.40 clock_K=none",
+      "uM_fold": 1.4,
+      "level": "none",
+      "clock_K_requested": 0.3,
+      "clock_K_readback": 0.3,
+      "clock_K_effective": 0.3,
+      "counting_passed": false,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "x23xx67xx67xx67xx67",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.16915097584676408,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.453548834054983,
+          "hold_h": 1.4897978276106123
+        },
+        "S1": {
+          "band_margin": -0.28885844901741137,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 12,
+          "n_windows": 27,
+          "setup_h": 6.277564393380665,
+          "hold_h": 1.621782367791532
+        },
+        "S2": {
+          "band_margin": 0.02268991980349999,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 4.738713952674914,
+          "hold_h": 2.9325424045442183
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 3,
+        "one_to_one": false
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 1,
+        "flip": 3,
+        "one_to_one": false
+      },
+      "clock_wave": {
+        "peak_max": 0.6304013373494187,
+        "peak_min": 0.6116966107467077,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.0128861308877877,
+        "integral_max": 2.083544703080251,
+        "far_dwell_median": 6.534111270955162e-05
+      },
+      "g1_wave": {
+        "peak_max": 0.08505366620556729,
+        "peak_min": 1.4293858864965113e-06,
+        "width_max": 9.533333333333333,
+        "integral_min": 3.6927649141193114e-07,
+        "integral_max": 0.08169539421896947,
+        "far_dwell_median": 2.10200738842292e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 3.232039315811557,
+        "peak_min": 5.4316663686867426e-05,
+        "width_max": 9.533333333333333,
+        "integral_min": 1.4032506673653383e-05,
+        "integral_max": 3.1044249803208404,
+        "far_dwell_median": 7.987628076007097e-06
+      },
+      "b2_I_wave": {
+        "peak_max": 0.8252465491880862,
+        "peak_min": 0.0016552557718167897,
+        "width_max": 10.25,
+        "integral_min": 0.0011780327129655935,
+        "integral_max": 0.8568179757533526,
+        "far_dwell_median": 1.1264352445976318e-06
+      },
+      "b2_I_peak": 0.8252465491880862,
+      "int2_source_peak": 3.232039315811557,
+      "int0_scale_deviation": 0.02348610882717511,
+      "clock_pointwise_dev_vs_baseline": 0.1673980833488492,
+      "clock_range": [
+        0.0,
+        0.6304013373494187
+      ],
+      "j_fwd2_integral": 1.9301968920243546,
+      "j_rev2_integral": 1.1907621819759053,
+      "int0_range": [
+        0.0,
+        0.391800171779167
+      ],
+      "runtime_s": 56.10424740000053
+    },
+    {
+      "label": "uM=x1.40 clock_K=comp",
+      "uM_fold": 1.4,
+      "level": "comp",
+      "clock_K_requested": 0.2142857142857143,
+      "clock_K_readback": 0.2142857142857143,
+      "clock_K_effective": 0.2142857142857143,
+      "counting_passed": false,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "x23xxxxxx67xxxxxx67",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.16915097584676408,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.453548834054983,
+          "hold_h": 1.4897978276106123
+        },
+        "S1": {
+          "band_margin": -0.28885844901741137,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 12,
+          "n_windows": 27,
+          "setup_h": 6.277564393380665,
+          "hold_h": 1.621782367791532
+        },
+        "S2": {
+          "band_margin": -0.39672051232093714,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 7,
+          "n_windows": 27,
+          "setup_h": 5.279801209381958,
+          "hold_h": 2.8149319215235913
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 3,
+        "one_to_one": false
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 1,
+        "flip": 3,
+        "one_to_one": false
+      },
+      "clock_wave": {
+        "peak_max": 0.7697470401903671,
+        "peak_min": 0.7553576381763817,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.735963916512066,
+        "integral_max": 2.8238213415026046,
+        "far_dwell_median": 0.00012806054791500887
+      },
+      "g1_wave": {
+        "peak_max": 0.10847068892878278,
+        "peak_min": 1.770256479253054e-06,
+        "width_max": 9.549999999999999,
+        "integral_min": 4.6367983536696074e-07,
+        "integral_max": 0.10573672938130732,
+        "far_dwell_median": 4.1197012403976336e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 4.121886179293746,
+        "peak_min": 6.726974621161605e-05,
+        "width_max": 9.549999999999999,
+        "integral_min": 1.7619833743944508e-05,
+        "integral_max": 4.017995716489679,
+        "far_dwell_median": 1.565486471351101e-05
+      },
+      "b2_I_wave": {
+        "peak_max": 1.0577990900310905,
+        "peak_min": 0.002204242284877251,
+        "width_max": 10.316666666666666,
+        "integral_min": 0.0015551929316297503,
+        "integral_max": 1.0926630016229493,
+        "far_dwell_median": 1.4383801474473636e-06
+      },
+      "b2_I_peak": 1.0577990900310905,
+      "int2_source_peak": 4.121886179293746,
+      "int0_scale_deviation": 0.02348610882717511,
+      "clock_pointwise_dev_vs_baseline": 0.038605776017066495,
+      "clock_range": [
+        0.0,
+        0.7697470401903671
+      ],
+      "j_fwd2_integral": 2.3065716116139248,
+      "j_rev2_integral": 1.6441971184674662,
+      "int0_range": [
+        0.0,
+        0.391800171779167
+      ],
+      "runtime_s": 52.98085530000026
+    },
+    {
+      "label": "uM=x1.40 clock_K=comp_x0.9",
+      "uM_fold": 1.4,
+      "level": "comp_x0.9",
+      "clock_K_requested": 0.1928571428571429,
+      "clock_K_readback": 0.1928571428571429,
+      "clock_K_effective": 0.1928571428571429,
+      "counting_passed": false,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "x23xxxxxx67xx67xx67",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.16915097584676408,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.453548834054983,
+          "hold_h": 1.4897978276106123
+        },
+        "S1": {
+          "band_margin": -0.28885844901741137,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 12,
+          "n_windows": 27,
+          "setup_h": 6.277564393380665,
+          "hold_h": 1.621782367791532
+        },
+        "S2": {
+          "band_margin": -0.3932747573932162,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 4,
+          "n_windows": 27,
+          "setup_h": 5.421543683071917,
+          "hold_h": 2.784372744726067
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 3,
+        "one_to_one": false
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 1,
+        "flip": 3,
+        "one_to_one": false
+      },
+      "clock_wave": {
+        "peak_max": 0.8049625939510898,
+        "peak_min": 0.7921797771959871,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.960551895307354,
+        "integral_max": 3.0534489447801265,
+        "far_dwell_median": 0.00015809469283233407
+      },
+      "g1_wave": {
+        "peak_max": 0.11474913216381454,
+        "peak_min": 1.8579476539947873e-06,
+        "width_max": 9.549999999999999,
+        "integral_min": 4.885982337646368e-07,
+        "integral_max": 0.11239584541550719,
+        "far_dwell_median": 5.085913022802006e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 4.360467022224952,
+        "peak_min": 7.060201085180192e-05,
+        "width_max": 9.549999999999999,
+        "integral_min": 1.8566732883056195e-05,
+        "integral_max": 4.271042125789274,
+        "far_dwell_median": 1.9326469486647622e-05
+      },
+      "b2_I_wave": {
+        "peak_max": 1.120593846143149,
+        "peak_min": 0.0023627274236441695,
+        "width_max": 10.333333333333332,
+        "integral_min": 0.0016627306253516984,
+        "integral_max": 1.156401990160849,
+        "far_dwell_median": 1.535692651761365e-06
+      },
+      "b2_I_peak": 1.120593846143149,
+      "int2_source_peak": 4.360467022224952,
+      "int0_scale_deviation": 0.02348610882717511,
+      "clock_pointwise_dev_vs_baseline": 0.09123047893439562,
+      "clock_range": [
+        0.0,
+        0.8049625939510898
+      ],
+      "j_fwd2_integral": 2.5184579951693786,
+      "j_rev2_integral": 1.7361297788806358,
+      "int0_range": [
+        0.0,
+        0.391800171779167
+      ],
+      "runtime_s": 53.60525510000116
+    },
+    {
+      "label": "uM=x1.40 clock_K=comp_x1.1",
+      "uM_fold": 1.4,
+      "level": "comp_x1.1",
+      "clock_K_requested": 0.23571428571428574,
+      "clock_K_readback": 0.23571428571428574,
+      "clock_K_effective": 0.23571428571428574,
+      "counting_passed": false,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "x23xx67xxxxxx67xxxx",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.16915097584676408,
+          "commitment": 1.0,
+          "n_samples": 3431,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.453548834054983,
+          "hold_h": 1.4897978276106123
+        },
+        "S1": {
+          "band_margin": -0.28885844901741137,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 12,
+          "n_windows": 27,
+          "setup_h": 6.277564393380665,
+          "hold_h": 1.621782367791532
+        },
+        "S2": {
+          "band_margin": -0.3918470136985123,
+          "commitment": 0.0,
+          "n_samples": 3431,
+          "n_unlabelled": 8,
+          "n_windows": 27,
+          "setup_h": 5.147390340890908,
+          "hold_h": 2.8379282391129266
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 3,
+        "one_to_one": false
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 1,
+        "flip": 3,
+        "one_to_one": false
+      },
+      "clock_wave": {
+        "peak_max": 0.7342440484604362,
+        "peak_min": 0.7184474739338118,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.530385042848025,
+        "integral_max": 2.613531817991214,
+        "far_dwell_median": 0.00010583751586953408
+      },
+      "g1_wave": {
+        "peak_max": 0.10230898968152534,
+        "peak_min": 1.6824877100075302e-06,
+        "width_max": 9.533333333333333,
+        "integral_min": 4.390250579708599e-07,
+        "integral_max": 0.09928870387238961,
+        "far_dwell_median": 3.4047800691663154e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 3.8877416078979627,
+        "peak_min": 6.393453298028615e-05,
+        "width_max": 9.533333333333333,
+        "integral_min": 1.6682952202892676e-05,
+        "integral_max": 3.7729707471508056,
+        "far_dwell_median": 1.2938164262832e-05
+      },
+      "b2_I_wave": {
+        "peak_max": 0.9962287229653066,
+        "peak_min": 0.002053545870993141,
+        "width_max": 10.299999999999999,
+        "integral_min": 0.001452367352898344,
+        "integral_max": 1.0302548370943965,
+        "far_dwell_median": 1.3661407301161332e-06
+      },
+      "b2_I_peak": 0.9962287229653066,
+      "int2_source_peak": 3.8877416078979627,
+      "int0_scale_deviation": 0.02348610882717511,
+      "clock_pointwise_dev_vs_baseline": 0.04834294197351391,
+      "clock_range": [
+        0.0,
+        0.7342440484604362
+      ],
+      "j_fwd2_integral": 2.2250405322686957,
+      "j_rev2_integral": 1.4423907888141358,
+      "int0_range": [
+        0.0,
+        0.391800171779167
+      ],
+      "runtime_s": 49.43702739999935
+    },
+    {
+      "label": "uM=x1.45 clock_K=none",
+      "uM_fold": 1.45,
+      "level": "none",
+      "clock_K_requested": 0.3,
+      "clock_K_readback": 0.3,
+      "clock_K_effective": 0.3,
+      "counting_passed": false,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "x6xxx6xxx6xxx6xxx6x",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.1520510458735368,
+          "commitment": 1.0,
+          "n_samples": 3435,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.392412000247202,
+          "hold_h": 1.556560422171163
+        },
+        "S1": {
+          "band_margin": -0.3781571516262559,
+          "commitment": 0.0,
+          "n_samples": 3435,
+          "n_unlabelled": 18,
+          "n_windows": 27,
+          "setup_h": 6.104823558743554,
+          "hold_h": 2.345176441256445
+        },
+        "S2": {
+          "band_margin": 0.044658259574042125,
+          "commitment": 1.0,
+          "n_samples": 3435,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.277710483029466,
+          "hold_h": 3.1539561836372023
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 1,
+        "one_to_one": false
+      },
+      "s1": {
+        "reverse": 13,
+        "gate": 0,
+        "flip": 1,
+        "one_to_one": false
+      },
+      "clock_wave": {
+        "peak_max": 0.6139065099244703,
+        "peak_min": 0.5962404528909429,
+        "width_max": 10.700000000000045,
+        "integral_min": 1.94344548917299,
+        "integral_max": 2.018043736795665,
+        "far_dwell_median": 6.146802252628661e-05
+      },
+      "g1_wave": {
+        "peak_max": 0.04233716286736034,
+        "peak_min": 3.874826172536647e-06,
+        "width_max": 10.5,
+        "integral_min": 9.053936582379144e-07,
+        "integral_max": 0.05181826946518302,
+        "far_dwell_median": 2.9191900490318945e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 1.608812188959693,
+        "peak_min": 0.0001472433945563926,
+        "width_max": 10.5,
+        "integral_min": 3.440495901304075e-05,
+        "integral_max": 1.9690942396769548,
+        "far_dwell_median": 1.1092922186321199e-05
+      },
+      "b2_I_wave": {
+        "peak_max": 0.484694335930356,
+        "peak_min": 0.0021667198310145524,
+        "width_max": 10.5,
+        "integral_min": 0.0016591538211521816,
+        "integral_max": 0.6759219669062935,
+        "far_dwell_median": 2.109181480903253e-06
+      },
+      "b2_I_peak": 0.484694335930356,
+      "int2_source_peak": 1.608812188959693,
+      "int0_scale_deviation": 0.02882461475303022,
+      "clock_pointwise_dev_vs_baseline": 0.1842628043763493,
+      "clock_range": [
+        0.0,
+        0.6139065099244703
+      ],
+      "j_fwd2_integral": 1.047405634836476,
+      "j_rev2_integral": 0.3021760982128757,
+      "int0_range": [
+        0.0,
+        0.3782911093384986
+      ],
+      "runtime_s": 50.90768460000072
+    },
+    {
+      "label": "uM=x1.45 clock_K=comp",
+      "uM_fold": 1.45,
+      "level": "comp",
+      "clock_K_requested": 0.20689655172413793,
+      "clock_K_readback": 0.20689655172413793,
+      "clock_K_effective": 0.20689655172413793,
+      "counting_passed": false,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "x6xxx6xxx6xxx6xxx6x",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.1520510458735368,
+          "commitment": 1.0,
+          "n_samples": 3435,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.392412000247202,
+          "hold_h": 1.556560422171163
+        },
+        "S1": {
+          "band_margin": -0.3781571516262559,
+          "commitment": 0.0,
+          "n_samples": 3435,
+          "n_unlabelled": 18,
+          "n_windows": 27,
+          "setup_h": 6.104823558743554,
+          "hold_h": 2.345176441256445
+        },
+        "S2": {
+          "band_margin": -0.38760752345349864,
+          "commitment": 0.0,
+          "n_samples": 3435,
+          "n_unlabelled": 4,
+          "n_windows": 27,
+          "setup_h": 5.496686849429352,
+          "hold_h": 2.9349798172373163
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 1,
+        "one_to_one": false
+      },
+      "s1": {
+        "reverse": 13,
+        "gate": 1,
+        "flip": 1,
+        "one_to_one": false
+      },
+      "clock_wave": {
+        "peak_max": 0.7697482473856883,
+        "peak_min": 0.7563831991848934,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.737976697590642,
+        "integral_max": 2.8334616046306627,
+        "far_dwell_median": 0.00012922775979074566
+      },
+      "g1_wave": {
+        "peak_max": 0.055249971147995285,
+        "peak_min": 4.93368671577613e-06,
+        "width_max": 10.5,
+        "integral_min": 1.1645493674253766e-06,
+        "integral_max": 0.06989827400736352,
+        "far_dwell_median": 6.1372163087582e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 2.0994989036238207,
+        "peak_min": 0.00018748009519949292,
+        "width_max": 10.5,
+        "integral_min": 4.425287596216431e-05,
+        "integral_max": 2.6561344122798136,
+        "far_dwell_median": 2.3321421973281162e-05
+      },
+      "b2_I_wave": {
+        "peak_max": 0.6372239368662236,
+        "peak_min": 0.0029474775385331686,
+        "width_max": 10.5,
+        "integral_min": 0.002232360669899371,
+        "integral_max": 0.8931744252002383,
+        "far_dwell_median": 2.8025276083033132e-06
+      },
+      "b2_I_peak": 0.6372239368662236,
+      "int2_source_peak": 2.0994989036238207,
+      "int0_scale_deviation": 0.02882461475303022,
+      "clock_pointwise_dev_vs_baseline": 0.04576797807925792,
+      "clock_range": [
+        0.0,
+        0.7697482473856883
+      ],
+      "j_fwd2_integral": 1.1832880252300666,
+      "j_rev2_integral": 0.43845051541711405,
+      "int0_range": [
+        0.0,
+        0.3782911093384986
+      ],
+      "runtime_s": 46.32903769999939
+    },
+    {
+      "label": "uM=x1.45 clock_K=comp_x0.9",
+      "uM_fold": 1.45,
+      "level": "comp_x0.9",
+      "clock_K_requested": 0.18620689655172415,
+      "clock_K_readback": 0.18620689655172415,
+      "clock_K_effective": 0.18620689655172415,
+      "counting_passed": false,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "x6xxx6xxx6xxx6xxx6x",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.1520510458735368,
+          "commitment": 1.0,
+          "n_samples": 3435,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.392412000247202,
+          "hold_h": 1.556560422171163
+        },
+        "S1": {
+          "band_margin": -0.3781571516262559,
+          "commitment": 0.0,
+          "n_samples": 3435,
+          "n_unlabelled": 18,
+          "n_windows": 27,
+          "setup_h": 6.104823558743554,
+          "hold_h": 2.345176441256445
+        },
+        "S2": {
+          "band_margin": -0.3793537793933905,
+          "commitment": 0.0,
+          "n_samples": 3435,
+          "n_unlabelled": 4,
+          "n_windows": 27,
+          "setup_h": 5.550581202955698,
+          "hold_h": 2.8810854637109706
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 1,
+        "one_to_one": false
+      },
+      "s1": {
+        "reverse": 13,
+        "gate": 1,
+        "flip": 1,
+        "one_to_one": false
+      },
+      "clock_wave": {
+        "peak_max": 0.8049636632959883,
+        "peak_min": 0.793093259273624,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.961662352022819,
+        "integral_max": 3.0631301553206605,
+        "far_dwell_median": 0.00015953560823356351
+      },
+      "g1_wave": {
+        "peak_max": 0.05832410373322004,
+        "peak_min": 5.177514308752374e-06,
+        "width_max": 10.5,
+        "integral_min": 1.2252475258663915e-06,
+        "integral_max": 0.07453447356521951,
+        "far_dwell_median": 7.573706688643027e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 2.2163159418623617,
+        "peak_min": 0.00019674554373259022,
+        "width_max": 10.5,
+        "integral_min": 4.655940598292289e-05,
+        "integral_max": 2.832309995478342,
+        "far_dwell_median": 2.8780085416843505e-05
+      },
+      "b2_I_wave": {
+        "peak_max": 0.6741049998010693,
+        "peak_min": 0.0031472019808632128,
+        "width_max": 10.5,
+        "integral_min": 0.0023766978552308173,
+        "integral_max": 0.947012409871788,
+        "far_dwell_median": 2.9692455221775856e-06
+      },
+      "b2_I_peak": 0.6741049998010693,
+      "int2_source_peak": 2.2163159418623617,
+      "int0_scale_deviation": 0.02882461475303022,
+      "clock_pointwise_dev_vs_baseline": 0.09838466501076365,
+      "clock_range": [
+        0.0,
+        0.8049636632959883
+      ],
+      "j_fwd2_integral": 1.2293678920695843,
+      "j_rev2_integral": 0.4843579840276285,
+      "int0_range": [
+        0.0,
+        0.3782911093384986
+      ],
+      "runtime_s": 56.45752920000086
+    },
+    {
+      "label": "uM=x1.45 clock_K=comp_x1.1",
+      "uM_fold": 1.45,
+      "level": "comp_x1.1",
+      "clock_K_requested": 0.22758620689655173,
+      "clock_K_readback": 0.22758620689655173,
+      "clock_K_effective": 0.22758620689655173,
+      "counting_passed": false,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "x6xxx6xxx6xxx6xxx6x",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.1520510458735368,
+          "commitment": 1.0,
+          "n_samples": 3435,
+          "n_unlabelled": 0,
+          "n_windows": 27,
+          "setup_h": 5.392412000247202,
+          "hold_h": 1.556560422171163
+        },
+        "S1": {
+          "band_margin": -0.3781571516262559,
+          "commitment": 0.0,
+          "n_samples": 3435,
+          "n_unlabelled": 18,
+          "n_windows": 27,
+          "setup_h": 6.104823558743554,
+          "hold_h": 2.345176441256445
+        },
+        "S2": {
+          "band_margin": -0.3722462859112738,
+          "commitment": 0.0,
+          "n_samples": 3435,
+          "n_unlabelled": 3,
+          "n_windows": 27,
+          "setup_h": 5.445531578153165,
+          "hold_h": 2.986135088513503
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 1,
+        "one_to_one": false
+      },
+      "s1": {
+        "reverse": 13,
+        "gate": 0,
+        "flip": 1,
+        "one_to_one": false
+      },
+      "clock_wave": {
+        "peak_max": 0.73424537753037,
+        "peak_min": 0.7195703210728285,
+        "width_max": 10.700000000000045,
+        "integral_min": 2.533108892718759,
+        "integral_max": 2.623031272798363,
+        "far_dwell_median": 0.00010680219683517319
+      },
+      "g1_wave": {
+        "peak_max": 0.052208515027881465,
+        "peak_min": 4.689589905865291e-06,
+        "width_max": 10.5,
+        "integral_min": 1.104200331614484e-06,
+        "integral_max": 0.06546681309775731,
+        "far_dwell_median": 5.07218374176586e-07
+      },
+      "int2_source_wave": {
+        "peak_max": 1.9839235710594956,
+        "peak_min": 0.00017820441642288104,
+        "width_max": 10.5,
+        "integral_min": 4.195961260135039e-05,
+        "integral_max": 2.4877388977147783,
+        "far_dwell_median": 1.927429821871027e-05
+      },
+      "b2_I_wave": {
+        "peak_max": 0.6010161568403818,
+        "peak_min": 0.002756004208038254,
+        "width_max": 10.5,
+        "integral_min": 0.0020930799504236073,
+        "integral_max": 0.8409605255753886,
+        "far_dwell_median": 2.638319818229386e-06
+      },
+      "b2_I_peak": 0.6010161568403818,
+      "int2_source_peak": 1.9839235710594956,
+      "int0_scale_deviation": 0.02882461475303022,
+      "clock_pointwise_dev_vs_baseline": 0.04823275134520977,
+      "clock_range": [
+        0.0,
+        0.73424537753037
+      ],
+      "j_fwd2_integral": 1.1424691265125588,
+      "j_rev2_integral": 0.3978462764512723,
+      "int0_range": [
+        0.0,
+        0.3782911093384986
+      ],
+      "runtime_s": 47.90053569999873
+    }
+  ]
+}

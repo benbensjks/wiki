@@ -47,7 +47,8 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from plausibility_common import (FROZEN_N_A1, OUT, build_decoupled,  # noqa: E402
+from plausibility_common import (FROZEN_N_A1, OUT, ZENG_N_A1_TABLE,  # noqa: E402
+                                 build_decoupled,
                                  build_threebit, frozen_carry0, gate_windows,
                                  leak_budget, load_valid_decoupling, merge_shards,
                                  restore, shard_slice, source_hashes,
@@ -90,7 +91,15 @@ def evaluate(p, hours, sample_min, max_step_min):
         # gate exponent moved on its own; the F1 production Hill stays frozen
         model, patch = build_decoupled(n_A1_gate=p['n_A1'], carry1=carry1)
     else:
-        model, patch = build_threebit(carry1=carry1)
+        # ARCHIVE FIDELITY: when this scan was RUN, build_threebit left the gate
+        # exponent unset, so arm A executed at the ZENG TABLE value (4.0) - the
+        # configuration the 20-point grid shows always fails.  The helper now
+        # defaults to the frozen working point (6.0), which would silently turn
+        # arm A into a DIFFERENT experiment.  Pin the historical value so the
+        # archived run stays reproducible.
+        # This scan is SUPERSEDED (see INVALIDATED_ARTIFACTS.json); the lever
+        # question is answered by scan_gate_segments.py / scan_carry_pairing.py.
+        model, patch = build_threebit(carry1=carry1, n_A1_gate=ZENG_N_A1_TABLE)
     try:
         sol = model.simulate(hours=hours, sample_min=sample_min,
                              max_step_min=max_step_min)

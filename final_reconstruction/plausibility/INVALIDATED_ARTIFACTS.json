@@ -8,6 +8,81 @@
     "guard_added": "check_local_identifiability.build_with now resolves the COMPLETE parameter vector, passes n_A1_gate explicitly and asserts the realised value; load_jobs refuses to analyse old-format runs"
   },
   "status": "INVALID_AT_FROZEN_POINT",
+  "fix_status": {
+    "summary": "The CODE has been fixed and self-checked; the ARTEFACTS listed below are still the old n=4 results and remain invalid until each is re-run.",
+    "code_fixed": {
+      "plausibility_common.build_threebit": "gained an n_A1_gate parameter; defaults to SELECTED_N_A1_GATE (6.0) when no ZENG patch is requested, otherwise to the patched value (legacy shared-slot semantics); the realised exponent is asserted",
+      "plausibility_common.build_decoupled": "defaults to SELECTED_N_A1_GATE (6.0); passing None now raises ValueError instead of silently using the table value; realised exponent and n_f1_drive asserted",
+      "plausibility_common constants": "ZENG_N_A1_TABLE = 4.0 and SELECTED_N_A1_GATE = 6.0 added; FROZEN_N_A1 kept as an alias of the TABLE value so previously recorded artefacts keep their meaning",
+      "check_rdf_collapse.Bit2RdfProbe": "builds ThreeBit51Model directly and did NOT inherit the helper default; now takes n_A1_gate explicitly (defaulting to SELECTED_N_A1_GATE) and asserts the realised value, which is recorded in every output row",
+      "scan_sharpen_vs_lengthen arm A": "pinned EXPLICITLY to ZENG_N_A1_TABLE (4.0) so the archived run stays reproducible; without the pin the new helper default would have silently turned arm A into a different experiment. The scan remains superseded."
+    },
+    "consequence_for_artefacts": {
+      "corrected_note": "An earlier version of this field said 'none has been regenerated'. That was written before the re-runs and left stale; it contradicted the completed block below. The per-group status is now explicit.",
+      "check_rdf_collapse": {
+        "n4_artefacts": ["rdf_collapse.json", "rdf_collapse.csv", "rdf_collapse_curve.csv",
+                         "rdf_collapse_rescored.json", "rdf_collapse_rescored.csv"],
+        "status": "REGENERATED at n_A1_gate=6 on 2026-09-24 (rdf_collapse.json 14:06, rescored 13:53). Current artefacts are valid; the rescored verdict carries the corrected VACUOUS statement.",
+        "n4_originals_at": "plausibility/invalidated_n4/"
+      },
+      "check_mass_balance": {
+        "n4_artefacts": ["mass_balance.json", "mass_balance.csv"],
+        "status": "REGENERATED at n_A1_gate=6 on 2026-09-24 13:40. Current artefacts are valid."
+      },
+      "check_absolute_scale": {
+        "n4_artefacts": ["absolute_scale.json", "absolute_scale_pools.csv",
+                         "absolute_scale_burden.csv", "absolute_scale_thresholds.csv"],
+        "status": "REGENERATED at n_A1_gate=6 on 2026-09-24 13:40. absolute_scale_thresholds.csv is byte-identical to the n=4 version BY CONSTRUCTION (pure au/uM/copies conversion, no trajectory dependence); the other three changed."
+      },
+      "check_threshold_margin": {
+        "n4_artefacts": ["threshold_margin/threshold_margin_baseline.json",
+                         "threshold_margin/threshold_margin_baseline.csv",
+                         "threshold_margin/threshold_margin_baseline_rescored_v2.json",
+                         "threshold_margin/threshold_margin_baseline_rescored_v2.csv"],
+        "status": "REGENERATED at n_A1_gate=6 on 2026-09-24 (main 14:07; the rescore variant was re-run from the new CSV after the first re-run left it stale). Current artefacts are valid."
+      },
+      "scan_sharpen_vs_lengthen": {
+        "n4_artefacts": ["sharpen_vs_lengthen_verdict.json", "sharpen_vs_lengthen_all.csv",
+                         "sharpen_vs_lengthen_shard00of10.csv ... shard09of10.csv"],
+        "status": "NOT regenerated, and must NOT be: the scan is superseded by scan_gate_segments / scan_carry_pairing, and arm A is deliberately pinned to the historical ZENG table value (4.0) for archive fidelity. These artefacts remain invalid at the frozen point."
+      },
+      "local_identifiability": {
+        "n4_artefacts": "the 55 npz/json run artifacts plus the original ANALYSIS_STATUS.json / RETRACTION.md",
+        "status": "DELETED, not archived - a process failure. The analysis was re-run at n_A1_gate=6 (PASSED_WITH_STEP_RESTRICTION); the record of the deleted run is RETRACTION_n4_run.md, marked as reconstructed."
+      }
+    },
+    "verification": {
+      "selfcheck": "plausibility/selfcheck_n_A1_gate.py - 17 measured assertions, all pass (C1..C11)",
+      "audit": "plausibility/audit_n_A1_gate.py + n_A1_gate_audit.json - measured semantics of the gate exponent",
+      "decoupling": "plausibility/decoupling_verification.json regenerated; passed=true; Test 1 trajectory gap exactly 0.0; new Test 3 (constructor path vs global-patch path at the selected exponent) gap 4.44e-15 with prefix gap 0.0",
+      "hashes": "plausibility_common.py 41D94B8E58AB637F7B9E2A1D7A5226D631181D5F2161EDEA6652DCE4DBE20813; decoupling implementation_sha256 59AE2A2DEAA5595163B1BC0A19F8317DA936B23BFBC0A436BB0C4B2202C8DC7F; load_valid_decoupling() returns VALID",
+      "frozen_chain": "unchanged - selected_v1 6BFD7FF6..., provisional 7CE9D5EB..., correction 484745AF..., model_threebit51.py D244D3CD..."
+    },
+    "completed": {
+      "re_runs_done": "All four checks were re-run at the frozen point (2026-09-24): check_threshold_margin --hours 300, check_absolute_scale --hours 300, check_mass_balance --hours 300, check_rdf_collapse --hours 600, plus the threshold-margin rescore.",
+      "old_artefacts_archived": "plausibility/invalidated_n4/ holds the 15 n=4 artefacts plus ARCHIVED_HASHES.json; nothing was deleted.",
+      "sweep": "Every top-level artefact was compared byte-wise against its archived n=4 twin: 13 differ (regenerated), 2 are identical BY CONSTRUCTION and were confirmed regenerated by timestamp - absolute_scale_thresholds.csv (pure au/uM/copies conversion) and rdf_collapse_curve.csv (closed-form rdf_map); neither depends on the trajectory. 0 stale.",
+      "numbers_moved": {
+        "threshold_margin_flagged": "16/18 at n=4 -> 1/18 at n=6",
+        "mass_balance_max_sequestered_fraction": "0.1608 -> 0.1844",
+        "absolute_scale_max_free_pool_uM": "40.71 -> 42.94",
+        "absolute_scale_burden_fraction": "0.05329 -> 0.05399",
+        "mass_balance_worst_rhs_relative": "8.40e-17 -> 9.64e-17 (structural identity, expected unchanged)"
+      },
+      "working_point_recorded": "mass_balance / absolute_scale / threshold_margin now carry a working_point block with n_A1_gate_effective=6.0 and n_A1_gate_is_frozen_point=true; check_rdf_collapse records gate_exponents_used=[6.0] plus a per-row n_A1_gate_effective column."
+    },
+    "new_finding_about_the_rdf_check": {
+      "problem": "check_rdf_collapse asks 'at a working point where the counter FAILS, does collapsing bit2 RDF repression rescue it?'. At n=6 the baseline already counts (certified, crossings=14, longest correct mod-8 run=48), so nothing can be rescued and rdf_collapse_is_load_bearing (computed as 'some probe is certified with crossings >= baseline') is trivially true.",
+      "action": "A vacuity guard was added: when the baseline already counts, the verdict is 'VACUOUS AT THIS WORKING POINT' and the two load-bearing fields are reported as null rather than true. The misleading string 'SUPPORTED: ... restores a correct mod-8 count' no longer appears at a working point where nothing was lost.",
+      "consequence": "The RDF-pool question remains OPEN. Re-running this check at n=6 does NOT answer it. To answer it, either run at a point where the baseline fails, or redesign the probe to force the RDF pool down/up starting from a WORKING counter."
+    },
+    "still_to_do": [
+      "Do NOT re-run scan_sharpen_vs_lengthen: superseded, and arm A is deliberately pinned to the historical n=4.",
+      "check_identifiability.py (old) now lands on n=6 through the helper but is superseded by check_local_identifiability.py; it was never executed.",
+      "The 55 local-identifiability runs are being re-integrated with the corrected constructor.",
+      "Re-derive the RDF load-bearing question with a probe that starts from a working counter."
+    ]
+  },
   "invalidated_artifacts": [
     {
       "paths": ["rdf_collapse.json", "rdf_collapse.csv", "rdf_collapse_curve.csv",
@@ -68,7 +143,11 @@
     "frozen_chain": "threebit51_selected_v1.json (6BFD7FF6...), threebit51_provisional_n6.json (7CE9D5EB...), threebit51_leak_correction.json (484745AF...) are unaffected; selected_v1 remains valid"
   },
   "already_marked": {
-    "plausibility/local_identifiability/": "status FAILED_ACCEPTANCE (see ANALYSIS_STATUS.json + RETRACTION.md). Reason: 49 of 55 runs were taken at n=4 while the analysis treated them as n=6, so the 9-column matrix is not a Jacobian at one parameter point."
+    "plausibility/local_identifiability/": {
+      "earlier_run": "FAILED_ACCEPTANCE - 49 of 55 runs were taken at n_A1_gate = 4 while the analysis treated them as n = 6, so the 9-column matrix was not a Jacobian at one parameter point.",
+      "earlier_run_record": "plausibility/local_identifiability/RETRACTION_n4_run.md - RECONSTRUCTED, not the original. The original ANALYSIS_STATUS.json / RETRACTION.md and the 55 n=4 run artifacts were DELETED by mistake when the directory was cleared before the re-run; they were not moved into invalidated_n4/ first. The reconstruction is faithful in substance but cannot claim byte identity. Recorded in that file's process_failures section.",
+      "current_status": "plausibility/local_identifiability/ANALYSIS_STATUS.json - PASSED_WITH_STEP_RESTRICTION. The analysis was re-run with the corrected constructor; the pre-merge audit confirms 49 runs at n_A1_gate = 6.0 and 6 moved (only the n_A1_gate perturbations). The 1-2 % step window converges (full-matrix change 0.012); the 5 % step does not (0.171) and must not be quoted as a local estimate."
+    }
   },
   "also_affected_by_the_same_class_of_defect": [
     "check_identifiability.py (the ORIGINAL script): run_threebit never passes n_A1_gate, so it also runs at n=4; it was never executed, so it produced no artefact",

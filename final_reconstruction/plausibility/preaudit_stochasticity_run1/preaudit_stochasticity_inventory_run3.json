@@ -1,0 +1,569 @@
+{
+  "ok": true,
+  "error": "",
+  "hours": 600.0,
+  "burn_in_h": 100.0,
+  "copies_per_au": 3462.730937,
+  "copies_per_au_source": "base.copies_per_au",
+  "cell_volume_fl": 1.0,
+  "per_state": {
+    "m_TetR": {
+      "copies_min_post_burnin": 1.3306841503119529,
+      "copies_p05_post_burnin": 1.8481726314745452,
+      "copies_median_post_burnin": 4013.8455078629227,
+      "copies_max_post_burnin": 95340.78161126979,
+      "copies_min_in_gate": 28.425026042670158,
+      "copies_median_in_gate": 214.17341618133804,
+      "copies_p05_in_gate": 34.90164977954698,
+      "is_decision_pool": false
+    },
+    "TetR_total": {
+      "copies_min_post_burnin": 51339.878296262694,
+      "copies_p05_post_burnin": 55046.87116270019,
+      "copies_median_post_burnin": 709983.9688171014,
+      "copies_max_post_burnin": 3119137.247763666,
+      "copies_min_in_gate": 51340.17706361309,
+      "copies_median_in_gate": 74484.92296110818,
+      "copies_p05_in_gate": 51430.2707641243,
+      "is_decision_pool": false
+    },
+    "m_CI": {
+      "copies_min_post_burnin": 0.4439227078282646,
+      "copies_p05_post_burnin": 0.46948819924721547,
+      "copies_median_post_burnin": 387.03855470956205,
+      "copies_max_post_burnin": 88654.26838182396,
+      "copies_min_in_gate": 69267.92356036026,
+      "copies_median_in_gate": 83644.94928908724,
+      "copies_p05_in_gate": 71260.3280572623,
+      "is_decision_pool": false
+    },
+    "CI": {
+      "copies_min_post_burnin": 24305.973147537094,
+      "copies_p05_post_burnin": 28645.630313589638,
+      "copies_median_post_burnin": 627905.5047895003,
+      "copies_max_post_burnin": 2804562.0986512173,
+      "copies_min_in_gate": 1227224.4699246527,
+      "copies_median_in_gate": 2007537.419338052,
+      "copies_p05_in_gate": 1313769.7058889212,
+      "is_decision_pool": false
+    },
+    "m_LacI": {
+      "copies_min_post_burnin": 0.3975342856588631,
+      "copies_p05_post_burnin": 0.41501426612912123,
+      "copies_median_post_burnin": 36.114308590309726,
+      "copies_max_post_burnin": 82765.639375037,
+      "copies_min_in_gate": 0.5365326725298296,
+      "copies_median_in_gate": 1.1552687844019396,
+      "copies_p05_in_gate": 0.5672296354770059,
+      "is_decision_pool": false
+    },
+    "LacI": {
+      "copies_min_post_burnin": 8587.457368891066,
+      "copies_p05_post_burnin": 9190.977096563927,
+      "copies_median_post_burnin": 128883.7003589632,
+      "copies_max_post_burnin": 1882190.1734615853,
+      "copies_min_in_gate": 169333.8322773905,
+      "copies_median_in_gate": 331495.20072104223,
+      "copies_p05_in_gate": 181331.8961114535,
+      "is_decision_pool": false
+    },
+    "b0_I": {
+      "copies_min_post_burnin": 9.861757956810429,
+      "copies_p05_post_burnin": 10.581682838207609,
+      "copies_median_post_burnin": 268.44099338398826,
+      "copies_max_post_burnin": 1899.2586517634202,
+      "copies_min_in_gate": 687.4893945335967,
+      "copies_median_in_gate": 1198.5879136589044,
+      "copies_p05_in_gate": 743.1664375230804,
+      "is_decision_pool": false
+    },
+    "b0_R": {
+      "copies_min_post_burnin": 7.666630182439488,
+      "copies_p05_post_burnin": 8.9133689800259,
+      "copies_median_post_burnin": 1067.8602438058335,
+      "copies_max_post_burnin": 24303.758011060087,
+      "copies_min_in_gate": 11693.909761801213,
+      "copies_median_in_gate": 19267.327503794186,
+      "copies_p05_in_gate": 12392.985212658721,
+      "is_decision_pool": false
+    },
+    "b0_C": {
+      "copies_min_post_burnin": 0.013134137147254397,
+      "copies_p05_post_burnin": 0.02360634692296456,
+      "copies_median_post_burnin": 3.2476549261144645,
+      "copies_max_post_burnin": 305.40278130840835,
+      "copies_min_in_gate": 141.26053334913888,
+      "copies_median_in_gate": 279.0345279968782,
+      "copies_p05_in_gate": 157.33547829797817,
+      "is_decision_pool": false
+    },
+    "b1_I": {
+      "copies_min_post_burnin": 1.5011725942453107,
+      "copies_p05_post_burnin": 1.9132037854888617,
+      "copies_median_post_burnin": 7.553932620755747,
+      "copies_max_post_burnin": 8460.645457189403,
+      "copies_min_in_gate": 718.7874236054886,
+      "copies_median_in_gate": 5591.392661750911,
+      "copies_p05_in_gate": 849.7360977949817,
+      "is_decision_pool": false
+    },
+    "b1_R": {
+      "copies_min_post_burnin": 1.5449812569076056,
+      "copies_p05_post_burnin": 1.560831357670441,
+      "copies_median_post_burnin": 1717.7280130994734,
+      "copies_max_post_burnin": 23750.088070711077,
+      "copies_min_in_gate": 8192.954271249284,
+      "copies_median_in_gate": 15252.782346260856,
+      "copies_p05_in_gate": 8743.560464239295,
+      "is_decision_pool": false
+    },
+    "b1_C": {
+      "copies_min_post_burnin": 4.6779950397186386e-05,
+      "copies_p05_post_burnin": 6.956511714697531e-05,
+      "copies_median_post_burnin": 1.0406942710919975,
+      "copies_max_post_burnin": 1052.4479596771184,
+      "copies_min_in_gate": 139.80240330281882,
+      "copies_median_in_gate": 658.8855391313359,
+      "copies_p05_in_gate": 155.47942072488806,
+      "is_decision_pool": false
+    },
+    "b2_I": {
+      "copies_min_post_burnin": 0.0010680678925472499,
+      "copies_p05_post_burnin": 0.0017474815673406779,
+      "copies_median_post_burnin": 1.9749719496649736,
+      "copies_max_post_burnin": 5414.825425315341,
+      "copies_min_in_gate": 20.027989015853613,
+      "copies_median_in_gate": 2159.816340093337,
+      "copies_p05_in_gate": 38.564754871645285,
+      "is_decision_pool": true
+    },
+    "b2_R": {
+      "copies_min_post_burnin": 0.24960755806024257,
+      "copies_p05_post_burnin": 0.25042107962814125,
+      "copies_median_post_burnin": 3105.707189889765,
+      "copies_max_post_burnin": 25858.91571256627,
+      "copies_min_in_gate": 0.2593818329249409,
+      "copies_median_in_gate": 19037.878488608978,
+      "copies_p05_in_gate": 0.2606064940056838,
+      "is_decision_pool": true
+    },
+    "b2_C": {
+      "copies_min_post_burnin": 5.080228372655116e-09,
+      "copies_p05_post_burnin": 7.345222309117991e-08,
+      "copies_median_post_burnin": 0.0285038818324331,
+      "copies_max_post_burnin": 1123.4530973200035,
+      "copies_min_in_gate": 1.6546089153619465e-05,
+      "copies_median_in_gate": 1.4844420301584735,
+      "copies_p05_in_gate": 5.810852452280116e-05,
+      "is_decision_pool": true
+    },
+    "b0_M_I": {
+      "copies_min_post_burnin": 0.7220112647087589,
+      "copies_p05_post_burnin": 0.7220494897150351,
+      "copies_median_post_burnin": 1.3000397481959594,
+      "copies_max_post_burnin": 133.27541854330104,
+      "copies_min_in_gate": 104.28934742408201,
+      "copies_median_in_gate": 125.78558583795423,
+      "copies_p05_in_gate": 107.26835037576338,
+      "is_decision_pool": false
+    },
+    "b0_M_R": {
+      "copies_min_post_burnin": 0.039051403137212774,
+      "copies_p05_post_burnin": 0.03929778325881294,
+      "copies_median_post_burnin": 0.5802510876306289,
+      "copies_max_post_burnin": 674.735382041401,
+      "copies_min_in_gate": 0.15213147102094676,
+      "copies_median_in_gate": 21.76266269285927,
+      "copies_p05_in_gate": 0.21062758508490767,
+      "is_decision_pool": false
+    },
+    "b1_M_I": {
+      "copies_min_post_burnin": 0.06856476789030241,
+      "copies_p05_post_burnin": 0.07896687745875294,
+      "copies_median_post_burnin": 0.2110713109224666,
+      "copies_max_post_burnin": 908.5167486265434,
+      "copies_min_in_gate": 23.635088244321636,
+      "copies_median_in_gate": 382.5180211463613,
+      "copies_p05_in_gate": 31.98606903330894,
+      "is_decision_pool": false
+    },
+    "b1_M_R": {
+      "copies_min_post_burnin": 0.04104965902460037,
+      "copies_p05_post_burnin": 0.04113718476902444,
+      "copies_median_post_burnin": 1.031731217846349,
+      "copies_max_post_burnin": 638.9957857894015,
+      "copies_min_in_gate": 0.2452555071611094,
+      "copies_median_in_gate": 3.8150629218221224,
+      "copies_p05_in_gate": 0.2794442523954419,
+      "is_decision_pool": false
+    },
+    "b2_M_I": {
+      "copies_min_post_burnin": 2.348762902230586e-07,
+      "copies_p05_post_burnin": 1.112145587197517e-05,
+      "copies_median_post_burnin": 0.02517929881505459,
+      "copies_max_post_burnin": 832.7463482612183,
+      "copies_min_in_gate": 32.90861695854292,
+      "copies_median_in_gate": 312.71295691612676,
+      "copies_p05_in_gate": 54.678376202103095,
+      "is_decision_pool": false
+    },
+    "b2_M_R": {
+      "copies_min_post_burnin": 0.005742875827417402,
+      "copies_p05_post_burnin": 0.005962315131742573,
+      "copies_median_post_burnin": 4.226001586025811,
+      "copies_max_post_burnin": 691.7579863092876,
+      "copies_min_in_gate": 0.0069319090460464566,
+      "copies_median_in_gate": 11.346705811020303,
+      "copies_p05_in_gate": 0.00708287833674994,
+      "is_decision_pool": false
+    },
+    "A0": {
+      "copies_min_post_burnin": 293.08204563130425,
+      "copies_p05_post_burnin": 297.71186610831603,
+      "copies_median_post_burnin": 9355.81707032038,
+      "copies_max_post_burnin": 13753.892728665187,
+      "copies_min_in_gate": 746.1082815469173,
+      "copies_median_in_gate": 4233.530791685774,
+      "copies_p05_in_gate": 912.2518855698379,
+      "is_decision_pool": false
+    },
+    "F0": {
+      "copies_min_post_burnin": 1479.6417633066858,
+      "copies_p05_post_burnin": 1760.2318660246353,
+      "copies_median_post_burnin": 18288.511229601536,
+      "copies_max_post_burnin": 21520.749665373467,
+      "copies_min_in_gate": 1479.6417721644602,
+      "copies_median_in_gate": 2561.1392540697057,
+      "copies_p05_in_gate": 1481.662631097419,
+      "is_decision_pool": false
+    },
+    "A1": {
+      "copies_min_post_burnin": 115.48453766245144,
+      "copies_p05_post_burnin": 294.2112798907148,
+      "copies_median_post_burnin": 3694.716407050142,
+      "copies_max_post_burnin": 4304.03153389232,
+      "copies_min_in_gate": 2367.9190953519173,
+      "copies_median_in_gate": 3971.8323568239352,
+      "copies_p05_in_gate": 2558.0483956398957,
+      "is_decision_pool": true
+    },
+    "F1": {
+      "copies_min_post_burnin": 40.1938807871141,
+      "copies_p05_post_burnin": 49.16077104139371,
+      "copies_median_post_burnin": 4672.013019225846,
+      "copies_max_post_burnin": 7781.991709075668,
+      "copies_min_in_gate": 125.51336332494367,
+      "copies_median_in_gate": 1021.7576667317745,
+      "copies_p05_in_gate": 150.1065310223679,
+      "is_decision_pool": true
+    },
+    "M_A1": {
+      "copies_min_post_burnin": 0.17413499405846658,
+      "copies_p05_post_burnin": 4.381593124220544,
+      "copies_median_post_burnin": 331.61586317624466,
+      "copies_max_post_burnin": 453.70242694778904,
+      "copies_min_in_gate": 335.79328220638587,
+      "copies_median_in_gate": 383.7006843119837,
+      "copies_p05_in_gate": 336.0124403001006,
+      "is_decision_pool": false
+    },
+    "M_F1": {
+      "copies_min_post_burnin": 0.0003480089368843242,
+      "copies_p05_post_burnin": 0.014657644886546603,
+      "copies_median_post_burnin": 220.50950790290898,
+      "copies_max_post_burnin": 308.66820751265334,
+      "copies_min_in_gate": 46.96143945209474,
+      "copies_median_in_gate": 253.37400514378064,
+      "copies_p05_in_gate": 62.463178457883984,
+      "is_decision_pool": false
+    }
+  },
+  "decision_pools": [
+    "b2_I",
+    "b2_R",
+    "b2_C",
+    "A1",
+    "F1"
+  ],
+  "number_verdict_rule_a_pre_registered": "RULE A (degenerate, kept for the record): the smallest decision-relevant pool (b2_C) reaches 5.08e-09 copies, below 100. Intrinsic relative noise is >~ 10 % and a continuous description of that pool is questionable.",
+  "number_verdict_rule_b_superseded": "RULE B (superseded): RULE B: the smallest decision-relevant pool (b2_I) reaches 1.97 copies, below 100. Intrinsic relative noise is >~ 10 % and a continuous description of that pool is questionable.",
+  "number_verdict": "NO SINGLE-POOL VERDICT. Every decision pool is pulsatile, so \"the smallest pool\" is not a well-defined instrument: two revisions of that statistic both misfired (see rule_revision_reason). The binding numbers are the per-pool, per-phase entries in noise_regime_per_pool; the smallest ones are: b2_C gate_phase_median = 1.48 copies (CV ~ 82 %); b2_I whole_cycle_median = 1.97 copies (CV ~ 71 %); b2_I gate_phase_minimum = 20 copies (CV ~ 22 %); b2_I gate_phase_p05 = 38.6 copies (CV ~ 16 %).",
+  "noise_regime_per_pool": {
+    "b2_I": {
+      "gate_phase_minimum": {
+        "copies": 20.027989015853613,
+        "implied_cv_pct": 22.345049842559078,
+        "uM_per_au_for_100_copies": 28.70982201682084,
+        "factor_vs_frozen": 4.993012524664493,
+        "regime": "small numbers"
+      },
+      "gate_phase_p05": {
+        "copies": 38.564754871645285,
+        "implied_cv_pct": 16.102922856972974,
+        "uM_per_au_for_100_copies": 14.909987160913305,
+        "factor_vs_frozen": 2.593041245376227,
+        "regime": "small numbers"
+      },
+      "gate_phase_median": {
+        "copies": 2159.816340093337,
+        "implied_cv_pct": 2.1517488956713025,
+        "uM_per_au_for_100_copies": 0.2662263403263035,
+        "factor_vs_frozen": 0.04630023310022669,
+        "regime": "large numbers"
+      },
+      "whole_cycle_trough": {
+        "copies": 0.0010680678925472499,
+        "regime": "STRUCTURALLY ABSENT",
+        "implied_cv_pct": null,
+        "note": "below one copy: this phase is a zero, not a noise-limited level, so it carries no CV"
+      },
+      "whole_cycle_median": {
+        "copies": 1.9749719496649736,
+        "implied_cv_pct": 71.15731201129938,
+        "uM_per_au_for_100_copies": 291.14337552872115,
+        "factor_vs_frozen": 50.633630526734116,
+        "regime": "small numbers"
+      }
+    },
+    "b2_R": {
+      "gate_phase_minimum": {
+        "copies": 0.2593818329249409,
+        "regime": "STRUCTURALLY ABSENT",
+        "implied_cv_pct": null,
+        "note": "below one copy: this phase is a zero, not a noise-limited level, so it carries no CV"
+      },
+      "gate_phase_p05": {
+        "copies": 0.2606064940056838,
+        "regime": "STRUCTURALLY ABSENT",
+        "implied_cv_pct": null,
+        "note": "below one copy: this phase is a zero, not a noise-limited level, so it carries no CV"
+      },
+      "gate_phase_median": {
+        "copies": 19037.878488608978,
+        "implied_cv_pct": 0.7247541731650112,
+        "uM_per_au_for_100_copies": 0.030202945162405695,
+        "factor_vs_frozen": 0.005252686115200991,
+        "regime": "large numbers"
+      },
+      "whole_cycle_trough": {
+        "copies": 0.24960755806024257,
+        "regime": "STRUCTURALLY ABSENT",
+        "implied_cv_pct": null,
+        "note": "below one copy: this phase is a zero, not a noise-limited level, so it carries no CV"
+      },
+      "whole_cycle_median": {
+        "copies": 3105.707189889765,
+        "implied_cv_pct": 1.7944020067461903,
+        "uM_per_au_for_100_copies": 0.1851430173043484,
+        "factor_vs_frozen": 0.03219878561814755,
+        "regime": "large numbers"
+      }
+    },
+    "b2_C": {
+      "gate_phase_minimum": {
+        "copies": 1.6546089153619465e-05,
+        "regime": "STRUCTURALLY ABSENT",
+        "implied_cv_pct": null,
+        "note": "below one copy: this phase is a zero, not a noise-limited level, so it carries no CV"
+      },
+      "gate_phase_p05": {
+        "copies": 5.810852452280116e-05,
+        "regime": "STRUCTURALLY ABSENT",
+        "implied_cv_pct": null,
+        "note": "below one copy: this phase is a zero, not a noise-limited level, so it carries no CV"
+      },
+      "gate_phase_median": {
+        "copies": 1.4844420301584735,
+        "implied_cv_pct": 82.07641501885513,
+        "uM_per_au_for_100_copies": 387.35092938497246,
+        "factor_vs_frozen": 67.36537902347347,
+        "regime": "small numbers"
+      },
+      "whole_cycle_trough": {
+        "copies": 5.080228372655116e-09,
+        "regime": "STRUCTURALLY ABSENT",
+        "implied_cv_pct": null,
+        "note": "below one copy: this phase is a zero, not a noise-limited level, so it carries no CV"
+      },
+      "whole_cycle_median": {
+        "copies": 0.0285038818324331,
+        "regime": "STRUCTURALLY ABSENT",
+        "implied_cv_pct": null,
+        "note": "below one copy: this phase is a zero, not a noise-limited level, so it carries no CV"
+      }
+    },
+    "A1": {
+      "gate_phase_minimum": {
+        "copies": 2367.9190953519173,
+        "implied_cv_pct": 2.055022447374407,
+        "uM_per_au_for_100_copies": 0.2428292424047301,
+        "factor_vs_frozen": 0.04223117259212698,
+        "regime": "large numbers"
+      },
+      "gate_phase_p05": {
+        "copies": 2558.0483956398957,
+        "implied_cv_pct": 1.9771773273674875,
+        "uM_per_au_for_100_copies": 0.22478073557172235,
+        "factor_vs_frozen": 0.03909230183856041,
+        "regime": "large numbers"
+      },
+      "gate_phase_median": {
+        "copies": 3971.8323568239352,
+        "implied_cv_pct": 1.5867355253601287,
+        "uM_per_au_for_100_copies": 0.14476945357779328,
+        "factor_vs_frozen": 0.025177296274398832,
+        "regime": "large numbers"
+      },
+      "whole_cycle_trough": {
+        "copies": 115.48453766245144,
+        "implied_cv_pct": 9.305465000334317,
+        "uM_per_au_for_100_copies": 4.979021535165699,
+        "factor_vs_frozen": 0.8659167887244694,
+        "regime": "intermediate"
+      },
+      "whole_cycle_median": {
+        "copies": 3694.716407050142,
+        "implied_cv_pct": 1.6451649389003782,
+        "uM_per_au_for_100_copies": 0.1556276413807574,
+        "factor_vs_frozen": 0.02706567676187085,
+        "regime": "large numbers"
+      }
+    },
+    "F1": {
+      "gate_phase_minimum": {
+        "copies": 125.51336332494367,
+        "implied_cv_pct": 8.92596164498012,
+        "uM_per_au_for_100_copies": 4.581185499040232,
+        "factor_vs_frozen": 0.7967279128765621,
+        "regime": "intermediate"
+      },
+      "gate_phase_p05": {
+        "copies": 150.1065310223679,
+        "implied_cv_pct": 8.162067945563654,
+        "uM_per_au_for_100_copies": 3.830612806009868,
+        "factor_vs_frozen": 0.6661935314799771,
+        "regime": "intermediate"
+      },
+      "gate_phase_median": {
+        "copies": 1021.7576667317745,
+        "implied_cv_pct": 3.128427158601877,
+        "uM_per_au_for_100_copies": 0.5627557479839742,
+        "factor_vs_frozen": 0.09787056486677811,
+        "regime": "large numbers"
+      },
+      "whole_cycle_trough": {
+        "copies": 40.1938807871141,
+        "implied_cv_pct": 15.773207985356462,
+        "uM_per_au_for_100_copies": 14.305660183585491,
+        "factor_vs_frozen": 2.487940901493129,
+        "regime": "small numbers"
+      },
+      "whole_cycle_median": {
+        "copies": 4672.013019225846,
+        "implied_cv_pct": 1.4630123015018999,
+        "uM_per_au_for_100_copies": 0.12307328717488841,
+        "factor_vs_frozen": 0.021404049943458854,
+        "regime": "large numbers"
+      }
+    }
+  },
+  "binding_small_number_entries": [
+    {
+      "pool": "b2_C",
+      "statistic": "gate_phase_median",
+      "copies": 1.4844420301584735,
+      "implied_cv_pct": 82.07641501885513
+    },
+    {
+      "pool": "b2_I",
+      "statistic": "whole_cycle_median",
+      "copies": 1.9749719496649736,
+      "implied_cv_pct": 71.15731201129938
+    },
+    {
+      "pool": "b2_I",
+      "statistic": "gate_phase_minimum",
+      "copies": 20.027989015853613,
+      "implied_cv_pct": 22.345049842559078
+    },
+    {
+      "pool": "b2_I",
+      "statistic": "gate_phase_p05",
+      "copies": 38.564754871645285,
+      "implied_cv_pct": 16.102922856972974
+    },
+    {
+      "pool": "F1",
+      "statistic": "whole_cycle_trough",
+      "copies": 40.1938807871141,
+      "implied_cv_pct": 15.773207985356462
+    }
+  ],
+  "rule_b_is_a_post_hoc_revision": true,
+  "rule_revision_reason": "Rule A (as pre-registered) fired on b2_C at 5.1e-9 copies - a pool structurally ABSENT at that instant, not noise-limited. Rule B (added after run 1) used the whole-cycle median and then folded the whole-cycle minimum back into its uM_per_au sensitivity, producing a requirement of 5.4e5x the frozen conversion for b2_I, which is nonsense because that minimum is again a zero. Rule C reports per-pool, per-phase numbers and refuses to name a single pool. Only Rule C is offered as a result; A and B are kept as the record.",
+  "uM_per_au_used_for_the_conversion": 5.75,
+  "uM_per_au_sensitivity_note": "copy numbers scale LINEARLY with uM_per_au, which is an uncalibrated interface assumption, so every copy number here inherits it. noise_regime_per_pool lists, per statistic, the uM_per_au that would be needed to lift that statistic to 100 copies.",
+  "excluded_states": {
+    "storage": [
+      "b0_S",
+      "b1_S",
+      "b2_S"
+    ],
+    "storage_reason": "the storage variable is a latched state, not a pool; converting it to copies would be a category error",
+    "immature": [
+      "b0_I_u",
+      "b0_R_u",
+      "b1_I_u",
+      "b1_R_u",
+      "b2_I_u",
+      "b2_R_u",
+      "A0_u",
+      "F0_u",
+      "A1_u",
+      "F1_u"
+    ],
+    "immature_reason": "transient intermediates, not the functional pool"
+  },
+  "certification": {
+    "certified": true,
+    "crossings": 14,
+    "gates": 14,
+    "steady_reads": 48,
+    "sequence": "123456701234567012345670123456701234567012345670",
+    "steady_reads_sufficient": true
+  },
+  "runtime_s": 259.25,
+  "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+  "source_sha256": {
+    "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+    "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+    "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+    "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+    "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+  },
+  "working_point": {
+    "model_file": "final_reconstruction/model_threebit51.py",
+    "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "zeng_n_A1_table": 4.0,
+    "selected_n_A1_gate": 6.0,
+    "live_zeng_n_A1": 4.0,
+    "source_sha256": {
+      "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+      "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+      "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+      "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+      "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+      "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+      "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+    },
+    "note": "n_A1_gate is a constructor parameter that overrides ONLY the carry-2 gate arm; leaving it unset falls back to ZENG[\"n_A\"][1] = 4.0, which is NOT the frozen working point. Every artefact must show which value was in force.",
+    "n_A1_gate_effective": 6.0,
+    "n_A1_gate_is_frozen_point": true,
+    "uM_per_au": 5.75,
+    "carry1_mrna_half_life_min": 2.0,
+    "A1_maturation_half_life_min": 32.5,
+    "F1_maturation_half_life_min": 32.5
+  }
+}

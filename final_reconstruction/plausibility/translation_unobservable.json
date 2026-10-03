@@ -1,0 +1,282 @@
+{
+  "hours": 200.0,
+  "reference_translation_h": 30.0,
+  "values": [
+    30.0,
+    45.0,
+    15.0
+  ],
+  "comparisons": {
+    "translation_h=45": {
+      "observable_state_max_abs_gap": 1.0835776720341528e-13,
+      "all_states_max_abs_gap": 0.09382802119636124,
+      "non_mrna_max_abs_gap": 2.3874235921539366e-12,
+      "flux_max_abs_gap": 1.8429702208777599e-13,
+      "mrna_per_state": {
+        "b2_M_I": {
+          "index": 34,
+          "max_abs_gap": 0.09382802119636124,
+          "scale": 0.2814840635890838,
+          "relative_gap": 0.33333333333333326,
+          "median_ratio_vs_reference": 0.6666666666666665,
+          "ratio_samples": 283
+        },
+        "M_A0": {
+          "index": 30,
+          "max_abs_gap": 0.0888888888888889,
+          "scale": 0.26666666666666666,
+          "relative_gap": 0.3333333333333334,
+          "median_ratio_vs_reference": 0.6666666666666666,
+          "ratio_samples": 6001
+        },
+        "b1_M_I": {
+          "index": 17,
+          "max_abs_gap": 0.0874537663446199,
+          "scale": 0.2623612990338561,
+          "relative_gap": 0.333333333333338,
+          "median_ratio_vs_reference": 0.6666666666666676,
+          "ratio_samples": 1047
+        },
+        "b2_M_R": {
+          "index": 40,
+          "max_abs_gap": 0.06659074729813375,
+          "scale": 0.19977224189440054,
+          "relative_gap": 0.3333333333333345,
+          "median_ratio_vs_reference": 0.666666666666667,
+          "ratio_samples": 2482
+        },
+        "b1_M_R": {
+          "index": 23,
+          "max_abs_gap": 0.0661848411035568,
+          "scale": 0.19855452331067105,
+          "relative_gap": 0.3333333333333322,
+          "median_ratio_vs_reference": 0.6666666666666672,
+          "ratio_samples": 2872
+        },
+        "b0_M_R": {
+          "index": 12,
+          "max_abs_gap": 0.06495213693598978,
+          "scale": 0.1948564108079691,
+          "relative_gap": 0.33333333333333376,
+          "median_ratio_vs_reference": 0.6666666666666666,
+          "ratio_samples": 2526
+        },
+        "M_A1": {
+          "index": 47,
+          "max_abs_gap": 0.04892417440837278,
+          "scale": 0.14677252322511583,
+          "relative_gap": 0.33333333333333903,
+          "median_ratio_vs_reference": 0.6666666666666664,
+          "ratio_samples": 5640
+        },
+        "M_F0": {
+          "index": 32,
+          "max_abs_gap": 0.04163510222598857,
+          "scale": 0.12490530667796568,
+          "relative_gap": 0.3333333333333334,
+          "median_ratio_vs_reference": 0.6666666666666666,
+          "ratio_samples": 6001
+        },
+        "b0_M_T": {
+          "index": 9,
+          "max_abs_gap": 0.03888888888888889,
+          "scale": 0.11666666666666667,
+          "relative_gap": 0.3333333333333333,
+          "median_ratio_vs_reference": 0.6666666666666667,
+          "ratio_samples": 6001
+        },
+        "b1_M_T": {
+          "index": 20,
+          "max_abs_gap": 0.03888888888888889,
+          "scale": 0.11666666666666667,
+          "relative_gap": 0.3333333333333333,
+          "median_ratio_vs_reference": 0.6666666666666665,
+          "ratio_samples": 5114
+        },
+        "b2_M_T": {
+          "index": 37,
+          "max_abs_gap": 0.03888888888888889,
+          "scale": 0.11666666666666667,
+          "relative_gap": 0.3333333333333333,
+          "median_ratio_vs_reference": 0.6666666666666666,
+          "ratio_samples": 5234
+        },
+        "M_F1": {
+          "index": 49,
+          "max_abs_gap": 0.029953830240971535,
+          "scale": 0.08986149072291442,
+          "relative_gap": 0.333333333333334,
+          "median_ratio_vs_reference": 0.6666666666666663,
+          "ratio_samples": 3309
+        },
+        "b0_M_I": {
+          "index": 6,
+          "max_abs_gap": 9.08995101411847e-16,
+          "scale": 0.03848852643102962,
+          "relative_gap": 2.361730067896315e-14,
+          "median_ratio_vs_reference": 0.9999999999999999,
+          "ratio_samples": 2990
+        }
+      }
+    },
+    "translation_h=15": {
+      "observable_state_max_abs_gap": 1.0036416142611415e-13,
+      "all_states_max_abs_gap": 0.28148406358908645,
+      "non_mrna_max_abs_gap": 4.092726157978177e-12,
+      "flux_max_abs_gap": 1.0635936575909e-13,
+      "mrna_per_state": {
+        "b2_M_I": {
+          "index": 34,
+          "max_abs_gap": 0.28148406358908645,
+          "scale": 0.2814840635890838,
+          "relative_gap": 1.0000000000000095,
+          "median_ratio_vs_reference": 2.0000000000000013,
+          "ratio_samples": 283
+        },
+        "M_A0": {
+          "index": 30,
+          "max_abs_gap": 0.26666666666666666,
+          "scale": 0.26666666666666666,
+          "relative_gap": 1.0,
+          "median_ratio_vs_reference": 2.0,
+          "ratio_samples": 6001
+        },
+        "b1_M_I": {
+          "index": 17,
+          "max_abs_gap": 0.2623612990338683,
+          "scale": 0.2623612990338561,
+          "relative_gap": 1.0000000000000466,
+          "median_ratio_vs_reference": 2.000000000000011,
+          "ratio_samples": 1047
+        },
+        "b2_M_R": {
+          "index": 40,
+          "max_abs_gap": 0.19977224189439982,
+          "scale": 0.19977224189440054,
+          "relative_gap": 0.9999999999999963,
+          "median_ratio_vs_reference": 1.9999999999999982,
+          "ratio_samples": 2482
+        },
+        "b1_M_R": {
+          "index": 23,
+          "max_abs_gap": 0.19855452331067128,
+          "scale": 0.19855452331067105,
+          "relative_gap": 1.000000000000001,
+          "median_ratio_vs_reference": 1.999999999999992,
+          "ratio_samples": 2872
+        },
+        "b0_M_R": {
+          "index": 12,
+          "max_abs_gap": 0.19485641080796964,
+          "scale": 0.1948564108079691,
+          "relative_gap": 1.0000000000000029,
+          "median_ratio_vs_reference": 1.9999999999999998,
+          "ratio_samples": 2526
+        },
+        "M_A1": {
+          "index": 47,
+          "max_abs_gap": 0.14677252322511583,
+          "scale": 0.14677252322511583,
+          "relative_gap": 1.0,
+          "median_ratio_vs_reference": 2.000000000000002,
+          "ratio_samples": 5640
+        },
+        "M_F0": {
+          "index": 32,
+          "max_abs_gap": 0.12490530667796568,
+          "scale": 0.12490530667796568,
+          "relative_gap": 1.0,
+          "median_ratio_vs_reference": 2.0,
+          "ratio_samples": 6001
+        },
+        "b0_M_T": {
+          "index": 9,
+          "max_abs_gap": 0.11666666666666667,
+          "scale": 0.11666666666666667,
+          "relative_gap": 1.0,
+          "median_ratio_vs_reference": 2.0,
+          "ratio_samples": 6001
+        },
+        "b1_M_T": {
+          "index": 20,
+          "max_abs_gap": 0.11666666666666667,
+          "scale": 0.11666666666666667,
+          "relative_gap": 1.0,
+          "median_ratio_vs_reference": 2.000000000000001,
+          "ratio_samples": 5114
+        },
+        "b2_M_T": {
+          "index": 37,
+          "max_abs_gap": 0.11666666666666667,
+          "scale": 0.11666666666666667,
+          "relative_gap": 1.0,
+          "median_ratio_vs_reference": 1.9999999999999998,
+          "ratio_samples": 5234
+        },
+        "M_F1": {
+          "index": 49,
+          "max_abs_gap": 0.08986149072291456,
+          "scale": 0.08986149072291442,
+          "relative_gap": 1.0000000000000016,
+          "median_ratio_vs_reference": 1.999999999999999,
+          "ratio_samples": 3309
+        },
+        "b0_M_I": {
+          "index": 6,
+          "max_abs_gap": 4.440892098500626e-16,
+          "scale": 0.03848852643102962,
+          "relative_gap": 1.1538223232470547e-14,
+          "median_ratio_vs_reference": 1.0,
+          "ratio_samples": 2990
+        }
+      }
+    }
+  },
+  "readout": {
+    "30.0": {
+      "certified": false,
+      "steady_sequence": "1234567012",
+      "steady_window_count": 10,
+      "cold_sequence": "123456701234567012",
+      "cold_window_count": 18,
+      "crossings": 4
+    },
+    "45.0": {
+      "certified": false,
+      "steady_sequence": "1234567012",
+      "steady_window_count": 10,
+      "cold_sequence": "123456701234567012",
+      "cold_window_count": 18,
+      "crossings": 4
+    },
+    "15.0": {
+      "certified": false,
+      "steady_sequence": "1234567012",
+      "steady_window_count": 10,
+      "cold_sequence": "123456701234567012",
+      "cold_window_count": 18,
+      "crossings": 4
+    }
+  },
+  "digital_behaviour_identical": true,
+  "readout_scope": "the compared sequence is the STEADY read set only (drop-8): 10 windows for every value of translation_h, spanning about 106 h. The run is 200 h and its crossings count covers the whole run, so the sequence and the crossing count are not expected to have the same time span.",
+  "verdict": "UNOBSERVABLE: changing translation_h by a factor of 1.5 in either direction leaves every observable state and every flux signal identical to within 1.08e-13 (numerical zero), while the mRNA levels move by up to 0.28. translation_h therefore has NO structural identifiability in this model: its value is fixed by assumption, not calibrated. The algebraic reason is that the QSS-matched chain gives p(s) = S*lm*lu/((s+lm)(s+lu)(s+gamma)), in which the translation constant cancels; only the unobserved mRNA m keeps a 1/T amplitude.",
+  "readout_note": "the readout sequence and crossing count are identical across all three translation_h values. Certification itself is not evaluated here: 200 h gives only 4 carries, below the >=16-steady-read rule.",
+  "working_point": {
+    "model_file": "final_reconstruction/model_threebit51.py",
+    "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "zeng_n_A1_table": 4.0,
+    "selected_n_A1_gate": 6.0,
+    "live_zeng_n_A1": 4.0,
+    "source_sha256": {
+      "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+      "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+      "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+      "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+      "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+      "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+      "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+    },
+    "note": "n_A1_gate is a constructor parameter that overrides ONLY the carry-2 gate arm; leaving it unset falls back to ZENG[\"n_A\"][1] = 4.0, which is NOT the frozen working point. Every artefact must show which value was in force."
+  }
+}

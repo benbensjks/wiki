@@ -1,0 +1,83 @@
+{
+  "status": "EXPLORATORY_ONLY_NOT_CERTIFIED",
+  "rule": "Int0 peak prominence=10% full range; trough between peaks; total window 20% period; no phase fitting",
+  "reads": [
+    {
+      "trough_h": 7.083333333333333,
+      "window_start_h": 6.041666666666666,
+      "window_end_h": 8.125,
+      "boundary_crossed": false,
+      "samples": 125,
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "value": 0
+    },
+    {
+      "trough_h": 17.65,
+      "window_start_h": 16.591666666666665,
+      "window_end_h": 18.708333333333332,
+      "boundary_crossed": false,
+      "samples": 127,
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "value": 0
+    }
+  ],
+  "clock_peak_times_h": [
+    2.3666666666666667,
+    12.783333333333333,
+    23.366666666666667
+  ],
+  "cold_mod8": {
+    "drop": 0,
+    "reads": 2,
+    "sequence": "00",
+    "observed_increments": false,
+    "enough_reads": false
+  },
+  "steady_mod8": {
+    "drop": 8,
+    "reads": 0,
+    "sequence": "",
+    "observed_increments": false,
+    "enough_reads": false
+  },
+  "cold_mod4": {
+    "drop": 0,
+    "reads": 2,
+    "sequence": "00",
+    "observed_increments": false,
+    "enough_reads": false
+  },
+  "steady_mod4": {
+    "drop": 4,
+    "reads": 0,
+    "sequence": "",
+    "observed_increments": false,
+    "enough_reads": false
+  },
+  "crossings": {
+    "bit0": [],
+    "bit1": [],
+    "bit2": []
+  },
+  "causal_certification": null,
+  "paired_leakage": null,
+  "limitation": "Formal carry association and paired leakage are not implemented in this preliminary version."
+}

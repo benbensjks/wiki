@@ -1,0 +1,180 @@
+{
+  "donor_parameters_per_min": {
+    "k_fwd": 0.118,
+    "k_rev": 0.08,
+    "Kinh": 0.1026,
+    "K_D_comp": 3.2,
+    "k_int": 6.0,
+    "gamma_int": 2.0,
+    "K_D_int0": 1.8,
+    "n_int0": 4.0,
+    "alpha_rep0": 0.1821,
+    "gamma_rep0": 0.0119,
+    "alpha_rdf0": 0.0325,
+    "gamma_rdf0": 0.0055,
+    "K_D_int1": 1.8,
+    "n_int1": 4.0,
+    "alpha_rep1": 0.2,
+    "gamma_rep1": 0.005,
+    "alpha_rdf1": 0.0265,
+    "gamma_rdf1": 0.005,
+    "K_rep": 1.8,
+    "n": 3.0,
+    "alpha_A0": 0.1413,
+    "gamma_A0": 0.0731,
+    "n_A0": 2.0,
+    "K_A0": 1.0,
+    "alpha_R0": 0.0979,
+    "gamma_R0": 0.0116,
+    "n_R0": 5.4332,
+    "K_R0": 2.6454,
+    "alpha_Int1": 0.3788,
+    "gamma_int1": 0.08
+  },
+  "receiver": {
+    "n_A1_gate": 6.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "clock_scale": 1.0,
+    "carry_mrna_min": 2.0,
+    "carry_maturation_min": 32.5,
+    "bit_mrna_min": 2.0,
+    "bit_maturation_min": 20.0,
+    "translation_h": 30.0,
+    "kon": 0.1,
+    "koff": 1.0,
+    "complex_decay": 1.0,
+    "receiver_uM_per_au": 5.75
+  },
+  "receiver_parameters": {
+    "k_fwd": 7.0,
+    "k_rev": 5.0,
+    "K_D_int": [
+      1.0,
+      1.0,
+      0.6
+    ],
+    "K_D_comp": 1.2,
+    "K_inh": 0.1,
+    "k_int": 6.0,
+    "gamma_int": [
+      2.0,
+      1.4,
+      2.2
+    ],
+    "alpha_rep": 3.5,
+    "gamma_rep": 0.6,
+    "K_rep": 0.85,
+    "n_rep": 3.9,
+    "alpha_rdf": 6.0,
+    "gamma_rdf": 0.8,
+    "alpha_A": [
+      8.0,
+      16.0
+    ],
+    "gamma_A": [
+      1.9,
+      2.5
+    ],
+    "K_A": [
+      0.5,
+      1.2
+    ],
+    "n_A": [
+      2.0,
+      4.0
+    ],
+    "alpha_F": [
+      3.8,
+      5.0
+    ],
+    "gamma_F": [
+      0.6,
+      1.1
+    ],
+    "K_F": [
+      0.6,
+      0.4
+    ],
+    "n_F": [
+      4.0,
+      4.0
+    ],
+    "alpha_Int": [
+      18.0,
+      38.0
+    ],
+    "K_auto1": 0.6,
+    "n_auto1": 2.0
+  },
+  "state_names": [
+    "pb0",
+    "int0",
+    "rep0",
+    "rdf0",
+    "a0",
+    "r0",
+    "pb1",
+    "int1",
+    "rep1",
+    "rdf1",
+    "A1",
+    "F1",
+    "M_A1",
+    "A1_u",
+    "M_F1",
+    "F1_u",
+    "b2_M_I",
+    "b2_I_u",
+    "b2_I",
+    "b2_M_T",
+    "b2_T_u",
+    "b2_T",
+    "b2_M_R",
+    "b2_R_u",
+    "b2_R",
+    "b2_C",
+    "b2_S"
+  ],
+  "initial_state": [
+    1.0,
+    0.0,
+    15.302521008403362,
+    0.0,
+    1.9329685362517102,
+    6.657771604876878,
+    1.0,
+    0.0,
+    40.0,
+    0.0,
+    1.2300679737379923,
+    2.3851258395219976,
+    0.10250566447816603,
+    2.4031217243422693,
+    0.08745461411580659,
+    2.0502679939256465,
+    0.0,
+    0.0,
+    0.0,
+    0.11666666666666667,
+    1.6831442143704574,
+    5.833333333333334,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "mapping": "u=C31/C31_refmax; dint0/dmin=6*u-2*int0",
+  "assumptions": [
+    "clock_scale=1 uncalibrated",
+    "no downstream feedback to upstream",
+    "1 fL cell for flux conversion"
+  ],
+  "solver": {
+    "method": "DOP853",
+    "rtol": 2e-07,
+    "atol": 2e-09,
+    "max_step_min": 0.5
+  }
+}

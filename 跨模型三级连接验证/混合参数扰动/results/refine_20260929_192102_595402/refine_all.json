@@ -1,0 +1,3090 @@
+{
+  "hours": 300.0,
+  "sample_min": 1.0,
+  "max_step_min": 1.0,
+  "rtol": 2e-07,
+  "atol": 2e-09,
+  "frozen_config": {
+    "n_A1_gate": 6.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "clock_scale": 1.0,
+    "carry_mrna_min": 2.0,
+    "carry_maturation_min": 32.5,
+    "bit_mrna_min": 2.0,
+    "bit_maturation_min": 20.0,
+    "translation_h": 30.0,
+    "kon": 0.1,
+    "koff": 1.0,
+    "complex_decay": 1.0,
+    "receiver_uM_per_au": 5.75
+  },
+  "reference": {
+    "certified": true,
+    "steady_reads": 19,
+    "clock_peak_count": 28,
+    "sequence": "1234567012345670123",
+    "margin_h": 1.1784609018563117,
+    "stage0": {
+      "reverse": 14,
+      "gate": 14,
+      "flip": 14
+    },
+    "stage1": {
+      "reverse": 7,
+      "gate": 7,
+      "flip": 7
+    }
+  },
+  "baseline_guard": {
+    "certified": true,
+    "reads": true,
+    "sequence": true,
+    "margin": true,
+    "n_A1_gate_readback": true
+  },
+  "rows": [
+    {
+      "label": "BASELINE",
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.2212344636680115,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.116818176046479,
+          "min_hold_h": 2.2212344636680115,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.38867527362533527
+        ],
+        "clock": [
+          0.0,
+          0.7697220274528427
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          2.2567737528098752
+        ],
+        "J_fwd2": [
+          0.0,
+          2.588794116662935
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9999779930211975
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 0.0,
+      "runtime_s": 56.61714329999813
+    },
+    {
+      "label": "n_A1_gate=2",
+      "tier": "B",
+      "kind": "config",
+      "target": "n_A1_gate",
+      "value": 2.0,
+      "work_point": {
+        "n_A1_gate": 2.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 2.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "xxx4567xxxx4567xxxx",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 1.9093265250318154,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 5.941524706101234,
+          "min_hold_h": 1.9093265250318154,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.3321332303348877
+        ],
+        "clock": [
+          0.0,
+          0.7697220274528427
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          1.268249110393806
+        ],
+        "J_fwd2": [
+          0.0,
+          2.2320185239960604
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9999717432386013
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 6.268927309512644,
+      "runtime_s": 62.50481420000142
+    },
+    {
+      "label": "n_A1_gate=3",
+      "tier": "B",
+      "kind": "config",
+      "target": "n_A1_gate",
+      "value": 3.0,
+      "work_point": {
+        "n_A1_gate": 3.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 3.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.110857058627815,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.234101593210767,
+          "min_hold_h": 2.110857058627815,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.34626094813678776
+        ],
+        "clock": [
+          0.0,
+          0.7697220274528427
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          2.1271911671443076
+        ],
+        "J_fwd2": [
+          0.0,
+          2.394607597021342
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9999765124980533
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 0.6232227370717427,
+      "runtime_s": 68.95827290000307
+    },
+    {
+      "label": "receiver_uM_per_au=x0.9",
+      "tier": "A",
+      "kind": "config",
+      "target": "receiver_uM_per_au",
+      "value": 5.175,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.175,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3116.4578432999997
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.1203012560793013,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.2487315371935104,
+      "margin_S2_h": 2.161465963880591,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 6.0864258989506705,
+          "min_hold_h": 1.1203012560793013,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.935470378981046,
+          "min_hold_h": 1.2487315371935104,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.181933608166048,
+          "min_hold_h": 2.161465963880591,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.00026309913103057445,
+          0.6338989048108533
+        ],
+        "g1": [
+          0.0,
+          0.41471613576775085
+        ],
+        "clock": [
+          0.0,
+          0.8049277536543079
+        ],
+        "J_rev0": [
+          0.0,
+          0.9715992727150832
+        ],
+        "J_rev1": [
+          0.0,
+          1.8436382251223695
+        ],
+        "J_rev2": [
+          0.0,
+          2.2730704624273055
+        ],
+        "J_fwd2": [
+          0.0,
+          2.6267829942437975
+        ],
+        "S0": [
+          0.0,
+          0.9919301954743597
+        ],
+        "S1": [
+          0.0,
+          0.9945797996064638
+        ],
+        "S2": [
+          0.0,
+          0.9999775994049358
+        ],
+        "int0": [
+          0.0,
+          0.6093993170332269
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 0.6806919948896906,
+      "runtime_s": 66.13091830000485
+    },
+    {
+      "label": "receiver_uM_per_au=x1.1",
+      "tier": "A",
+      "kind": "config",
+      "target": "receiver_uM_per_au",
+      "value": 6.325,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 6.325,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3809.0040307
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.2335199955867893,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.3456600858576167,
+      "margin_S2_h": 2.276162548875135,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.855170983968501,
+          "min_hold_h": 1.2335199955867893,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.80662966915569,
+          "min_hold_h": 1.3456600858576167,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.058667993986205,
+          "min_hold_h": 2.276162548875135,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.00229284043189746,
+          0.622332851235694
+        ],
+        "g1": [
+          0.0,
+          0.3537093097682635
+        ],
+        "clock": [
+          0.0,
+          0.7342271908247183
+        ],
+        "J_rev0": [
+          0.0,
+          0.8907692231044573
+        ],
+        "J_rev1": [
+          0.0,
+          1.7507581593559585
+        ],
+        "J_rev2": [
+          0.0,
+          2.2195935012105963
+        ],
+        "J_fwd2": [
+          0.0,
+          2.5171773517510183
+        ],
+        "S0": [
+          0.0,
+          0.9753375238207205
+        ],
+        "S1": [
+          0.0,
+          0.9940782414924817
+        ],
+        "S2": [
+          0.0,
+          0.9999778707462637
+        ],
+        "int0": [
+          0.0,
+          0.4986332251072132
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 0.8412032941117586,
+      "runtime_s": 62.55355860000418
+    },
+    {
+      "label": "receiver_uM_per_au=x1.5",
+      "tier": "A",
+      "kind": "config",
+      "target": "receiver_uM_per_au",
+      "value": 8.625,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 8.625,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 5194.0964054999995
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "xxxxxxxxxxxxxxxxxxx",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0,
+      "margin_h": 1.624667399789164,
+      "clock_peak_count": 28,
+      "margin_S1_h": 2.5428750589323688,
+      "margin_S2_h": 3.1375314867504542,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.314182449521347,
+          "min_hold_h": 1.624667399789164,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 5.9237916077343,
+          "min_hold_h": 2.5428750589323688,
+          "setup_samples": 26.0,
+          "hold_samples": 1.0
+        },
+        "S2": {
+          "min_setup_h": 3.1375314867504542,
+          "min_hold_h": 3.465928845278821,
+          "setup_samples": 24.0,
+          "hold_samples": 8.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.005180570046731917,
+          0.5546852639328034
+        ],
+        "g1": [
+          0.0,
+          0.021690802669519994
+        ],
+        "clock": [
+          0.0,
+          0.5977180214119705
+        ],
+        "J_rev0": [
+          0.0,
+          0.6401440815612879
+        ],
+        "J_rev1": [
+          0.0,
+          0.4100105946110971
+        ],
+        "J_rev2": [
+          0.0,
+          0.190080370024874
+        ],
+        "J_fwd2": [
+          0.0,
+          0.5892071359435792
+        ],
+        "S0": [
+          0.0,
+          0.9041760083891032
+        ],
+        "S1": [
+          0.0,
+          0.9956729883574341
+        ],
+        "S2": [
+          0.0,
+          0.9199943472583165
+        ],
+        "int0": [
+          0.0,
+          0.36568246942862725
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 1,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "stage1": {
+        "reverse": 13,
+        "gate": 0,
+        "flip": 3,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 25.96629729888628,
+      "runtime_s": 64.19629729999724
+    },
+    {
+      "label": "receiver_uM_per_au=x1.75",
+      "tier": "A",
+      "kind": "config",
+      "target": "receiver_uM_per_au",
+      "value": 10.0625,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 10.0625,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 6059.77913975
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "76x676x6765x765x765",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0,
+      "margin_h": 0.484299381333372,
+      "clock_peak_count": 28,
+      "margin_S1_h": 0.484299381333372,
+      "margin_S2_h": 4.077994856027235,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 4.976879684503886,
+          "min_hold_h": 2.3934075499318936,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 0.484299381333372,
+          "min_hold_h": 2.3687203797391447,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 4.3853384773060995,
+          "min_hold_h": 4.077994856027235,
+          "setup_samples": 25.0,
+          "hold_samples": 2.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.005187003555014951,
+          0.44155141271880305
+        ],
+        "g1": [
+          0.0,
+          0.02028184963678711
+        ],
+        "clock": [
+          0.0,
+          0.5218850539134592
+        ],
+        "J_rev0": [
+          0.0,
+          0.36898832563374184
+        ],
+        "J_rev1": [
+          0.0,
+          0.30246255379162296
+        ],
+        "J_rev2": [
+          0.0,
+          0.08631549288496149
+        ],
+        "J_fwd2": [
+          0.0,
+          0.5826481033742273
+        ],
+        "S0": [
+          0.0,
+          0.8481579383598079
+        ],
+        "S1": [
+          0.0,
+          0.9921828535228311
+        ],
+        "S2": [
+          0.0,
+          0.9076285666400078
+        ],
+        "int0": [
+          0.0,
+          0.31343141574139194
+        ]
+      },
+      "stage0": {
+        "reverse": 12,
+        "gate": 12,
+        "flip": 13,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "stage1": {
+        "reverse": 6,
+        "gate": 0,
+        "flip": 1,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 33.9990197482888,
+      "runtime_s": 63.142431399995985
+    },
+    {
+      "label": "K_A[1]=x1.5",
+      "tier": "B",
+      "kind": "zeng",
+      "target": "('K_A', 1)",
+      "value": 1.7999999999999998,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.7999999999999998,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "xxx4xxx4xxx4xxx4xxx",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.4843463576042666,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 4.059340222841797,
+          "min_hold_h": 2.4843463576042666,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.1048925757401433
+        ],
+        "clock": [
+          0.0,
+          0.7697220274528427
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          0.2643472385817778
+        ],
+        "J_fwd2": [
+          0.0,
+          1.3982998353376868
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9997858267008389
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 13,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 7.385063376488753,
+      "runtime_s": 69.77966979999474
+    },
+    {
+      "label": "K_A[1]=x1.75",
+      "tier": "B",
+      "kind": "zeng",
+      "target": "('K_A', 1)",
+      "value": 2.1,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 2.1,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "1234123412341234123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.425321807672141,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 3.1619450513534133,
+          "min_hold_h": 2.425321807672141,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.046561258361998696
+        ],
+        "clock": [
+          0.0,
+          0.7697220274528427
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          0.5576731184967714
+        ],
+        "J_fwd2": [
+          0.0,
+          1.0042929878318687
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9962727316779921
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 0,
+        "flip": 14,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 7.391238379568907,
+      "runtime_s": 61.13904899999761
+    },
+    {
+      "label": "K_F[1]=x1.5",
+      "tier": "B",
+      "kind": "zeng",
+      "target": "('K_F', 1)",
+      "value": 0.6000000000000001,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.6000000000000001,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "xxxx567xxxxxxxxxxxx",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.2196770924757736,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 3.4627284507803324,
+          "min_hold_h": 2.2196770924757736,
+          "setup_samples": 24.0,
+          "hold_samples": 7.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.41823124122820365
+        ],
+        "clock": [
+          0.0,
+          0.7697220274528427
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          1.23209595519964
+        ],
+        "J_fwd2": [
+          0.0,
+          2.4956811165292208
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9999618846750977
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 3,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 7.294824506237341,
+      "runtime_s": 70.91753009999957
+    },
+    {
+      "label": "K_F[1]=x1.75",
+      "tier": "B",
+      "kind": "zeng",
+      "target": "('K_F', 1)",
+      "value": 0.7000000000000001,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.7000000000000001,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "567xxxxxxxxxxxxxxxx",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.0336043130123613,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 2.949467447128363,
+          "min_hold_h": 2.0336043130123613,
+          "setup_samples": 24.0,
+          "hold_samples": 11.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.42756484355212626
+        ],
+        "clock": [
+          0.0,
+          0.7697220274528427
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          1.218114628546068
+        ],
+        "J_fwd2": [
+          0.0,
+          2.272188775142232
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9999140834730524
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 5,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 7.368107270450399,
+      "runtime_s": 61.37470999999641
+    },
+    {
+      "label": "clock_K_au=x0.25",
+      "tier": "A",
+      "kind": "config",
+      "target": "clock_K_au",
+      "value": 0.075,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.075,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.075,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.1433062342033367,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.1905751841217125,
+          "min_hold_h": 2.1433062342033367,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.5928636134367449
+        ],
+        "clock": [
+          0.0,
+          0.9816450593552816
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          2.3172084663125685
+        ],
+        "J_fwd2": [
+          0.0,
+          2.808619890245437
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9999688656356231
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 2.2834212021028213,
+      "runtime_s": 68.69258119999722
+    },
+    {
+      "label": "clock_K_au=x4",
+      "tier": "A",
+      "kind": "config",
+      "target": "clock_K_au",
+      "value": 1.2,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 1.2,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 1.2,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.71796433088889,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 5.701405784362009,
+          "min_hold_h": 2.71796433088889,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.060172671827148125
+        ],
+        "clock": [
+          0.0,
+          0.17280932218897121
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          1.3293699276315012
+        ],
+        "J_fwd2": [
+          0.0,
+          1.2579567253562058
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9251599393849538
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 0,
+        "flip": 7,
+        "one_to_one": false,
+        "order": false,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 3.5633024146148546,
+      "runtime_s": 65.12551530000201
+    },
+    {
+      "label": "GRID n_A1_gate=4 uM_per_au=x0.8",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 4.0,
+      "uM_fold": 0.8,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 0.8,
+      "work_point": {
+        "n_A1_gate": 4.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 4.6000000000000005,
+        "n_A1_gate_effective": 4.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 2770.1847496
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.0588904935075476,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.1772693831980128,
+      "margin_S2_h": 2.0020332902994937,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 6.1957118145157,
+          "min_hold_h": 1.0588904935075476,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.996415427055728,
+          "min_hold_h": 1.1772693831980128,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.346025879077445,
+          "min_hold_h": 2.0020332902994937,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          8.537570911633548e-05,
+          0.6397180156130462
+        ],
+        "g1": [
+          0.0,
+          0.3860328521228818
+        ],
+        "clock": [
+          0.0,
+          0.8392727520793859
+        ],
+        "J_rev0": [
+          0.0,
+          1.0178917040130693
+        ],
+        "J_rev1": [
+          0.0,
+          1.7312324831998538
+        ],
+        "J_rev2": [
+          0.0,
+          2.134629542137999
+        ],
+        "J_fwd2": [
+          0.0,
+          2.451816887372397
+        ],
+        "S0": [
+          0.0,
+          0.9956228589481614
+        ],
+        "S1": [
+          0.0,
+          0.9946314837229591
+        ],
+        "S2": [
+          0.0,
+          0.9999756797118724
+        ],
+        "int0": [
+          0.0,
+          0.6855325211503033
+        ]
+      },
+      "stage0": {
+        "reverse": 28,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 1.5827564734492892,
+      "runtime_s": 68.4087137999959
+    },
+    {
+      "label": "GRID n_A1_gate=4 uM_per_au=x1",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 4.0,
+      "uM_fold": 1.0,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 1.0,
+      "work_point": {
+        "n_A1_gate": 4.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 4.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.161980909819576,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.179531913551216,
+          "min_hold_h": 2.161980909819576,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.36044033089578287
+        ],
+        "clock": [
+          0.0,
+          0.7697220274528427
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          2.1841327729088786
+        ],
+        "J_fwd2": [
+          0.0,
+          2.4711826641858186
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9999773045695717
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 0.35387025518565995,
+      "runtime_s": 64.48535120000452
+    },
+    {
+      "label": "GRID n_A1_gate=4 uM_per_au=x1.25",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 4.0,
+      "uM_fold": 1.25,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 1.25,
+      "work_point": {
+        "n_A1_gate": 4.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 7.1875,
+        "n_A1_gate_effective": 4.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 4328.413671249999
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.3249981317140112,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.5001737947455247,
+      "margin_S2_h": 2.338322907405722,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.670059837880214,
+          "min_hold_h": 1.3249981317140112,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.638224727665035,
+          "min_hold_h": 1.5001737947455247,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.018666127833029,
+          "min_hold_h": 2.338322907405722,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.005169226360480798,
+          0.6065893163671613
+        ],
+        "g1": [
+          0.0,
+          0.26391072286714423
+        ],
+        "clock": [
+          0.0,
+          0.6814761217507549
+        ],
+        "J_rev0": [
+          0.0,
+          0.8154153273340196
+        ],
+        "J_rev1": [
+          0.0,
+          1.3827455990793835
+        ],
+        "J_rev2": [
+          0.0,
+          1.8543275485702988
+        ],
+        "J_fwd2": [
+          0.0,
+          2.1030645880942
+        ],
+        "S0": [
+          0.0,
+          0.9526840659933362
+        ],
+        "S1": [
+          0.0,
+          0.9932756196771286
+        ],
+        "S2": [
+          0.0,
+          0.9999751372042106
+        ],
+        "int0": [
+          0.0,
+          0.4388090529964871
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 2.409626565602472,
+      "runtime_s": 60.15814849999879
+    },
+    {
+      "label": "GRID n_A1_gate=4 uM_per_au=x2",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 4.0,
+      "uM_fold": 2.0,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 2.0,
+      "work_point": {
+        "n_A1_gate": 4.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 11.5,
+        "n_A1_gate_effective": 4.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 6925.461874
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "xxx7xxx7x7x7x7x7x7x",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0,
+      "margin_h": 1.559170303546857,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.8335449960213577,
+      "margin_S2_h": 2.675039882820087,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 4.128590766665049,
+          "min_hold_h": 1.559170303546857,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.649788337311978,
+          "min_hold_h": 1.8335449960213577,
+          "setup_samples": 26.0,
+          "hold_samples": 1.0
+        },
+        "S2": {
+          "min_setup_h": 3.4334933221990127,
+          "min_hold_h": 2.675039882820087,
+          "setup_samples": 24.0,
+          "hold_samples": 6.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.00519104268159846,
+          0.33106125216244403
+        ],
+        "g1": [
+          0.0,
+          0.023793231861432573
+        ],
+        "clock": [
+          0.0,
+          0.45503631899628644
+        ],
+        "J_rev0": [
+          0.0,
+          0.1721959875092454
+        ],
+        "J_rev1": [
+          0.0,
+          0.0771367795363248
+        ],
+        "J_rev2": [
+          0.0,
+          0.7281999732539581
+        ],
+        "J_fwd2": [
+          0.0,
+          0.4227927290835217
+        ],
+        "S0": [
+          0.0,
+          0.8050456900489299
+        ],
+        "S1": [
+          0.0,
+          0.9751383471503304
+        ],
+        "S2": [
+          0.0,
+          0.9884050585706369
+        ],
+        "int0": [
+          0.0,
+          0.27413248666006684
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 13,
+        "flip": 1,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "stage1": {
+        "reverse": 0,
+        "gate": 0,
+        "flip": 3,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 37.070534756697825,
+      "runtime_s": 66.36640179999813
+    },
+    {
+      "label": "GRID n_A1_gate=6 uM_per_au=x0.8",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 6.0,
+      "uM_fold": 0.8,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 0.8,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 4.6000000000000005,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 2770.1847496
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.0588904935075476,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.1772693831980128,
+      "margin_S2_h": 2.0789624011834213,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 6.1957118145157,
+          "min_hold_h": 1.0588904935075476,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.996415427055728,
+          "min_hold_h": 1.1772693831980128,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.262931110842288,
+          "min_hold_h": 2.0789624011834213,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          8.537570911633548e-05,
+          0.6397180156130462
+        ],
+        "g1": [
+          0.0,
+          0.40982013835554115
+        ],
+        "clock": [
+          0.0,
+          0.8392727520793859
+        ],
+        "J_rev0": [
+          0.0,
+          1.0178917040130693
+        ],
+        "J_rev1": [
+          0.0,
+          1.7312324831998538
+        ],
+        "J_rev2": [
+          0.0,
+          2.2250281159028233
+        ],
+        "J_fwd2": [
+          0.0,
+          2.57749054583025
+        ],
+        "S0": [
+          0.0,
+          0.9956228589481614
+        ],
+        "S1": [
+          0.0,
+          0.9946314837229591
+        ],
+        "S2": [
+          0.0,
+          0.9999771187336592
+        ],
+        "int0": [
+          0.0,
+          0.6855325211503033
+        ]
+      },
+      "stage0": {
+        "reverse": 28,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 1.5551998392833433,
+      "runtime_s": 62.097356899997976
+    },
+    {
+      "label": "GRID n_A1_gate=6 uM_per_au=x1.25",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 6.0,
+      "uM_fold": 1.25,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 1.25,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 7.1875,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 4328.413671249999
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.3249981317140112,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.5001737947455247,
+      "margin_S2_h": 2.4502056510532775,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.670059837880214,
+          "min_hold_h": 1.3249981317140112,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.638224727665035,
+          "min_hold_h": 1.5001737947455247,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 5.877750259322454,
+          "min_hold_h": 2.4502056510532775,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.005169226360480798,
+          0.6065893163671613
+        ],
+        "g1": [
+          0.0,
+          0.26715690363113387
+        ],
+        "clock": [
+          0.0,
+          0.6814761217507549
+        ],
+        "J_rev0": [
+          0.0,
+          0.8154153273340196
+        ],
+        "J_rev1": [
+          0.0,
+          1.3827455990793835
+        ],
+        "J_rev2": [
+          0.0,
+          2.041208764609734
+        ],
+        "J_fwd2": [
+          0.0,
+          2.273780404291966
+        ],
+        "S0": [
+          0.0,
+          0.9526840659933362
+        ],
+        "S1": [
+          0.0,
+          0.9932756196771286
+        ],
+        "S2": [
+          0.0,
+          0.9999734997333443
+        ],
+        "int0": [
+          0.0,
+          0.4388090529964871
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 2.409626565602472,
+      "runtime_s": 69.67659989999811
+    },
+    {
+      "label": "GRID n_A1_gate=6 uM_per_au=x2",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 6.0,
+      "uM_fold": 2.0,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 2.0,
+      "work_point": {
+        "n_A1_gate": 6.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 11.5,
+        "n_A1_gate_effective": 6.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 6925.461874
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "xxxxxxxxxxxxxxx7x7x",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0,
+      "margin_h": 1.559170303546857,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.8335449960213577,
+      "margin_S2_h": 3.1248969395390134,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 4.128590766665049,
+          "min_hold_h": 1.559170303546857,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.649788337311978,
+          "min_hold_h": 1.8335449960213577,
+          "setup_samples": 26.0,
+          "hold_samples": 1.0
+        },
+        "S2": {
+          "min_setup_h": 5.340103060460976,
+          "min_hold_h": 3.1248969395390134,
+          "setup_samples": 17.0,
+          "hold_samples": 10.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.00519104268159846,
+          0.33106125216244403
+        ],
+        "g1": [
+          0.0,
+          0.00603160771294716
+        ],
+        "clock": [
+          0.0,
+          0.45503631899628644
+        ],
+        "J_rev0": [
+          0.0,
+          0.1721959875092454
+        ],
+        "J_rev1": [
+          0.0,
+          0.0771367795363248
+        ],
+        "J_rev2": [
+          0.0,
+          0.0015639166269287243
+        ],
+        "J_fwd2": [
+          0.0,
+          0.13635468346421012
+        ],
+        "S0": [
+          0.0,
+          0.8050456900489299
+        ],
+        "S1": [
+          0.0,
+          0.9751383471503304
+        ],
+        "S2": [
+          0.0,
+          0.7285042026708826
+        ],
+        "int0": [
+          0.0,
+          0.27413248666006684
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 13,
+        "flip": 1,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "stage1": {
+        "reverse": 0,
+        "gate": 0,
+        "flip": 1,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 37.070534756697825,
+      "runtime_s": 56.38201850000041
+    },
+    {
+      "label": "GRID n_A1_gate=8 uM_per_au=x0.8",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 8.0,
+      "uM_fold": 0.8,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 0.8,
+      "work_point": {
+        "n_A1_gate": 8.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 4.6000000000000005,
+        "n_A1_gate_effective": 8.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 2770.1847496
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.0588904935075476,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.1772693831980128,
+      "margin_S2_h": 2.1204659934492405,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 6.1957118145157,
+          "min_hold_h": 1.0588904935075476,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.996415427055728,
+          "min_hold_h": 1.1772693831980128,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.216437332550925,
+          "min_hold_h": 2.1204659934492405,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          8.537570911633548e-05,
+          0.6397180156130462
+        ],
+        "g1": [
+          0.0,
+          0.43332754606787954
+        ],
+        "clock": [
+          0.0,
+          0.8392727520793859
+        ],
+        "J_rev0": [
+          0.0,
+          1.0178917040130693
+        ],
+        "J_rev1": [
+          0.0,
+          1.7312324831998538
+        ],
+        "J_rev2": [
+          0.0,
+          2.2816793083059363
+        ],
+        "J_fwd2": [
+          0.0,
+          2.6632180911605956
+        ],
+        "S0": [
+          0.0,
+          0.9956228589481614
+        ],
+        "S1": [
+          0.0,
+          0.9946314837229591
+        ],
+        "S2": [
+          0.0,
+          0.9999776900102022
+        ],
+        "int0": [
+          0.0,
+          0.6855325211503033
+        ]
+      },
+      "stage0": {
+        "reverse": 28,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 1.5551998392833433,
+      "runtime_s": 71.36118140000326
+    },
+    {
+      "label": "GRID n_A1_gate=8 uM_per_au=x1",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 8.0,
+      "uM_fold": 1.0,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 1.0,
+      "work_point": {
+        "n_A1_gate": 8.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 5.75,
+        "n_A1_gate_effective": 8.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 3462.730937
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.254570487997711,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 6.081187441059598,
+          "min_hold_h": 2.254570487997711,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.0008147234503385048,
+          0.6287645793472647
+        ],
+        "g1": [
+          0.0,
+          0.4155134100015045
+        ],
+        "clock": [
+          0.0,
+          0.7697220274528427
+        ],
+        "J_rev0": [
+          0.0,
+          0.9315872793481188
+        ],
+        "J_rev1": [
+          0.0,
+          1.8258333311481794
+        ],
+        "J_rev2": [
+          0.0,
+          2.3106113154395618
+        ],
+        "J_fwd2": [
+          0.0,
+          2.678198782891746
+        ],
+        "S0": [
+          0.0,
+          0.9854514225859179
+        ],
+        "S1": [
+          0.0,
+          0.9944267385843951
+        ],
+        "S2": [
+          0.0,
+          0.9999783148937705
+        ],
+        "int0": [
+          0.0,
+          0.5484815380117275
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 0.22759811779932326,
+      "runtime_s": 61.00891359999514
+    },
+    {
+      "label": "GRID n_A1_gate=8 uM_per_au=x1.25",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 8.0,
+      "uM_fold": 1.25,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 1.25,
+      "work_point": {
+        "n_A1_gate": 8.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 7.1875,
+        "n_A1_gate_effective": 8.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 4328.413671249999
+      },
+      "certified": true,
+      "steady_reads": 19,
+      "increments_mod8": true,
+      "sequence": "1234567012345670123",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0,
+      "margin_h": 1.3249981317140112,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.5001737947455247,
+      "margin_S2_h": 2.5112013312966717,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.670059837880214,
+          "min_hold_h": 1.3249981317140112,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.638224727665035,
+          "min_hold_h": 1.5001737947455247,
+          "setup_samples": 26.0,
+          "hold_samples": 27.0
+        },
+        "S2": {
+          "min_setup_h": 5.8076533620345,
+          "min_hold_h": 2.5112013312966717,
+          "setup_samples": 24.0,
+          "hold_samples": 27.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.005169226360480798,
+          0.6065893163671613
+        ],
+        "g1": [
+          0.0,
+          0.27153491572971106
+        ],
+        "clock": [
+          0.0,
+          0.6814761217507549
+        ],
+        "J_rev0": [
+          0.0,
+          0.8154153273340196
+        ],
+        "J_rev1": [
+          0.0,
+          1.3827455990793835
+        ],
+        "J_rev2": [
+          0.0,
+          2.105837751821947
+        ],
+        "J_fwd2": [
+          0.0,
+          2.3567593054656837
+        ],
+        "S0": [
+          0.0,
+          0.9526840659933362
+        ],
+        "S1": [
+          0.0,
+          0.9932756196771286
+        ],
+        "S2": [
+          0.0,
+          0.9999709040173211
+        ],
+        "int0": [
+          0.0,
+          0.4388090529964871
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "stage1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true,
+        "order": true,
+        "alt": true
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 2.61324509306103,
+      "runtime_s": 70.13769540000067
+    },
+    {
+      "label": "GRID n_A1_gate=8 uM_per_au=x2",
+      "tier": "GRID",
+      "kind": "grid",
+      "n_A1_gate": 8.0,
+      "uM_fold": 2.0,
+      "target": "n_A1_gate x receiver_uM_per_au",
+      "value": 2.0,
+      "work_point": {
+        "n_A1_gate": 8.0,
+        "clock_K_au": 0.3,
+        "clock_n": 2.0,
+        "clock_scale": 1.0,
+        "carry_mrna_min": 2.0,
+        "carry_maturation_min": 32.5,
+        "bit_mrna_min": 2.0,
+        "bit_maturation_min": 20.0,
+        "translation_h": 30.0,
+        "kon": 0.1,
+        "koff": 1.0,
+        "complex_decay": 1.0,
+        "receiver_uM_per_au": 11.5,
+        "n_A1_gate_effective": 8.0,
+        "clock_K_effective": 0.3,
+        "k_complex": 0.06,
+        "K_A1": 1.2,
+        "K_F1": 0.4,
+        "K_D_int0": 1.0,
+        "K_inh": 0.1,
+        "K_D_comp": 1.2,
+        "copies_per_au": 6925.461874
+      },
+      "certified": false,
+      "steady_reads": 19,
+      "increments_mod8": false,
+      "sequence": "x3x3x3x3x3x3x3x3x3x",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0,
+      "margin_h": 1.559170303546857,
+      "clock_peak_count": 28,
+      "margin_S1_h": 1.8335449960213577,
+      "margin_S2_h": null,
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 4.128590766665049,
+          "min_hold_h": 1.559170303546857,
+          "setup_samples": 27.0,
+          "hold_samples": 27.0
+        },
+        "S1": {
+          "min_setup_h": 6.649788337311978,
+          "min_hold_h": 1.8335449960213577,
+          "setup_samples": 26.0,
+          "hold_samples": 1.0
+        },
+        "S2": {
+          "min_setup_h": null,
+          "min_hold_h": null,
+          "setup_samples": 0.0,
+          "hold_samples": 0.0
+        }
+      },
+      "signal_ranges": {
+        "g0": [
+          0.00519104268159846,
+          0.33106125216244403
+        ],
+        "g1": [
+          0.0,
+          0.0017774463749668566
+        ],
+        "clock": [
+          0.0,
+          0.45503631899628644
+        ],
+        "J_rev0": [
+          0.0,
+          0.1721959875092454
+        ],
+        "J_rev1": [
+          0.0,
+          0.0771367795363248
+        ],
+        "J_rev2": [
+          0.0,
+          2.204585122404241e-09
+        ],
+        "J_fwd2": [
+          0.0,
+          0.013152420701111129
+        ],
+        "S0": [
+          0.0,
+          0.8050456900489299
+        ],
+        "S1": [
+          0.0,
+          0.9751383471503304
+        ],
+        "S2": [
+          0.0,
+          0.2322787115912774
+        ],
+        "int0": [
+          0.0,
+          0.27413248666006684
+        ]
+      },
+      "stage0": {
+        "reverse": 14,
+        "gate": 13,
+        "flip": 1,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "stage1": {
+        "reverse": 0,
+        "gate": 0,
+        "flip": 0,
+        "one_to_one": false,
+        "order": false,
+        "alt": false
+      },
+      "error": null,
+      "max_abs_gap_vs_baseline": 37.070534756697825,
+      "runtime_s": 62.90719209999952
+    }
+  ]
+}

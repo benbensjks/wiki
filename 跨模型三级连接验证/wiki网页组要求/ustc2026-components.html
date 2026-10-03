@@ -1,0 +1,1698 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>组件选型图鉴</title>
+<style>
+/* ============================================================
+   组件选型图鉴 — USTC 2026 iGEM Wiki
+   单文件、零外部依赖：不联网、不装字体、不需要服务器，
+   双击就能在任何浏览器打开。
+   配色取自 wiki 自身的 src/styles/variables.css。
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+
+  --bg:            #ffffff;
+  --bg-alt:        #f8f9fa;
+  --surface:       #ffffff;
+  --border:        #dee2e6;
+  --border-light:  #e9ecef;
+  --fg:            #212529;
+  --fg-muted:      #6c757d;
+  --fg-faint:      #adb5bd;
+  --primary:       #1a5276;
+  --primary-light: #2980b9;
+  --primary-dark:  #0e2f44;
+  --accent:        #d3701a;
+  --accent-light:  #f39c12;
+  --ok:            #1e8449;
+  --err:           #c0392b;
+  --info:          #2471a3;
+  --nav-start:     #194955;
+  --nav-end:       #ef912b;
+
+  --font-sans: system-ui, -apple-system, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+  --font-mono: 'Cascadia Mono', Consolas, 'Courier New', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,.07);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg:            #0f161b;
+    --bg-alt:        #17222a;
+    --surface:       #17222a;
+    --border:        #2b3a44;
+    --border-light:  #22303a;
+    --fg:            #e6ecf0;
+    --fg-muted:      #9db0bc;
+    --fg-faint:      #6d808d;
+    --primary:       #74b6dc;
+    --primary-light: #93cbea;
+    --primary-dark:  #0a1a24;
+    --accent:        #f0a05a;
+    --accent-light:  #f6bb85;
+    --ok:            #4ec27e;
+    --err:           #ef6b5c;
+    --info:          #63aee0;
+    --nav-start:     #12333c;
+    --nav-end:       #7a4a16;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+    --shadow-md: 0 4px 6px rgba(0,0,0,.45);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg:            #0f161b;
+  --bg-alt:        #17222a;
+  --surface:       #17222a;
+  --border:        #2b3a44;
+  --border-light:  #22303a;
+  --fg:            #e6ecf0;
+  --fg-muted:      #9db0bc;
+  --fg-faint:      #6d808d;
+  --primary:       #74b6dc;
+  --primary-light: #93cbea;
+  --primary-dark:  #0a1a24;
+  --accent:        #f0a05a;
+  --accent-light:  #f6bb85;
+  --ok:            #4ec27e;
+  --err:           #ef6b5c;
+  --info:          #63aee0;
+  --nav-start:     #12333c;
+  --nav-end:       #7a4a16;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-md: 0 4px 6px rgba(0,0,0,.45);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,.5);
+}
+
+* { box-sizing: border-box; }
+
+/* 预览里的显隐一律用 hidden 属性切换（和真实组件保持同样的做法），
+   但下面几处容器的 display 是 flex / grid，需要这条规则让 hidden 真正生效 */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  padding-block: 0 72px;
+  padding-inline: 20px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1120px; margin-inline: auto; }
+
+/* ── 页头 ───────────────────────────────────────────────── */
+.masthead {
+  border-bottom: 1px solid var(--border);
+  padding-block: 52px 34px;
+  margin-bottom: 30px;
+}
+.eyebrow {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+h1 {
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+  margin: 0 0 16px;
+}
+.standfirst {
+  font-size: 17px;
+  color: var(--fg-muted);
+  max-width: 64ch;
+  margin: 0 0 24px;
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 13px;
+  color: var(--fg-muted);
+}
+.meta span { display: inline-flex; align-items: center; gap: 6px; }
+.swatch {
+  width: 10px; height: 10px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--nav-start), var(--nav-end));
+  flex: none;
+}
+
+/* ── 怎么用 ─────────────────────────────────────────────── */
+.howto {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  margin-bottom: 34px;
+}
+.howto h2 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  margin: 0 0 12px;
+}
+.howto ol { margin: 0; padding-left: 20px; display: grid; gap: 7px; }
+.howto li { font-size: 14.5px; }
+.howto strong { font-weight: 600; }
+
+/* ── 分区 ───────────────────────────────────────────────── */
+.section { margin-bottom: 60px; }
+.section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--fg);
+}
+.section__head h2 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin: 0;
+}
+.section__note {
+  font-size: 13.5px;
+  color: var(--fg-muted);
+}
+
+/* ── 组件条目 ───────────────────────────────────────────── */
+.comp {
+  display: grid;
+  grid-template-columns: minmax(0, 330px) minmax(0, 1fr);
+  gap: 30px;
+  padding-block: 30px;
+  border-bottom: 1px solid var(--border-light);
+}
+.comp:first-of-type { padding-top: 0; }
+.comp:last-of-type { border-bottom: 0; }
+
+@media (max-width: 800px) {
+  .comp { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}
+
+.stage {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+  min-width: 0;
+  overflow: hidden;
+  align-self: start;
+}
+
+.comp__body { min-width: 0; }
+.comp__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 6px;
+}
+.comp__title h3 {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin: 0;
+}
+.comp__file {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--fg-faint);
+  margin: 0 0 12px;
+}
+.comp__lede {
+  font-size: 15px;
+  color: var(--fg);
+  margin: 0 0 18px;
+  max-width: 68ch;
+}
+
+.chip {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.chip--live { color: var(--ok); }
+.chip--idle { color: var(--fg-muted); }
+
+/* 说明用的定义列表 */
+.facts { margin: 0; display: grid; gap: 13px; }
+.facts dt {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 3px;
+}
+.facts dd {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--fg-muted);
+  max-width: 68ch;
+}
+.facts dd strong { color: var(--fg); font-weight: 600; }
+.facts ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+.facts li { position: relative; padding-left: 16px; }
+.facts li::before {
+  content: "";
+  position: absolute;
+  left: 1px; top: .68em;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+details {
+  margin-top: 14px;
+  font-size: 13px;
+}
+summary {
+  cursor: pointer;
+  color: var(--primary);
+  font-weight: 500;
+  width: fit-content;
+}
+summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
+details p { margin: 8px 0 0; color: var(--fg-muted); max-width: 68ch; }
+details code, .howto code, .facts code, .flow code {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+/* ════════════════════════════════════════════════════════════
+   以下是各组件的「预览台」——还原真实观感，便于看图选型
+   ════════════════════════════════════════════════════════════ */
+
+/* Accordion */
+.pv-acc {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.pv-acc:last-child { margin-bottom: 0; }
+.pv-acc__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--bg-alt);
+  border: 0;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--fg);
+  text-align: left;
+  cursor: pointer;
+}
+.pv-acc__head[aria-expanded="true"] {
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+.pv-acc__body { padding: 12px 14px; font-size: 13px; color: var(--fg-muted); }
+.pv-acc__caret { color: var(--fg-muted); font-size: 10px; }
+
+/* Tabs */
+.pv-tabs__list {
+  display: flex;
+  gap: 2px;
+  border-bottom: 2px solid var(--border);
+  overflow-x: auto;
+}
+.pv-tabs__tab {
+  padding: 8px 16px;
+  margin-bottom: -2px;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--fg-muted);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.pv-tabs__tab[aria-selected="true"] {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: 600;
+}
+.pv-tabs__panel {
+  padding: 14px 2px 0;
+  font-size: 13px;
+  color: var(--fg-muted);
+  min-height: 44px;
+}
+
+/* Card */
+.pv-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px,100%),1fr)); gap: 12px; }
+.pv-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+}
+.pv-card__bar { height: 46px; border-radius: var(--radius-sm); background: linear-gradient(120deg, var(--primary), var(--primary-light)); margin-bottom: 10px; }
+.pv-card__t { font-size: 13.5px; font-weight: 600; margin: 0 0 4px; }
+.pv-card__d { font-size: 12px; color: var(--fg-muted); margin: 0; }
+.pv-card--hl { border-left: 4px solid var(--accent); background: var(--bg-alt); }
+
+/* Timeline */
+.pv-tl { display: grid; }
+.pv-tl__row { display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 12px; }
+.pv-tl__rail { display: flex; flex-direction: column; align-items: center; padding-top: 3px; }
+.pv-tl__dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 2px var(--bg-alt), 0 0 0 3px var(--primary);
+  flex: none;
+}
+.pv-tl__line { width: 2px; flex: 1; min-height: 26px; background: var(--border); }
+.pv-tl__body { padding-bottom: 16px; }
+.pv-tl__date { font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--fg-faint); }
+.pv-tl__t { font-size: 13.5px; font-weight: 600; margin: 2px 0; }
+.pv-tl__d { font-size: 12px; color: var(--fg-muted); margin: 0; }
+
+/* QuoteCallout */
+.pv-quote {
+  border-left: 4px solid var(--accent);
+  background: var(--bg-alt);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 16px 18px;
+}
+.pv-quote p { margin: 0 0 8px; font-style: italic; font-size: 14px; color: var(--fg); }
+.pv-quote cite { font-size: 12px; color: var(--fg-muted); font-style: normal; }
+
+/* DataTable */
+.pv-table-scroll { overflow-x: auto; min-width: 0; }
+.pv-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.pv-table th {
+  text-align: left;
+  padding: 7px 11px;
+  border-bottom: 2px solid var(--border);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.pv-table td { padding: 7px 11px; border-bottom: 1px solid var(--border-light); color: var(--fg-muted); }
+.pv-table tr:nth-child(even) td { background: var(--bg-alt); }
+.pv-sort { color: var(--primary); font-size: 9px; margin-left: 4px; }
+
+/* Badge */
+.pv-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.pv-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.pv-badge--default { background: var(--bg); color: var(--fg-muted); border-color: var(--border); }
+.pv-badge--primary { background: var(--primary); color: #fff; }
+.pv-badge--success { background: var(--ok); color: #fff; }
+.pv-badge--warning { background: var(--accent-light); color: #40270a; }
+.pv-badge--error   { background: var(--err); color: #fff; }
+.pv-badge--info    { background: var(--info); color: #fff; }
+.pv-badge--outline { background: transparent; color: var(--primary); border-color: var(--primary); }
+
+/* ProgressBar */
+.pv-prog { display: grid; gap: 14px; }
+.pv-prog__row { display: flex; align-items: center; gap: 12px; }
+.pv-prog__label { font-size: 12.5px; font-weight: 500; min-width: 86px; }
+.pv-prog__track {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+  min-width: 0;
+}
+.pv-prog__fill { height: 100%; border-radius: 999px; background: var(--primary); }
+.pv-prog__num { font-size: 11.5px; color: var(--fg-muted); font-variant-numeric: tabular-nums; min-width: 34px; text-align: right; }
+
+/* ImageGallery */
+.pv-gal { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+@media (max-width: 480px) { .pv-gal { grid-template-columns: repeat(2, 1fr); } }
+.pv-gal__cell {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+.pv-gal__cell--b { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%); }
+.pv-gal__cell--c { background: linear-gradient(135deg, var(--nav-start) 0%, #2d7f7f 100%); }
+
+/* Carousel */
+.pv-car { position: relative; }
+.pv-car__viewport {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 7;
+  background: linear-gradient(120deg, var(--nav-start), var(--primary-light));
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+.pv-car__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(0,0,0,.45);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+.pv-car__btn:hover { background: rgba(0,0,0,.65); }
+.pv-car__btn--prev { left: 10px; }
+.pv-car__btn--next { right: 10px; }
+.pv-car__foot { text-align: center; font-size: 11.5px; color: var(--fg-muted); margin-top: 8px; font-variant-numeric: tabular-nums; }
+
+/* Modal */
+.stage--modal { position: relative; }
+.pv-modal__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  width: fit-content;
+  margin-inline: auto;
+  cursor: pointer;
+}
+.pv-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 20, 26, .55);
+  border-radius: var(--radius-md);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+.pv-modal__box {
+  margin: 0;
+  max-width: 260px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  background: var(--surface);
+  padding: 18px;
+}
+.pv-modal__box h4 { margin: 0 0 6px; font-size: 14px; }
+.pv-modal__box p { margin: 0 0 14px; font-size: 12.5px; color: var(--fg-muted); }
+.pv-modal__close {
+  font-size: 12.5px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--fg);
+  cursor: pointer;
+}
+
+/* Avatar */
+.pv-avs { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.pv-av {
+  position: relative;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  flex: none;
+}
+.pv-av--sm { width: 28px; height: 28px; font-size: 10px; }
+.pv-av--md { width: 40px; height: 40px; font-size: 12px; }
+.pv-av--lg { width: 56px; height: 56px; font-size: 16px; }
+.pv-av--xl { width: 72px; height: 72px; font-size: 21px; }
+.pv-av--h0 { background: #d6eaf3; color: #154360; }
+.pv-av--h1 { background: #d4efdf; color: #145a32; }
+.pv-av--h2 { background: #fae5d3; color: #7e4a1c; }
+.pv-av--h3 { background: #e8daef; color: #5b2c6f; }
+.pv-av__dot {
+  position: absolute;
+  right: 0; bottom: 0;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-alt);
+  background: var(--ok);
+}
+
+/* CodeBlock */
+.pv-code {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+.pv-code__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  font-size: 10.5px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.pv-code__copy {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--fg-muted);
+  font-size: 10.5px;
+  padding: 2px 8px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.pv-code pre {
+  margin: 0;
+  padding: 12px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--fg);
+}
+.pv-code .k { color: var(--primary-light); }
+.pv-code .s { color: var(--ok); }
+
+/* TempoGame */
+.pv-tempo {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--primary-dark);
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+}
+.pv-tempo__scope { width: 100%; height: auto; display: block; }
+.pv-tempo__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.pv-tempo__bits { display: flex; gap: 5px; }
+.pv-tempo__bit {
+  width: 24px; height: 30px;
+  display: grid; place-items: center;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255,255,255,.08);
+  color: #cfe6f2;
+  border: 1px solid rgba(255,255,255,.14);
+}
+.pv-tempo__bit--on { background: var(--accent); color: #201000; border-color: var(--accent-light); }
+.pv-tempo__target { font-family: var(--font-mono); font-size: 17px; font-weight: 700; letter-spacing: .12em; color: var(--accent-light); }
+.pv-tempo__btn {
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #201000;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 9px 20px;
+  letter-spacing: .04em;
+}
+.pv-tempo__hint { color: rgba(255,255,255,.6); font-size: 11.5px; }
+
+/* Navbar */
+.pv-nav {
+  border-radius: var(--radius-md);
+  background: linear-gradient(to right, var(--nav-start), var(--nav-end));
+  padding: 0 16px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  overflow-x: auto;
+}
+.pv-nav__brand { color: #fff; font-weight: 700; font-size: 13px; letter-spacing: .04em; white-space: nowrap; }
+.pv-nav__link { color: rgba(255,255,255,.85); font-size: 11.5px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+.pv-nav__drop {
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  box-shadow: var(--shadow-lg);
+  padding: 6px;
+  width: fit-content;
+  min-width: 150px;
+}
+.pv-nav__drop div { padding: 6px 10px; font-size: 12.5px; border-radius: var(--radius-sm); color: var(--fg); }
+.pv-nav__drop div:first-child { background: var(--bg-alt); }
+
+/* Footer */
+.pv-foot {
+  border-radius: var(--radius-md);
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+.pv-foot__cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(92px,100%),1fr)); gap: 14px; }
+.pv-foot__cols h5 { margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+.pv-foot__cols ul { margin: 0; padding: 0; }
+.pv-foot__cols li { list-style: none; font-size: 11px; color: rgba(255,255,255,.9); padding: 2px 0; }
+.pv-foot__bottom {
+  border-top: 1px solid rgba(255,255,255,.12);
+  padding-top: 10px;
+  font-size: 10.5px;
+  color: rgba(255,255,255,.75);
+  display: flex; flex-wrap: wrap; gap: 6px 14px;
+}
+.pv-foot__bottom a { color: var(--accent-light); }
+
+/* ToC */
+.pv-toc {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+.pv-toc__h {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin: 0 0 10px;
+}
+.pv-toc__l { font-size: 12.5px; color: var(--fg-muted); padding: 3px 0; }
+.pv-toc__l--h3 { padding-left: 16px; font-size: 11.5px; }
+.pv-toc__l--on { color: var(--primary); background: var(--bg); border-radius: var(--radius-sm); padding-left: 6px; font-weight: 600; }
+
+/* Breadcrumb */
+.pv-crumb { font-size: 13px; color: var(--fg-muted); display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.pv-crumb a { color: var(--primary); text-decoration: none; }
+.pv-crumb span.sep { color: var(--fg-faint); font-size: 11.5px; }
+.pv-crumb b { color: var(--fg); font-weight: 600; }
+
+/* ── 流程图一节 ─────────────────────────────────────────── */
+.flow {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+.flow p { margin: 0 0 14px; font-size: 15px; max-width: 72ch; }
+.flow__opts { display: grid; gap: 12px; margin: 18px 0; }
+.flow__opt {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+}
+.flow__opt--pick { border-left-color: var(--ok); }
+.flow__opt h4 { margin: 0 0 5px; font-size: 14.5px; font-weight: 700; }
+.flow__opt h4 span { font-weight: 400; font-size: 12.5px; color: var(--ok); margin-left: 6px; }
+.flow__opt p { font-size: 14px; margin: 0; color: var(--fg-muted); max-width: 68ch; }
+
+/* ── 页脚 ───────────────────────────────────────────────── */
+.pagefoot {
+  margin-top: 20px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 13.5px;
+  color: var(--fg-muted);
+}
+.pagefoot p { margin: 0 0 8px; max-width: 72ch; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">USTC 2026 iGEM · Wiki 内容呈现手册</p>
+    <h1>组件选型图鉴</h1>
+    <p class="standfirst">
+      写内容的时候，先在这里挑「用什么形式呈现」。每个组件都配了一张真实观感的预览图，
+      以及它适合承载哪类内容、有什么坑。不需要懂网页技术，看到合适的效果告诉网页组就行。
+    </p>
+    <div class="meta">
+      <span><i class="swatch"></i>18 个组件</span>
+      <span>配色与实际 wiki 一致</span>
+      <span>单文件，双击即可打开</span>
+    </div>
+  </header>
+
+  <div class="howto">
+    <h2>怎么用这份表</h2>
+    <ol>
+      <li><strong>先看左边那张图</strong>——那就是这个组件长什么样。觉得「我这个内容放进去正合适」，就往下读。<br>（折叠面板、标签页、轮播、弹窗这四张预览是<strong>可以点的</strong>，直接动手试试就知道手感了。）</li>
+      <li><strong>再看「适合放什么」</strong>——里面每一条例句都直接对应到 wiki 的某个页面板块，照着对号入座。</li>
+      <li><strong>最后看「注意」</strong>——这里写的都是容易踩的坑，尤其是无障碍和搜索引擎相关的，写之前扫一眼能省很多返工。</li>
+      <li>然后在文档里<strong>用文字描述你想要的效果</strong>，比如「这一段我想用折叠面板，三个问题各一条」，不用管技术怎么实现，那是网页组的活。</li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════ 全站自动 ═══════════════ -->
+  <section class="section" id="global">
+    <div class="section__head">
+      <h2>一、全站自动，写内容时不用管</h2>
+      <span class="section__note">这 4 个由页面模板统一生成，每个页面都会出现</span>
+    </div>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-nav">
+          <span class="pv-nav__brand">TEMPO</span>
+          <span class="pv-nav__link">Project</span>
+          <span class="pv-nav__link">Wet Lab</span>
+          <span class="pv-nav__link">Dry Lab</span>
+          <span class="pv-nav__link">Engagement</span>
+          <span class="pv-nav__link">Team</span>
+        </div>
+        <div class="pv-nav__drop">
+          <div>Description</div>
+          <div>Design</div>
+          <div>Engineering</div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Navbar 顶部导航</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/layout/Navbar</p>
+        <p class="comp__lede">网页最顶端那条横着的导航栏，读者靠它在各个页面之间跳转。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>一条从左到右由深青绿渐变到橙色的横条。左边是队伍标志，右边横向排着五个大类：Project、Wet Lab、Dry Lab、Engagement、Team。鼠标移到某一类上面，正下方会弹出这一类包含的小页面列表，鼠标移开就收回去。</dd>
+          <dt>怎么操作</dt>
+          <dd>鼠标悬停或点击展开子菜单；用键盘的话按 Tab 进入导航栏、方向键上下选择、回车进入。手机上五个大类收进右上角一个「三条横线」的按钮，点开整块纵向铺开。当前所在页面对应的那一类会自动高亮。</dd>
+          <dt>适合放什么</dt>
+          <dd>全站自动，写内容时不用考虑。</dd>
+          <dt>注意</dt>
+          <dd>新页面加进来的时候，只要告诉网页组它属于哪个大类，导航条目就会自动出现，不用自己动手改。</dd>
+          <dt>占多大版面</dt>
+          <dd>固定在屏幕顶部约 64 像素高，往下滚也不会消失。</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-foot">
+          <div class="pv-foot__cols">
+            <div><h5>Project</h5><ul><li>Description</li><li>Design</li></ul></div>
+            <div><h5>Wet Lab</h5><ul><li>Experiments</li><li>Parts</li></ul></div>
+            <div><h5>Team</h5><ul><li>Members</li><li>Attributions</li></ul></div>
+          </div>
+          <div class="pv-foot__bottom">
+            <span>© 2026 USTC iGEM Team</span>
+            <a href="#">CC BY 4.0</a>
+            <span>GitLab</span>
+          </div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Footer 页脚</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/layout/Footer</p>
+        <p class="comp__lede">每个页面最底下那块深色区域。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>深蓝黑底、白字的区块，分成几列把全站导航再列一遍（内容和顶部导航一样，方便读者读到页尾时不用滚回顶部），最底下一行左边是版权声明，右边是 CC BY 4.0 授权链接和代码仓库链接。右下角还浮着一个圆形「回到顶部」按钮，页面往下滚的时候，按钮外圈会画出一圈进度环，表示这一页读了多少。</dd>
+          <dt>适合放什么</dt>
+          <dd>全站自动，写内容时不用考虑。</dd>
+          <dt>注意</dt>
+          <dd><strong>CC BY 4.0 那一行是 iGEM 官方的硬性要求，任何情况下都不能删掉或挪走。</strong>这是全队提交资格的一部分。</dd>
+          <dt>占多大版面</dt>
+          <dd>约占屏幕底部四分之一高度，只在页面最末尾出现。</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-toc">
+          <p class="pv-toc__h">本页目录</p>
+          <div class="pv-toc__l pv-toc__l--on">概述</div>
+          <div class="pv-toc__l pv-toc__l--h3">研究背景</div>
+          <div class="pv-toc__l">实验设计</div>
+          <div class="pv-toc__l pv-toc__l--h3">电路构建</div>
+          <div class="pv-toc__l">结果</div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>ToC 右侧目录</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/layout/ToC</p>
+        <p class="comp__lede">长文章右边那条「本页目录」，让读者一眼看到这一页都讲了什么。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>一个浅灰底的方框，竖着列出本页所有小标题。读者往下滚的时候，当前读到的那一节会自动变成蓝底加粗高亮；三级小标题会比二级多缩进一格，层级一眼可辨。手机屏幕上它收成一条可以点开的长条，不占正文位置。</dd>
+          <dt>怎么操作</dt>
+          <dd>点任意一条就跳到对应的小节。</dd>
+          <dt>适合放什么</dt>
+          <dd>全站自动，由页面里的小标题自动生成，不需要手工维护。</dd>
+          <dt>注意</dt>
+          <dd>页面里用几个井号（<code>##</code> 表示二级、<code>###</code> 表示三级）写小标题，目录就会自动长出对应的条目。<strong>标题写得越清楚，目录越好用</strong>——它是读者快速扫读一整页的唯一入口，写「结果」不如写「荧光强度比对照组高 3.2 倍」。</dd>
+          <dt>占多大版面</dt>
+          <dd>桌面端占右侧约 200 像素，不挤占正文宽度；内容太短的页面会自动隐藏。</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-crumb">
+          <a href="#">Wet Lab</a><span class="sep">/</span>
+          <a href="#">Experiments</a><span class="sep">/</span>
+          <b>Protocol</b>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Breadcrumb 面包屑</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/Breadcrumb</p>
+        <p class="comp__lede">页面主标题上方的一行小字，告诉读者现在站在网站的哪个位置。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>像「Wet Lab / Experiments / Protocol」这样，一层一层用斜杠隔开。灰色的都是可以点的链接，最后一个（也就是当前这一页）是黑色加粗、点不动的。层级特别深的时候，中间几层会自动收成一个省略号，只保留最开头和最末尾。</dd>
+          <dt>适合放什么</dt>
+          <dd>全站自动，由页面的存放位置决定。</dd>
+          <dt>注意</dt>
+          <dd>不用管。它的主要作用是让评审随时知道自己在哪，以及方便他们往回跳。</dd>
+          <dt>占多大版面</dt>
+          <dd>一行，约 24 像素高，紧贴在页面主标题上方。</dd>
+        </dl>
+      </div>
+    </article>
+  </section>
+
+  <!-- ═══════════════ 内容结构 ═══════════════ -->
+  <section class="section" id="structure">
+    <div class="section__head">
+      <h2>二、内容结构</h2>
+      <span class="section__note">决定读者怎么在页面里移动、查找、展开——用得最多的一组</span>
+    </div>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-acc" data-demo="acc">
+          <button class="pv-acc__head" type="button" aria-expanded="true">
+            <span>需要哪些质粒？</span><span class="pv-acc__caret" aria-hidden="true">▲</span>
+          </button>
+          <div class="pv-acc__body">使用 pSB1C3 作为骨架，配合本项目的两个复合元件。</div>
+        </div>
+        <div class="pv-acc" data-demo="acc">
+          <button class="pv-acc__head" type="button" aria-expanded="false">
+            <span>培养条件是什么？</span><span class="pv-acc__caret" aria-hidden="true">▼</span>
+          </button>
+          <div class="pv-acc__body" hidden>37 °C、220 rpm 过夜培养，培养基中加相应抗生素。</div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Accordion 折叠面板</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/Accordion</p>
+        <p class="comp__lede">一排可以点开点收的条目，像手风琴一样。收起时只占一行，所以一页能塞下很多东西而不显得拥挤。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>每一行是一条浅灰底的横条，左边是标题文字，右边一个朝下的小三角。点一下，横条下面滑出内容区，三角翻转朝上。展开的内容区是白底，文字和标题左对齐在同一列。可以同时展开好几个，也可以设置成一组里只允许开一个。</dd>
+          <dt>怎么操作</dt>
+          <dd>点标题行展开或收起。键盘用户按 Tab 走到标题上、按回车同样可以开合。没有 JavaScript 的环境下会全部默认展开，内容不会丢。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>FAQ 常见问题</strong>——读者只展开自己关心的那一条</li>
+              <li><strong>实验步骤</strong>——每一步折叠起来，读者按自己的进度逐步展开，不会一上来就被淹没</li>
+              <li><strong>Safety 页的风险条目</strong>——逐条列出风险，展开看对应的应对措施</li>
+              <li><strong>Parts 页的元件描述</strong>——一个元件一条，一页能放下十几个</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd><strong>标题要写得能一眼看出里面是什么。</strong>读者决定要不要点开，全靠这一行标题——写「需要哪些质粒？」比只写「质粒」强得多。另外，如果这些内容读者一条都不能漏（比如安全规程），就不要折叠，老老实实全部铺开写。</dd>
+          <dt>占多大版面</dt>
+          <dd>收起时每条约 44 像素高，展开后按内容长短自动撑开。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>基于浏览器原生 <code>&lt;details&gt;</code> 元素，零 JavaScript，禁用 JS 也能用。多个面板设置同一个 <code>groupName</code> 可以实现「一组里同时只开一个」的手风琴效果。</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-tabs" data-demo="tabs">
+          <div class="pv-tabs__list" role="tablist">
+            <button class="pv-tabs__tab" type="button" role="tab" aria-selected="true"
+              data-panel="GFP 荧光强度在诱导后 4 小时达到峰值，约为对照组的 3.2 倍。">荧光数据</button>
+            <button class="pv-tabs__tab" type="button" role="tab" aria-selected="false" tabindex="-1"
+              data-panel="OD600 在 6 小时内从 0.05 升到 0.80，对数生长期约 3.5 小时。">生长曲线</button>
+            <button class="pv-tabs__tab" type="button" role="tab" aria-selected="false" tabindex="-1"
+              data-panel="诱导组 87% 的细胞落在高荧光门内，对照组仅 4%。">流式</button>
+          </div>
+          <div class="pv-tabs__panel">GFP 荧光强度在诱导后 4 小时达到峰值，约为对照组的 3.2 倍。</div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Tabs 标签页</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/Tabs</p>
+        <p class="comp__lede">一排平行的标签，点哪个就显示哪块内容，同一块位置来回换。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>顶部横着一排文字标签，当前选中的那个下面有一条蓝色下划线，字加粗变蓝；其他的都是灰字。点另一个标签，下面的内容整块换掉，被选中的标签样式跟着挪过去。标签数量多到一行放不下的时候，这一排可以横向滑动。</dd>
+          <dt>怎么操作</dt>
+          <dd>鼠标点击切换；键盘用户按左右方向键在标签之间移动，按 Home 和 End 跳到第一个和最后一个。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>Results 页</strong>——荧光数据 / 生长曲线 / 流式细胞，三种表征并列</li>
+              <li><strong>Model 页</strong>——模型假设 / 参数取值 / 求解结果</li>
+              <li><strong>Software 页</strong>——怎么安装 / 怎么用 / API 说明</li>
+              <li>凡是「同一个主题下有几套平行内容，读者一般只关心其中一套」的情况，用它就比堆在一起清楚得多</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd>标签名要短，两到六个字最好，最长别超过一行宽度。还有一点很重要：<strong>标签页里藏起来的内容，在搜索引擎和直接读页面的人眼里是不存在的</strong>——如果几块内容同等重要，别藏在标签里，老老实实分段写出来。</dd>
+          <dt>占多大版面</dt>
+          <dd>标签条一行约 40 像素，内容区高度由最长的那块内容决定。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>完整的 ARIA Tabs 模式：<code>role="tablist"</code>、左右方向键导航、Home / End 跳首尾、roving tabindex。禁用 JS 时所有面板会依次铺开显示，内容不会丢失。</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-cards">
+          <div class="pv-card">
+            <div class="pv-card__bar"></div>
+            <p class="pv-card__t">团队成员</p>
+            <p class="pv-card__d">照片加姓名与分工</p>
+          </div>
+          <div class="pv-card pv-card--hl">
+            <p class="pv-card__t">重点结论</p>
+            <p class="pv-card__d">左侧橙条标记高亮</p>
+          </div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Card 卡片</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/Card</p>
+        <p class="comp__lede">一个个带边框的小方块，用来并列展示同类的东西。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>白底圆角方框，带一圈很浅的边框。里面可以放一张图（图片占满顶部通栏）、一个加粗标题、一段两三行以内的描述。鼠标移到卡片上，阴影会加深、整张卡微微上浮一点，表示它可以点击。另外还有一种「高亮变体」：左边多出一条橙色竖条、底色变成浅灰，用来强调某一张。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>Team 页</strong>——每位成员一张，照片 + 姓名 + 分工</li>
+              <li><strong>Partners / 合作方页</strong>——一排机构 Logo，各配一句介绍</li>
+              <li><strong>项目亮点</strong>——一页并列三四个核心贡献点</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd>卡片里的描述控制在一两句话，<strong>超过三行就该考虑改用折叠面板或者直接分段写</strong>。一排摆三到四张最舒服：少了浪费空间，多了每张太窄、字挤成一条。</dd>
+          <dt>占多大版面</dt>
+          <dd>一排三张时，每张约 280 像素宽、180 像素高。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>支持横向排列和纵向排列两种。窄屏时横向卡片自动改为纵向堆叠。链接放在标题里，整卡可点但只暴露一个链接，避免屏幕阅读器重复朗读。</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-tl">
+          <div class="pv-tl__row">
+            <div class="pv-tl__rail"><div class="pv-tl__dot"></div><div class="pv-tl__line"></div></div>
+            <div class="pv-tl__body">
+              <div class="pv-tl__date">2026-03</div>
+              <p class="pv-tl__t">完成设计</p>
+              <p class="pv-tl__d">确定复合元件结构</p>
+            </div>
+          </div>
+          <div class="pv-tl__row">
+            <div class="pv-tl__rail"><div class="pv-tl__dot"></div><div class="pv-tl__line"></div></div>
+            <div class="pv-tl__body">
+              <div class="pv-tl__date">2026-05</div>
+              <p class="pv-tl__t">完成构建</p>
+              <p class="pv-tl__d">质粒转化成功</p>
+            </div>
+          </div>
+          <div class="pv-tl__row">
+            <div class="pv-tl__rail"><div class="pv-tl__dot"></div></div>
+            <div class="pv-tl__body">
+              <div class="pv-tl__date">2026-07</div>
+              <p class="pv-tl__t">完成测试</p>
+              <p class="pv-tl__d">表征数据汇总</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Timeline 时间线</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/Timeline</p>
+        <p class="comp__lede">一条竖线串起一串圆点，按时间顺序讲故事。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>左侧一条竖直的灰线，线上每隔一段有一个实心圆点。每个圆点右边是这一条的内容：最上面一行是小号大写的日期（比如 2026-03），中间是加粗的标题，下面是一句描述。每一条还可以在标题旁挂一个彩色状态小标签（设计 / 构建 / 测试 / 学习 / 完成，各有各的颜色）。条目多了就一直往下延伸。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>项目推进</strong>——「几月做了什么」，按时间铺开</li>
+              <li><strong>Human Practices</strong>——访谈和活动的先后顺序</li>
+              <li><strong>Notebook</strong>——按天记录的实验日志</li>
+              <li><strong>Engineering 页</strong>——DBTL 每一轮迭代</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd>它是<strong>纯展示</strong>组件，没有任何交互，也不需要读者点——所以只适合表达「先后顺序」的线性叙事。如果内容之间存在分支、循环或者互相依赖（比如「如果 A 成功就走 B，否则回到 C」），时间线表达不了，那种情况需要画流程图（见最后一节）。</dd>
+          <dt>占多大版面</dt>
+          <dd>每条约 90 像素高，十条左右就是一屏半。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>状态可选 design / build / test / learn / complete 五种，各配色都做过对比度校验。日期写成 <code>2026-03</code> 这种格式会被识别成机器可读时间。</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-quote">
+          <p>「合成生物学要解决的问题，往往不在实验室里。」</p>
+          <cite>— 受访者，某医院临床医生</cite>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>QuoteCallout 引用块</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/QuoteCallout</p>
+        <p class="comp__lede">把一段话从正文里单独拎出来，让它跳出来被看见。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>左边一条橙色竖条，底色是浅灰，正文用斜体，下面跟着一行小字标出处（比如「— 受访者，某医院临床医生」）。如果出处是一个外部网站链接，后面会自动补一个小图标表示「会在新窗口打开」。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>引用文献</strong>——把一篇论文里的关键结论单独拎出来</li>
+              <li><strong>访谈原话</strong>——Human Practices 页引用受访者说的话，并标明来源</li>
+              <li><strong>合作方反馈</strong>——引用其他队伍或机构对你们的评价</li>
+              <li>正文里任何「这句话想让读者记住」的地方，用它都比单纯加粗醒目</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd>一页别用太多，超过三四处就不显眼了。出处尽量写具体：<strong>谁说的、什么身份、什么时候</strong>。「业内人士表示」这种说法没有说服力，评审也不认。</dd>
+          <dt>占多大版面</dt>
+          <dd>三到四行，约 100 像素高。</dd>
+        </dl>
+      </div>
+    </article>
+  </section>
+
+  <!-- ═══════════════ 数据与状态 ═══════════════ -->
+  <section class="section" id="data">
+    <div class="section__head">
+      <h2>三、数据与状态</h2>
+      <span class="section__note">有真实数字、清单或者状态要交代的时候用</span>
+    </div>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-table-scroll">
+          <table class="pv-table">
+            <thead>
+              <tr><th>Part 编号 <span class="pv-sort">▲</span></th><th>名称</th><th>长度</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>BBa_K1234000</td><td>振荡器</td><td>812 bp</td></tr>
+              <tr><td>BBa_K1234001</td><td>计数器</td><td>1,240 bp</td></tr>
+              <tr><td>BBa_K1234002</td><td>自毁开关</td><td>690 bp</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>DataTable 数据表</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/DataTable</p>
+        <p class="comp__lede">规规矩矩的表格，而且带排序功能。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>最上面一行是表头（灰底加粗），下面每行一条数据。行与行之间用浅灰色条纹隔开，方便横向读一长串数字而不会串行。写了排序功能的列，点一下表头就按那一列从小到大排，再点一下从大到小排，表头上会显示一个上下箭头表示当前方向。手机屏幕上表格自己内部左右滑动，不会把整个页面撑宽。</dd>
+          <dt>怎么操作</dt>
+          <dd>点表头排序，可以反复点来切换升降序。屏幕阅读器用户会听到「已按 XXX 升序排列」的语音播报。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>Parts 页</strong>——元件清单：编号 / 名称 / 长度 / 状态</li>
+              <li><strong>Measurement 页</strong>——测量数据和单位</li>
+              <li><strong>Results 页</strong>——几组实验条件的横向对比</li>
+              <li><strong>Contribution 页</strong>——和其他队伍方案的对比表</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd><strong>只要有超过一列数字，就该考虑用表格，别写成一句话。</strong>评委读 Results 和 Measurement 的时候，要的是能横向对比的结构化数据，一段「A 是 3.2，B 是 4.1，C 是 2.8」的散文是读不下去的。另外每一列都要起个说清楚单位的名，写「长度 (bp)」而不是只写「长度」。</dd>
+          <dt>占多大版面</dt>
+          <dd>表头一行加每行约 36 像素。超过八行建议考虑拆分或者改用折叠。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>排序在前端完成：纯数字列按数值大小排（会先剥掉千分位逗号），其余按文本排并启用 numeric 比较。排序结果通过一个隐藏的播报区念给屏幕阅读器听。表头用 <code>scope="col"</code>，排序状态写在 <code>aria-sort</code> 上。</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-badges">
+          <span class="pv-badge pv-badge--primary">已构建</span>
+          <span class="pv-badge pv-badge--success">已验证</span>
+          <span class="pv-badge pv-badge--warning">待测序</span>
+          <span class="pv-badge pv-badge--error">失败</span>
+          <span class="pv-badge pv-badge--info">信息</span>
+          <span class="pv-badge pv-badge--default">默认</span>
+          <span class="pv-badge pv-badge--outline">描边样式</span>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Badge 状态标签</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/Badge</p>
+        <p class="comp__lede">小小的彩色胶囊标签，贴在文字旁边表示状态或者分类。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>圆角小胶囊，里面是几个字的短文字。有六种颜色（深蓝 / 绿 / 黄 / 红 / 浅蓝 / 灰）和一种描边样式（透明底加彩色边框）。颜色本身带含义：绿色代表成功、黄色代表警告、红色代表失败。可以在文字前面加一个很小的图标，高度有三档可调。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>Parts 页</strong>——每个元件的状态：已构建 / 待验证 / 失败</li>
+              <li><strong>Team 页</strong>——在成员名字旁边标出分工</li>
+              <li>任何列表里，给每一项打一个分类标签</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd><strong>颜色不能是唯一的信息载体。</strong>红绿色盲在男性里大约每十二个人就有一个，他们分不出红和绿。所以标签上必须写字——不要做一个纯红色的圆点表示「失败」，要写「失败」两个字。这是无障碍的硬要求，评审也会看。</dd>
+          <dt>占多大版面</dt>
+          <dd>很小，一行可以并排放好几个。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>颜色不能作为唯一语义载体（WCAG 1.4.1）。支持做成可关闭的标签（带关闭按钮）。</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-prog">
+          <div class="pv-prog__row">
+            <span class="pv-prog__label">元件构建</span>
+            <span class="pv-prog__track"><span class="pv-prog__fill" style="width:82%"></span></span>
+            <span class="pv-prog__num">82%</span>
+          </div>
+          <div class="pv-prog__row">
+            <span class="pv-prog__label">表征测试</span>
+            <span class="pv-prog__track"><span class="pv-prog__fill" style="width:45%"></span></span>
+            <span class="pv-prog__num">45%</span>
+          </div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>ProgressBar 进度条</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/ProgressBar</p>
+        <p class="comp__lede">一条横条加一个百分比，一眼看出某件事做到几成了。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>一条横向的浅灰轨道，里面有一段蓝色的填充表示进度，右边跟着百分比数字。页面刚打开的时候，数字会从 0 快速滚到目标值（大约一秒钟），填充条同步展开。如果读者的系统设置了「减少动效」（一些对动画敏感的人会开这个开关），就直接显示最终值，不做动画。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>项目完成度</strong>——元件构建 82%、表征测试 45%，各环节推进到哪了</li>
+              <li><strong>构建进度</strong>——实验流程走到哪一步</li>
+              <li><strong>Education 页</strong>——课程或活动目标的达成情况</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd>它适合表达「一个整体完成到几成」——也就是各部分的数字加起来有意义的情况。<strong>如果几个数字互不相干，并排的进度条会让人误以为它们能加总</strong>，那种情况改用数据表。</dd>
+          <dt>占多大版面</dt>
+          <dd>每条一行，约 24 像素高。</dd>
+        </dl>
+      </div>
+    </article>
+  </section>
+
+  <!-- ═══════════════ 图片与媒体 ═══════════════ -->
+  <section class="section" id="media">
+    <div class="section__head">
+      <h2>四、图片与媒体</h2>
+      <span class="section__note">图片多的页面重点看这一组，其中三个组件目前还没接进任何页面</span>
+    </div>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-gal">
+          <div class="pv-gal__cell">凝胶图</div>
+          <div class="pv-gal__cell pv-gal__cell--b">显微图</div>
+          <div class="pv-gal__cell pv-gal__cell--c">流式图</div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>ImageGallery 图片画廊</h3><span class="chip chip--idle">尚未接入</span></div>
+        <p class="comp__file">components/ui/ImageGallery</p>
+        <p class="comp__lede">缩略图排成整齐的网格，点任意一张就全屏放大看细节。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>一堆缩略图排成整齐的网格，可以选每行 2 张、3 张或 4 张。点任意一张，整个屏幕变暗，那张图的大图浮在正中间，下面是图片说明，右下角标着「第几张 / 共几张」。每张缩略图下面还可以配一句说明文字。</dd>
+          <dt>怎么操作</dt>
+          <dd>点缩略图放大。放大状态下，可以用键盘左右方向键、点两侧的箭头，或者在手机上左右滑动来翻页；按 Esc 键或者点图片外面的暗处关闭。关闭之后，焦点会自动回到你刚才点的那张缩略图上。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>实验证据成套展示</strong>——凝胶电泳图、显微镜照片、流式图</li>
+              <li><strong>Human Practices 照片墙</strong>——走访活动的记录</li>
+              <li>只要读者需要「放大看细节」，用它就比在正文里直接插图强得多——正文里插满大图会把版面撑得极长，读者根本滚不到底</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd><strong>每张图都要写清楚说明</strong>：这是什么的图、什么条件下拍的、说明了什么。图片说明不是可有可无的装饰，评委理解你的实验全靠它。另外图片文件尽量压到 200KB 以内，否则读者加载会很慢。</dd>
+          <dt>占多大版面</dt>
+          <dd>三列时一排约 220 像素高。九张图大约占两屏。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>灯箱打开时锁住背景页面滚动，关闭后把焦点还给你点的那张缩略图。灯箱内做了完整的焦点陷阱。禁用 JS 时退化成直接点开原图。</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-car" data-demo="carousel">
+          <div class="pv-car__viewport">实验现场</div>
+          <button class="pv-car__btn pv-car__btn--prev" type="button" aria-label="上一张">‹</button>
+          <button class="pv-car__btn pv-car__btn--next" type="button" aria-label="下一张">›</button>
+          <div class="pv-car__foot" aria-live="polite">1 / 3</div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Carousel 轮播</h3><span class="chip chip--idle">尚未接入</span></div>
+        <p class="comp__file">components/ui/Carousel</p>
+        <p class="comp__lede">一次只显示一屏内容，左右按钮翻页。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>一次只显示一屏内容（一张大图或者一组内容），左右两侧各有一个半透明的圆形按钮，点了就换下一屏。下面一行小字标着「3 / 5」，表示看到第几张了。可以设成循环（到最后一张再点就回到第一张），也可以设成到头就把按钮变灰。</dd>
+          <dt>怎么操作</dt>
+          <dd>点左右按钮或者键盘方向键翻页，键盘 Home / End 跳首尾。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>成果主图</strong>——三到五张关键图轮流展示，放在页面显眼位置</li>
+              <li><strong>活动集锦</strong>——时间跨度大的照片串成一组当门面</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd><strong>读者往往只看第一屏。</strong>最重要的内容一定放第一张，不要指望别人会点。如果所有图同等重要，用图片画廊的网格更好——一眼全看到，不用点。另外它<strong>不会自动播放</strong>：自动轮播会打断阅读而且读者控制不了，这里刻意没做这个功能，你也不该要求加。</dd>
+          <dt>占多大版面</dt>
+          <dd>一屏高度，约 300 到 400 像素。</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage stage--modal">
+        <button class="pv-modal__trigger" type="button" data-demo="modal-open">查看详情</button>
+        <div class="pv-modal__overlay" hidden>
+          <div class="pv-modal__box" role="dialog" aria-modal="true" aria-label="复合元件说明">
+            <h4>复合元件说明</h4>
+            <p>浮层已打开，背景变暗。按 Esc 键、点暗处，或点下面的 Close 都能关掉。</p>
+            <button class="pv-modal__close" type="button" data-demo="modal-close">Close</button>
+          </div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Modal 弹窗</h3><span class="chip chip--idle">尚未接入</span></div>
+        <p class="comp__file">components/ui/Modal</p>
+        <p class="comp__lede">点一个按钮，屏幕中央浮出一个对话框。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>页面上有个按钮（比如「查看详情」），点一下屏幕中央浮出一个圆角对话框，背后的页面变暗。对话框底部有一个「Close」按钮，按 Esc 键或者点对话框外面的暗处也能关掉。</dd>
+          <dt>怎么操作</dt>
+          <dd>点按钮打开，三种方式关闭（Close 按钮 / Esc 键 / 点暗处）。打开期间键盘焦点被锁在弹窗内部，不会跑到后面的页面上。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>术语解释</strong>——正文里不想打断阅读，读者点开才看详细定义</li>
+              <li><strong>补充信息</strong>——塞进正文会让段落太长，但又不能完全没有</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd><strong>弹窗里的内容对搜索引擎和直接把页面读一遍的人都是不可见的。</strong>重要的内容不要只放在弹窗里——弹窗适合放「锦上添花」的东西，不适合放「不看就不懂」的东西。评审如果只导出页面文字来读，弹窗里的内容会整个丢掉。</dd>
+          <dt>占多大版面</dt>
+          <dd>浮层，关闭时不占任何版面，页面上只留一个按钮。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>用的是浏览器原生 <code>&lt;dialog&gt;</code> 元素加 <code>showModal()</code>，焦点管理由浏览器负责。禁用 JS 时对话框会直接以静态块的形式显示在页面上，内容不会丢。</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-avs">
+          <span class="pv-av pv-av--md pv-av--h0">ZY<span class="pv-av__dot"></span></span>
+          <span class="pv-av pv-av--lg pv-av--h1">LW</span>
+          <span class="pv-av pv-av--xl pv-av--h2">CH</span>
+          <span class="pv-av pv-av--xl pv-av--h3">XM</span>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>Avatar 头像</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/Avatar</p>
+        <p class="comp__lede">圆形头像，没照片的时候会自动用姓名首字母顶上。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>圆形头像，有 28 / 40 / 56 / 72 像素四档大小。有照片就显示照片；没有照片的时候，自动用姓名的首字母配一个底色顶上，同一个人的颜色每次显示都一样。右下角还可以加一个小小的彩色圆点表示状态。照片万一加载失败，也会自动切回首字母，不会留下一个破图图标。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>Team 页</strong>——成员和指导教师的头像</li>
+              <li>照片还没收齐的时候，首字母兜底能保证版面不会塌，可以先排上去占位</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd>用真人照片前记得先确认当事人同意。另外照片尽量统一背景和构图——一排头像里混着证件照、自拍和风景照会显得很乱，如果实在统一不了，全部改用首字母反而更整洁。</dd>
+          <dt>占多大版面</dt>
+          <dd>很小，一般和姓名文字排在同一行。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>照片加载失败时自动降级到首字母，不会出现破图。首字母底色由姓名哈希决定，保证同一个人颜色稳定。</p>
+        </details>
+      </div>
+    </article>
+  </section>
+
+  <!-- ═══════════════ 代码与交互 ═══════════════ -->
+  <section class="section" id="code">
+    <div class="section__head">
+      <h2>五、代码与交互</h2>
+      <span class="section__note">两个特殊用途的组件</span>
+    </div>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-code">
+          <div class="pv-code__bar"><span>Python</span><span class="pv-code__copy">复制</span></div>
+          <pre><span class="k">def</span> simulate(k_on, k_off, t):
+    <span class="s">"""求解振荡器动力学"""</span>
+    <span class="k">return</span> solve(k_on, k_off, t)</pre>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>CodeBlock 代码块</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/ui/CodeBlock</p>
+        <p class="comp__lede">等宽字体的代码区域，带一键复制按钮。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>一块等宽字体的代码区域，左上角标着语言名称（Python、JavaScript 之类），右上角一个「复制」按钮。点复制，按钮会变成绿色显示「已复制」，两秒后恢复原样。代码行太长的时候，这个块内部会横向滚动，不会把整个页面撑宽。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>Software 页</strong>——安装命令和用法示例</li>
+              <li><strong>Model 页</strong>——算法片段或者公式实现</li>
+              <li>任何想让其他队伍直接复制去用的脚本</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd>代码块不显示行号——这是刻意的。带行号的代码，读者从网页复制走会连行号一起粘进编辑器，全部报错。另外代码里别写只有你们实验室环境才有的绝对路径，别人照着跑不起来。</dd>
+          <dt>占多大版面</dt>
+          <dd>按代码行数算，一行约 20 像素。</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="comp">
+      <div class="stage">
+        <div class="pv-tempo">
+          <svg class="pv-tempo__scope" viewBox="0 0 320 92" role="img" aria-label="正弦波形与计时光标">
+            <rect x="0" y="0" width="320" height="92" fill="#0a1a24"></rect>
+            <g stroke="rgba(255,255,255,.09)" stroke-width="1">
+              <line x1="0" y1="23" x2="320" y2="23"></line>
+              <line x1="0" y1="46" x2="320" y2="46"></line>
+              <line x1="0" y1="69" x2="320" y2="69"></line>
+              <line x1="80" y1="0" x2="80" y2="92"></line>
+              <line x1="160" y1="0" x2="160" y2="92"></line>
+              <line x1="240" y1="0" x2="240" y2="92"></line>
+            </g>
+            <path d="M0 46 Q 20 4 40 46 T 80 46 T 120 46 T 160 46 T 200 46 T 240 46 T 280 46 T 320 46"
+                  fill="none" stroke="#4cc9f0" stroke-width="2"></path>
+            <line x1="240" y1="0" x2="240" y2="92" stroke="rgba(255,255,255,.55)" stroke-width="1" stroke-dasharray="3 3"></line>
+            <circle cx="240" cy="46" r="4" fill="#fff"></circle>
+          </svg>
+          <div class="pv-tempo__row">
+            <div class="pv-tempo__bits">
+              <span class="pv-tempo__bit">0</span>
+              <span class="pv-tempo__bit pv-tempo__bit--on">1</span>
+              <span class="pv-tempo__bit pv-tempo__bit--on">1</span>
+            </div>
+            <span class="pv-tempo__target">011</span>
+          </div>
+          <div class="pv-tempo__row">
+            <button class="pv-tempo__btn" type="button">TRIGGER</button>
+            <span class="pv-tempo__hint">目标周期 011</span>
+          </div>
+        </div>
+      </div>
+      <div class="comp__body">
+        <div class="comp__title"><h3>TempoGame 计时小游戏</h3><span class="chip chip--live">已启用</span></div>
+        <p class="comp__file">components/game/TempoGame</p>
+        <p class="comp__lede">一台模拟示波器，把「时序控制」变成能上手玩的东西。</p>
+        <dl class="facts">
+          <dt>长什么样</dt>
+          <dd>深色的模拟示波器屏幕，上面一条蓝色的正弦波不断从左往右跑，每到达一个波峰就把下面的二进制计数器翻一次。屏幕下方是当前计数和一串二进制小方块（亮着的方块表示 1）。再往下是题目要求的目标读数，和一个大按钮「TRIGGER」。玩家要在计数器读数和题目一致、同时波形正处在波峰的那一刻按下按钮——按早了算表达不足，按晚了算泄漏。波形速度、判定宽容度、计数器位数都可以调，用来控制难度。</dd>
+          <dt>适合放什么</dt>
+          <dd>
+            <ul>
+              <li><strong>Education 页</strong>——把「精确时序控制」这个抽象概念变成能上手玩的东西，这是合成生物学里一个真实存在的难点</li>
+              <li>科普展台或者开放日，用来吸引参观者停下来</li>
+            </ul>
+          </dd>
+          <dt>注意</dt>
+          <dd>这是全站唯一的交互游戏组件，<strong>一页放一个就够了</strong>。放多了会抢走正文的注意力，评审也可能觉得你们在凑数。</dd>
+          <dt>占多大版面</dt>
+          <dd>约 400 像素高。</dd>
+        </dl>
+        <details>
+          <summary>技术说明（网页组看）</summary>
+          <p>纯 JavaScript 实现，没有外部依赖，也不从外部加载任何资源。计时用高精度时钟而不是帧数，切到后台标签页会自动暂停，切回来不会算错。</p>
+        </details>
+      </div>
+    </article>
+  </section>
+
+  <!-- ═══════════════ 流程图 ═══════════════ -->
+  <section class="section" id="flowchart">
+    <div class="section__head">
+      <h2>六、关于画流程图</h2>
+      <span class="section__note">有队友问过——可以画，但需要先定一件事</span>
+    </div>
+
+    <div class="flow">
+      <p>
+        结论是<strong>可以画</strong>。但 iGEM 有一条硬性规定：所有资源必须自托管，不能引用外部网站。
+        这意味着不能像平时那样贴一个在线画图服务的链接，也排除掉了几种常见做法。
+      </p>
+      <p>目前比较现实的几个方向：</p>
+
+      <div class="flow__opts">
+        <div class="flow__opt flow__opt--pick">
+          <h4>Mermaid 代码写图 <span>推荐</span></h4>
+          <p>用一段类似代码的简单文字描述图的连接关系，构建网页时自动转成矢量图。好处是改一个字就改一处，不用重画；坏处是样式比较朴素、不能自由摆放位置，而且需要先给项目加一个转换插件。</p>
+        </div>
+        <div class="flow__opt">
+          <h4>设计组画好导出 SVG</h4>
+          <p>在设计软件（Figma、draw.io 之类）里画好，导出成矢量图文件交给网页组。好处是样式自由、好看；坏处是每次改动都要重新画一遍再重新导出。适合少数几张最重要的图，比如电路图和 DBTL 循环。</p>
+        </div>
+      </div>
+
+      <p>
+        <strong>在动手之前需要先定一件事：</strong>你们写的文档要怎么变成网页。
+        目前站点的所有页面都是网页组手工写的，没有任何「把文档自动转成页面」的流程。
+        Mermaid 这种写法必须先把这个流程配上，否则你们按它的语法写完，到网页上只会显示成一段普通文字。
+        这件事需要你们和网页组碰一下再决定。
+      </p>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <p>
+      这份图鉴由本地代码生成，每个组件的描述都对照源码核对过，配色与实际 wiki 一致，所以预览的观感和真实效果基本相符。
+    </p>
+    <p>
+      预览是简化还原，用来判断「长什么样」足够了。具体一个组件最终在你那页里呈现成什么样子，
+      还要等页面真正接上、配合全局样式微调之后才定——<strong>所有组件目前都还是候选状态，页面里的用法也都只是占位示例</strong>，
+      完全可以按内容需要重新安排。
+    </p>
+  </footer>
+
+</div>
+
+<script>
+/* 让四张可交互的预览真的动起来。
+   纯原生 JS，不依赖任何库，也不联网。
+   真实组件的行为比这里复杂（键盘导航、焦点管理、无障碍播报等），
+   这里只复现「点下去会发生什么」这一层，够用来判断手感。 */
+(function () {
+  'use strict';
+
+  /* ── 折叠面板：点标题开合 ─────────────────────────────── */
+  document.querySelectorAll('[data-demo="acc"]').forEach(function (acc) {
+    var head = acc.querySelector('.pv-acc__head');
+    var body = acc.querySelector('.pv-acc__body');
+    var caret = acc.querySelector('.pv-acc__caret');
+    if (!head || !body) return;
+
+    head.addEventListener('click', function () {
+      var isOpen = head.getAttribute('aria-expanded') === 'true';
+      head.setAttribute('aria-expanded', String(!isOpen));
+      body.hidden = isOpen;
+      if (caret) caret.textContent = isOpen ? '▼' : '▲';
+    });
+  });
+
+  /* ── 标签页：点标签换内容，支持左右方向键 ─────────────── */
+  document.querySelectorAll('[data-demo="tabs"]').forEach(function (tabs) {
+    var panel = tabs.querySelector('.pv-tabs__panel');
+    var btns = Array.prototype.slice.call(tabs.querySelectorAll('.pv-tabs__tab'));
+    if (!panel || !btns.length) return;
+
+    function select(i) {
+      btns.forEach(function (b, j) {
+        b.setAttribute('aria-selected', String(i === j));
+        b.setAttribute('tabindex', i === j ? '0' : '-1');
+      });
+      panel.textContent = btns[i].getAttribute('data-panel') || '';
+    }
+
+    btns.forEach(function (btn, i) {
+      btn.addEventListener('click', function () { select(i); });
+      btn.addEventListener('keydown', function (e) {
+        var next = null;
+        if (e.key === 'ArrowRight') next = (i + 1) % btns.length;
+        if (e.key === 'ArrowLeft')  next = (i - 1 + btns.length) % btns.length;
+        if (next === null) return;
+        e.preventDefault();
+        select(next);
+        btns[next].focus();
+      });
+    });
+  });
+
+  /* ── 轮播：左右按钮翻页（演示用循环模式）─────────────── */
+  var SLIDES = [
+    { label: '实验现场',   bg: 'linear-gradient(120deg, #194955, #2980b9)' },
+    { label: '凝胶电泳结果', bg: 'linear-gradient(120deg, #7e4a1c, #f39c12)' },
+    { label: '显微成像',   bg: 'linear-gradient(120deg, #1a5276, #2d7f7f)' }
+  ];
+
+  document.querySelectorAll('[data-demo="carousel"]').forEach(function (car) {
+    var viewport = car.querySelector('.pv-car__viewport');
+    var foot = car.querySelector('.pv-car__foot');
+    var prev = car.querySelector('.pv-car__btn--prev');
+    var next = car.querySelector('.pv-car__btn--next');
+    if (!viewport || !prev || !next) return;
+
+    var i = 0;
+    function render() {
+      viewport.textContent = SLIDES[i].label;
+      viewport.style.background = SLIDES[i].bg;
+      if (foot) foot.textContent = (i + 1) + ' / ' + SLIDES.length;
+    }
+
+    prev.addEventListener('click', function () {
+      i = (i - 1 + SLIDES.length) % SLIDES.length;
+      render();
+    });
+    next.addEventListener('click', function () {
+      i = (i + 1) % SLIDES.length;
+      render();
+    });
+  });
+
+  /* ── 弹窗：点按钮开，Esc / 点暗处 / Close 关 ──────────── */
+  document.querySelectorAll('[data-demo="modal-open"]').forEach(function (trigger) {
+    var stage = trigger.closest('.stage');
+    var overlay = stage && stage.querySelector('.pv-modal__overlay');
+    if (!overlay) return;
+
+    var closeBtn = overlay.querySelector('[data-demo="modal-close"]');
+
+    function open() {
+      overlay.hidden = false;
+      if (closeBtn) closeBtn.focus();
+    }
+    function close() {
+      overlay.hidden = true;
+      trigger.focus();
+    }
+
+    trigger.addEventListener('click', open);
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) close();   // 只有点暗处才关，点框内不关
+    });
+    overlay.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+  });
+})();
+</script>

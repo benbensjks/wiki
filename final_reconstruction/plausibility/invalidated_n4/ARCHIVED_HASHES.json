@@ -1,0 +1,77 @@
+﻿[
+    {
+        "name":  "rdf_collapse.json",
+        "bytes":  1877,
+        "sha256":  "4E8AAD17EB44ECCC04FFB9A962BEE802762D3E887B50C36043398F5C8358EEEA"
+    },
+    {
+        "name":  "rdf_collapse.csv",
+        "bytes":  959,
+        "sha256":  "C4A5EE86666CFDE09196FFF584E2A85047194BFE0A2D728753C6BEEDA16020D8"
+    },
+    {
+        "name":  "rdf_collapse_curve.csv",
+        "bytes":  75534,
+        "sha256":  "2B310EADA0951E261137C06D1DFBA88BA3FB8B66A0F557BCAAE0D6B5FDEE791E"
+    },
+    {
+        "name":  "rdf_collapse_rescored.json",
+        "bytes":  858,
+        "sha256":  "3C4FAE3FC36AAF83C06C76BADD6FDEE733DA9511120462BFB00E18F57B90563F"
+    },
+    {
+        "name":  "rdf_collapse_rescored.csv",
+        "bytes":  1110,
+        "sha256":  "EF56B242D19252F0492EB94D496C8C7A8466849C22E8C0091FA78446C3D7C67C"
+    },
+    {
+        "name":  "mass_balance.json",
+        "bytes":  782,
+        "sha256":  "E7F600623DC91E4E98CD00F22C9DC9754EF0B692657787BFD8156E3B99B8AD94"
+    },
+    {
+        "name":  "mass_balance.csv",
+        "bytes":  1268,
+        "sha256":  "39E68BDBE9AB33334D49CDCECC4688002721032038920A9E67F5C82634D58758"
+    },
+    {
+        "name":  "absolute_scale.json",
+        "bytes":  457,
+        "sha256":  "C1C048F3931B2DFC9F93506BBEEE40F8EC18D49175FD115DC60CD592EEE20976"
+    },
+    {
+        "name":  "absolute_scale_pools.csv",
+        "bytes":  3701,
+        "sha256":  "E0BE6110E6002E192A01128CB399B6234436A1202AC27CDBE2ABE22661534FA2"
+    },
+    {
+        "name":  "absolute_scale_burden.csv",
+        "bytes":  930,
+        "sha256":  "934C0E622BAEF460FA4A9BBC055179A39B7EB133A3C0C289EF087AFBD20E76A8"
+    },
+    {
+        "name":  "absolute_scale_thresholds.csv",
+        "bytes":  570,
+        "sha256":  "8F988807E9A5D545065641B04B50CAE575F15B7FC586B50D4B88ECEF5281FE27"
+    },
+    {
+        "name":  "threshold_margin/threshold_margin_baseline.json",
+        "bytes":  3873,
+        "sha256":  "393A860A2256D5B62EB908CD29EC26D1F4F83F7E5437CDED6257BF66C94A84D5"
+    },
+    {
+        "name":  "threshold_margin/threshold_margin_baseline.csv",
+        "bytes":  3424,
+        "sha256":  "32D601BCEBC60E8EF8232404F73E2D19C16D5E3FCA4831F29F8B21471BE7FE8F"
+    },
+    {
+        "name":  "threshold_margin/threshold_margin_baseline_rescored_v2.json",
+        "bytes":  720,
+        "sha256":  "801021F2A1AC47C682160C1637159C8409A541F190B7D40114EE546D0A2698F2"
+    },
+    {
+        "name":  "threshold_margin/threshold_margin_baseline_rescored_v2.csv",
+        "bytes":  4093,
+        "sha256":  "284491B12684CFF03F650EC092A5D15069C13B691EE5F440380655989D181B6D"
+    }
+]

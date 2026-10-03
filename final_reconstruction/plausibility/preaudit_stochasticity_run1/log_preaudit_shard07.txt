@@ -1,0 +1,3 @@
+[shard07of08] clock_K|f=0.8          cert=True cross=14 gates=14 L=0.019023850688840296 (457.76s)
+[shard07of08] K_A1|f=0.9             cert=True cross=14 gates=14 L=0.014456658236237641 (421.88s)
+[shard07of08] wrote 2 rows

@@ -1,0 +1,175 @@
+{
+  "problem1": {
+    "period_h": 10.516666666666666,
+    "span_h": 9.202083333333348,
+    "phase_states": [
+      {
+        "t_h": 267.81666666666666,
+        "S0": 0.021589838346574172,
+        "S1": 0.9925867855753459,
+        "S2": 0.0067185561414429,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "value": 2
+      },
+      {
+        "t_h": 269.1333333333333,
+        "S0": 0.06176033941418885,
+        "S1": 0.9925870437259809,
+        "S2": 0.006718578936514508,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "value": 2
+      },
+      {
+        "t_h": 270.45,
+        "S0": 0.07388225796733033,
+        "S1": 0.9925870176126308,
+        "S2": 0.006718584372177316,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "value": 2
+      },
+      {
+        "t_h": 271.76666666666665,
+        "S0": 0.07488953095836934,
+        "S1": 0.992586860706446,
+        "S2": 0.006718584633616076,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "value": 2
+      },
+      {
+        "t_h": 273.06666666666666,
+        "S0": 0.0750111681575412,
+        "S1": 0.9925856930920626,
+        "S2": 0.006718584635220681,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "value": 2
+      },
+      {
+        "t_h": 274.3833333333333,
+        "S0": 0.07509828495162536,
+        "S1": 0.9925762481410647,
+        "S2": 0.006718584635229674,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "value": 2
+      },
+      {
+        "t_h": 275.7,
+        "S0": 0.126875814448154,
+        "S1": 0.992510196505313,
+        "S2": 0.006718584914870762,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "value": 2
+      },
+      {
+        "t_h": 277.01666666666665,
+        "S0": 0.6325650031424307,
+        "S1": 0.9921621132727358,
+        "S2": 0.00671859219799642,
+        "labels": [
+          null,
+          1,
+          0
+        ],
+        "value": null
+      }
+    ],
+    "distinct_values": [
+      2
+    ],
+    "undecided": 1,
+    "note": "period used for spacing is ONE clock cycle; one count per cycle, so the eight samples sit inside a single count and cannot cover values 0-7"
+  },
+  "problem2": {
+    "K_D_comp": 0.8,
+    "table": [
+      {
+        "case": "base fail  K=0.40 off  (no bypass)",
+        "counting": false,
+        "clock_K": 0.4,
+        "max_I2": 0.39427546361851057,
+        "max_RDF2": 0.2070880452046899,
+        "peak_times_product": 0.08164973503293019,
+        "same_time_product": 0.08155076110877889,
+        "same_time_at_h": 286.9,
+        "pb2_at_that_time": 0.18239790246373377,
+        "same_time_over_threshold": 0.1019384513859736
+      },
+      {
+        "case": "base fail  K=0.25 off  (no bypass)",
+        "counting": false,
+        "clock_K": 0.25,
+        "max_I2": 0.9952771715130995,
+        "max_RDF2": 3.858354489603833,
+        "peak_times_product": 3.8401321431077715,
+        "same_time_product": 3.5521335700237806,
+        "same_time_at_h": 159.8,
+        "pb2_at_that_time": 0.6833937045578429,
+        "same_time_over_threshold": 4.440166962529726
+      },
+      {
+        "case": "clk020 pass K=0.20 off (no bypass)",
+        "counting": false,
+        "clock_K": 0.2,
+        "max_I2": 1.3120198100188667,
+        "max_RDF2": 3.7264260941316203,
+        "peak_times_product": 4.8891448560719155,
+        "same_time_product": 4.484974661712301,
+        "same_time_at_h": 159.8,
+        "pb2_at_that_time": 0.7133236680773614,
+        "same_time_over_threshold": 5.606218327140376
+      },
+      {
+        "case": "bypass   K=0.40 off",
+        "counting": false,
+        "clock_K": 0.4,
+        "max_I2": 1.9776708135599232,
+        "max_RDF2": 7.266857866144561,
+        "peak_times_product": 14.371452708162442,
+        "same_time_product": 12.850403232774303,
+        "same_time_at_h": 244.51666666666665,
+        "pb2_at_that_time": 0.7775929835283619,
+        "same_time_over_threshold": 16.06300404096788
+      },
+      {
+        "case": "bypass   K=0.40 on ",
+        "counting": true,
+        "clock_K": 0.4,
+        "max_I2": 1.7150240629726348,
+        "max_RDF2": 6.641951960658689,
+        "peak_times_product": 11.391107437637922,
+        "same_time_product": 1.7400241411266346,
+        "same_time_at_h": 75.28333333333333,
+        "pb2_at_that_time": 0.7567377458953976,
+        "same_time_over_threshold": 2.1750301764082933
+      }
+    ],
+    "note": "peak_times_product multiplies maxima attained at different times; only same_time_product is a physical reaction state"
+  }
+}

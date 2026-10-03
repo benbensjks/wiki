@@ -1,0 +1,122 @@
+{
+ "smoke": false,
+ "question": "on the 34-state hybrid HZH (HZH_MOD8_CAUSAL_V1), what changes when the Int0 clock AND gate is removed from g1?",
+ "note": "judgment via common.sig_of + explicit overwrite + common.verdict; NOT via verify_hzh.analyse (D1)",
+ "K_cert": 0.3,
+ "K_alt": 0.4,
+ "hours": 300.0,
+ "guards": {
+  "G1_cert_reproduction": {
+   "certified": true,
+   "reads": true,
+   "sequence": true,
+   "stage0": true,
+   "stage1": true,
+   "margin": true
+  },
+  "G2_parity": true,
+  "G3": true,
+  "G4": true,
+  "G4_max_abs_dy": 0.0
+ },
+ "cases": [
+  {
+   "tag": "kept_K0.30",
+   "arm": "kept",
+   "clock_K": 0.3,
+   "hours": 300.0,
+   "n_samples": 18001,
+   "certified": true,
+   "counting": true,
+   "events": true,
+   "steady_reads": 19,
+   "sequence": "1234567012345670123",
+   "cold_reads": 27,
+   "s2_crossings": 7,
+   "stage0": [
+    14,
+    14,
+    14
+   ],
+   "stage1": [
+    7,
+    7,
+    7
+   ],
+   "gate_segments": 7,
+   "gate_dose_min": 0.22002856742065457,
+   "gate_dose_max": 0.2216738194099409,
+   "gate_dur_min": 0.9166666666666288,
+   "gate_dur_max": 0.9333333333333371,
+   "gate_peak": 0.38867527362533527,
+   "clock_signal_min": 0.0,
+   "clock_signal_max": 0.7697220274528427,
+   "S0_min": 0.0,
+   "S0_max": 0.9854514225859179,
+   "S1_min": 0.0,
+   "S1_max": 0.9944267385843951,
+   "S2_min": 0.0,
+   "S2_max": 0.9999779930211975,
+   "commitment": {
+    "bit0": 1.0,
+    "bit1": 1.0,
+    "bit2": 1.0
+   },
+   "unlabelled": {
+    "bit0": 0,
+    "bit1": 0,
+    "bit2": 0
+   },
+   "margin_h": 1.178460901856866
+  },
+  {
+   "tag": "removed_K0.30",
+   "arm": "removed",
+   "clock_K": 0.3,
+   "hours": 300.0,
+   "n_samples": 18001,
+   "certified": false,
+   "counting": true,
+   "events": false,
+   "steady_reads": 19,
+   "sequence": "1234567012345670123",
+   "cold_reads": 27,
+   "s2_crossings": 7,
+   "stage0": [
+    14,
+    14,
+    14
+   ],
+   "stage1": [
+    7,
+    0,
+    7
+   ],
+   "gate_segments": 0,
+   "gate_dose_min": NaN,
+   "gate_dose_max": NaN,
+   "gate_dur_min": NaN,
+   "gate_dur_max": NaN,
+   "gate_peak": 2.7718739029917846e-10,
+   "clock_signal_min": 1.0,
+   "clock_signal_max": 1.0,
+   "S0_min": 0.0,
+   "S0_max": 0.9854514225859179,
+   "S1_min": 0.0,
+   "S1_max": 0.9944267385843951,
+   "S2_min": 0.0,
+   "S2_max": 0.9999657334915769,
+   "commitment": {
+    "bit0": 1.0,
+    "bit1": 1.0,
+    "bit2": 1.0
+   },
+   "unlabelled": {
+    "bit0": 0,
+    "bit1": 0,
+    "bit2": 0
+   },
+   "margin_h": 1.178460901856866
+  }
+ ]
+}

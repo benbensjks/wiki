@@ -41,6 +41,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from plausibility_common import (OUT, build_threebit, frozen_carry0,  # noqa: E402
                                  restore, threshold_margin, write_manifest)
+from working_point import working_point_block  # noqa: E402
 
 NEAR_TIME_FLAG = 0.25
 GATE_MEDIAN_CEILING = 0.10
@@ -98,10 +99,15 @@ def apply_rule(df: pd.DataFrame) -> pd.DataFrame:
                           ascending=False).reset_index(drop=True)
 
 
-def report(df: pd.DataFrame, tag: str, hours):
+def report(df: pd.DataFrame, tag: str, hours, model=None):
     out = OUT / 'threshold_margin'
     out.mkdir(parents=True, exist_ok=True)
     df.to_csv(out / f'threshold_margin_{tag}.csv', index=False, encoding='utf-8')
+    wp = working_point_block(model)
+    if model is None:
+        wp['note'] = ('no model object was available: this artefact was rescored from an '
+                      'existing CSV, so its working point is inherited from that CSV and '
+                      'is NOT independently recorded here')
     summary = dict(hours=hours, tag=tag, terms=len(df),
                    flagged=int(df.flagged.sum()),
                    rule=dict(primary=f'frac_time_near_threshold >= {NEAR_TIME_FLAG}',
@@ -110,7 +116,8 @@ def report(df: pd.DataFrame, tag: str, hours):
                              note='straddles_threshold is descriptive only in v2'),
                    flagged_terms=df[df.flagged][['term', 'role', 'ratio_median',
                                                  'frac_time_near_threshold']]
-                   .to_dict(orient='records'))
+                   .to_dict(orient='records'),
+                   working_point=wp)
     (out / f'threshold_margin_{tag}.json').write_text(
         json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
     write_manifest()
@@ -148,7 +155,7 @@ def main():
                              max_step_min=args.max_step_min)
     finally:
         restore(patch)
-    report(apply_rule(audit(model, sol)), args.tag, args.hours)
+    report(apply_rule(audit(model, sol)), args.tag, args.hours, model=model)
 
 
 if __name__ == '__main__':

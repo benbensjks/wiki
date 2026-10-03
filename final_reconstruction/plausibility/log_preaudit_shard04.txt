@@ -1,0 +1,4 @@
+[shard04of08] conc_scale|f=1.05      cert=False cross=14 gates=14 L=0.010691207446899487 (420.02s)
+[shard04of08] clock_K|f=1.1          cert=True cross=14 gates=14 L=0.012317284882253546 (401.91s)
+[shard04of08] K_A1|f=1.2             cert=False cross=14 gates=14 L=0.07468628689351198 (248.35s)
+[shard04of08] wrote 3 rows

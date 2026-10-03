@@ -1,0 +1,111 @@
+{
+  "window": [
+    97.0,
+    139.4
+  ],
+  "counts": {
+    "low_order": 2,
+    "g0_open": 2,
+    "high_order": 1,
+    "g1_open": 1,
+    "bit2_flip": 1
+  },
+  "gate_context": [
+    {
+      "gate_open_h": 116.81666666666666,
+      "S1": 0.977424157359821,
+      "bit1_state": "LR"
+    },
+    {
+      "gate_open_h": 138.0,
+      "S1": 0.014339467348906343,
+      "bit1_state": "PB"
+    }
+  ],
+  "next_bit1_carry_after_last_gate": 159.6355256496444,
+  "convention": "S0 and S1 are LR fractions; a carry is the DOWNWARD 0.5 crossing. associations[].flip_h lists every crossing, so only direction==\"down\" rows are carries.",
+  "stage0": {
+    "A_to_F_h": 0.9499999999999957,
+    "gate_peak": 0.6287628498625206,
+    "gate_duration_h": 2.066666666666663,
+    "gate_dose": 0.650528736500193,
+    "detail": [
+      {
+        "gate_start_h": 116.81666666666666,
+        "gate_peak_h": 117.68333333333334,
+        "gate_peak": 0.6287611203777764,
+        "gate_dose": 0.65052870606835,
+        "gate_duration_h": 2.066666666666663,
+        "A_half_h": 117.36666666666666,
+        "F_half_h": 118.31666666666666,
+        "A_to_F_h": 0.9500000000000028,
+        "A_max": 1.905253943937366,
+        "F_max": 6.422195599971679
+      },
+      {
+        "gate_start_h": 138.0,
+        "gate_peak_h": 138.86666666666667,
+        "gate_peak": 0.6287645793472647,
+        "gate_dose": 0.6505287669320361,
+        "gate_duration_h": 2.066666666666663,
+        "A_half_h": 138.55,
+        "F_half_h": 139.5,
+        "A_to_F_h": 0.9499999999999886,
+        "A_max": 1.9052539777848383,
+        "F_max": 6.422195327504121
+      }
+    ]
+  },
+  "stage1": {
+    "A_to_F_h": 1.4666666666666686,
+    "gate_peak": 0.3868843776274177,
+    "gate_duration_h": 0.9333333333333229,
+    "gate_dose": 0.2209479406491113,
+    "detail": [
+      {
+        "gate_start_h": 117.7,
+        "gate_peak_h": 118.18333333333334,
+        "gate_peak": 0.3868843776274177,
+        "gate_dose": 0.2209479406491113,
+        "gate_duration_h": 0.9333333333333229,
+        "A_half_h": 117.61666666666666,
+        "F_half_h": 119.08333333333333,
+        "A_to_F_h": 1.4666666666666686,
+        "A_max": 1.3598187352699724,
+        "F_max": 2.3600618715898714
+      }
+    ]
+  },
+  "event_lines": {
+    "bit0_LR_to_PB": [
+      117.14846090185686,
+      138.33051470691237
+    ],
+    "g0_open": [
+      116.81666666666666,
+      138.0
+    ],
+    "bit1_LR_to_PB": [
+      117.27144282256576
+    ],
+    "bit1_LR_to_PB_from_Jrev1": [
+      117.2
+    ],
+    "g1_open": [
+      117.7
+    ],
+    "bit2_flip": [
+      118.19123446366801
+    ]
+  },
+  "source": {
+    "cert": "hby_zmh_hby\\certification\\results\\20260928_141723_738780\\baseline_saved\\verdict.json",
+    "traj": "hby_zmh_hby\\results\\20260927_233646_924908\\han\\trajectory.npz",
+    "guard": {
+      "certified": true,
+      "reads": true,
+      "sequence": true,
+      "margin": true
+    }
+  }
+}

@@ -41,6 +41,25 @@ PROTEIN_SYNTHESIS_BUDGET_PER_H = 4.0e6
 REF_FREE_TF_UM = 30.0        # a free transcription factor above this is unusual
 REF_BURDEN_FRACTION = 0.10   # >10 % of total protein synthesis on one circuit
 
+# ------------------------------------------- the carry-1 A1 Hill exponent
+# ZENG['n_A'][1] is a SINGLE table entry that the model reads in TWO places:
+#     model.py:120              the carry-2 gate   g1 = act(A1, K_A[1], n) * rep(F1, K_F[1], n_F) * clock
+#     model_threebit51.py:96    the F1 production  source_F1 = alpha_F[1] * act(A1, K_A[1], n)
+# `n_A1_gate` is a model-CONSTRUCTOR parameter that overrides ONLY the gate arm.
+# Measured behaviour of that override (see plausibility/n_A1_gate_audit.json):
+#   * it is implemented as an EXACT correction to d[34] (bit2's M_I) and nothing
+#     else - the independently measured local slope of the bit2 M_I source with
+#     respect to the gate equals the correction's `scale` factor to 1.1e-13, the
+#     predicted and measured d[34] changes agree to 2e-16, and no other derivative
+#     entry moves;
+#   * the gate also reaches model.py's F1 production entry, but ThreeBit51Model.rhs
+#     discards that entry and recomputes A1/F1 itself, which is why the F1
+#     production exponent stays pinned;
+#   * the initial state does NOT depend on the gate exponent;
+#   * states 0..33 (the frozen two-bit prefix) are bit-identical for any exponent.
+ZENG_N_A1_TABLE = 4.0        # the published ZENG table value
+SELECTED_N_A1_GATE = 6.0     # the frozen working point (threebit51_selected_v1.json)
+
 FROZEN_FILES = ('model.py', 'model_twobit34.py', 'model_threebit51.py',
                 'verify_threebit51.py', 'verify_twobit_causal.py',
                 'test_threebit51.py', 'scan_threebit51_carry1.py')
@@ -76,16 +95,36 @@ def frozen_carry0():
 
 
 def build_threebit(carry1=None, extension=None, n_A1=None, k_A1=None,
-                   n_rep=None, k_rep=None):
+                   n_rep=None, k_rep=None, n_A1_gate=None):
     """Build the 51-state model.
 
     n_A1 / k_A1 / n_rep / k_rep apply a run-time diagnostic patch to model.ZENG
     and the previous values are returned so the caller can record and restore
     them.  They are NOT proposals to change Zeng's table; they exist to separate
     structural questions from parameter questions.
+
+    n_A1_gate  the exponent of the A1 arm INSIDE the carry-2 gate.
+
+      The default is deliberately NOT "pass None through".  Leaving the model's
+      n_A1_gate unset makes it fall back to ZENG['n_A'][1] = 4.0, which is the
+      ZENG TABLE value and NOT the frozen working point (6.0).  That silent
+      fallback invalidated six analyses (see INVALIDATED_ARTIFACTS.json), so the
+      resolution rule is now explicit:
+
+        n_A1_gate given                      -> exactly that value
+        not given, n_A1 not given            -> SELECTED_N_A1_GATE (the frozen point)
+        not given, n_A1 given                -> n_A1, reproducing the legacy
+                                                "shared slot" behaviour where
+                                                patching the table moves BOTH the
+                                                gate and the F1 production Hill
+
+      The realised exponent is asserted against the requested one.
     """
     import model as M
     from model_threebit51 import ThreeBit51Model, ThreeBitCarryParameters
+    if n_A1_gate is None:
+        n_A1_gate = SELECTED_N_A1_GATE if n_A1 is None else float(n_A1)
+    n_A1_gate = float(n_A1_gate)
     patched = {}
     if n_A1 is not None:
         patched['n_A'] = M.ZENG['n_A']
@@ -103,7 +142,13 @@ def build_threebit(carry1=None, extension=None, n_A1=None, k_A1=None,
         carry0=frozen_carry0(),
         carry1=carry1 if carry1 is not None else frozen_carry0())
     model = ThreeBit51Model(extension=extension if extension is not None
-                            else frozen_extension(), carry=carry)
+                            else frozen_extension(), carry=carry,
+                            n_A1_gate=n_A1_gate)
+    realised = float(model.n_A1_gate_effective)
+    if realised != n_A1_gate:
+        restore(patched)
+        raise RuntimeError(
+            f'n_A1_gate not realised: requested {n_A1_gate}, model reports {realised}')
     return model, patched
 
 
@@ -345,7 +390,13 @@ def write_manifest():
 # Patching ZENG['n_A'][1] therefore moves both.  DecoupledThreeBit51Model keeps
 # (a) on the patched value and pins (b) to FROZEN_N_A1, without touching any
 # frozen file: only the subclass override differs.
-FROZEN_N_A1 = 4.0
+#
+# NAMING WARNING: FROZEN_N_A1 is the ZENG TABLE value (4.0) - the value the
+# incoherent F1 arm is pinned to - and is NOT the frozen working point's gate
+# exponent, which is SELECTED_N_A1_GATE (6.0).  The name is kept because the
+# decoupling machinery and the archived decoupling artefact refer to it, and the
+# value is unchanged, so previously recorded artefacts keep their meaning.
+FROZEN_N_A1 = ZENG_N_A1_TABLE
 
 
 def _make_decoupled_class():
@@ -380,20 +431,48 @@ def _make_decoupled_class():
 DecoupledThreeBit51Model = _make_decoupled_class()
 
 
-def build_decoupled(n_A1_gate=None, carry1=None, extension=None, n_f1_drive=FROZEN_N_A1):
-    """51-state model whose gate exponent is independent of the F1 drive exponent."""
+def build_decoupled(n_A1_gate=SELECTED_N_A1_GATE, carry1=None, extension=None,
+                    n_f1_drive=FROZEN_N_A1):
+    """51-state model whose gate exponent is independent of the F1 drive exponent.
+
+    `n_A1_gate` defaults to the FROZEN working point (6.0), NOT to None.  Passing
+    None would leave the ZENG table value (4.0) in force silently, which is the
+    fallback that invalidated six analyses; if you genuinely want the table value,
+    pass ZENG_N_A1_TABLE explicitly.
+
+    NOTE this helper sets the gate exponent by patching the GLOBAL ZENG['n_A'][1],
+    and `ThreeBit51Model._carry1_sources` reads that global at call time.  A live
+    patched model therefore contaminates any other model evaluated while the patch
+    is active.  Keep at most one such model alive and restore ZENG between phases.
+    (build_threebit's `n_A1_gate` uses the model constructor instead and carries no
+    such hazard; the two mechanisms were verified equivalent to round-off.)
+    """
     import model as M
     from model_threebit51 import ThreeBitCarryParameters
-    patched = {}
-    if n_A1_gate is not None:
-        patched['n_A'] = M.ZENG['n_A']
-        M.ZENG['n_A'] = (M.ZENG['n_A'][0], float(n_A1_gate))
+    if n_A1_gate is None:
+        raise ValueError('n_A1_gate=None would silently fall back to the ZENG table '
+                         f'value; pass {ZENG_N_A1_TABLE} explicitly if that is intended')
+    n_A1_gate = float(n_A1_gate)
+    patched = {'n_A': M.ZENG['n_A']}
+    M.ZENG['n_A'] = (M.ZENG['n_A'][0], n_A1_gate)
     carry = ThreeBitCarryParameters(
         carry0=frozen_carry0(),
         carry1=carry1 if carry1 is not None else frozen_carry0())
-    model = DecoupledThreeBit51Model(
-        extension=extension if extension is not None else frozen_extension(),
-        carry=carry, n_f1_drive=n_f1_drive)
+    try:
+        model = DecoupledThreeBit51Model(
+            extension=extension if extension is not None else frozen_extension(),
+            carry=carry, n_f1_drive=n_f1_drive)
+    except Exception:
+        restore(patched)
+        raise
+    realised = float(model.n_A1_gate_effective)
+    if realised != n_A1_gate:
+        restore(patched)
+        raise RuntimeError(
+            f'n_A1_gate not realised: requested {n_A1_gate}, model reports {realised}')
+    if float(model.n_f1_drive) != float(n_f1_drive):
+        restore(patched)
+        raise RuntimeError('n_f1_drive not realised')
     return model, patched
 
 
@@ -413,14 +492,86 @@ def verify_decoupling(hours=100.0, sample_min=2.0, max_step_min=2.0,
                       probes=(6.0,)) -> dict:
     """Prove that the decoupling is exact, and write the artefact the scan checks.
 
-    Test 1  with the gate exponent at the frozen value, the decoupled model must
-            reproduce the plain model bit-for-bit (initial state and trajectory).
-    Test 2  with the gate exponent moved, the F1 production source evaluated on
-            the frozen trajectory must be unchanged, while g1 must change.
+    Test 1  with the gate exponent at the ZENG TABLE value (FROZEN_N_A1 = 4.0, the
+            value the table pins the F1 arm to), the decoupled model must reproduce
+            the plain model bit-for-bit (initial state and trajectory).
+    Test 2  with the gate exponent moved, the F1 production source evaluated on the
+            frozen trajectory must be unchanged, while g1 must change.
+    Test 3  at the SELECTED gate exponent (SELECTED_N_A1_GATE = 6.0), the
+            model-constructor path used by build_threebit and the global-ZENG-patch
+            path used by build_decoupled must agree to round-off.  This is the bridge
+            that makes results obtained through either mechanism comparable, and it
+            is re-checked on every run rather than asserted once by hand.
+
+    ORDERING MATTERS: ThreeBit51Model._carry1_sources is a staticmethod that reads
+    the global ZENG at CALL time, so a live patch contaminates other live models.
+    Test 3 therefore runs the constructor-path model FIRST, with ZENG clean, and
+    the patch-path model strictly afterwards.
     """
     carry = frozen_carry0()
 
-    plain, patch_plain = build_threebit(carry1=carry, n_A1=None)
+    # ---- Test 3 (first, because it needs a clean ZENG) --------------------
+    # Each model's right-hand side must be sampled INSIDE its own ZENG context:
+    # the constructor path runs with the table value untouched, the patch path
+    # with ZENG moved, and _carry1_sources reads ZENG at call time.
+    a6, patch_a = build_threebit(carry1=carry, n_A1_gate=SELECTED_N_A1_GATE)
+    try:
+        y0_a = a6.initial_state(cold=False)
+        sol_a = a6.simulate(hours=hours, sample_min=sample_min,
+                            max_step_min=max_step_min, initial_state=y0_a)
+        probe_idx = list(range(0, sol_a.y.shape[1], max(1, sol_a.y.shape[1] // 12)))
+        rhs_a = [a6.rhs(0.0, sol_a.y[:, k]).copy() for k in probe_idx]
+    finally:
+        restore(patch_a)
+
+    b6, patch_b = build_decoupled(n_A1_gate=SELECTED_N_A1_GATE, carry1=carry)
+    try:
+        y0_b = b6.initial_state(cold=False)
+        sol_b = b6.simulate(hours=hours, sample_min=sample_min,
+                            max_step_min=max_step_min, initial_state=y0_b)
+        rhs_b = [b6.rhs(0.0, sol_a.y[:, k]).copy() for k in probe_idx]
+    finally:
+        restore(patch_b)
+
+    gap_b6 = float(np.max(np.abs(sol_a.y - sol_b.y)))
+    # The RHS comparison is the STRUCTURAL test.  The two paths are algebraically
+    # identical but NOT bit-identical: the constructor path evaluates
+    # f(g1_table) + (g1_gate - g1_table)*scale while the patch path evaluates
+    # f(g1_gate) directly, so the rounding differs at the last bit.  An exact-zero
+    # criterion is therefore wrong; the criterion is relative to the RHS magnitude.
+    # States 0..33 ARE bit-identical because both paths call the same
+    # TwoBit34Model.rhs on the same prefix.
+    rhs_scale = float(max(max(np.max(np.abs(x)) for x in rhs_a), 1e-30))
+    rhs_gap = float(max(np.max(np.abs(x - y)) for x, y in zip(rhs_a, rhs_b)))
+    prefix_rhs_gap = float(max(np.max(np.abs(x[:34] - y[:34]))
+                               for x, y in zip(rhs_a, rhs_b)))
+    rhs_tol = 1e-12 * rhs_scale
+    equivalence = dict(
+        gate_exponent=SELECTED_N_A1_GATE,
+        constructor_path='ThreeBit51Model(n_A1_gate=...) with ZENG untouched',
+        patch_path='global ZENG["n_A"][1] patch with _carry1_sources pinned',
+        initial_state_max_abs_gap=float(np.max(np.abs(y0_a - y0_b))),
+        trajectory_max_abs_gap=gap_b6,
+        prefix_max_abs_gap=float(np.max(np.abs(sol_a.y[:34] - sol_b.y[:34]))),
+        rhs_max_abs_gap=rhs_gap,
+        rhs_scale=rhs_scale,
+        rhs_relative_gap=float(rhs_gap / rhs_scale),
+        rhs_tolerance=rhs_tol,
+        rhs_prefix_max_abs_gap=prefix_rhs_gap,
+        rhs_probes=len(probe_idx),
+        structural_identity=bool(rhs_gap <= rhs_tol),
+        prefix_bit_identical=bool(prefix_rhs_gap == 0.0),
+        equal=bool(gap_b6 < 1e-9),
+        note=('rhs_prefix_max_abs_gap is EXACTLY 0.0: both paths call the same '
+              'TwoBit34Model.rhs on states 0..33. rhs_max_abs_gap is not zero and is NOT '
+              'expected to be: the two implementations of the corrected d[34] differ in '
+              'operation order, so they agree only to rounding. The structural criterion is '
+              'the relative gap against rhs_scale. trajectory_max_abs_gap is the weaker '
+              'round-off-sensitive test, kept for continuity with the earlier report.'))
+
+    # ---- Test 1: at the TABLE value the decoupled model reproduces the plain one
+    plain, patch_plain = build_threebit(carry1=carry, n_A1=None,
+                                        n_A1_gate=FROZEN_N_A1)
     try:
         y0_plain = plain.initial_state(cold=False)
         sol_plain = plain.simulate(hours=hours, sample_min=sample_min,
@@ -439,7 +590,7 @@ def verify_decoupling(hours=100.0, sample_min=2.0, max_step_min=2.0,
     init_gap = float(np.max(np.abs(y0_dec - y0_plain)))
     traj_gap = float(np.max(np.abs(sol_dec.y - sol_plain.y)))
 
-    # Test 2: evaluate both source variants on the frozen trajectory
+    # ---- Test 2: evaluate both source variants on the frozen trajectory
     probe_rows = []
     s1 = np.asarray(sol_plain.y[27])
     a1 = np.asarray(sol_plain.y[45])
@@ -453,9 +604,13 @@ def verify_decoupling(hours=100.0, sample_min=2.0, max_step_min=2.0,
             g1_dec = dec.diagnostic_signals(sol_plain.y)['g1'][idx]
         finally:
             restore(patch)
-        plain_patched, patch2 = build_threebit(carry1=carry, n_A1=n_gate)
+        # n_A1_gate=n_gate is the legacy SHARED-SLOT semantics: patching the table
+        # moves both the gate and the F1 production Hill.  Stated explicitly.
+        plain_patched, patch2 = build_threebit(carry1=carry, n_A1=n_gate,
+                                               n_A1_gate=n_gate)
         try:
-            src_sh = np.asarray([plain_patched._carry1_sources(s1[k], a1[k])[1] for k in idx])
+            src_sh = np.asarray([plain_patched._carry1_sources(s1[k], a1[k])[1]
+                                 for k in idx])
         finally:
             restore(patch2)
         probe_rows.append(dict(
@@ -468,18 +623,32 @@ def verify_decoupling(hours=100.0, sample_min=2.0, max_step_min=2.0,
             max_g1_at_gate_n=float(np.max(g1_dec))))
 
     passed = bool(init_gap == 0.0 and traj_gap < 1e-9 and
+                  equivalence['equal'] and equivalence['structural_identity'] and
                   all(r['f1_source_decoupled_equals_frozen'] for r in probe_rows) and
                   all(not r['f1_source_shared_patch_equals_frozen'] for r in probe_rows))
-    result = dict(passed=passed, hours=hours, frozen_n_A1=FROZEN_N_A1,
+    result = dict(passed=passed, hours=hours,
+                  zeng_n_A1_table=ZENG_N_A1_TABLE,
+                  zeng_table_n_A1=ZENG_N_A1_TABLE,
+                  selected_n_A1_gate=SELECTED_N_A1_GATE,
+                  frozen_n_A1=FROZEN_N_A1,
+                  frozen_n_A1_meaning=('legacy alias, EQUAL to zeng_n_A1_table (4.0); it is NOT '
+                                       'the frozen working point gate exponent, which is '
+                                       'selected_n_A1_gate (6.0)'),
+                  test1_gate_exponent=FROZEN_N_A1,
+                  equivalence_constructor_vs_patch=equivalence,
                   initial_state_max_abs_gap=init_gap,
                   trajectory_max_abs_gap=traj_gap,
                   probes=probe_rows,
                   implementation_sha256=implementation_sha256(),
                   source_sha256=source_hashes(),
-                  note=('The decoupled model reproduces the frozen model exactly at the '
-                        'frozen gate exponent, and moving the gate exponent leaves the '
-                        'F1 production source untouched. The plain shared-slot patch '
-                        'does move it, which is why it must not be used for the scan.'))
+                  note=('Test 1 and Test 2 are stated at the ZENG TABLE exponent '
+                        '(FROZEN_N_A1 = 4.0), which is what the decoupling question is '
+                        'about. Test 3 states that at the SELECTED gate exponent (6.0) '
+                        'the constructor path and the global-patch path agree, so '
+                        'results from either mechanism are comparable. The decoupled '
+                        'model leaves the F1 production source untouched; the plain '
+                        'shared-slot patch moves it, which is why it must not be used '
+                        'for scans.'))
     OUT.mkdir(parents=True, exist_ok=True)
     decoupling_verification_path().write_text(
         json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')

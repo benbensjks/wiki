@@ -1,0 +1,743 @@
+{
+  "source_hashes": {
+    "wiki任务\\完整二级级联.py": "E790743F493F415E43296CD10911BB6C2A4E5A024F70E807A40267E9705A0E2B",
+    "final_reconstruction\\model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "C:\\Users\\18633\\Desktop\\wiki\\其他小组成员任务\\前馈环脉冲进位级联模型参数分析 (1).pdf": "4EF770A748C77C977887B62EDDC1209CA87C070BDAD17C7EFB5A94D84A26473D",
+    "C:\\Users\\18633\\Desktop\\wiki\\其他小组成员任务\\Week4_振荡器-C31建模\\code\\Flux_Driven_Translation_Burden_Model.py": "456326A418C4C7EE23C75FA2DD4A86070F37CAF820B5F863BBAA44FE9DCE51BD",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\pdf_parameters\\model_pdf.py": "4F3B40113A9E913D125B4474D0385CBB9EDAB8F10EEE7195FD76AD30C6B1B3BD",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\pdf_parameters\\run_pdf.py": "22927AD7C895B610BF9FF17E05C1CCDBF0123B3ECF8FE337B68F6F5348AA9168",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\model_hzh.py": "AD41B3E4C0681609BBB146406AFF28E6E27D87598080C9650EA5F296FEF0FA0A",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\run_hzh.py": "AF1D2474627791673AC16961AF7B502193B972AD0AA2C3F22520499EAC6D6187",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hybrid_model.py": "33168F82A1E17778589824F66DEE2ACA06833C7F113EF723B5C7F9FEA4E7B058",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\diagnostics.py": "CAF04F1E1621E407199A475634F4F7FB6A3FB02016A2A209D42FC93BDF7D423A",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\run_han_comparison.py": "0043F0B22347F963745D2B54C5CCE471425E0E57E9B4C6D8E8D22421DDCF57DF"
+  },
+  "cases": [
+    {
+      "mode": "square",
+      "hours": 300,
+      "certified": null,
+      "parameter_audit": {
+        "pdf_sha256": "4EF770A748C77C977887B62EDDC1209CA87C070BDAD17C7EFB5A94D84A26473D",
+        "pages": [
+          1,
+          2
+        ],
+        "rows": [
+          {
+            "parameter": "k_fwd",
+            "old_code_per_hour_or_dimensionless": 7.08,
+            "pdf": 7.0,
+            "used_after_conversion": 7.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.11666666666666667,
+            "is_rate": true
+          },
+          {
+            "parameter": "k_rev",
+            "old_code_per_hour_or_dimensionless": 4.8,
+            "pdf": 5.0,
+            "used_after_conversion": 5.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.08333333333333333,
+            "is_rate": true
+          },
+          {
+            "parameter": "K_D_comp",
+            "old_code_per_hour_or_dimensionless": 3.2,
+            "pdf": 1.2,
+            "used_after_conversion": 1.2,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 1.2,
+            "is_rate": false
+          },
+          {
+            "parameter": "Kinh",
+            "old_code_per_hour_or_dimensionless": 0.1026,
+            "pdf": 0.1,
+            "used_after_conversion": 0.1,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.1,
+            "is_rate": false
+          },
+          {
+            "parameter": "K_D_int1",
+            "old_code_per_hour_or_dimensionless": 1.8,
+            "pdf": 1.0,
+            "used_after_conversion": 1.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 1.0,
+            "is_rate": false
+          },
+          {
+            "parameter": "alpha_rep1",
+            "old_code_per_hour_or_dimensionless": 12.0,
+            "pdf": 3.5,
+            "used_after_conversion": 3.5,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.058333333333333334,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_rep1",
+            "old_code_per_hour_or_dimensionless": 0.3,
+            "pdf": 0.6,
+            "used_after_conversion": 0.6,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.01,
+            "is_rate": true
+          },
+          {
+            "parameter": "alpha_rdf1",
+            "old_code_per_hour_or_dimensionless": 1.5899999999999999,
+            "pdf": 6.0,
+            "used_after_conversion": 6.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.1,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_rdf1",
+            "old_code_per_hour_or_dimensionless": 0.3,
+            "pdf": 0.8,
+            "used_after_conversion": 0.8,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.013333333333333334,
+            "is_rate": true
+          },
+          {
+            "parameter": "K_rep",
+            "old_code_per_hour_or_dimensionless": 1.8,
+            "pdf": 0.85,
+            "used_after_conversion": 0.85,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.85,
+            "is_rate": false
+          },
+          {
+            "parameter": "n",
+            "old_code_per_hour_or_dimensionless": 3.0,
+            "pdf": 3.9,
+            "used_after_conversion": 3.9,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 3.9,
+            "is_rate": false
+          },
+          {
+            "parameter": "alpha_A0",
+            "old_code_per_hour_or_dimensionless": 8.478,
+            "pdf": 8.0,
+            "used_after_conversion": 8.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.13333333333333333,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_A0",
+            "old_code_per_hour_or_dimensionless": 4.386,
+            "pdf": 1.9,
+            "used_after_conversion": 1.8999999999999997,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.03166666666666666,
+            "is_rate": true
+          },
+          {
+            "parameter": "K_A0",
+            "old_code_per_hour_or_dimensionless": 1.0,
+            "pdf": 0.5,
+            "used_after_conversion": 0.5,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.5,
+            "is_rate": false
+          },
+          {
+            "parameter": "n_A0",
+            "old_code_per_hour_or_dimensionless": 2.0,
+            "pdf": 2.0,
+            "used_after_conversion": 2.0,
+            "changed": false,
+            "matches_pdf": true,
+            "stored_internal_value": 2.0,
+            "is_rate": false
+          },
+          {
+            "parameter": "alpha_R0",
+            "old_code_per_hour_or_dimensionless": 5.874,
+            "pdf": 3.8,
+            "used_after_conversion": 3.7999999999999994,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.06333333333333332,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_R0",
+            "old_code_per_hour_or_dimensionless": 0.696,
+            "pdf": 0.6,
+            "used_after_conversion": 0.6,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.01,
+            "is_rate": true
+          },
+          {
+            "parameter": "K_R0",
+            "old_code_per_hour_or_dimensionless": 2.6454,
+            "pdf": 0.6,
+            "used_after_conversion": 0.6,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.6,
+            "is_rate": false
+          },
+          {
+            "parameter": "n_R0",
+            "old_code_per_hour_or_dimensionless": 5.4332,
+            "pdf": 4.0,
+            "used_after_conversion": 4.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 4.0,
+            "is_rate": false
+          },
+          {
+            "parameter": "alpha_Int1",
+            "old_code_per_hour_or_dimensionless": 22.728,
+            "pdf": 18.0,
+            "used_after_conversion": 18.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.3,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_int1",
+            "old_code_per_hour_or_dimensionless": 4.8,
+            "pdf": 1.4,
+            "used_after_conversion": 1.4,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.02333333333333333,
+            "is_rate": true
+          }
+        ],
+        "matching_count": 21,
+        "changed_count": 20,
+        "not_in_pdf": {
+          "n_int1": 4.0
+        },
+        "retained_hby_extension": {
+          "n_A1_gate": 6.0,
+          "F1_production_exponent": 4.0,
+          "clock_K": 0.3,
+          "clock_n": 2.0
+        },
+        "scope": "Replace all PDF-listed parameters used by ZMH carry0/bit1. HBY bit0/carry1/bit2 remain unchanged; this is not a full reconstruction of the PDF circuit.",
+        "dimensional_note": "K_D_comp numeric value 1.2 retained; because the original reverse Hill argument is I*R, its threshold has product-concentration dimensions despite the PDF a.u. label."
+      },
+      "cold_mod8": {
+        "drop": 0,
+        "reads": 29,
+        "sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "observed_increments": false,
+        "enough_reads": true
+      },
+      "steady_mod8": {
+        "drop": 8,
+        "reads": 21,
+        "sequence": "xxxxxxxxxxxxxxxxxxxxx",
+        "observed_increments": false,
+        "enough_reads": true
+      },
+      "cold_mod4": {
+        "drop": 0,
+        "reads": 29,
+        "sequence": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "observed_increments": false,
+        "enough_reads": true
+      },
+      "steady_mod4": {
+        "drop": 4,
+        "reads": 25,
+        "sequence": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+        "observed_increments": false,
+        "enough_reads": true
+      },
+      "events": {
+        "bit0": 30,
+        "bit1": 15,
+        "bit2": 7
+      },
+      "health": {
+        "finite": true,
+        "minimum_by_state": {
+          "b0_M_I": 0.0,
+          "b0_I_u": 0.0,
+          "b0_I": 0.0,
+          "b0_M_T": 6.783065059130791e-06,
+          "b0_T_u": 0.00300957973322211,
+          "b0_T": 0.07879050331150991,
+          "b0_M_R": 0.0,
+          "b0_R_u": 0.0,
+          "b0_R": 0.0,
+          "b0_C": 0.0,
+          "b0_S": 0.0,
+          "A0_zmh": 0.009790869754008578,
+          "F0_zmh": 0.0794040091739696,
+          "pb1_zmh": 0.0024122298491901645,
+          "I1_zmh": 0.0,
+          "T1_zmh": 0.10444234487867618,
+          "RDF1_zmh": -1.3311621114716993e-51,
+          "A1": 0.05304307630772754,
+          "F1": 0.00031834771205568386,
+          "M_A1": 0.0007359820427042945,
+          "A1_u": 0.09295029139450886,
+          "M_F1": 6.391444562345994e-07,
+          "F1_u": 0.0002447760760766683,
+          "b2_M_I": 0.0,
+          "b2_I_u": 0.0,
+          "b2_I": 0.0,
+          "b2_M_T": 0.0158599432859341,
+          "b2_T_u": 0.2313484896723283,
+          "b2_T": 0.8178552891224137,
+          "b2_M_R": -2.436028410503416e-36,
+          "b2_R_u": -3.384344829133231e-36,
+          "b2_R": 0.0,
+          "b2_C": -1.2959287418579305e-45,
+          "b2_S": -3.28703657185628e-30
+        },
+        "maximum_by_state": {
+          "b0_M_I": 0.19999999999999984,
+          "b0_I_u": 2.785202929053146,
+          "b0_I": 2.5676061015830776,
+          "b0_M_T": 0.11666666666666667,
+          "b0_T_u": 1.6831442143704574,
+          "b0_T": 5.833333333333334,
+          "b0_M_R": 0.19803134632164182,
+          "b0_R_u": 2.8566379063430856,
+          "b0_R": 7.256304485286636,
+          "b0_C": 0.4599521696089588,
+          "b0_S": 0.9999428926449118,
+          "A0_zmh": 4.210526315789474,
+          "F0_zmh": 6.245265333898282,
+          "pb1_zmh": 1.0,
+          "I1_zmh": 2.1769628012840463,
+          "T1_zmh": 5.833333333333333,
+          "RDF1_zmh": 7.3631477200757605,
+          "A1": 1.2300679737379923,
+          "F1": 2.3851258395219976,
+          "M_A1": 0.12495175295945175,
+          "A1_u": 2.4031217243422693,
+          "M_F1": 0.08745461411580659,
+          "F1_u": 2.0502679939256465,
+          "b2_M_I": 0.07350406099954351,
+          "b2_I_u": 0.790548948418132,
+          "b2_I": 0.5705160179986848,
+          "b2_M_T": 0.11666666666666667,
+          "b2_T_u": 1.6831442143704574,
+          "b2_T": 5.833333333333334,
+          "b2_M_R": 0.09221166302763792,
+          "b2_R_u": 1.3197693294157893,
+          "b2_R": 3.231865583648193,
+          "b2_C": 0.06986454339391646,
+          "b2_S": 0.8640689291550444
+        },
+        "fractions_within_tolerance": true,
+        "nonnegative_within_tolerance": true
+      },
+      "post50_ranges": [
+        {
+          "min": 0.01672046004176776,
+          "max": 0.9998957966849958
+        },
+        {
+          "min": 0.3339082339677486,
+          "max": 0.9896260108355786
+        },
+        {
+          "min": 0.04384826831329674,
+          "max": 0.8640689291550444
+        }
+      ],
+      "square_off_sequence": "123xx27xxxxxxx7xx2xxxx7xx23xx",
+      "square_off_increments": false
+    },
+    {
+      "mode": "han",
+      "hours": 300,
+      "certified": null,
+      "parameter_audit": {
+        "pdf_sha256": "4EF770A748C77C977887B62EDDC1209CA87C070BDAD17C7EFB5A94D84A26473D",
+        "pages": [
+          1,
+          2
+        ],
+        "rows": [
+          {
+            "parameter": "k_fwd",
+            "old_code_per_hour_or_dimensionless": 7.08,
+            "pdf": 7.0,
+            "used_after_conversion": 7.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.11666666666666667,
+            "is_rate": true
+          },
+          {
+            "parameter": "k_rev",
+            "old_code_per_hour_or_dimensionless": 4.8,
+            "pdf": 5.0,
+            "used_after_conversion": 5.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.08333333333333333,
+            "is_rate": true
+          },
+          {
+            "parameter": "K_D_comp",
+            "old_code_per_hour_or_dimensionless": 3.2,
+            "pdf": 1.2,
+            "used_after_conversion": 1.2,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 1.2,
+            "is_rate": false
+          },
+          {
+            "parameter": "Kinh",
+            "old_code_per_hour_or_dimensionless": 0.1026,
+            "pdf": 0.1,
+            "used_after_conversion": 0.1,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.1,
+            "is_rate": false
+          },
+          {
+            "parameter": "K_D_int1",
+            "old_code_per_hour_or_dimensionless": 1.8,
+            "pdf": 1.0,
+            "used_after_conversion": 1.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 1.0,
+            "is_rate": false
+          },
+          {
+            "parameter": "alpha_rep1",
+            "old_code_per_hour_or_dimensionless": 12.0,
+            "pdf": 3.5,
+            "used_after_conversion": 3.5,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.058333333333333334,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_rep1",
+            "old_code_per_hour_or_dimensionless": 0.3,
+            "pdf": 0.6,
+            "used_after_conversion": 0.6,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.01,
+            "is_rate": true
+          },
+          {
+            "parameter": "alpha_rdf1",
+            "old_code_per_hour_or_dimensionless": 1.5899999999999999,
+            "pdf": 6.0,
+            "used_after_conversion": 6.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.1,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_rdf1",
+            "old_code_per_hour_or_dimensionless": 0.3,
+            "pdf": 0.8,
+            "used_after_conversion": 0.8,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.013333333333333334,
+            "is_rate": true
+          },
+          {
+            "parameter": "K_rep",
+            "old_code_per_hour_or_dimensionless": 1.8,
+            "pdf": 0.85,
+            "used_after_conversion": 0.85,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.85,
+            "is_rate": false
+          },
+          {
+            "parameter": "n",
+            "old_code_per_hour_or_dimensionless": 3.0,
+            "pdf": 3.9,
+            "used_after_conversion": 3.9,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 3.9,
+            "is_rate": false
+          },
+          {
+            "parameter": "alpha_A0",
+            "old_code_per_hour_or_dimensionless": 8.478,
+            "pdf": 8.0,
+            "used_after_conversion": 8.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.13333333333333333,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_A0",
+            "old_code_per_hour_or_dimensionless": 4.386,
+            "pdf": 1.9,
+            "used_after_conversion": 1.8999999999999997,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.03166666666666666,
+            "is_rate": true
+          },
+          {
+            "parameter": "K_A0",
+            "old_code_per_hour_or_dimensionless": 1.0,
+            "pdf": 0.5,
+            "used_after_conversion": 0.5,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.5,
+            "is_rate": false
+          },
+          {
+            "parameter": "n_A0",
+            "old_code_per_hour_or_dimensionless": 2.0,
+            "pdf": 2.0,
+            "used_after_conversion": 2.0,
+            "changed": false,
+            "matches_pdf": true,
+            "stored_internal_value": 2.0,
+            "is_rate": false
+          },
+          {
+            "parameter": "alpha_R0",
+            "old_code_per_hour_or_dimensionless": 5.874,
+            "pdf": 3.8,
+            "used_after_conversion": 3.7999999999999994,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.06333333333333332,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_R0",
+            "old_code_per_hour_or_dimensionless": 0.696,
+            "pdf": 0.6,
+            "used_after_conversion": 0.6,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.01,
+            "is_rate": true
+          },
+          {
+            "parameter": "K_R0",
+            "old_code_per_hour_or_dimensionless": 2.6454,
+            "pdf": 0.6,
+            "used_after_conversion": 0.6,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.6,
+            "is_rate": false
+          },
+          {
+            "parameter": "n_R0",
+            "old_code_per_hour_or_dimensionless": 5.4332,
+            "pdf": 4.0,
+            "used_after_conversion": 4.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 4.0,
+            "is_rate": false
+          },
+          {
+            "parameter": "alpha_Int1",
+            "old_code_per_hour_or_dimensionless": 22.728,
+            "pdf": 18.0,
+            "used_after_conversion": 18.0,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.3,
+            "is_rate": true
+          },
+          {
+            "parameter": "gamma_int1",
+            "old_code_per_hour_or_dimensionless": 4.8,
+            "pdf": 1.4,
+            "used_after_conversion": 1.4,
+            "changed": true,
+            "matches_pdf": true,
+            "stored_internal_value": 0.02333333333333333,
+            "is_rate": true
+          }
+        ],
+        "matching_count": 21,
+        "changed_count": 20,
+        "not_in_pdf": {
+          "n_int1": 4.0
+        },
+        "retained_hby_extension": {
+          "n_A1_gate": 6.0,
+          "F1_production_exponent": 4.0,
+          "clock_K": 0.3,
+          "clock_n": 2.0
+        },
+        "scope": "Replace all PDF-listed parameters used by ZMH carry0/bit1. HBY bit0/carry1/bit2 remain unchanged; this is not a full reconstruction of the PDF circuit.",
+        "dimensional_note": "K_D_comp numeric value 1.2 retained; because the original reverse Hill argument is I*R, its threshold has product-concentration dimensions despite the PDF a.u. label."
+      },
+      "cold_mod8": {
+        "drop": 0,
+        "reads": 27,
+        "sequence": "121xx2x6x6x6x6x6x6x6x6x6x6x",
+        "observed_increments": false,
+        "enough_reads": true
+      },
+      "steady_mod8": {
+        "drop": 8,
+        "reads": 19,
+        "sequence": "x6x6x6x6x6x6x6x6x6x",
+        "observed_increments": false,
+        "enough_reads": true
+      },
+      "cold_mod4": {
+        "drop": 0,
+        "reads": 27,
+        "sequence": "121xx2x2x2x2x2x2x2x2x2x2x2x",
+        "observed_increments": false,
+        "enough_reads": true
+      },
+      "steady_mod4": {
+        "drop": 4,
+        "reads": 23,
+        "sequence": "x2x2x2x2x2x2x2x2x2x2x2x",
+        "observed_increments": false,
+        "enough_reads": true
+      },
+      "events": {
+        "bit0": 29,
+        "bit1": 5,
+        "bit2": 1
+      },
+      "health": {
+        "finite": true,
+        "minimum_by_state": {
+          "b0_M_I": 0.00020850920961377364,
+          "b0_I_u": 0.0,
+          "b0_I": 0.0,
+          "b0_M_T": 0.0016981534469251043,
+          "b0_T_u": 0.027146398025159356,
+          "b0_T": 0.16593456979664994,
+          "b0_M_R": 0.0,
+          "b0_R_u": 0.0,
+          "b0_R": 0.0,
+          "b0_C": 0.0,
+          "b0_S": 0.0,
+          "A0_zmh": 0.06955555812925979,
+          "F0_zmh": 0.29279121269577285,
+          "pb1_zmh": 0.039378019794946414,
+          "I1_zmh": 0.0,
+          "T1_zmh": 0.2608875824986603,
+          "RDF1_zmh": -1.3311621114716993e-51,
+          "A1": 0.22619864276556287,
+          "F1": 0.0075430695587877196,
+          "M_A1": 0.009238981499616657,
+          "A1_u": 0.4364402283529077,
+          "M_F1": 0.00021022523501018192,
+          "F1_u": 0.006270201336837847,
+          "b2_M_I": 0.0,
+          "b2_I_u": 0.0,
+          "b2_I": 0.0,
+          "b2_M_T": 0.025455344813742033,
+          "b2_T_u": 0.369547446763165,
+          "b2_T": 1.2913901566598838,
+          "b2_M_R": 0.0,
+          "b2_R_u": 0.0,
+          "b2_R": 0.0,
+          "b2_C": 0.0,
+          "b2_S": 0.0
+        },
+        "maximum_by_state": {
+          "b0_M_I": 0.03848833048305994,
+          "b0_I_u": 0.5428952216816719,
+          "b0_I": 0.5484815380117275,
+          "b0_M_T": 0.11666666666666667,
+          "b0_T_u": 1.6831442143704574,
+          "b0_T": 5.833333333333334,
+          "b0_M_R": 0.19485608598172305,
+          "b0_R_u": 2.8085259818116786,
+          "b0_R": 7.018644877111332,
+          "b0_C": 0.08819558970022821,
+          "b0_S": 0.9854514225859179,
+          "A0_zmh": 4.210526315789474,
+          "F0_zmh": 6.245265333898282,
+          "pb1_zmh": 1.0,
+          "I1_zmh": 1.6154210007549992,
+          "T1_zmh": 5.833333333333333,
+          "RDF1_zmh": 7.090970116546318,
+          "A1": 1.2300679737379923,
+          "F1": 2.3851258395219976,
+          "M_A1": 0.13979664153336607,
+          "A1_u": 2.43886470615872,
+          "M_F1": 0.08745461411580659,
+          "F1_u": 2.0502679939256465,
+          "b2_M_I": 0.014459499796196212,
+          "b2_I_u": 0.20497604300842592,
+          "b2_I": 0.1885027103694772,
+          "b2_M_T": 0.11666666666666667,
+          "b2_T_u": 1.6831442143704574,
+          "b2_T": 5.833333333333334,
+          "b2_M_R": 0.025471409811083076,
+          "b2_R_u": 0.3670244283004674,
+          "b2_R": 0.9433882638153337,
+          "b2_C": 0.005520612464945997,
+          "b2_S": 0.7818243355320402
+        },
+        "fractions_within_tolerance": true,
+        "nonnegative_within_tolerance": true
+      },
+      "post50_ranges": [
+        {
+          "min": 0.012070334747104165,
+          "max": 0.9854514225859179
+        },
+        {
+          "min": 0.3464006642204117,
+          "max": 0.9516066386760877
+        },
+        {
+          "min": 0.07873669779744823,
+          "max": 0.7818243355320402
+        }
+      ],
+      "square_off_sequence": null,
+      "square_off_increments": null
+    }
+  ]
+}

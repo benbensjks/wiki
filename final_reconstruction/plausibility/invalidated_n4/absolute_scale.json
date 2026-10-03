@@ -1,0 +1,21 @@
+{
+  "hours": 300.0,
+  "uM_per_au": 5.75,
+  "reference": {
+    "free_tf_uM": 30.0,
+    "burden_fraction": 0.1,
+    "protein_synthesis_budget_per_h": 4000000.0
+  },
+  "flagged_pools": [
+    "bit0.T",
+    "bit0.R",
+    "bit1.T",
+    "bit1.R",
+    "bit2.R",
+    "F0"
+  ],
+  "max_free_pool_uM": 40.70689509998698,
+  "total_synthesis_copies_per_cell_h": 213169.58161990505,
+  "burden_fraction": 0.05329239540497626,
+  "burden_flagged": false
+}

@@ -1,0 +1,181 @@
+{
+  "dir": "round4_20261001_165636",
+  "rows": [
+    {
+      "phase": 0,
+      "counting": true,
+      "events": true,
+      "stage0": [
+        19,
+        19,
+        17
+      ],
+      "stage1": [
+        10,
+        9,
+        9
+      ],
+      "late1": 8,
+      "unassigned_gate1": [],
+      "unassigned_flip1": [],
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "sequence": "70123456701234567012345670123"
+    },
+    {
+      "phase": 1,
+      "counting": true,
+      "events": true,
+      "stage0": [
+        19,
+        19,
+        19
+      ],
+      "stage1": [
+        10,
+        10,
+        10
+      ],
+      "late1": 8,
+      "unassigned_gate1": [],
+      "unassigned_flip1": [],
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "sequence": "34567012345670123456701234567"
+    },
+    {
+      "phase": 2,
+      "counting": true,
+      "events": true,
+      "stage0": [
+        19,
+        19,
+        19
+      ],
+      "stage1": [
+        10,
+        10,
+        10
+      ],
+      "late1": 8,
+      "unassigned_gate1": [],
+      "unassigned_flip1": [],
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "sequence": "34567012345670123456701234567"
+    },
+    {
+      "phase": 3,
+      "counting": true,
+      "events": true,
+      "stage0": [
+        19,
+        19,
+        19
+      ],
+      "stage1": [
+        10,
+        10,
+        10
+      ],
+      "late1": 8,
+      "unassigned_gate1": [],
+      "unassigned_flip1": [],
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "sequence": "34567012345670123456701234567"
+    },
+    {
+      "phase": 4,
+      "counting": true,
+      "events": true,
+      "stage0": [
+        19,
+        19,
+        19
+      ],
+      "stage1": [
+        10,
+        10,
+        10
+      ],
+      "late1": 8,
+      "unassigned_gate1": [],
+      "unassigned_flip1": [],
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "sequence": "34567012345670123456701234567"
+    },
+    {
+      "phase": 5,
+      "counting": true,
+      "events": true,
+      "stage0": [
+        19,
+        19,
+        19
+      ],
+      "stage1": [
+        10,
+        10,
+        10
+      ],
+      "late1": 8,
+      "unassigned_gate1": [],
+      "unassigned_flip1": [],
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "sequence": "34567012345670123456701234567"
+    },
+    {
+      "phase": 6,
+      "counting": true,
+      "events": true,
+      "stage0": [
+        19,
+        19,
+        19
+      ],
+      "stage1": [
+        10,
+        10,
+        10
+      ],
+      "late1": 8,
+      "unassigned_gate1": [],
+      "unassigned_flip1": [],
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "sequence": "34567012345670123456701234567"
+    },
+    {
+      "phase": 7,
+      "counting": true,
+      "events": false,
+      "stage0": [
+        19,
+        18,
+        18
+      ],
+      "stage1": [
+        9,
+        8,
+        8
+      ],
+      "late1": 7,
+      "unassigned_gate1": [],
+      "unassigned_flip1": [],
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "sequence": "67012345670123456701234567012"
+    }
+  ]
+}

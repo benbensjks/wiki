@@ -1,0 +1,824 @@
+{
+  "square": {
+    "level01": {
+      "rows": [
+        {
+          "trigger_h": 15.611892805871772,
+          "count": 1,
+          "delays_h": [
+            0.4278625135338565
+          ]
+        },
+        {
+          "trigger_h": 35.61176010564186,
+          "count": 1,
+          "delays_h": [
+            0.2870857518110199
+          ]
+        },
+        {
+          "trigger_h": 55.61175980107477,
+          "count": 1,
+          "delays_h": [
+            0.4402974537828541
+          ]
+        },
+        {
+          "trigger_h": 75.61175980047278,
+          "count": 1,
+          "delays_h": [
+            0.2895023011208764
+          ]
+        },
+        {
+          "trigger_h": 95.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.4397518209191986
+          ]
+        },
+        {
+          "trigger_h": 115.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.2893948986517927
+          ]
+        },
+        {
+          "trigger_h": 135.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.43977332089795595
+          ]
+        },
+        {
+          "trigger_h": 155.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.2893990686378345
+          ]
+        },
+        {
+          "trigger_h": 175.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.43977248631898647
+          ]
+        },
+        {
+          "trigger_h": 195.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.2893989066762117
+          ]
+        },
+        {
+          "trigger_h": 215.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.43977251873403134
+          ]
+        },
+        {
+          "trigger_h": 235.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.28939891296667497
+          ]
+        },
+        {
+          "trigger_h": 255.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.4397725174750917
+          ]
+        },
+        {
+          "trigger_h": 275.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.2893989127223904
+          ]
+        },
+        {
+          "trigger_h": 295.6117598004716,
+          "count": 1,
+          "delays_h": [
+            0.43977251752397706
+          ]
+        }
+      ],
+      "one_per_observed_rollover": true,
+      "unassigned_high_events": 0,
+      "alternating_high_directions": true,
+      "scope": "0.5 DNA crossings only; not a gate-window causal certificate; last interval is right-censored"
+    },
+    "level12": {
+      "rows": [
+        {
+          "trigger_h": 35.898845857452876,
+          "count": 1,
+          "delays_h": [
+            0.8570305546040515
+          ]
+        },
+        {
+          "trigger_h": 75.90126210159366,
+          "count": 1,
+          "delays_h": [
+            0.9589207397239363
+          ]
+        },
+        {
+          "trigger_h": 115.9011546991234,
+          "count": 1,
+          "delays_h": [
+            0.8519755466842582
+          ]
+        },
+        {
+          "trigger_h": 155.90115886910942,
+          "count": 1,
+          "delays_h": [
+            0.9588910194434277
+          ]
+        },
+        {
+          "trigger_h": 195.9011587071478,
+          "count": 1,
+          "delays_h": [
+            0.8519683269354346
+          ]
+        },
+        {
+          "trigger_h": 235.90115871343826,
+          "count": 1,
+          "delays_h": [
+            0.9588909704052924
+          ]
+        },
+        {
+          "trigger_h": 275.901158713194,
+          "count": 1,
+          "delays_h": [
+            0.851968315502063
+          ]
+        }
+      ],
+      "one_per_observed_rollover": true,
+      "unassigned_high_events": 0,
+      "alternating_high_directions": true,
+      "scope": "0.5 DNA crossings only; not a gate-window causal certificate; last interval is right-censored"
+    },
+    "min_original_commitment": 0.7520661157024794,
+    "unlabelled_by_bit": [
+      29,
+      0,
+      0
+    ]
+  },
+  "han": {
+    "level01": {
+      "rows": [
+        {
+          "trigger_h": 11.265500399413497,
+          "count": 1,
+          "delays_h": [
+            0.3609531873787297
+          ]
+        },
+        {
+          "trigger_h": 32.42023550836183,
+          "count": 1,
+          "delays_h": [
+            0.12042708011720293
+          ]
+        },
+        {
+          "trigger_h": 53.60230830518327,
+          "count": 1,
+          "delays_h": [
+            0.3727350621528984
+          ]
+        },
+        {
+          "trigger_h": 74.78435728071531,
+          "count": 1,
+          "delays_h": [
+            0.12305176637930515
+          ]
+        },
+        {
+          "trigger_h": 95.96640673862738,
+          "count": 1,
+          "delays_h": [
+            0.3724465640669621
+          ]
+        },
+        {
+          "trigger_h": 117.14846090185686,
+          "count": 1,
+          "delays_h": [
+            0.12298192070889513
+          ]
+        },
+        {
+          "trigger_h": 138.33051470691237,
+          "count": 1,
+          "delays_h": [
+            0.37243093943885697
+          ]
+        },
+        {
+          "trigger_h": 159.51256812752732,
+          "count": 1,
+          "delays_h": [
+            0.12295752211707622
+          ]
+        },
+        {
+          "trigger_h": 180.69462113746104,
+          "count": 1,
+          "delays_h": [
+            0.37239772844216645
+          ]
+        },
+        {
+          "trigger_h": 201.87667371050466,
+          "count": 1,
+          "delays_h": [
+            0.12293189707310148
+          ]
+        },
+        {
+          "trigger_h": 223.05872582048494,
+          "count": 1,
+          "delays_h": [
+            0.37241516340444036
+          ]
+        },
+        {
+          "trigger_h": 244.24077744126473,
+          "count": 1,
+          "delays_h": [
+            0.12295919327263505
+          ]
+        },
+        {
+          "trigger_h": 265.4228285467375,
+          "count": 1,
+          "delays_h": [
+            0.37243565847694526
+          ]
+        },
+        {
+          "trigger_h": 286.60487911083123,
+          "count": 1,
+          "delays_h": [
+            0.12297887676169239
+          ]
+        }
+      ],
+      "one_per_observed_rollover": true,
+      "unassigned_high_events": 0,
+      "alternating_high_directions": true,
+      "scope": "0.5 DNA crossings only; not a gate-window causal certificate; last interval is right-censored"
+    },
+    "level12": {
+      "rows": [
+        {
+          "trigger_h": 32.54066258847903,
+          "count": 1,
+          "delays_h": [
+            0.922978078226599
+          ]
+        },
+        {
+          "trigger_h": 74.90740904709462,
+          "count": 1,
+          "delays_h": [
+            1.021143114210119
+          ]
+        },
+        {
+          "trigger_h": 117.27144282256576,
+          "count": 1,
+          "delays_h": [
+            0.9197916411022504
+          ]
+        },
+        {
+          "trigger_h": 159.6355256496444,
+          "count": 1,
+          "delays_h": [
+            1.0211712797432426
+          ]
+        },
+        {
+          "trigger_h": 201.99960560757776,
+          "count": 1,
+          "delays_h": [
+            0.9198056047617058
+          ]
+        },
+        {
+          "trigger_h": 244.36373663453736,
+          "count": 1,
+          "delays_h": [
+            1.0211118560828254
+          ]
+        },
+        {
+          "trigger_h": 286.7278579875929,
+          "count": 1,
+          "delays_h": [
+            0.9197503532384985
+          ]
+        }
+      ],
+      "one_per_observed_rollover": true,
+      "unassigned_high_events": 0,
+      "alternating_high_directions": true,
+      "scope": "0.5 DNA crossings only; not a gate-window causal certificate; last interval is right-censored"
+    },
+    "min_original_commitment": 1.0,
+    "unlabelled_by_bit": [
+      0,
+      0,
+      0
+    ]
+  },
+  "square_alternative_readout": {
+    "status": "POST_HOC_DIAGNOSTIC_NOT_CERTIFICATION",
+    "rule": "OFF interval midpoint; width=20% input period; no phase scan; original trough readout retained",
+    "reads": [
+      {
+        "centre_h": 10.833333333333332,
+        "start_h": 9.833333333333332,
+        "end_h": 11.833333333333332,
+        "labels": [
+          1,
+          0,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 1
+      },
+      {
+        "centre_h": 20.833333333333332,
+        "start_h": 19.833333333333332,
+        "end_h": 21.833333333333332,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 2
+      },
+      {
+        "centre_h": 30.833333333333332,
+        "start_h": 29.833333333333332,
+        "end_h": 31.833333333333332,
+        "labels": [
+          1,
+          1,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 3
+      },
+      {
+        "centre_h": 40.833333333333336,
+        "start_h": 39.833333333333336,
+        "end_h": 41.833333333333336,
+        "labels": [
+          0,
+          0,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 4
+      },
+      {
+        "centre_h": 50.833333333333336,
+        "start_h": 49.833333333333336,
+        "end_h": 51.833333333333336,
+        "labels": [
+          1,
+          0,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 5
+      },
+      {
+        "centre_h": 60.833333333333336,
+        "start_h": 59.833333333333336,
+        "end_h": 61.833333333333336,
+        "labels": [
+          0,
+          1,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 6
+      },
+      {
+        "centre_h": 70.83333333333333,
+        "start_h": 69.83333333333333,
+        "end_h": 71.83333333333333,
+        "labels": [
+          1,
+          1,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 7
+      },
+      {
+        "centre_h": 80.83333333333333,
+        "start_h": 79.83333333333333,
+        "end_h": 81.83333333333333,
+        "labels": [
+          0,
+          0,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 0
+      },
+      {
+        "centre_h": 90.83333333333333,
+        "start_h": 89.83333333333333,
+        "end_h": 91.83333333333333,
+        "labels": [
+          1,
+          0,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 1
+      },
+      {
+        "centre_h": 100.83333333333333,
+        "start_h": 99.83333333333333,
+        "end_h": 101.83333333333333,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 2
+      },
+      {
+        "centre_h": 110.83333333333333,
+        "start_h": 109.83333333333333,
+        "end_h": 111.83333333333333,
+        "labels": [
+          1,
+          1,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 3
+      },
+      {
+        "centre_h": 120.83333333333333,
+        "start_h": 119.83333333333333,
+        "end_h": 121.83333333333333,
+        "labels": [
+          0,
+          0,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 4
+      },
+      {
+        "centre_h": 130.83333333333334,
+        "start_h": 129.83333333333334,
+        "end_h": 131.83333333333334,
+        "labels": [
+          1,
+          0,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 5
+      },
+      {
+        "centre_h": 140.83333333333334,
+        "start_h": 139.83333333333334,
+        "end_h": 141.83333333333334,
+        "labels": [
+          0,
+          1,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 6
+      },
+      {
+        "centre_h": 150.83333333333334,
+        "start_h": 149.83333333333334,
+        "end_h": 151.83333333333334,
+        "labels": [
+          1,
+          1,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 7
+      },
+      {
+        "centre_h": 160.83333333333334,
+        "start_h": 159.83333333333334,
+        "end_h": 161.83333333333334,
+        "labels": [
+          0,
+          0,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 0
+      },
+      {
+        "centre_h": 170.83333333333334,
+        "start_h": 169.83333333333334,
+        "end_h": 171.83333333333334,
+        "labels": [
+          1,
+          0,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 1
+      },
+      {
+        "centre_h": 180.83333333333334,
+        "start_h": 179.83333333333334,
+        "end_h": 181.83333333333334,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 2
+      },
+      {
+        "centre_h": 190.83333333333334,
+        "start_h": 189.83333333333334,
+        "end_h": 191.83333333333334,
+        "labels": [
+          1,
+          1,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 3
+      },
+      {
+        "centre_h": 200.83333333333334,
+        "start_h": 199.83333333333334,
+        "end_h": 201.83333333333334,
+        "labels": [
+          0,
+          0,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 4
+      },
+      {
+        "centre_h": 210.83333333333334,
+        "start_h": 209.83333333333334,
+        "end_h": 211.83333333333334,
+        "labels": [
+          1,
+          0,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 5
+      },
+      {
+        "centre_h": 220.83333333333334,
+        "start_h": 219.83333333333334,
+        "end_h": 221.83333333333334,
+        "labels": [
+          0,
+          1,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 6
+      },
+      {
+        "centre_h": 230.83333333333334,
+        "start_h": 229.83333333333334,
+        "end_h": 231.83333333333334,
+        "labels": [
+          1,
+          1,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 7
+      },
+      {
+        "centre_h": 240.83333333333334,
+        "start_h": 239.83333333333334,
+        "end_h": 241.83333333333334,
+        "labels": [
+          0,
+          0,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 0
+      },
+      {
+        "centre_h": 250.83333333333334,
+        "start_h": 249.83333333333334,
+        "end_h": 251.83333333333334,
+        "labels": [
+          1,
+          0,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 1
+      },
+      {
+        "centre_h": 260.8333333333333,
+        "start_h": 259.8333333333333,
+        "end_h": 261.8333333333333,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 2
+      },
+      {
+        "centre_h": 270.8333333333333,
+        "start_h": 269.8333333333333,
+        "end_h": 271.8333333333333,
+        "labels": [
+          1,
+          1,
+          0
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 3
+      },
+      {
+        "centre_h": 280.8333333333333,
+        "start_h": 279.8333333333333,
+        "end_h": 281.8333333333333,
+        "labels": [
+          0,
+          0,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 4
+      },
+      {
+        "centre_h": 290.8333333333333,
+        "start_h": 289.8333333333333,
+        "end_h": 291.8333333333333,
+        "labels": [
+          1,
+          0,
+          1
+        ],
+        "commitment": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "value": 5
+      }
+    ],
+    "sequence": "12345670123456701234567012345",
+    "increments": true,
+    "min_commitment": 1.0
+  }
+}

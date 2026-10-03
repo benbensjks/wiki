@@ -1,0 +1,43 @@
+{
+  "kind": "preaudit_report_archive",
+  "created_for": "the 2026-09-26 pre-audit wrap-up round: the report and the two hash manifests as they stood before the revision",
+  "reason": "H3/H7 - artefacts are archived before being superseded, never overwritten in place. The revised report changes the wording of the small-number claim, the CV statement, the conc_scale naming and the \"stochastic study REQUIRED\" conclusion, so the previous wording must stay quotable and its manifests verifiable.",
+  "naming_note": "archive file names deliberately do not start with \"SHA256SUMS\", because write_manifest() skips such names and an archived manifest invisible to the manifest would defeat the purpose",
+  "files": [
+    {
+      "source": "final_reconstruction\\plausibility\\PREAUDIT_STOCHASTICITY_REPORT.md",
+      "archived": "final_reconstruction\\plausibility\\preaudit_report_archive\\ARCHIVED_PREAUDIT_REPORT_v1_20260924.md",
+      "sha256_before": "1185172622C7956801E5B07F566931C8D99243E0E57D0222E0F9172682538FBA",
+      "sha256_after_copy": "1185172622C7956801E5B07F566931C8D99243E0E57D0222E0F9172682538FBA",
+      "size_bytes": 7783
+    },
+    {
+      "source": "final_reconstruction\\plausibility\\SHA256SUMS.json",
+      "archived": "final_reconstruction\\plausibility\\preaudit_report_archive\\ARCHIVED_plausibility_SHA256SUMS.v1.json",
+      "sha256_before": "016CDB86C1A77DA754E884D9F9F94B1578E2F2706942490E39C460E95917EF9F",
+      "sha256_after_copy": "016CDB86C1A77DA754E884D9F9F94B1578E2F2706942490E39C460E95917EF9F",
+      "size_bytes": 117799
+    },
+    {
+      "source": "final_reconstruction\\plausibility\\SHA256SUMS.txt",
+      "archived": "final_reconstruction\\plausibility\\preaudit_report_archive\\ARCHIVED_plausibility_SHA256SUMS.v1.txt",
+      "sha256_before": "8A09E482C84D41023B2EE264A59C845FC7F2CAAF91BAEA31B84A5675010E0428",
+      "sha256_after_copy": "8A09E482C84D41023B2EE264A59C845FC7F2CAAF91BAEA31B84A5675010E0428",
+      "size_bytes": 109789
+    },
+    {
+      "source": "SHA256SUMS_authority.json",
+      "archived": "final_reconstruction\\plausibility\\preaudit_report_archive\\ARCHIVED_authority_SHA256SUMS.v1.json",
+      "sha256_before": "800B8DB952554519CCEE4CA43EE42F0E1E08339869A7F2DE8CD4ABC05602BB1A",
+      "sha256_after_copy": "800B8DB952554519CCEE4CA43EE42F0E1E08339869A7F2DE8CD4ABC05602BB1A",
+      "size_bytes": 4316
+    },
+    {
+      "source": "SHA256SUMS_authority.txt",
+      "archived": "final_reconstruction\\plausibility\\preaudit_report_archive\\ARCHIVED_authority_SHA256SUMS.v1.txt",
+      "sha256_before": "F176FEF157DE419C8C5738B5896377DC324EAA2CBF55328D60F8BA99DBBE7688",
+      "sha256_after_copy": "F176FEF157DE419C8C5738B5896377DC324EAA2CBF55328D60F8BA99DBBE7688",
+      "size_bytes": 3312
+    }
+  ]
+}

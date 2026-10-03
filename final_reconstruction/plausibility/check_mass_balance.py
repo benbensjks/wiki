@@ -44,6 +44,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from plausibility_common import (OUT, build_threebit, frozen_carry0,  # noqa: E402
                                  restore, write_manifest)
 from model import ZENG  # noqa: E402
+from working_point import working_point_block  # noqa: E402
 
 RHS_TOL = 1e-9
 FD_TOL = 0.10
@@ -121,8 +122,8 @@ def main():
                              for r in df.itertuples()},
         declaration=("the explicit complex is a structural addition relative to Zeng's "
                      'reduced model; it sequesters up to %.1f %% of the peak free Int pool'
-                     % (100 * float(df.sequestered_fraction_of_free_max.max()))))
-
+                     % (100 * float(df.sequestered_fraction_of_free_max.max()))),
+        working_point=working_point_block(model))
     OUT.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT / 'mass_balance.csv', index=False, encoding='utf-8')
     (OUT / 'mass_balance.json').write_text(

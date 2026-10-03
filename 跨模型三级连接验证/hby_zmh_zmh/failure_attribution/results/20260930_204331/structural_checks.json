@@ -1,0 +1,11 @@
+{
+  "original_tail_rhs_gap": 7.105427357601002e-15,
+  "prefix_rhs_gap": 0.0,
+  "toggle_only_A1_gap": 1.7763568394002505e-15,
+  "initial_tail_residuals": {
+    "off": 4.440892098500626e-16,
+    "on": 4.440892098500626e-16
+  },
+  "original_tail_autoregulation": false,
+  "probes": 40
+}

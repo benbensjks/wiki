@@ -1,0 +1,468 @@
+{
+  "hours": 300.0,
+  "sample_min": 1.0,
+  "rtol": 2e-07,
+  "atol": 2e-09,
+  "frozen_config": {
+    "n_A1_gate": 6.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "clock_scale": 1.0,
+    "carry_mrna_min": 2.0,
+    "carry_maturation_min": 32.5,
+    "bit_mrna_min": 2.0,
+    "bit_maturation_min": 20.0,
+    "translation_h": 30.0,
+    "kon": 0.1,
+    "koff": 1.0,
+    "complex_decay": 1.0,
+    "receiver_uM_per_au": 5.75
+  },
+  "note": "global band margin is pinned by an n-independent bit; only the per-bit values can show whether a steeper gate improves bit2",
+  "rows": [
+    {
+      "label": "n=3 uM=x0.80",
+      "n_A1_gate": 3.0,
+      "uM_fold": 0.8,
+      "gate_readback": 3.0,
+      "counting_passed": true,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.1874903243243497,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.1874903243243497,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.1957118145157,
+          "hold_h": 1.0588904935075476
+        },
+        "S1": {
+          "band_margin": 0.26435173243083265,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.996415427055728,
+          "hold_h": 1.1772693831980128
+        },
+        "S2": {
+          "band_margin": 0.27483599417242677,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.42529385490181,
+          "hold_h": 1.9313697965901042
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 44.1172493999984
+    },
+    {
+      "label": "n=3 uM=x1.00",
+      "n_A1_gate": 3.0,
+      "uM_fold": 1.0,
+      "gate_readback": 3.0,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.2236805753675657,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.2797648437431398,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.234101593210767,
+          "hold_h": 2.110857058627815
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 45.15592910000123
+    },
+    {
+      "label": "n=3 uM=x1.25",
+      "n_A1_gate": 3.0,
+      "uM_fold": 1.25,
+      "gate_readback": 3.0,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.215665632629362,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.215665632629362,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.670059837880214,
+          "hold_h": 1.3249981317140112
+        },
+        "S1": {
+          "band_margin": 0.22742479953839845,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.638224727665035,
+          "hold_h": 1.5001737947455247
+        },
+        "S2": {
+          "band_margin": 0.2762000208198242,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.186337396905486,
+          "hold_h": 2.213796146329642
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 44.057626500005426
+    },
+    {
+      "label": "n=4 uM=x0.80",
+      "n_A1_gate": 4.0,
+      "uM_fold": 0.8,
+      "gate_readback": 4.0,
+      "counting_passed": true,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.1874903243243497,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.1874903243243497,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.1957118145157,
+          "hold_h": 1.0588904935075476
+        },
+        "S1": {
+          "band_margin": 0.26435173243083265,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.996415427055728,
+          "hold_h": 1.1772693831980128
+        },
+        "S2": {
+          "band_margin": 0.2774625669104577,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.346025879077445,
+          "hold_h": 2.0020332902994937
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 61.03164229999675
+    },
+    {
+      "label": "n=4 uM=x1.00",
+      "n_A1_gate": 4.0,
+      "uM_fold": 1.0,
+      "gate_readback": 4.0,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.2236805753675657,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.2811125988689094,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.179531913551216,
+          "hold_h": 2.161980909819576
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 55.63548759999685
+    },
+    {
+      "label": "n=4 uM=x1.25",
+      "n_A1_gate": 4.0,
+      "uM_fold": 1.25,
+      "gate_readback": 4.0,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.215665632629362,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.215665632629362,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.670059837880214,
+          "hold_h": 1.3249981317140112
+        },
+        "S1": {
+          "band_margin": 0.22742479953839845,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.638224727665035,
+          "hold_h": 1.5001737947455247
+        },
+        "S2": {
+          "band_margin": 0.28167433923543356,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.018666127833029,
+          "hold_h": 2.338322907405722
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 50.63344130000041
+    },
+    {
+      "label": "n=6 uM=x0.80",
+      "n_A1_gate": 6.0,
+      "uM_fold": 0.8,
+      "gate_readback": 6.0,
+      "counting_passed": true,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.1874903243243497,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.1874903243243497,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.1957118145157,
+          "hold_h": 1.0588904935075476
+        },
+        "S1": {
+          "band_margin": 0.26435173243083265,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.996415427055728,
+          "hold_h": 1.1772693831980128
+        },
+        "S2": {
+          "band_margin": 0.27941612912757935,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.262931110842288,
+          "hold_h": 2.0789624011834213
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 42.33059830000275
+    },
+    {
+      "label": "n=6 uM=x1.00",
+      "n_A1_gate": 6.0,
+      "uM_fold": 1.0,
+      "gate_readback": 6.0,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.2236805753675657,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.28213392728037096,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.116818176046479,
+          "hold_h": 2.2212344636680115
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 52.572106300001906
+    },
+    {
+      "label": "n=6 uM=x1.25",
+      "n_A1_gate": 6.0,
+      "uM_fold": 1.25,
+      "gate_readback": 6.0,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.215665632629362,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.215665632629362,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.670059837880214,
+          "hold_h": 1.3249981317140112
+        },
+        "S1": {
+          "band_margin": 0.22742479953839845,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.638224727665035,
+          "hold_h": 1.5001737947455247
+        },
+        "S2": {
+          "band_margin": 0.2850496352259818,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.877750259322454,
+          "hold_h": 2.4502056510532775
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 53.34382230000483
+    },
+    {
+      "label": "n=8 uM=x0.80",
+      "n_A1_gate": 8.0,
+      "uM_fold": 0.8,
+      "gate_readback": 8.0,
+      "counting_passed": true,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.1874903243243497,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.1874903243243497,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.1957118145157,
+          "hold_h": 1.0588904935075476
+        },
+        "S1": {
+          "band_margin": 0.26435173243083265,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.996415427055728,
+          "hold_h": 1.1772693831980128
+        },
+        "S2": {
+          "band_margin": 0.28017531736080037,
+          "commitment": 1.0,
+          "n_samples": 3437,
+          "setup_h": 6.216437332550925,
+          "hold_h": 2.1204659934492405
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 60.55228460000217
+    },
+    {
+      "label": "n=8 uM=x1.00",
+      "n_A1_gate": 8.0,
+      "uM_fold": 1.0,
+      "gate_readback": 8.0,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.2236805753675657,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.2824475045473265,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.081187441059598,
+          "hold_h": 2.254570487997711
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 57.938862400005746
+    },
+    {
+      "label": "n=8 uM=x1.25",
+      "n_A1_gate": 8.0,
+      "uM_fold": 1.25,
+      "gate_readback": 8.0,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "band_margin_global": 0.215665632629362,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.215665632629362,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.670059837880214,
+          "hold_h": 1.3249981317140112
+        },
+        "S1": {
+          "band_margin": 0.22742479953839845,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.638224727665035,
+          "hold_h": 1.5001737947455247
+        },
+        "S2": {
+          "band_margin": 0.2863831791276111,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.8076533620345,
+          "hold_h": 2.5112013312966717
+        }
+      },
+      "clock_peak_count": 28,
+      "runtime_s": 52.50261140000657
+    }
+  ]
+}

@@ -1,0 +1,489 @@
+{
+  "partA": {
+    "hours": 400.0,
+    "n_phase": 8,
+    "period_h": 10.516666666666666,
+    "align_min": 0.49999999999954525,
+    "clock_K": 0.1,
+    "phases": [
+      {
+        "phase": 0,
+        "source_time_h": 267.81666666666666,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "70123456701234567012345670123",
+        "reads": 29,
+        "s2_flips": 9,
+        "stage1": [
+          10,
+          9,
+          9
+        ],
+        "stage0": [
+          19,
+          19,
+          17
+        ],
+        "clock_peaks": 38,
+        "last_rev_h": 392.56666666666666,
+        "gap_to_end_h": 7.433333333333337,
+        "S2_band_margin": 0.27312160852226675,
+        "S2_unlabelled": 0,
+        "S2_commitment": 1.0
+      },
+      {
+        "phase": 1,
+        "source_time_h": 269.1333333333333,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "34567012345670123456701234567",
+        "reads": 29,
+        "s2_flips": 10,
+        "stage1": [
+          10,
+          10,
+          10
+        ],
+        "stage0": [
+          19,
+          19,
+          19
+        ],
+        "clock_peaks": 38,
+        "last_rev_h": 392.56666666666666,
+        "gap_to_end_h": 7.433333333333337,
+        "S2_band_margin": 0.2731166313147413,
+        "S2_unlabelled": 0,
+        "S2_commitment": 1.0
+      },
+      {
+        "phase": 2,
+        "source_time_h": 270.45,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "34567012345670123456701234567",
+        "reads": 29,
+        "s2_flips": 10,
+        "stage1": [
+          10,
+          10,
+          10
+        ],
+        "stage0": [
+          19,
+          19,
+          19
+        ],
+        "clock_peaks": 38,
+        "last_rev_h": 392.56666666666666,
+        "gap_to_end_h": 7.433333333333337,
+        "S2_band_margin": 0.2731210894759949,
+        "S2_unlabelled": 0,
+        "S2_commitment": 1.0
+      },
+      {
+        "phase": 3,
+        "source_time_h": 271.76666666666665,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "34567012345670123456701234567",
+        "reads": 29,
+        "s2_flips": 10,
+        "stage1": [
+          10,
+          10,
+          10
+        ],
+        "stage0": [
+          19,
+          19,
+          19
+        ],
+        "clock_peaks": 38,
+        "last_rev_h": 392.56666666666666,
+        "gap_to_end_h": 7.433333333333337,
+        "S2_band_margin": 0.27312172031471615,
+        "S2_unlabelled": 0,
+        "S2_commitment": 1.0
+      },
+      {
+        "phase": 4,
+        "source_time_h": 273.06666666666666,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "34567012345670123456701234567",
+        "reads": 29,
+        "s2_flips": 10,
+        "stage1": [
+          10,
+          10,
+          10
+        ],
+        "stage0": [
+          19,
+          19,
+          19
+        ],
+        "clock_peaks": 38,
+        "last_rev_h": 392.56666666666666,
+        "gap_to_end_h": 7.433333333333337,
+        "S2_band_margin": 0.27312195030732,
+        "S2_unlabelled": 0,
+        "S2_commitment": 1.0
+      },
+      {
+        "phase": 5,
+        "source_time_h": 274.3833333333333,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "34567012345670123456701234567",
+        "reads": 29,
+        "s2_flips": 10,
+        "stage1": [
+          10,
+          10,
+          10
+        ],
+        "stage0": [
+          19,
+          19,
+          19
+        ],
+        "clock_peaks": 38,
+        "last_rev_h": 392.56666666666666,
+        "gap_to_end_h": 7.433333333333337,
+        "S2_band_margin": 0.27312206691016183,
+        "S2_unlabelled": 0,
+        "S2_commitment": 1.0
+      },
+      {
+        "phase": 6,
+        "source_time_h": 275.7,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "34567012345670123456701234567",
+        "reads": 29,
+        "s2_flips": 10,
+        "stage1": [
+          10,
+          10,
+          10
+        ],
+        "stage0": [
+          19,
+          19,
+          19
+        ],
+        "clock_peaks": 38,
+        "last_rev_h": 392.56666666666666,
+        "gap_to_end_h": 7.433333333333337,
+        "S2_band_margin": 0.2731223228240458,
+        "S2_unlabelled": 0,
+        "S2_commitment": 1.0
+      },
+      {
+        "phase": 7,
+        "source_time_h": 277.01666666666665,
+        "counting": true,
+        "events": false,
+        "full": false,
+        "sequence": "67012345670123456701234567012",
+        "reads": 29,
+        "s2_flips": 8,
+        "stage1": [
+          9,
+          8,
+          8
+        ],
+        "stage0": [
+          19,
+          18,
+          18
+        ],
+        "clock_peaks": 38,
+        "last_rev_h": 360.8,
+        "gap_to_end_h": 39.19999999999999,
+        "S2_band_margin": 0.22545358309718644,
+        "S2_unlabelled": 0,
+        "S2_commitment": 1.0
+      }
+    ],
+    "all_counting": true,
+    "all_events": false,
+    "reading": "if every phase now passes, the round-3 7/8 was a window-boundary effect; if phase 7 still fails, the result is phase-dependent"
+  },
+  "partB": {
+    "question": "does forcing the clock term to 1 (removing pulse_gate) restore the count at the original clock_K = 0.40?",
+    "cases": [
+      {
+        "arm": "off",
+        "clock_K": 0.4,
+        "bypass": true,
+        "counting": true,
+        "events": false,
+        "full": false,
+        "sequence": "1234567012345670123",
+        "reads": 19,
+        "s2_flips": 7,
+        "stage1": [
+          7,
+          0,
+          7
+        ],
+        "gate_segments": 7,
+        "gate_dose": [
+          0.012747887120719992,
+          0.013739219080701137
+        ],
+        "gate_duration": [
+          0.13333333333332575,
+          0.1500000000000341
+        ],
+        "meets_both": 0,
+        "g1_peak": 0.11747602075244341,
+        "S2_band_margin": 0.27357499460827495,
+        "S2_unlabelled": 0,
+        "mechanism": {
+          "I2_peak": 1.9776708134838088,
+          "RDF2_peak": 7.266857866144826,
+          "T2_min": 0.12946101935337387,
+          "pb2_min": 0.02001923251965541,
+          "K_rep": 0.45,
+          "n": 3.9,
+          "alpha_Int2": 28.0,
+          "K_A1": 1.2,
+          "K_R1": 0.4,
+          "clock_K": 0.4,
+          "rdf_suppression": 0.9923006043224406,
+          "RDF2_steady_predicted": 7.293266308463362,
+          "RDF2_pred_vs_measured": 1.003634093690145,
+          "i_times_r_peak": 14.371452707609853,
+          "K_D_comp": 0.8,
+          "reverse_hill_value": 0.9969108786501026,
+          "v_reverse_at_peak_per_h": 6.838674415783226,
+          "v_forward_at_peak_per_h": 0.0015149041890542047,
+          "reverse_over_forward": 4514.262000986871,
+          "reverse_sufficient": true
+        }
+      },
+      {
+        "arm": "off",
+        "clock_K": 0.2,
+        "bypass": true,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "1234567012345670123",
+        "reads": 19,
+        "s2_flips": 7,
+        "stage1": [
+          7,
+          7,
+          7
+        ],
+        "gate_segments": 7,
+        "gate_dose": [
+          0.05755003764297852,
+          0.058626858619692655
+        ],
+        "gate_duration": [
+          0.25,
+          0.26666666666667993
+        ],
+        "meets_both": 7,
+        "g1_peak": 0.38792760960893286,
+        "S2_band_margin": 0.27357499460827495,
+        "S2_unlabelled": 0,
+        "mechanism": {
+          "I2_peak": 1.9776708134838088,
+          "RDF2_peak": 7.266857866144826,
+          "T2_min": 0.12946101935337387,
+          "pb2_min": 0.02001923251965541,
+          "K_rep": 0.45,
+          "n": 3.9,
+          "alpha_Int2": 28.0,
+          "K_A1": 1.2,
+          "K_R1": 0.4,
+          "clock_K": 0.2,
+          "rdf_suppression": 0.9923006043224406,
+          "RDF2_steady_predicted": 7.293266308463362,
+          "RDF2_pred_vs_measured": 1.003634093690145,
+          "i_times_r_peak": 14.371452707609853,
+          "K_D_comp": 0.8,
+          "reverse_hill_value": 0.9969108786501026,
+          "v_reverse_at_peak_per_h": 6.838674415783226,
+          "v_forward_at_peak_per_h": 0.0015149041890542047,
+          "reverse_over_forward": 4514.262000986871,
+          "reverse_sufficient": true
+        }
+      },
+      {
+        "arm": "off",
+        "clock_K": 0.1,
+        "bypass": true,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "1234567012345670123",
+        "reads": 19,
+        "s2_flips": 7,
+        "stage1": [
+          7,
+          7,
+          7
+        ],
+        "gate_segments": 7,
+        "gate_dose": [
+          0.08423577296171135,
+          0.08525001411378673
+        ],
+        "gate_duration": [
+          0.28333333333333144,
+          0.30000000000001137
+        ],
+        "meets_both": 7,
+        "g1_peak": 0.5455596780792151,
+        "S2_band_margin": 0.27357499460827495,
+        "S2_unlabelled": 0,
+        "mechanism": {
+          "I2_peak": 1.9776708134838088,
+          "RDF2_peak": 7.266857866144826,
+          "T2_min": 0.12946101935337387,
+          "pb2_min": 0.02001923251965541,
+          "K_rep": 0.45,
+          "n": 3.9,
+          "alpha_Int2": 28.0,
+          "K_A1": 1.2,
+          "K_R1": 0.4,
+          "clock_K": 0.1,
+          "rdf_suppression": 0.9923006043224406,
+          "RDF2_steady_predicted": 7.293266308463362,
+          "RDF2_pred_vs_measured": 1.003634093690145,
+          "i_times_r_peak": 14.371452707609853,
+          "K_D_comp": 0.8,
+          "reverse_hill_value": 0.9969108786501026,
+          "v_reverse_at_peak_per_h": 6.838674415783226,
+          "v_forward_at_peak_per_h": 0.0015149041890542047,
+          "reverse_over_forward": 4514.262000986871,
+          "reverse_sufficient": true
+        }
+      },
+      {
+        "arm": "on",
+        "clock_K": 0.4,
+        "bypass": true,
+        "counting": true,
+        "events": false,
+        "full": false,
+        "sequence": "1234567012345670123",
+        "reads": 19,
+        "s2_flips": 7,
+        "stage1": [
+          7,
+          0,
+          7
+        ],
+        "gate_segments": 7,
+        "gate_dose": [
+          0.014722408669974232,
+          0.015609652430764296
+        ],
+        "gate_duration": [
+          0.21666666666666856,
+          0.2333333333333485
+        ],
+        "meets_both": 0,
+        "g1_peak": 0.07588613986179948,
+        "S2_band_margin": 0.10502923699621552,
+        "S2_unlabelled": 0,
+        "mechanism": {
+          "I2_peak": 1.7150240628529472,
+          "RDF2_peak": 6.641951960659443,
+          "T2_min": 0.1811838039637002,
+          "pb2_min": 0.009343203369151861,
+          "K_rep": 0.45,
+          "n": 3.9,
+          "alpha_Int2": 28.0,
+          "K_A1": 1.2,
+          "K_R1": 0.4,
+          "clock_K": 0.4,
+          "rdf_suppression": 0.9720222391151618,
+          "RDF2_steady_predicted": 7.222053282418279,
+          "RDF2_pred_vs_measured": 1.0873389818527444,
+          "i_times_r_peak": 11.391107436844257,
+          "K_D_comp": 0.8,
+          "reverse_hill_value": 0.9950919239934889,
+          "v_reverse_at_peak_per_h": 6.90056204443632,
+          "v_forward_at_peak_per_h": 0.0007239495464047197,
+          "reverse_over_forward": 9531.827291978992,
+          "reverse_sufficient": true
+        }
+      },
+      {
+        "arm": "on",
+        "clock_K": 0.1,
+        "bypass": true,
+        "counting": true,
+        "events": true,
+        "full": true,
+        "sequence": "1234567012345670123",
+        "reads": 19,
+        "s2_flips": 7,
+        "stage1": [
+          7,
+          7,
+          7
+        ],
+        "gate_segments": 7,
+        "gate_dose": [
+          0.09123831819521634,
+          0.09216282222267017
+        ],
+        "gate_duration": [
+          0.5333333333333314,
+          0.5500000000000114
+        ],
+        "meets_both": 7,
+        "g1_peak": 0.27188952746733347,
+        "S2_band_margin": 0.10502923699621552,
+        "S2_unlabelled": 0,
+        "mechanism": {
+          "I2_peak": 1.7150240628529472,
+          "RDF2_peak": 6.641951960659443,
+          "T2_min": 0.1811838039637002,
+          "pb2_min": 0.009343203369151861,
+          "K_rep": 0.45,
+          "n": 3.9,
+          "alpha_Int2": 28.0,
+          "K_A1": 1.2,
+          "K_R1": 0.4,
+          "clock_K": 0.1,
+          "rdf_suppression": 0.9720222391151618,
+          "RDF2_steady_predicted": 7.222053282418279,
+          "RDF2_pred_vs_measured": 1.0873389818527444,
+          "i_times_r_peak": 11.391107436844257,
+          "K_D_comp": 0.8,
+          "reverse_hill_value": 0.9950919239934889,
+          "v_reverse_at_peak_per_h": 6.90056204443632,
+          "v_forward_at_peak_per_h": 0.0007239495464047197,
+          "reverse_over_forward": 9531.827291978992,
+          "reverse_sufficient": true
+        }
+      }
+    ],
+    "restored_at_original": []
+  },
+  "prefix_guard": {
+    "certified": true,
+    "reads": true,
+    "sequence": true,
+    "margin": true
+  }
+}

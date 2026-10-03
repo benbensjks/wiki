@@ -1,0 +1,18 @@
+{
+ "status": "COMPLETED",
+ "rows": 2,
+ "guards": {
+  "G1_cert_reproduction": {
+   "certified": false,
+   "reads": false,
+   "sequence": false,
+   "stage0": false,
+   "stage1": false,
+   "margin": false
+  },
+  "G2_parity": true,
+  "G3": true,
+  "G4": true,
+  "G4_max_abs_dy": 0.0
+ }
+}

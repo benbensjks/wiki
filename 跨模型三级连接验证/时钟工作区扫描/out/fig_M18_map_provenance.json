@@ -1,0 +1,113 @@
+{
+  "source": "results\\clock_axis_20261001_180035_369646\\all.csv",
+  "source_sha256": "7BF24B0CF86113FDBF7A8CC82E153E6A6B975140C071A529EDFD00715F9804B3",
+  "points": 60,
+  "K_levels": [
+    0.075,
+    0.15,
+    0.2,
+    0.22,
+    0.24,
+    0.26,
+    0.28,
+    0.3,
+    0.4,
+    0.6
+  ],
+  "r_levels": [
+    0.13674115681610485,
+    0.2734823136322097,
+    0.3646430848429463,
+    0.4011073933272409,
+    0.4375717018115355,
+    0.47403601029583015,
+    0.5105003187801248,
+    0.5469646272644194,
+    0.7292861696858925,
+    1.0939292545288388
+  ],
+  "Int0_peak": 0.5484815380117275,
+  "n_levels": [
+    2.0,
+    3.0
+  ],
+  "arms": [
+    "hzh/base",
+    "hzz/off",
+    "hzz/on"
+  ],
+  "hours": 300.0,
+  "certified_equals_counting_and_events": true,
+  "failure_mode_rule": "s: every labelled window equals the expected sequence (only unlabelled remain); r: the x-free core is a fixed 4-state cycle; u: otherwise",
+  "note": "ordinal x axis -- column spacing is NOT physical distance; only measured levels are drawn; boundaries are intervals, not points",
+  "audit_fig_M18_map_3cell": {
+    "texts": 221,
+    "text_text": [],
+    "text_cell": [],
+    "outside": []
+  },
+  "boundaries": {
+    "hzz/off": {
+      "last_passing_K": 0.22,
+      "first_failing_K": 0.24,
+      "interval": [
+        0.22,
+        0.24
+      ],
+      "r_last": 0.4011073933272409,
+      "r_first": 0.4375717018115355
+    },
+    "hzz/on": {
+      "last_passing_K": 0.26,
+      "first_failing_K": 0.28,
+      "interval": [
+        0.26,
+        0.28
+      ],
+      "r_last": 0.47403601029583015,
+      "r_first": 0.5105003187801248
+    }
+  },
+  "audit_fig_M18_map_2cell": {
+    "texts": 161,
+    "text_text": [],
+    "text_cell": [],
+    "outside": []
+  },
+  "audit_fig_M18_map_2cell_failmode": {
+    "texts": 302,
+    "text_text": [],
+    "text_cell": [],
+    "outside": []
+  },
+  "boundaries_hzz_on": {
+    "hzz/off": {
+      "last_passing_K": 0.22,
+      "first_failing_K": 0.24,
+      "interval": [
+        0.22,
+        0.24
+      ],
+      "r_last": 0.4011073933272409,
+      "r_first": 0.4375717018115355
+    },
+    "hzz/on": {
+      "last_passing_K": 0.26,
+      "first_failing_K": 0.28,
+      "interval": [
+        0.26,
+        0.28
+      ],
+      "r_last": 0.47403601029583015,
+      "r_first": 0.5105003187801248
+    }
+  },
+  "outputs": {
+    "fig_M18_map_2cell.png": "0CF93800CE6F2E017C8036F6B10442A87B3941E9024530A419AA22D60A9BFAC9",
+    "fig_M18_map_2cell.svg": "5022B61E0CFE23E498BCA4FA2468F73F9EA77FEA1D741A88BBEF32F255C085CE",
+    "fig_M18_map_2cell_failmode.png": "6F2C7B05F44CFA3BA0A50D94825F900FCFB9EF356E8A3E6EC783E4C7374104E6",
+    "fig_M18_map_2cell_failmode.svg": "82A66ED45230F76667E915C4BDB1EA429B4FBABAAA7F8E8CE910E0A4897736E4",
+    "fig_M18_map_3cell.png": "68DCC7864248EC4F65A141C70CBE4ED8EF955FE8526514E0FBF966AF8ADE93D9",
+    "fig_M18_map_3cell.svg": "1FCBB21EA3A9FFD2628367C4359C15EEDDC53963CEB19A693BBA0C60A6501964"
+  }
+}

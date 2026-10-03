@@ -3,6 +3,19 @@
   "overrides": {
     "complex_on": 0.10500000000000001
   },
+  "resolved_params": {
+    "uM_per_au": 5.75,
+    "n_A1_gate": 6.0,
+    "carry1_mrna_half_life_min": 2.0,
+    "A1_maturation_half_life_min": 32.5,
+    "F1_maturation_half_life_min": 32.5,
+    "complex_on": 0.10500000000000001,
+    "complex_off": 1.0,
+    "complex_decay": 1.0,
+    "K_D_comp_scale": 1.0,
+    "translation_h": 30.0
+  },
+  "n_A1_gate_effective": 6.0,
   "theo_names": [
     "S0",
     "S1",
@@ -34,6 +47,19 @@
   "meta": {
     "q": 0.052500000000000005,
     "K_complex": 0.063,
-    "k_D_comp_used": 1.2
+    "k_D_comp_used": 1.2,
+    "resolved_params": {
+      "uM_per_au": 5.75,
+      "n_A1_gate": 6.0,
+      "carry1_mrna_half_life_min": 2.0,
+      "A1_maturation_half_life_min": 32.5,
+      "F1_maturation_half_life_min": 32.5,
+      "complex_on": 0.10500000000000001,
+      "complex_off": 1.0,
+      "complex_decay": 1.0,
+      "K_D_comp_scale": 1.0,
+      "translation_h": 30.0
+    },
+    "n_A1_gate_effective": 6.0
   }
 }

@@ -1,0 +1,229 @@
+{
+  "clock_K": 0.1,
+  "source_hours": 300.0,
+  "continuation_hours": 150.0,
+  "upstream_hours": 470.0,
+  "construction": "eight consecutive read windows covering values 0-7 in a converged orbit; snapshot taken at each window trough; continued with its own upstream time via dy/dt = f(t + t_start, y)",
+  "chosen": [
+    {
+      "value": 1,
+      "trough_h": 93.71666666666667
+    },
+    {
+      "value": 2,
+      "trough_h": 104.28333333333333
+    },
+    {
+      "value": 3,
+      "trough_h": 114.89999999999999
+    },
+    {
+      "value": 4,
+      "trough_h": 125.46666666666667
+    },
+    {
+      "value": 5,
+      "trough_h": 136.06666666666666
+    },
+    {
+      "value": 6,
+      "trough_h": 146.65
+    },
+    {
+      "value": 7,
+      "trough_h": 157.25
+    },
+    {
+      "value": 0,
+      "trough_h": 167.83333333333334
+    }
+  ],
+  "continuations": [
+    {
+      "target_value": 1,
+      "t_start_h": 93.71666666666667,
+      "horizon_h": 150.0,
+      "snapshot_S0": 0.9775053237364787,
+      "snapshot_S1": 0.014347790292101426,
+      "snapshot_S2": 0.006722469208599757,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "steady_sequence": "23456",
+      "increments_mod8": false,
+      "reads": 5,
+      "s2_flips": 3,
+      "stage1": [
+        3,
+        3,
+        3
+      ],
+      "S2_band_margin": 0.2731502211014697,
+      "S2_unlabelled": 0
+    },
+    {
+      "target_value": 2,
+      "t_start_h": 104.28333333333333,
+      "horizon_h": 150.0,
+      "snapshot_S0": 0.07505172262634156,
+      "snapshot_S1": 0.9925838704344199,
+      "snapshot_S2": 0.006728263696812897,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "steady_sequence": "34567",
+      "increments_mod8": false,
+      "reads": 5,
+      "s2_flips": 4,
+      "stage1": [
+        4,
+        4,
+        4
+      ],
+      "S2_band_margin": 0.27312234122222456,
+      "S2_unlabelled": 0
+    },
+    {
+      "target_value": 3,
+      "t_start_h": 114.89999999999999,
+      "horizon_h": 150.0,
+      "snapshot_S0": 0.9775039510851524,
+      "snapshot_S1": 0.986795747909772,
+      "snapshot_S2": 0.006728616695067524,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "steady_sequence": "45670",
+      "increments_mod8": false,
+      "reads": 5,
+      "s2_flips": 4,
+      "stage1": [
+        4,
+        4,
+        4
+      ],
+      "S2_band_margin": 0.27312234122222456,
+      "S2_unlabelled": 0
+    },
+    {
+      "target_value": 4,
+      "t_start_h": 125.46666666666667,
+      "horizon_h": 150.0,
+      "snapshot_S0": 0.0750517997767632,
+      "snapshot_S1": 0.014336777188075578,
+      "snapshot_S2": 0.9752567639365816,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "steady_sequence": "56701",
+      "increments_mod8": false,
+      "reads": 5,
+      "s2_flips": 3,
+      "stage1": [
+        3,
+        3,
+        3
+      ],
+      "S2_band_margin": 0.27312234122222456,
+      "S2_unlabelled": 0
+    },
+    {
+      "target_value": 5,
+      "t_start_h": 136.06666666666666,
+      "horizon_h": 150.0,
+      "snapshot_S0": 0.9775204211218848,
+      "snapshot_S1": 0.014336916561173307,
+      "snapshot_S2": 0.9736093508067872,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "steady_sequence": "67012",
+      "increments_mod8": false,
+      "reads": 5,
+      "s2_flips": 3,
+      "stage1": [
+        3,
+        3,
+        3
+      ],
+      "S2_band_margin": 0.2731223412222247,
+      "S2_unlabelled": 0
+    },
+    {
+      "target_value": 6,
+      "t_start_h": 146.65,
+      "horizon_h": 150.0,
+      "snapshot_S0": 0.07505187694190035,
+      "snapshot_S1": 0.9925830889022133,
+      "snapshot_S2": 0.973150434711845,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "steady_sequence": "70123",
+      "increments_mod8": false,
+      "reads": 5,
+      "s2_flips": 4,
+      "stage1": [
+        4,
+        4,
+        4
+      ],
+      "S2_band_margin": 0.2731223412222247,
+      "S2_unlabelled": 0
+    },
+    {
+      "target_value": 7,
+      "t_start_h": 157.25,
+      "horizon_h": 150.0,
+      "snapshot_S0": 0.977519049366547,
+      "snapshot_S1": 0.9868044839251363,
+      "snapshot_S2": 0.9731225545746043,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "steady_sequence": "01234",
+      "increments_mod8": false,
+      "reads": 5,
+      "s2_flips": 4,
+      "stage1": [
+        4,
+        4,
+        4
+      ],
+      "S2_band_margin": 0.27525654648218156,
+      "S2_unlabelled": 0
+    },
+    {
+      "target_value": 0,
+      "t_start_h": 167.83333333333334,
+      "horizon_h": 150.0,
+      "snapshot_S0": 0.07505195411840328,
+      "snapshot_S1": 0.014337003203722332,
+      "snapshot_S2": 0.006691884485898081,
+      "counting": false,
+      "events": false,
+      "full": false,
+      "steady_sequence": "12345",
+      "increments_mod8": false,
+      "reads": 5,
+      "s2_flips": 3,
+      "stage1": [
+        3,
+        3,
+        3
+      ],
+      "S2_band_margin": 0.27360913655843655,
+      "S2_unlabelled": 0
+    }
+  ],
+  "counting_passed": 0,
+  "event_passed": 0,
+  "increments_mod8": 0,
+  "note": "supersedes the round-3/4 \"eight phases\", which sampled 9.20 h inside a single 10.52 h clock cycle (all one digital value) and restarted the upstream at t=0",
+  "prefix_guard": {
+    "certified": true,
+    "reads": true,
+    "sequence": true,
+    "margin": true
+  }
+}

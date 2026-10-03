@@ -1,0 +1,121 @@
+{
+ "question": "on the 34-state hybrid HZH (HZH_MOD8_CAUSAL_V1), what changes when the Int0 clock AND gate is removed from g1?",
+ "note": "judgment via common.sig_of + explicit overwrite + common.verdict; NOT via verify_hzh.analyse (D1)",
+ "K_cert": 0.3,
+ "K_alt": 0.4,
+ "hours": 10.0,
+ "guards": {
+  "G1_cert_reproduction": {
+   "certified": false,
+   "reads": false,
+   "sequence": false,
+   "stage0": false,
+   "stage1": false,
+   "margin": false
+  },
+  "G2_parity": true,
+  "G3": true,
+  "G4": true,
+  "G4_max_abs_dy": 0.0
+ },
+ "cases": [
+  {
+   "tag": "kept_K0.30",
+   "arm": "kept",
+   "clock_K": 0.3,
+   "hours": 10.0,
+   "n_samples": 601,
+   "certified": false,
+   "counting": false,
+   "events": false,
+   "steady_reads": 0,
+   "sequence": "",
+   "cold_reads": 0,
+   "s2_crossings": 0,
+   "stage0": [
+    0,
+    0,
+    0
+   ],
+   "stage1": [
+    0,
+    0,
+    0
+   ],
+   "gate_segments": 0,
+   "gate_dose_min": NaN,
+   "gate_dose_max": NaN,
+   "gate_dur_min": NaN,
+   "gate_dur_max": NaN,
+   "gate_peak": 0.00031833769880135036,
+   "clock_signal_min": 0.0,
+   "clock_signal_max": 0.7499269698202302,
+   "S0_min": 0.0,
+   "S0_max": 0.9722596621432082,
+   "S1_min": 0.0,
+   "S1_max": 2.1418086930680147e-06,
+   "S2_min": 0.0,
+   "S2_max": 0.0013455446597479,
+   "commitment": {
+    "bit0": null,
+    "bit1": null,
+    "bit2": null
+   },
+   "unlabelled": {
+    "bit0": 0,
+    "bit1": 0,
+    "bit2": 0
+   },
+   "margin_h": null
+  },
+  {
+   "tag": "removed_K0.30",
+   "arm": "removed",
+   "clock_K": 0.3,
+   "hours": 10.0,
+   "n_samples": 601,
+   "certified": false,
+   "counting": false,
+   "events": false,
+   "steady_reads": 0,
+   "sequence": "",
+   "cold_reads": 0,
+   "s2_crossings": 0,
+   "stage0": [
+    0,
+    0,
+    0
+   ],
+   "stage1": [
+    0,
+    0,
+    0
+   ],
+   "gate_segments": 0,
+   "gate_dose_min": NaN,
+   "gate_dose_max": NaN,
+   "gate_dur_min": NaN,
+   "gate_dur_max": NaN,
+   "gate_peak": 2.633241010470688e-10,
+   "clock_signal_min": 1.0,
+   "clock_signal_max": 1.0,
+   "S0_min": 0.0,
+   "S0_max": 0.9722596621432082,
+   "S1_min": 0.0,
+   "S1_max": 2.1418086930680147e-06,
+   "S2_min": 0.0,
+   "S2_max": 0.009013890237873655,
+   "commitment": {
+    "bit0": null,
+    "bit1": null,
+    "bit2": null
+   },
+   "unlabelled": {
+    "bit0": 0,
+    "bit1": 0,
+    "bit2": 0
+   },
+   "margin_h": null
+  }
+ ]
+}

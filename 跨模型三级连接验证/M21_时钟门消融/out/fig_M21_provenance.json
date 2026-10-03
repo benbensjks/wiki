@@ -1,0 +1,109 @@
+{
+ "source": "results\\m21_20261001_225706",
+ "kept_traj": "traj_kept_K0.30.npz",
+ "removed_traj": "traj_removed_K0.30.npz",
+ "hours": 300.0,
+ "clock_K": 0.3,
+ "drop": 8,
+ "steady_reads": 19,
+ "sequence": "1234567012345670123",
+ "kept": {
+  "certified": true,
+  "gate_peak": 0.38867527362533527,
+  "gate_dose": 0.22002856742065457,
+  "gate_duration_h": 0.9166666666666288
+ },
+ "removed": {
+  "certified": true,
+  "gate_peak": 0.6144986487356715,
+  "gate_dose": 0.3608566572617658,
+  "gate_duration_h": 1.033333333333303
+ },
+ "max_abs_dy_removed_vs_kept": 2.616766524610914,
+ "differing_state_indices": [
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33
+ ],
+ "bit2_window_margins": {
+  "kept": {
+   "max_S2_low_windows": 0.01786607271962903,
+   "min_S2_high_windows": 0.9852468047278439,
+   "band_edge_distance": 0.28213392728037096
+  },
+  "removed": {
+   "max_S2_low_windows": 0.07098375150323223,
+   "min_S2_high_windows": 0.8856814630069506,
+   "band_edge_distance": 0.18568146300695065
+  },
+  "per_window_kept": [
+   0.28228246630876364,
+   0.2821399890093977,
+   0.28213998900849624,
+   0.2981175465972372,
+   0.2861085456678477,
+   0.28524688085696237,
+   0.28524688085062777,
+   0.28400940796946766,
+   0.28227640189661846,
+   0.2821339297108805,
+   0.2821339297099784,
+   0.29811748172239383,
+   0.2861084697620401,
+   0.2852468047341924,
+   0.2852468047278439,
+   0.2840094055331184,
+   0.28227639946414057,
+   0.28213392728127307,
+   0.28213392728037096
+  ],
+  "per_window_removed": [
+   0.2339030726581527,
+   0.23116886620548027,
+   0.23116886610511106,
+   0.27240677301823324,
+   0.2015419423852488,
+   0.18577333077771052,
+   0.18577333051814637,
+   0.24266967870519957,
+   0.23183908916837292,
+   0.2290996337785447,
+   0.22909963367884323,
+   0.2723335357681027,
+   0.20140096490408133,
+   0.1856814632666154,
+   0.18568146300695065,
+   0.24259602744316242,
+   0.23175019372290706,
+   0.22901624859666958,
+   0.22901624849676777
+  ]
+ },
+ "guards": {
+  "G1_cert_reproduction": {
+   "certified": true,
+   "reads": true,
+   "sequence": true,
+   "stage0": true,
+   "stage1": true,
+   "margin": true
+  },
+  "G2_parity": true,
+  "G3": true,
+  "G4": true,
+  "G5_gate_recon_parity": true,
+  "G6_gate_nontrivial": true,
+  "G4_max_abs_dy": 0.0,
+  "G5_max_abs_dgate": 0.0,
+  "G6_gate_peak": 0.6144986487356715
+ },
+ "note": "no integration in this script: reads saved trajectories only; gate signals rebuilt from states for plotting.  The labels and commitment are unchanged by the ablation but the band-edge distance is NOT: it falls from 0.2821 to 0.1857, i.e. 34 %% closer to the 0.30/0.70 edge.  \"Unchanged\" must not be claimed for readout margin."
+}

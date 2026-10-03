@@ -1,0 +1,188 @@
+{
+  "phase0": {
+    "stage0": {
+      "bit": "S1",
+      "reverse": 19,
+      "gate": 19,
+      "flips": 17,
+      "passed": true,
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "late_rows": 17,
+      "dropped_first_2": [
+        0,
+        1
+      ],
+      "unmatched": [
+        {
+          "reverse_id": 0,
+          "reverse_peak_h": 13.65,
+          "gap_to_end_h": 386.35,
+          "in_dropped_burnin": true,
+          "gate_count": 1,
+          "flip_count": 0
+        },
+        {
+          "reverse_id": 1,
+          "reverse_peak_h": 32.61666666666667,
+          "gap_to_end_h": 367.3833333333333,
+          "in_dropped_burnin": true,
+          "gate_count": 1,
+          "flip_count": 0
+        }
+      ],
+      "unassigned_gate": [],
+      "unassigned_flip": [],
+      "last_reverse_h": 392.46666666666664,
+      "last_gate_start_h": 392.18333333333334
+    },
+    "stage1": {
+      "bit": "S2",
+      "reverse": 10,
+      "gate": 9,
+      "flips": 9,
+      "passed": true,
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "late_rows": 8,
+      "dropped_first_2": [
+        0,
+        1
+      ],
+      "unmatched": [
+        {
+          "reverse_id": 0,
+          "reverse_peak_h": 9.1,
+          "gap_to_end_h": 390.9,
+          "in_dropped_burnin": true,
+          "gate_count": 0,
+          "flip_count": 0
+        }
+      ],
+      "unassigned_gate": [],
+      "unassigned_flip": [],
+      "last_reverse_h": 392.56666666666666,
+      "last_gate_start_h": 392.55
+    }
+  },
+  "phase1": {
+    "stage0": {
+      "bit": "S1",
+      "reverse": 19,
+      "gate": 19,
+      "flips": 19,
+      "passed": true,
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "late_rows": 17,
+      "dropped_first_2": [
+        0,
+        1
+      ],
+      "unmatched": [],
+      "unassigned_gate": [],
+      "unassigned_flip": [],
+      "last_reverse_h": 392.46666666666664,
+      "last_gate_start_h": 392.18333333333334
+    },
+    "stage1": {
+      "bit": "S2",
+      "reverse": 10,
+      "gate": 10,
+      "flips": 10,
+      "passed": true,
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "late_rows": 8,
+      "dropped_first_2": [
+        0,
+        1
+      ],
+      "unmatched": [],
+      "unassigned_gate": [],
+      "unassigned_flip": [],
+      "last_reverse_h": 392.56666666666666,
+      "last_gate_start_h": 392.55
+    }
+  },
+  "phase7": {
+    "stage0": {
+      "bit": "S1",
+      "reverse": 19,
+      "gate": 18,
+      "flips": 18,
+      "passed": false,
+      "one_to_one": false,
+      "order": false,
+      "alt": false,
+      "late_rows": 17,
+      "dropped_first_2": [
+        0,
+        1
+      ],
+      "unmatched": [
+        {
+          "reverse_id": 1,
+          "reverse_peak_h": 24.366666666666667,
+          "gap_to_end_h": 375.6333333333333,
+          "in_dropped_burnin": true,
+          "gate_count": 0,
+          "flip_count": 1
+        },
+        {
+          "reverse_id": 2,
+          "reverse_peak_h": 43.7,
+          "gap_to_end_h": 356.3,
+          "in_dropped_burnin": false,
+          "gate_count": 1,
+          "flip_count": 0
+        }
+      ],
+      "unassigned_gate": [],
+      "unassigned_flip": [],
+      "last_reverse_h": 381.8833333333333,
+      "last_gate_start_h": 381.6
+    },
+    "stage1": {
+      "bit": "S2",
+      "reverse": 9,
+      "gate": 8,
+      "flips": 8,
+      "passed": true,
+      "one_to_one": true,
+      "order": true,
+      "alt": true,
+      "late_rows": 7,
+      "dropped_first_2": [
+        0,
+        1
+      ],
+      "unmatched": [
+        {
+          "reverse_id": 0,
+          "reverse_peak_h": 5.533333333333333,
+          "gap_to_end_h": 394.46666666666664,
+          "in_dropped_burnin": true,
+          "gate_count": 0,
+          "flip_count": 1
+        },
+        {
+          "reverse_id": 1,
+          "reverse_peak_h": 64.46666666666667,
+          "gap_to_end_h": 335.5333333333333,
+          "in_dropped_burnin": true,
+          "gate_count": 1,
+          "flip_count": 0
+        }
+      ],
+      "unassigned_gate": [],
+      "unassigned_flip": [],
+      "last_reverse_h": 360.8,
+      "last_gate_start_h": 360.7833333333333
+    }
+  }
+}

@@ -80,6 +80,7 @@ SAMPLE_MIN = 2.0
 MAX_STEP_MIN = 2.0
 STEPS = (0.01, 0.02, 0.05)
 RANK_TOL = 1e-3
+RANK_TOLERANCES = (1e-2, 1e-3, 1e-4)
 EXPERIMENTAL_SAMPLE_MIN = 30.0
 
 PARAMS_CORE = (
@@ -335,13 +336,23 @@ def analyse(results, params, names, h, rank_tol=RANK_TOL):
     n_obs = len(names)
     F = S.T @ S
     U, sv, Vt = np.linalg.svd(S, full_matrices=False)
-    rank = int((sv > rank_tol * sv[0]).sum())
+    # The effective rank depends on the cut, so report it at several thresholds
+    # together with how far the smallest singular value sits above each.  A rank
+    # claimed at a cut the smallest sigma only clears by 2x is not a robust
+    # statement, so the margin must travel with it.
+    rank_at = {f'{t:g}': int((sv > t * sv[0]).sum()) for t in RANK_TOLERANCES}
+    ratio_min = float(sv[-1] / sv[0])
+    margin = {f'{t:g}': (float(sv[-1] / (t * sv[0])) if t > 0 else None)
+              for t in RANK_TOLERANCES}
     cond = float(sv[0] / sv[-1]) if sv[-1] > 0 else float('inf')
     C = np.linalg.pinv(F)
     d = np.sqrt(np.maximum(np.diag(C), 1e-300))
     corr = C / np.outer(d, d)
-    return dict(S=S, sv=sv, rank=rank, cond=cond, corr=corr, weakest=Vt[-1],
-                names=list(names), params=list(params), scale=scale, n_obs=n_obs)
+    return dict(S=S, sv=sv, rank=int((sv > rank_tol * sv[0]).sum()), cond=cond,
+                corr=corr, weakest=Vt[-1], names=list(names), params=list(params),
+                scale=scale, n_obs=n_obs, rank_at_threshold=rank_at,
+                smallest_sigma_margin_over_threshold=margin,
+                smallest_over_largest=ratio_min)
 
 
 def rms_summary(S, names, params):
@@ -371,6 +382,13 @@ def observable_contribution(S, names):
                          variance_fraction_lost=float(
                              1.0 - np.sum(sv ** 2) / max(np.sum(sv_full ** 2), 1e-300))))
     return rows
+
+
+def _fmt_margin(x):
+    """Format a ratio that can be anywhere from 1e-10 to 1e2."""
+    if x is None:
+        return 'n/a'
+    return ('%.1fx' % x) if x >= 0.1 else ('%.2e' % x)
 
 
 def merge(args):
@@ -414,7 +432,12 @@ def merge(args):
             full_S[f'{h:g}'] = a['S']
             entry['per_step'][f'{h:g}'] = dict(
                 singular_values=[float(x) for x in a['sv']],
-                effective_rank=a['rank'], condition_number=a['cond'],
+                effective_rank=a['rank'],
+                effective_rank_at_threshold=a['rank_at_threshold'],
+                rank_tolerances=list(RANK_TOLERANCES),
+                smallest_sigma_margin_over_threshold=a['smallest_sigma_margin_over_threshold'],
+                smallest_over_largest_sigma=a['smallest_over_largest'],
+                condition_number=a['cond'],
                 weakest_direction=dict(zip(a['params'], [float(x) for x in a['weakest']])),
                 normalised_singular_values=[float(x / a['sv'][0]) for x in a['sv']])
             sens_frames[f'{h:g}'] = rms_summary(a['S'], names, a['params'])
@@ -487,22 +510,33 @@ def merge(args):
             note='n_A1_gate is an exponent; a scale confusion shows as large |rho| with a scale'),
     )
     h0 = f'{STEPS[0]:g}'
+    exp_entry = verdict['results']['experimental']
+    th_ps, ex_ps = th['per_step'][h0], exp_entry['per_step'][h0]
+
+    def _head(ps):
+        return dict(effective_rank=ps['effective_rank'],
+                    effective_rank_at_threshold=ps['effective_rank_at_threshold'],
+                    smallest_sigma_margin_over_threshold=ps[
+                        'smallest_sigma_margin_over_threshold'],
+                    smallest_over_largest_sigma=ps['smallest_over_largest_sigma'],
+                    condition_number=ps['condition_number'],
+                    singular_values=ps['singular_values'],
+                    weakest_direction=ps['weakest_direction'])
+
     verdict['headline'] = dict(
-        theoretical=dict(effective_rank=th['per_step'][h0]['effective_rank'],
-                         condition_number=th['per_step'][h0]['condition_number'],
-                         singular_values=th['per_step'][h0]['singular_values'],
-                         weakest_direction=th['per_step'][h0]['weakest_direction']),
-        experimental=dict(effective_rank=verdict['results']['experimental']
-                          ['per_step'][h0]['effective_rank'],
-                          condition_number=verdict['results']['experimental']
-                          ['per_step'][h0]['condition_number'],
-                          singular_values=verdict['results']['experimental']
-                          ['per_step'][h0]['singular_values'],
-                          weakest_direction=verdict['results']['experimental']
-                          ['per_step'][h0]['weakest_direction']),
+        theoretical=_head(th_ps), experimental=_head(ex_ps),
         rank_lost_by_restricting_to_experimental=(
-            th['per_step'][h0]['effective_rank'] -
-            verdict['results']['experimental']['per_step'][h0]['effective_rank']))
+            th_ps['effective_rank'] - ex_ps['effective_rank']),
+        rank_statement_qualification=(
+            'The effective rank is a thresholded quantity. At the 1e-3 cut it is 9 for both '
+            'observation models, but at the looser 1e-2 cut it drops to %d (theoretical) and %d '
+            '(experimental), and the smallest singular value clears the 1e-3 cut by only '
+            '%s / %s. "Restricting to experimental observables loses no rank" is therefore a '
+            'statement AT one cut, not a robust one. Any quoted rank must name its threshold.'
+            % (th_ps['effective_rank_at_threshold'].get('0.01'),
+               ex_ps['effective_rank_at_threshold'].get('0.01'),
+               _fmt_margin(th_ps['smallest_sigma_margin_over_threshold']['0.001']),
+               _fmt_margin(ex_ps['smallest_sigma_margin_over_threshold']['0.001']))))
     (OUT / 'local_identifiability_verdict.json').write_text(
         json.dumps(verdict, ensure_ascii=False, indent=2), encoding='utf-8')
     write_manifest()

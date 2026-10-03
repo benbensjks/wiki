@@ -1,0 +1,56 @@
+{
+  "style_reference": "wiki_submission_assets/plot_hybrid_submission.py",
+  "inputs": {
+    "kept": {
+      "file": "M21_时钟门消融\\results\\m21_20261001_225706\\traj_kept_K0.30.npz",
+      "sha256": "BFD0790721BAA34593CD8ED562395EAB5871EC2A94B6AF740A0579CC5DF88102"
+    },
+    "removed": {
+      "file": "M21_时钟门消融\\results\\m21_20261001_225706\\traj_removed_K0.30.npz",
+      "sha256": "516A482040EE08B04327CB85444671A414E27812758DC979C1BBDAD132E1CA30"
+    }
+  },
+  "window": {
+    "read_windows": "steady 7..14",
+    "carry_cycles": "15..22",
+    "t_start_h": 161.933,
+    "t_end_h": 246.667,
+    "span_h": 84.73400000000001,
+    "n_read_windows": 8,
+    "decoded_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "why": "first complete steady mod-8 cycle that starts on value 0; also contains the stretch where the REMOVED arm band margin is smallest (cycles 21-22)"
+  },
+  "state_definitions": {
+    "bit0": "b0_S",
+    "bit1": "1 - pb1_zmh",
+    "bit2": "b2_S",
+    "int0_translation": "30 * b0_M_I"
+  },
+  "identity_checks": {
+    "bit0_maxabs": 0.0,
+    "bit1_maxabs": 0.0,
+    "bit2_maxabs": 0.23054774159030395
+  },
+  "band_edge_distance": {
+    "kept": 0.2821,
+    "removed": 0.1857
+  },
+  "note": "saved trajectories only; no integration, smoothing or resampling.  The two columns share identical y limits so they are directly comparable.  bit0/bit1 identity is ASSERTED before drawing.",
+  "outputs": {
+    "fig_M21_pair_combined.png": "B5A6709239BCFD1EC3B09A87F83B84D71B84818A274941C06613552FDC2CE2C2",
+    "fig_M21_pair_combined.svg": "56C519C0D19A12E06B92FBA7AB9D1E5F65D506321BEC5E79B192948E37CBD219",
+    "fig_M21_pair_kept.png": "1A5560BA802A5E1932DCA8D65C78121B0C63CBB407641A51007502D07B7780F2",
+    "fig_M21_pair_kept.svg": "D3E3449B75D1AC4D73C9C4CF553FE80B7FAE067D0DAD08F824FC325711F25765",
+    "fig_M21_pair_removed.png": "15C9C81592F0E6E8B2949A7D9B1032081557C4D07A327640AE88EF599DA62EC2",
+    "fig_M21_pair_removed.svg": "DEDF17FC9DB11B41ED61C45F60E03D5547BE8865F627C653B907AD231BAFC1E5"
+  }
+}

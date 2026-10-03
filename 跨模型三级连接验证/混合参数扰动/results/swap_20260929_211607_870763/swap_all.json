@@ -1,0 +1,383 @@
+{
+  "hours": 300.0,
+  "sample_min": 1.0,
+  "rtol": 2e-07,
+  "atol": 2e-09,
+  "frozen_config": {
+    "n_A1_gate": 6.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "clock_scale": 1.0,
+    "carry_mrna_min": 2.0,
+    "carry_maturation_min": 32.5,
+    "bit_mrna_min": 2.0,
+    "bit_maturation_min": 20.0,
+    "translation_h": 30.0,
+    "kon": 0.1,
+    "koff": 1.0,
+    "complex_decay": 1.0,
+    "receiver_uM_per_au": 5.75
+  },
+  "reference": {
+    "certified": true,
+    "steady_reads": 19,
+    "clock_peak_count": 28,
+    "sequence": "1234567012345670123",
+    "margin_h": 1.1784609018563117,
+    "stage0": {
+      "reverse": 14,
+      "gate": 14,
+      "flip": 14
+    },
+    "stage1": {
+      "reverse": 7,
+      "gate": 7,
+      "flip": 7
+    }
+  },
+  "control_checks": {
+    "full": true,
+    "reads": true,
+    "sequence": true,
+    "margin": true
+  },
+  "middle_definition": {
+    "zmh": "A0_zmh,F0_zmh,pb1_zmh,I1_zmh,T1_zmh,RDF1_zmh (6 states)",
+    "m51": "M_A0,A0_u,A0,M_F0,F0_u,F0 + full 11-state b1 (17 states)"
+  },
+  "confound_note": "the swap changes module structure AND the middle-stage parameter table (ZENG vs ZMH current); they are not separated here",
+  "rows": [
+    {
+      "label": "zmh n=4",
+      "middle": "zmh",
+      "n_A1_gate": 4.0,
+      "n_states": 34,
+      "runtime_s": 37.23585190000449,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "reads": 19,
+      "commitment": 1.0,
+      "margin_global_h": 1.178460901856866,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.161980909819576,
+      "clock_peak_count": 28,
+      "s0": {
+        "reverse_events": 14,
+        "gate_events": 14,
+        "flip_events": 14,
+        "one_to_one": true,
+        "causal_order": true,
+        "alternating_directions": true
+      },
+      "s1": {
+        "reverse_events": 7,
+        "gate_events": 7,
+        "flip_events": 7,
+        "one_to_one": true,
+        "causal_order": true,
+        "alternating_directions": true
+      },
+      "g1_peak": 0.36044033089578287,
+      "g1_window": {
+        "peak_max": 0.36044033089578287,
+        "width_max": 9.166666666666686,
+        "integral_min": 7.421584898964989e-06,
+        "integral_max": 0.23714965241299948,
+        "far_dwell_median": 1.907307500749533e-09
+      },
+      "int2_peak": 13.69673257403975,
+      "j_fwd2_integral": 4.896144359198789,
+      "j_rev2_integral": 3.9020996566349533,
+      "j_rev1_integral": 7.701915430228945,
+      "interface": {
+        "PB0_high": 0.028902169563620794,
+        "PB0_low": 0.7294021937011667,
+        "PB1_high": 0.01386267009188055,
+        "PB1_low": 0.899426165475947,
+        "A0": {
+          "peak": 1.9329685362517102,
+          "median_in": 0.055624607503880416,
+          "median_out": 1.3934042205375838
+        },
+        "F0": {
+          "peak": 6.657771604876878,
+          "median_in": 0.10828762358524263,
+          "median_out": 4.5064608068194225
+        },
+        "Int1": {
+          "peak": 2.7161068661996977,
+          "median_in": 0.014496309889861312,
+          "median_out": 0.030625467959206686
+        },
+        "T1": {
+          "peak": 40.0,
+          "median_in": 5.062499583928542,
+          "median_out": 21.731900842292283
+        },
+        "RDF1": {
+          "peak": 4.740516833263119,
+          "median_in": 0.24972105897406532,
+          "median_out": 0.28092468148923766
+        },
+        "Int1_source": {
+          "peak": 0.23817602265674392,
+          "median_in": 0.0011684286251785764,
+          "median_out": 0.0024408066114044195
+        },
+        "Int1_peak": 2.7161068661996977,
+        "Int1_source_peak": 0.23817602265674392
+      }
+    },
+    {
+      "label": "zmh n=6",
+      "middle": "zmh",
+      "n_A1_gate": 6.0,
+      "n_states": 34,
+      "runtime_s": 37.72873299999628,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "reads": 19,
+      "commitment": 1.0,
+      "margin_global_h": 1.178460901856866,
+      "margin_S1_h": 1.301442822565761,
+      "margin_S2_h": 2.2212344636680115,
+      "clock_peak_count": 28,
+      "s0": {
+        "reverse_events": 14,
+        "gate_events": 14,
+        "flip_events": 14,
+        "one_to_one": true,
+        "causal_order": true,
+        "alternating_directions": true
+      },
+      "s1": {
+        "reverse_events": 7,
+        "gate_events": 7,
+        "flip_events": 7,
+        "one_to_one": true,
+        "causal_order": true,
+        "alternating_directions": true
+      },
+      "g1_peak": 0.38867527362533527,
+      "g1_window": {
+        "peak_max": 0.38867527362533527,
+        "width_max": 9.016666666666708,
+        "integral_min": 8.261938249369365e-08,
+        "integral_max": 0.2350639166982352,
+        "far_dwell_median": 8.193987678903863e-12
+      },
+      "int2_peak": 14.76966039776274,
+      "j_fwd2_integral": 4.864393571647213,
+      "j_rev2_integral": 3.8702068172933655,
+      "j_rev1_integral": 7.701915430228945,
+      "interface": {
+        "PB0_high": 0.028902169563620794,
+        "PB0_low": 0.7294021937011667,
+        "PB1_high": 0.01386267009188055,
+        "PB1_low": 0.899426165475947,
+        "A0": {
+          "peak": 1.9329685362517102,
+          "median_in": 0.055624607503880416,
+          "median_out": 1.3934042205375838
+        },
+        "F0": {
+          "peak": 6.657771604876878,
+          "median_in": 0.10828762358524263,
+          "median_out": 4.5064608068194225
+        },
+        "Int1": {
+          "peak": 2.7161068661996977,
+          "median_in": 0.014496309889861312,
+          "median_out": 0.030625467959206686
+        },
+        "T1": {
+          "peak": 40.0,
+          "median_in": 5.062499583928542,
+          "median_out": 21.731900842292283
+        },
+        "RDF1": {
+          "peak": 4.740516833263119,
+          "median_in": 0.24972105897406532,
+          "median_out": 0.28092468148923766
+        },
+        "Int1_source": {
+          "peak": 0.23817602265674392,
+          "median_in": 0.0011684286251785764,
+          "median_out": 0.0024408066114044195
+        },
+        "Int1_peak": 2.7161068661996977,
+        "Int1_source_peak": 0.23817602265674392
+      }
+    },
+    {
+      "label": "m51 n=4",
+      "middle": "m51",
+      "n_A1_gate": 4.0,
+      "n_states": 45,
+      "runtime_s": 43.143061800001306,
+      "counting_passed": false,
+      "event_causality_passed": false,
+      "full_certified": false,
+      "sequence": "56x456x4567xxxx456x",
+      "reads": 19,
+      "commitment": 0.0,
+      "margin_global_h": 0.9770293325471506,
+      "margin_S1_h": 0.9770293325471506,
+      "margin_S2_h": 1.4016905594992295,
+      "clock_peak_count": 28,
+      "s0": {
+        "reverse_events": 14,
+        "gate_events": 14,
+        "flip_events": 14,
+        "one_to_one": true,
+        "causal_order": true,
+        "alternating_directions": true
+      },
+      "s1": {
+        "reverse_events": 7,
+        "gate_events": 7,
+        "flip_events": 5,
+        "one_to_one": false,
+        "causal_order": false,
+        "alternating_directions": false
+      },
+      "g1_peak": 0.23323157278723217,
+      "g1_window": {
+        "peak_max": 0.23323157278723217,
+        "width_max": 9.4,
+        "integral_min": 1.417858220799007e-05,
+        "integral_max": 0.18226682733663663,
+        "far_dwell_median": 6.755745309706018e-08
+      },
+      "int2_peak": 8.862799765914822,
+      "j_fwd2_integral": 4.6039014944449015,
+      "j_rev2_integral": 3.6633997986057922,
+      "j_rev1_integral": 10.571108952556987,
+      "interface": {
+        "PB0_high": 0.028902169563620794,
+        "PB0_low": 0.7294021937011667,
+        "PB1_high": 0.08096100127904016,
+        "PB1_low": 0.818571527701187,
+        "A0": {
+          "peak": 4.2105263157894735,
+          "median_in": 0.12274456151793578,
+          "median_out": 2.7765593258023715
+        },
+        "F0": {
+          "peak": 6.245265333898283,
+          "median_in": 1.6148907128237537,
+          "median_out": 5.321149418839026
+        },
+        "Int1": {
+          "peak": 2.4431750755187958,
+          "median_in": 0.0023444485975902935,
+          "median_out": 0.0012798070900816496
+        },
+        "T1": {
+          "peak": 5.833333333333334,
+          "median_in": 0.35344874000687987,
+          "median_out": 3.561830085893951
+        },
+        "RDF1": {
+          "peak": 7.4392907885259785,
+          "median_in": 6.047042271452006,
+          "median_out": 0.3189467405886177
+        },
+        "Int1_source": {
+          "peak": 7.970344887126204,
+          "median_in": 0.009988033612863004,
+          "median_out": 0.0018125415213548378
+        },
+        "Int1_peak": 2.4431750755187958,
+        "Int1_source_peak": 7.970344887126204
+      }
+    },
+    {
+      "label": "m51 n=6",
+      "middle": "m51",
+      "n_A1_gate": 6.0,
+      "n_states": 45,
+      "runtime_s": 43.600520300002245,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "reads": 19,
+      "commitment": 1.0,
+      "margin_global_h": 0.9770293325471506,
+      "margin_S1_h": 0.9770293325471506,
+      "margin_S2_h": 1.8845866156503526,
+      "clock_peak_count": 28,
+      "s0": {
+        "reverse_events": 14,
+        "gate_events": 14,
+        "flip_events": 14,
+        "one_to_one": true,
+        "causal_order": true,
+        "alternating_directions": true
+      },
+      "s1": {
+        "reverse_events": 7,
+        "gate_events": 7,
+        "flip_events": 7,
+        "one_to_one": true,
+        "causal_order": true,
+        "alternating_directions": true
+      },
+      "g1_peak": 0.2255819335882729,
+      "g1_window": {
+        "peak_max": 0.2255819335882729,
+        "width_max": 9.183333333333334,
+        "integral_min": 3.864716134614391e-07,
+        "integral_max": 0.16035738120517878,
+        "far_dwell_median": 2.777322679167471e-08
+      },
+      "int2_peak": 8.57211347635437,
+      "j_fwd2_integral": 4.602087918561276,
+      "j_rev2_integral": 3.608320788219948,
+      "j_rev1_integral": 10.571108952556987,
+      "interface": {
+        "PB0_high": 0.028902169563620794,
+        "PB0_low": 0.7294021937011667,
+        "PB1_high": 0.08096100127904016,
+        "PB1_low": 0.818571527701187,
+        "A0": {
+          "peak": 4.2105263157894735,
+          "median_in": 0.12274456151793578,
+          "median_out": 2.7765593258023715
+        },
+        "F0": {
+          "peak": 6.245265333898283,
+          "median_in": 1.6148907128237537,
+          "median_out": 5.321149418839026
+        },
+        "Int1": {
+          "peak": 2.4431750755187958,
+          "median_in": 0.0023444485975902935,
+          "median_out": 0.0012798070900816496
+        },
+        "T1": {
+          "peak": 5.833333333333334,
+          "median_in": 0.35344874000687987,
+          "median_out": 3.561830085893951
+        },
+        "RDF1": {
+          "peak": 7.4392907885259785,
+          "median_in": 6.047042271452006,
+          "median_out": 0.3189467405886177
+        },
+        "Int1_source": {
+          "peak": 7.970344887126204,
+          "median_in": 0.009988033612863004,
+          "median_out": 0.0018125415213548378
+        },
+        "Int1_peak": 2.4431750755187958,
+        "Int1_source_peak": 7.970344887126204
+      }
+    }
+  ]
+}

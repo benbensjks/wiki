@@ -1,0 +1,3 @@
+[shard06of08] conc_scale|f=1.2       cert=False cross=26 gates=13 L=None (419.62s)
+[shard06of08] K_A1|f=0.8             cert=True cross=14 gates=14 L=0.03935866798711571 (402.29s)
+[shard06of08] wrote 2 rows

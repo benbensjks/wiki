@@ -1,0 +1,36 @@
+{
+  "script": "C:\\Users\\18633\\Desktop\\wiki\\\u8de8\u6a21\u578b\u4e09\u7ea7\u8fde\u63a5\u9a8c\u8bc1\\hby_zmh_zmh\\analyse_saved.py",
+  "sha256": "E85C7185286A6ECFD9A45B07BB023025EE65CB8C860D48BBE4B14B6FD2CA7522",
+  "no_new_integration": true,
+  "parameter_note": "parameters.json preserves the full source p dictionary; only the listed tail keys are used in the new six-state module",
+  "active_tail_parameter_keys": [
+    "alpha_A1",
+    "gamma_A1",
+    "K_auto1",
+    "n_auto1",
+    "alpha_R1",
+    "gamma_R1",
+    "K_A1",
+    "n_A1",
+    "K_R1",
+    "n_R1",
+    "alpha_Int2",
+    "gamma_int2",
+    "K_D_int2",
+    "k_fwd",
+    "k_rev",
+    "Kinh",
+    "K_D_comp",
+    "alpha_rep",
+    "gamma_rep",
+    "alpha_rdf",
+    "gamma_rdf",
+    "K_rep",
+    "n"
+  ],
+  "hardcoded_source_clock": {
+    "K": 0.4,
+    "n": 3,
+    "scale": 1
+  }
+}

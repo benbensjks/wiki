@@ -1,0 +1,55 @@
+{
+  "phase0": {
+    "reverse_events": 10,
+    "gate_events": 9,
+    "flips": 9,
+    "passed": true,
+    "late_rows": 8,
+    "unmatched": [
+      {
+        "reverse_id": 0,
+        "reverse_peak_h": 9.1,
+        "gap_to_end_h": 390.9,
+        "gate_count": 0,
+        "flip_count": 0
+      }
+    ],
+    "last_reverse_h": 392.56666666666666,
+    "last_gate_start_h": 392.55
+  },
+  "phase1": {
+    "reverse_events": 10,
+    "gate_events": 10,
+    "flips": 10,
+    "passed": true,
+    "late_rows": 8,
+    "unmatched": [],
+    "last_reverse_h": 392.56666666666666,
+    "last_gate_start_h": 392.55
+  },
+  "phase7": {
+    "reverse_events": 9,
+    "gate_events": 8,
+    "flips": 8,
+    "passed": true,
+    "late_rows": 7,
+    "unmatched": [
+      {
+        "reverse_id": 0,
+        "reverse_peak_h": 5.533333333333333,
+        "gap_to_end_h": 394.46666666666664,
+        "gate_count": 0,
+        "flip_count": 1
+      },
+      {
+        "reverse_id": 1,
+        "reverse_peak_h": 64.46666666666667,
+        "gap_to_end_h": 335.5333333333333,
+        "gate_count": 1,
+        "flip_count": 0
+      }
+    ],
+    "last_reverse_h": 360.8,
+    "last_gate_start_h": 360.7833333333333
+  }
+}

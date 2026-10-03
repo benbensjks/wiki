@@ -1,0 +1,197 @@
+{
+  "off": {
+    "g1_peak": 0.11747602065961248,
+    "Int2_source_peak_au_per_h": 3.2893285784691493,
+    "mature_Int2_peak_au": 0.39427546361851057,
+    "S2_last100h": [
+      0.7842798713981944,
+      0.8177481924157821
+    ],
+    "final_S2": 0.817678051417998,
+    "raw_gate_segments": [
+      {
+        "start_h": 32.53333333333333,
+        "end_h": 32.68333333333333,
+        "peak_h": 32.61666666666667,
+        "peak": 0.11747602065961248,
+        "dose": 0.013733953199261842,
+        "duration_h": 0.14999999999999858,
+        "meets_duration": false,
+        "meets_dose": false
+      },
+      {
+        "start_h": 74.9,
+        "end_h": 75.05,
+        "peak_h": 74.98333333333333,
+        "peak": 0.11726466568329251,
+        "dose": 0.013739219084189569,
+        "duration_h": 0.14999999999999147,
+        "meets_duration": false,
+        "meets_dose": false
+      },
+      {
+        "start_h": 117.26666666666667,
+        "end_h": 117.41666666666667,
+        "peak_h": 117.35,
+        "peak": 0.11681570521768862,
+        "dose": 0.013737756050722538,
+        "duration_h": 0.15000000000000568,
+        "meets_duration": false,
+        "meets_dose": false
+      },
+      {
+        "start_h": 159.63333333333333,
+        "end_h": 159.78333333333333,
+        "peak_h": 159.7,
+        "peak": 0.11612969069734941,
+        "dose": 0.013724343175837072,
+        "duration_h": 0.15000000000000568,
+        "meets_duration": false,
+        "meets_dose": false
+      },
+      {
+        "start_h": 202.0,
+        "end_h": 202.13333333333333,
+        "peak_h": 202.06666666666666,
+        "peak": 0.11680230038297425,
+        "dose": 0.012747887127627047,
+        "duration_h": 0.13333333333332575,
+        "meets_duration": false,
+        "meets_dose": false
+      },
+      {
+        "start_h": 244.36666666666667,
+        "end_h": 244.5,
+        "peak_h": 244.43333333333334,
+        "peak": 0.11724105515187135,
+        "dose": 0.012751966141278537,
+        "duration_h": 0.13333333333332575,
+        "meets_duration": false,
+        "meets_dose": false
+      },
+      {
+        "start_h": 286.71666666666664,
+        "end_h": 286.8666666666667,
+        "peak_h": 286.8,
+        "peak": 0.11743643283810908,
+        "dose": 0.013716751936324295,
+        "duration_h": 0.1500000000000341,
+        "meets_duration": false,
+        "meets_dose": false
+      }
+    ],
+    "qualifying_gates": 0,
+    "J_fwd2_total": 0.8734510628914305,
+    "J_rev2_total": 0.05577301147305613,
+    "counted_flips": 1,
+    "steady": {
+      "drop": 8,
+      "reads": 19,
+      "complete": false,
+      "increments_mod8": false,
+      "passed": false,
+      "sequence": "xxx4567456745674567",
+      "minimum_commitment": 0.0,
+      "boundary_clips": 0
+    },
+    "DNA_balance_residual": 3.7636560534792807e-13
+  },
+  "on": {
+    "g1_peak": 0.07588613985591075,
+    "Int2_source_peak_au_per_h": 2.124811915965501,
+    "mature_Int2_peak_au": 0.45020143466041684,
+    "S2_last100h": [
+      0.764909324772022,
+      0.8395536684330869
+    ],
+    "final_S2": 0.8395318514382764,
+    "raw_gate_segments": [
+      {
+        "start_h": 32.68333333333333,
+        "end_h": 32.916666666666664,
+        "peak_h": 32.8,
+        "peak": 0.07582899132101675,
+        "dose": 0.01559001311550698,
+        "duration_h": 0.23333333333333428,
+        "meets_duration": true,
+        "meets_dose": false
+      },
+      {
+        "start_h": 75.05,
+        "end_h": 75.28333333333333,
+        "peak_h": 75.16666666666667,
+        "peak": 0.07588613985591075,
+        "dose": 0.015606270586353832,
+        "duration_h": 0.23333333333333428,
+        "meets_duration": true,
+        "meets_dose": false
+      },
+      {
+        "start_h": 117.41666666666667,
+        "end_h": 117.64999999999999,
+        "peak_h": 117.53333333333333,
+        "peak": 0.07585762700223801,
+        "dose": 0.015597687234150868,
+        "duration_h": 0.23333333333332007,
+        "meets_duration": true,
+        "meets_dose": false
+      },
+      {
+        "start_h": 159.78333333333333,
+        "end_h": 160.0,
+        "peak_h": 159.9,
+        "peak": 0.07580104984518087,
+        "dose": 0.01472240866963332,
+        "duration_h": 0.21666666666666856,
+        "meets_duration": true,
+        "meets_dose": false
+      },
+      {
+        "start_h": 202.13333333333333,
+        "end_h": 202.36666666666667,
+        "peak_h": 202.25,
+        "peak": 0.07572895427869775,
+        "dose": 0.015601107725027161,
+        "duration_h": 0.2333333333333485,
+        "meets_duration": true,
+        "meets_dose": false
+      },
+      {
+        "start_h": 244.5,
+        "end_h": 244.73333333333332,
+        "peak_h": 244.61666666666667,
+        "peak": 0.07581128543806019,
+        "dose": 0.015607395707144207,
+        "duration_h": 0.23333333333332007,
+        "meets_duration": true,
+        "meets_dose": false
+      },
+      {
+        "start_h": 286.8666666666667,
+        "end_h": 287.1,
+        "peak_h": 286.98333333333335,
+        "peak": 0.07586313869379242,
+        "dose": 0.015609652430895167,
+        "duration_h": 0.2333333333333485,
+        "meets_duration": true,
+        "meets_dose": false
+      }
+    ],
+    "qualifying_gates": 0,
+    "J_fwd2_total": 1.0760583579030105,
+    "J_rev2_total": 0.23652650644772513,
+    "counted_flips": 1,
+    "steady": {
+      "drop": 8,
+      "reads": 19,
+      "complete": true,
+      "increments_mod8": false,
+      "passed": false,
+      "sequence": "5674567456745674567",
+      "minimum_commitment": 1.0,
+      "boundary_clips": 0
+    },
+    "DNA_balance_residual": 1.7009060826467248e-11
+  },
+  "prefix_gap_off_on": 0.0
+}

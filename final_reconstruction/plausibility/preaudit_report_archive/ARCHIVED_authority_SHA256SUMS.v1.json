@@ -1,0 +1,48 @@
+{
+  "entries": {
+    "CURRENT_BASELINE.md": "461C7C5F785D653EDCDBCD22450E0D7E3C97BBEA26F964CA4FAA476B353FAE96",
+    "final_reconstruction/README.md": "2BBD7340C4B983A812B42A334FECE44EDD768F05D252E5DB5A1E1BAE0679C326",
+    "final_reconstruction/model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "final_reconstruction/model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "final_reconstruction/model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+    "final_reconstruction/plausibility/HARD_CONSTRAINTS.md": "34875E8E82F667794B9644F828365939160D0F74054F70491FE31069884AE6FB",
+    "final_reconstruction/plausibility/INVALIDATED_ARTIFACTS.json": "9C84FC0F9E3D7912B7429A70713851C56DE3DA96E1F7A0D09ACBAC78C950A6CC",
+    "final_reconstruction/plausibility/N6_FREEZE_JUSTIFICATION.md": "6A60AA41025368A5F9FD3E74DAB3BD3FFB6292D99999150D8EAA605929E948FE",
+    "final_reconstruction/plausibility/README.md": "ACB1D2A9514C538AC342397D0B0CF53B332E86C0B6B4E1D82AA93E05A25C092E",
+    "final_reconstruction/plausibility/SHA256SUMS.json": "016CDB86C1A77DA754E884D9F9F94B1578E2F2706942490E39C460E95917EF9F",
+    "final_reconstruction/plausibility/SHA256SUMS.txt": "8A09E482C84D41023B2EE264A59C845FC7F2CAAF91BAEA31B84A5675010E0428",
+    "final_reconstruction/plausibility/carry_pairing_grid_verdict.json": "76702F2689B4FDA1ED298D6AD083C0CDF54295A1B8BC68F577F0728F25484772",
+    "final_reconstruction/plausibility/decoupling_verification.json": "9CCF6B025A571E4A3DA8BC500F4224746C4B092AC273824447339B7A9129B9B3",
+    "final_reconstruction/plausibility/invalidated_n4/ARCHIVED_HASHES.json": "DA88521C64F17448CFE355367C1A60B1AF866DFBA0C199BFBB0BAE86BB8FC237",
+    "final_reconstruction/plausibility/local_identifiability/ANALYSIS_STATUS.json": "DBFB302127872047D40A2D8C683D0BFB77AE6C1CDF772340A886DB034A903C53",
+    "final_reconstruction/plausibility/local_identifiability/RETRACTION_n4_run.md": "4F1777C309FD840C3D5806EDA90494364F521A51FA63F8C2C6D02AD731A9C6E8",
+    "final_reconstruction/plausibility/nA1_vs_maturation_verdict.json": "2DAEB5658CE434BFDB6B566570B1A8FEF341F5642E498E02CA710B0E1BF0080B",
+    "final_reconstruction/plausibility/threebit51_leak_correction.json": "484745AFF81E34374F14B383EB4D1640A407A6C652D30426BC569ACC6479C77B",
+    "final_reconstruction/plausibility/threebit51_provisional_n6.json": "7CE9D5EB256045D837569AB106DEA6743B821C9BEDCD4FCCAD0CE7459E9D2973",
+    "final_reconstruction/plausibility/threebit51_selected_v1.json": "6BFD7FF6F0A4D897753D02789E5B22879D1A9DE94D53C4C8253F63D52E953A36",
+    "final_reconstruction/plausibility/translation_unobservable.json": "95B7A3658DB2D6CD9CE6F6B4E29CDF5A4C2701457B62AB9EF7B9D652D7A932A0",
+    "final_reconstruction/scan_figures/README_图注与参数.md": "E4F4211D2FF756CCC24B795334EEBD28B160C7CE30A178F5372F372B39136009",
+    "final_reconstruction/scan_figures/figure_data_manifest.json": "F5618E0A3A74A12CC3A01B8AB5A7A41448B2FC64C619C7857CA8F945CC6D5F6E",
+    "final_reconstruction/threebit51_results/wiki_n6_20260924/README_图注与参数.md": "5548A9E1E23D45B65F53C633664348D84F6D9616E15CF4DC799C8E871674D15B",
+    "final_reconstruction/twobit34_results/selected_profile.md": "76B3869A3955EA68501A35BBFD09B43916D53C35D8D2251986C26A66DB9050EB",
+    "final_reconstruction/verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+    "final_reconstruction/verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0"
+  },
+  "entry_count": 27,
+  "kind": "authority_manifest",
+  "notes": [
+    "excludes itself: SHA256SUMS_authority.json, SHA256SUMS_authority.txt",
+    "run `check` for a read-only verification of every entry",
+    "any edit inside plausibility/ makes this manifest stale by design"
+  ],
+  "plausibility_manifest": {
+    "entries": 932,
+    "entries_reverified": 932,
+    "path": "final_reconstruction/plausibility/SHA256SUMS.json",
+    "sha256": "016CDB86C1A77DA754E884D9F9F94B1578E2F2706942490E39C460E95917EF9F",
+    "stale": false,
+    "stale_entries": []
+  },
+  "scope": "named authority documents at the wiki root and inside final_reconstruction; NOT a whole-tree hash",
+  "wiki_root": "C:\\Users\\18633\\Desktop\\wiki"
+}

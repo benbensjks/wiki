@@ -1,57 +1,164 @@
 {
-  "status": "FAILED_ACCEPTANCE",
-  "classification": "diagnostic_archive",
-  "artifact": "plausibility/local_identifiability/",
-  "must_not_be_cited_for": [
-    "effective rank of the sensitivity matrix",
-    "condition number",
-    "weakest identifiable direction",
-    "any pairwise parameter correlation",
-    "any claim that q and K_D_comp are exactly degenerate",
-    "any claim that a parameter is or is not confounded with another"
-  ],
-  "reason_primary": {
-    "defect": "mixed working point: the parameter matrix was assembled from runs at two different gate exponents",
-    "evidence": {
-      "build_with_old_behaviour": "n_gate stayed None unless n_A1_gate was itself the perturbed parameter; n_A1_gate_effective then returns ZENG['n_A'][1]",
-      "zeng_n_A_1": 4.0,
-      "nominal_used_in_analysis": 6.0,
-      "runs_at_n4": 49,
-      "runs_at_n6": 6,
-      "verified_by": "constructing the model exactly as the script did and printing n_A1_gate_effective for baseline / complex_on / uM_per_au / n_A1_gate overrides",
-      "consequence": "the 9-column matrix is not a Jacobian at one parameter point, so no linear-algebra summary of it is meaningful"
+  "status": "PASSED_WITH_STEP_RESTRICTION",
+  "analysis": "local identifiability at the frozen three-bit working point",
+  "supersedes": {
+    "what": "the previous run in this directory",
+    "status_of_previous": "FAILED_ACCEPTANCE - 49 of 55 runs were taken at n_A1_gate = 4 (the ZENG table value) while the analysis treated them as n = 6, so the matrix was not a Jacobian at one parameter point",
+    "record": "RETRACTION_n4_run.md (RECONSTRUCTED - the original record was deleted by mistake; see process_failures)"
+  },
+  "why_the_restriction": "1 % -> 2 % converges (full-matrix relative change 0.012); 2 % -> 5 % does NOT (0.171 against the pre-registered criterion of 0.05). The valid local estimate is therefore the 1-2 % window; the 5 % step lies outside the linear regime and must not be quoted.",
+  "pre_merge_audit": {
+    "script": "plausibility/verify_li_runs.py",
+    "result": "PASSED",
+    "jobs": 55,
+    "runs_at_frozen_exponent_6": 49,
+    "runs_with_exponent_moved": 6,
+    "moved_exponents": [5.7, 5.88, 5.94, 6.06, 6.12, 6.3],
+    "observable_table_shapes": {"theoretical_timepoints": 4501, "experimental_timepoints": 301},
+    "checks": "resolved_params present on every run; realised exponent equals requested; every non-perturbed parameter equals its frozen value; the perturbed parameter equals nominal*(1+-step); the resolved vector covers all 9 parameters"
+  },
+  "configuration": {
+    "parameters": ["uM_per_au", "n_A1_gate", "carry1_mrna_half_life_min",
+                   "A1_maturation_half_life_min", "F1_maturation_half_life_min",
+                   "complex_on", "complex_off", "complex_decay", "K_D_comp_scale"],
+    "hours": 350.0,
+    "analysis_window_h": [200.0, 350.0],
+    "theoretical_observables": ["S0", "S1", "S2", "I0", "R0", "C0", "I1", "R1", "C1",
+                                "I2", "R2", "C2", "A1", "F1", "g1", "J_rev1", "J_rev2"],
+    "experimental_observables": ["S0", "S1", "S2", "I0", "A1"],
+    "sampling": "2 min theoretical / 30 min experimental",
+    "frozen_inputs": "model_threebit51.py D244D3CD..., threebit51_selected_v1.json 6BFD7FF6..."
+  },
+  "convergence": {
+    "theoretical": {
+      "1_to_2_pct": {"full_matrix_relative_change": 0.01226, "rms_summary": 0.009018, "converged": true},
+      "2_to_5_pct": {"full_matrix_relative_change": 0.1712, "rms_summary": 0.142, "converged": false}
+    },
+    "experimental": {
+      "1_to_2_pct": {"full_matrix_relative_change": 0.01198, "rms_summary": 0.007189, "converged": true},
+      "2_to_5_pct": {"full_matrix_relative_change": 0.1086, "rms_summary": 0.05458, "converged": false}
+    },
+    "independent_check_correlation_matrices": {
+      "theoretical_1_vs_2_pct": {"mean_abs_delta": 0.0012, "max_abs_delta": 0.0064},
+      "theoretical_1_vs_5_pct": {"mean_abs_delta": 0.0179, "max_abs_delta": 0.0802},
+      "experimental_1_vs_2_pct": {"mean_abs_delta": 0.0011, "max_abs_delta": 0.0066},
+      "experimental_1_vs_5_pct": {"mean_abs_delta": 0.0109, "max_abs_delta": 0.0529}
+    },
+    "weakest_direction_1_vs_2_pct": "components agree to ~1e-4 (e.g. carry1_mrna -0.9777 vs -0.9777, difference 2.1e-05)"
+  },
+  "headline_at_1pct": {
+    "theoretical": {
+      "effective_rank": 9,
+      "rank_threshold": "sigma > 1e-3 * sigma_max",
+      "condition_number": 212.5,
+      "singular_values": [135.4, 48.87, 24.01, 13.6, 8.121, 6.701, 3.462, 1.322, 0.6372]
+    },
+    "experimental": {
+      "effective_rank": 9,
+      "condition_number": 462.5,
+      "singular_values": [20.51, 4.721, 1.134, 1.062, 0.8491, 0.4978, 0.1571, 0.1124, 0.04434]
+    },
+    "rank_lost_by_restricting_to_experimental": 0,
+    "conditioning_penalty_from_restricting": 2.18,
+    "note": "RANK IS A THRESHOLDED QUANTITY AND MUST NEVER BE QUOTED WITHOUT ITS CUT. At the 1e-3 cut the rank is 9 of 9; at the looser 1e-2 cut it is 7 (theoretical) and 6 (experimental). The smallest singular value clears the 1e-3 cut by only 4.71x (theoretical) and 2.16x (experimental), so the earlier phrasing 'restricting to experimental observables loses no rank' is a statement AT one cut, not a robust one, and has been withdrawn.",
+    "effective_rank_at_threshold_1pct_step": {
+      "rank_tolerances": [0.01, 0.001, 0.0001],
+      "theoretical": {"1e-2": 7, "1e-3": 9, "1e-4": 9},
+      "experimental": {"1e-2": 6, "1e-3": 9, "1e-4": 9},
+      "smallest_sigma_margin_over_1e-3_cut": {"theoretical": 4.71, "experimental": 2.16}
     }
   },
-  "reason_secondary": {
-    "defect": "the finite-difference convergence check compared the RMS sensitivity summary, not the full (time x observable) x parameter matrix",
-    "consequence": "the reported 0.507 / 0.680 are summary-table differences and were mislabelled as full-matrix changes; the convergence verdict itself (not converged) still stands"
+  "extension_with_translation_10_parameters": {
+    "location": "plausibility/local_identifiability/with_translation/ (its own verdict and CSVs; the top level holds the 9-parameter set)",
+    "result": "translation_h is STRUCTURALLY UNOBSERVABLE",
+    "evidence": {
+      "singular_spectrum": "the first nine singular values are BIT-IDENTICAL to the 9-parameter case and the tenth is 3.25e-11, i.e. relative 2.4e-13 = numerical zero",
+      "weakest_direction": "translation_h = -1.00000 with every other component exactly 0.00000",
+      "condition_number": {"theoretical": 4.166e12, "experimental": 5.151e12}
+    },
+    "independent_confirmation": {
+      "script": "plausibility/check_translation_unobservable.py",
+      "artefact": "plausibility/translation_unobservable.json",
+      "method": "run at translation_h = 30 / 45 / 15 (nominal, +50 %, -50 %) and compare",
+      "observable_state_max_abs_gap": [1.084e-13, 1.004e-13],
+      "flux_signal_max_abs_gap": [1.843e-13, 1.064e-13],
+      "mrna_max_abs_gap": "up to 0.28",
+      "readout": "identical sequence and crossing count at all three values"
+    },
+    "algebraic_reason": "the QSS-matched chain gives p(s) = S*lm*lu/((s+lm)(s+lu)(s+gamma)): the translation constant cancels from the mature protein's response, and only the unobserved mRNA keeps a 1/T amplitude. The observables contain no mRNA for the carry arms.",
+    "consequence": "translation_h = 30.0 in the frozen profile is NOT identifiable from any trajectory data. It must be reported as fixed by assumption, never as calibrated. Consequence for the reviewer's predicted uM_per_au <-> translation-strength confusion: in THIS model there is nothing to confuse, because translation strength has zero leverage - but that is a property of the QSS-matched chain, not a biological statement.",
+    "note_on_condition_number": "with cond ~ 4e12 the pairwise correlations involving translation_h are numerically meaningless; they are recorded in with_translation/correlations_*.csv but must not be cited."
   },
-  "retracted_claims": [
-    "that the phase shift of the limit cycle is the LOCATED root cause of the non-convergence. Timing sensitivity is a genuine part of dS/dp, and the working-point mixing was a confirmed confound that had to be excluded first. Correct statement: no trustworthy local sensitivity estimate was obtained under this implementation and perturbation scale; working-point mixing is a confirmed error, while timing sensitivity versus finite-amplitude nonlinearity remain to be separated.",
-    "that 'local sensitivity is unusable for this system'. Not established.",
-    "that q and K_D_comp are exactly degenerate. The product form K_complex = q*K_D_comp makes q cancel from the reverse Hill ONLY in the quasi-steady-state limit C ~ q*I*R. The model integrates C explicitly, so kon, koff and complex_decay also set complex relaxation, sequestration of free Int and RDF, and complex loss. Structural non-identifiability must be proven on the full equations under a specified observation model.",
-    "that n_A1_gate is not confounded with uM_per_au (the two columns came from different working points)",
-    "that mRNA half-life and A1 maturation are strongly anti-correlated at the frozen point (the runs were at n=4; retain only as a hypothesis to retest)",
-    "that S2 is the single observable carrying the weak direction (same n=4/n=6 mixture)"
+  "rdf_dependence_finding": {
+    "source": "plausibility/rdf_collapse.json and rdf_collapse_rescored.json",
+    "statement": "the state-dependent T -> RDF feedback IS necessary for counting: the bit2_no_repression_Krep100 probe cuts the longest correct mod-8 run from 48 to 4 and loses certification, while bit2_soft_repression_n2 leaves it at 48.",
+    "relationship_to_the_vacuity_finding": "this is a DIFFERENT question from 'did RDF collapse cause the n_A1_gate=4 stall', which the check cannot answer at the frozen point. Both are now recorded separately so the positive finding is not buried by the vacuity verdict."
+  },
+  "absolute_scale_sensitivity": {
+    "source": "plausibility/absolute_scale.json, absolute_scale_uM_sensitivity.csv",
+    "finding": "the a.u.-level pool maxima are NOT invariant to uM_per_au, so the uM figures are not a pure rescaling. Across uM_per_au = 5.5 / 5.75 / 6.5: max free pool = 41.07 / 42.94 / 48.54 uM = 1.369x / 1.431x / 1.618x the 30 uM order-of-magnitude reference, and the flagged-pool count is 5 / 7 / 7.",
+    "consequence": "no order-of-magnitude violation at any swept value, but the flagged LIST is uM-dependent and must not be quoted as a fixed set. Max free pool is 1.43x a reference whose own uncertainty is a factor of a few, so it is not a violation."
+  },
+  "weakest_identifiable_direction": {
+    "theoretical": {"carry1_mrna_half_life_min": -0.9777, "F1_maturation_half_life_min": 0.1225,
+                    "complex_off": 0.1171, "complex_decay": -0.1014},
+    "experimental": {"carry1_mrna_half_life_min": 0.9908, "F1_maturation_half_life_min": -0.1225,
+                     "A1_maturation_half_life_min": -0.0573, "n_A1_gate": -0.0051},
+    "reading": "the least-constrained combination is dominated by the carry1 mRNA half-life; the maturation half-lives and the complex parameters are its compensating partners. The sign is arbitrary (it is a singular vector)."
+  },
+  "pairwise_correlations_at_1pct": {
+    "complex_off ~ complex_decay": -0.954,
+    "carry1_mrna_half_life_min ~ F1_maturation_half_life_min": -0.784,
+    "K_D_comp_scale ~ complex_off": 0.649,
+    "n_A1_gate ~ A1_maturation_half_life_min": -0.640,
+    "K_D_comp_scale ~ complex_decay": -0.499,
+    "carry1_mrna_half_life_min ~ A1_maturation_half_life_min": -0.427,
+    "K_D_comp_scale ~ complex_on": 0.368,
+    "complex_on ~ complex_off": 0.271,
+    "n_A1_gate ~ uM_per_au": 0.042,
+    "A1_maturation_half_life_min ~ F1_maturation_half_life_min": -0.033,
+    "complex_on ~ complex_decay": -0.010
+  },
+  "findings": {
+    "complex_off_vs_complex_decay": "rho = -0.954, near-perfect anti-correlation. Consistent with the reverse Hill depending on q = kon/(koff + complex_decay + growth), i.e. only the SUM koff + complex_decay is strongly constrained. BUT complex_on is NOT degenerate with that sum (rho(on,off) = +0.271, rho(on,decay) = -0.010), so the identifiable structure is {kon} plus {koff + complex_decay}, i.e. TWO effective degrees of freedom rather than one. This REFINES, and does not confirm, the earlier claim that only the product q*K_D_comp is identifiable - that claim was retracted because it assumed quasi-steady state.",
+    "mRNA_vs_maturation": "the two maturation arms are NOT confounded with each other (rho = -0.033), but each is anti-correlated with the mRNA half-life (-0.427 for A1, -0.784 for F1). So the confusion is mRNA-versus-each-arm, not arm-versus-arm.",
+    "n_A1_gate": "no confusion with the interface scale uM_per_au (rho = +0.042) and none with complex_on (+0.020). It IS anti-correlated with the A1 maturation half-life (-0.640) - a trade-off that was not predicted in advance.",
+    "K_D_comp_scale": "correlates with the complex parameters (off +0.649, decay -0.499, on +0.368), consistent with K_complex = q*K_D_comp acting as a product.",
+    "uM_per_au_vs_translation": "NOT TESTED: translation_h is not in the 9-parameter set. Rerun with --with-translation to test the predicted uM_per_au versus translation-strength confusion."
+  },
+  "comparison_with_the_invalid_run": {
+    "theoretical_effective_rank": {"before": [8, 9, 9], "after": [9, 9, 9]},
+    "theoretical_condition_number": {"before": [1237, 575, 84], "after": [212.5, 213.6, 225.2]},
+    "theoretical_sigma_1": {"before": [2481, 1572, 988], "after": [135.4, 136.1, 143.3]},
+    "full_matrix_relative_change_1_to_2_pct": {"before": 0.507, "after": 0.01226},
+    "full_matrix_relative_change_2_to_5_pct": {"before": 0.680, "after": 0.1712},
+    "reading": "mixing two working points was the dominant cause of the earlier instability: with a uniform n=6 the condition number is stable to about 6 % across steps instead of varying 15-fold, and sigma_1 to about 6 % instead of 2.5-fold. What remains is a real non-linearity: the local linearisation holds to about 2 % and breaks by 5 %."
+  },
+  "conditional_on": {
+    "perturbation_scale_pct": [1.0, 2.0, 5.0],
+    "observables": "listed above; the experimental set is a strict subset of the theoretical one",
+    "sampling": "2 min theoretical / 30 min experimental",
+    "noise": "IDEALIZED NOISELESS observation; no measurement-error model",
+    "quantitation": "states treated as absolutely quantified in model a.u.; scale_i is the baseline trajectory maximum of each observable",
+    "initial_condition": "the frozen model default initial state, not fitted",
+    "note": "these are assumptions of the EXPERIMENT, not of the model; identifiability holds only within them"
+  },
+  "process_failures": [
+    "The original retraction record and the 55 n=4 run artifacts in this directory were DELETED when the directory was cleared before the re-run. They should have been moved into invalidated_n4/ first, as was done for the other four checks. RETRACTION_n4_run.md in this directory is a reconstruction from the session record and is marked as such.",
+    "INVALIDATED_ARTIFACTS.json previously pointed at the now-missing ANALYSIS_STATUS.json and RETRACTION.md; that reference has been corrected."
   ],
-  "still_valid": {
-    "convergence_check_fired": "the per-step singular spectra and condition numbers differ by ~15x across 1/2/5 %, so no converged local estimate exists from these runs",
-    "freeze_and_postfreeze_results_unaffected": "every other script in this project passes n_A1_gate explicitly: scan_gate_segments, scan_carry_pairing, scan_strict_tolerance (and therefore postfreeze_peak_perturbation) all build the model with n_A1_gate from the point definition, so the frozen working point and all freeze/post-freeze conclusions are untouched",
-    "check_identifiability_py_audit": "the pre-existing check_identifiability.py also runs at the ZENG default because it never passes n_A1_gate; it covers only 5 of the 9 parameters and implements no sensitivity/rank/correlation machinery"
-  },
-  "fixes_applied_and_verified": {
-    "resolved_params": "every run now resolves the COMPLETE parameter vector from the frozen point before construction, so no field can fall back to a library default",
-    "n_A1_gate_always_explicit": "passed explicitly on every construction; realised value asserted against the resolved value",
-    "per_run_audit": "each job json records resolved_params and n_A1_gate_effective",
-    "load_jobs_guard": "merge refuses to proceed if any run is off the frozen point in a parameter it is not perturbing, or if resolved_params is absent (i.e. old-format artifacts)",
-    "convergence_metric": "now computed on the full stacked matrix AND on the RMS summary, reported separately, with an explicit criterion (full_matrix_relative_change < 0.05)",
-    "verification": "baseline and the five sampled overrides all realise n_A1_gate_effective = 6.0 (only the n_A1_gate perturbations move it, to 6.12 / 5.70); the old construction reproduces 4.0"
-  },
-  "before_any_rerun": [
-    "re-integrate all 55 runs with the corrected constructor (the 49 n=4 trajectories are usable only as a failure-configuration diagnostic; the 6 n~6 trajectories are only reusable once the rest is rechecked)",
-    "verify the per-run audit for all 55 runs before any analysis",
-    "then decide between the local finite-difference route and an event-based route",
-    "if the event-based route is taken: keep continuous features only (flip delay relative to the external clock, gate width and dose separately for forward and reverse events, plateau levels, pool peaks and their timing); event counts, pass booleans and saturated commitment have zero local derivative in the success region and cannot carry identifiability"
+  "what_may_now_be_cited": [
+    "the 1 % and 2 % singular spectra and condition numbers about 212 (theoretical) and about 463 (experimental), WITH the step window stated",
+    "the pairwise correlation table above",
+    "the weakest identifiable direction",
+    "the rank only together with its threshold: 9 at 1e-3, 7 / 6 at 1e-2",
+    "that translation_h is structurally unobservable (see extension_with_translation_10_parameters)"
   ],
-  "new_integrations_started_in_this_round": 0
+  "what_may_not_be_cited": [
+    "the 5 % step as a local estimate (outside the linear regime)",
+    "any claim that q and K_D_comp are exactly degenerate (retracted; the converged correlations refine this to kon plus the sum koff + complex_decay)",
+    "any statement about uM_per_au versus translation strength based on the correlations of the 10-parameter set (numerically meaningless at cond ~ 4e12); the leverage question itself is answered by check_translation_unobservable.py instead",
+    "'restricting to experimental observables loses no rank' without naming the 1e-3 cut and the 2.16x margin",
+    "any bare 'rank 9' without its threshold"
+  ]
 }

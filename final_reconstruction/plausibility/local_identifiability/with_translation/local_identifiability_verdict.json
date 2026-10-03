@@ -1,0 +1,1068 @@
+{
+  "hours": 350.0,
+  "analysis_start_h": 200.0,
+  "sample_min": 2.0,
+  "experimental_sample_min": 30.0,
+  "steps": [
+    0.01,
+    0.02,
+    0.05
+  ],
+  "rank_tol": 0.001,
+  "parameters": [
+    "uM_per_au",
+    "n_A1_gate",
+    "carry1_mrna_half_life_min",
+    "A1_maturation_half_life_min",
+    "F1_maturation_half_life_min",
+    "complex_on",
+    "complex_off",
+    "complex_decay",
+    "K_D_comp_scale",
+    "translation_h"
+  ],
+  "nominal_values": {
+    "uM_per_au": 5.75,
+    "n_A1_gate": 6.0,
+    "carry1_mrna_half_life_min": 2.0,
+    "A1_maturation_half_life_min": 32.5,
+    "F1_maturation_half_life_min": 32.5,
+    "complex_on": 0.1,
+    "complex_off": 1.0,
+    "complex_decay": 1.0,
+    "K_D_comp_scale": 1.0,
+    "translation_h": 30.0
+  },
+  "model_sha256": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+  "source_sha256": {
+    "model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A",
+    "model_twobit34.py": "4385E3B8C9B8AE39D09061A9DF7D5B1E7F645AC5CF56B22E4C7183B421501062",
+    "model_threebit51.py": "D244D3CD1914F50F994E6856084D4A012B820C13249DCBA0E963E444CE3C34CC",
+    "verify_threebit51.py": "9AC2B6A9AD83BBEC41A87891A620EFE4EA050ACDAD8BF39757FD5F14281B8827",
+    "verify_twobit_causal.py": "C8678A03EC6201E65EBBE2BD182AB89BC2AB8DAAD502A4E302CAFFBC361BCFF0",
+    "test_threebit51.py": "E33FDF4FAF47A5304B41AB73FC2613DA1830C6A3B7A088CAFDD50949F200095D",
+    "scan_threebit51_carry1.py": "E29AAACB1089EE86CCA0AE8984C4F92BA8BA6AB17EEC8ED6B45D8B7AF6E719FC"
+  },
+  "observation_models": {
+    "theoretical": {
+      "observables": [
+        "S0",
+        "S1",
+        "S2",
+        "I0",
+        "R0",
+        "C0",
+        "I1",
+        "R1",
+        "C1",
+        "I2",
+        "R2",
+        "C2",
+        "A1",
+        "F1",
+        "g1",
+        "J_rev1",
+        "J_rev2"
+      ],
+      "sample_min": 2.0
+    },
+    "experimental": {
+      "observables": [
+        "S0",
+        "S1",
+        "S2",
+        "I0",
+        "A1"
+      ],
+      "sample_min": 30.0,
+      "excluded": [
+        "RDF pools",
+        "complexes",
+        "immature and mRNA states",
+        "internal gate g1",
+        "all fluxes"
+      ]
+    }
+  },
+  "conditional_on": {
+    "perturbation_scale_pct": [
+      1.0,
+      2.0,
+      5.0
+    ],
+    "observables": "listed under observation_models; the experimental set is a subset",
+    "sampling": "2 min theoretical / 30 min experimental",
+    "noise": "IDEALIZED NOISELESS observation; no measurement-error model",
+    "quantitation": "states treated as absolutely quantified in model a.u.; scale_i is the baseline trajectory maximum of each observable",
+    "initial_condition": "the frozen model default initial state, not fitted; a different or unknown initial condition changes the sensitivities",
+    "note": "these are assumptions of the EXPERIMENT, not of the model; identifiability holds only within them"
+  },
+  "results": {
+    "theoretical": {
+      "observables": [
+        "S0",
+        "S1",
+        "S2",
+        "I0",
+        "R0",
+        "C0",
+        "I1",
+        "R1",
+        "C1",
+        "I2",
+        "R2",
+        "C2",
+        "A1",
+        "F1",
+        "g1",
+        "J_rev1",
+        "J_rev2"
+      ],
+      "n_observables": 17,
+      "n_timepoints": 4501,
+      "per_step": {
+        "0.01": {
+          "singular_values": [
+            135.4013374461451,
+            48.86598143153741,
+            24.0069306228526,
+            13.595619817643152,
+            8.121114395535603,
+            6.700957089754801,
+            3.4619763946589597,
+            1.3220602633279048,
+            0.6372089150942356,
+            3.250213968073393e-11
+          ],
+          "effective_rank": 9,
+          "effective_rank_at_threshold": {
+            "0.01": 7,
+            "0.001": 9,
+            "0.0001": 9
+          },
+          "rank_tolerances": [
+            0.01,
+            0.001,
+            0.0001
+          ],
+          "smallest_sigma_margin_over_threshold": {
+            "0.01": 2.40042973679351e-11,
+            "0.001": 2.40042973679351e-10,
+            "0.0001": 2.40042973679351e-09
+          },
+          "smallest_over_largest_sigma": 2.40042973679351e-13,
+          "condition_number": 4165920729409.886,
+          "weakest_direction": {
+            "uM_per_au": -5.684067422883041e-14,
+            "n_A1_gate": 1.5394193095833738e-13,
+            "carry1_mrna_half_life_min": -3.502898597842581e-12,
+            "A1_maturation_half_life_min": 5.061685906037349e-13,
+            "F1_maturation_half_life_min": 3.0550936545302117e-13,
+            "complex_on": -6.075276044357522e-13,
+            "complex_off": -1.8824538885318575e-12,
+            "complex_decay": 7.714613348194671e-13,
+            "K_D_comp_scale": -1.9546766797876514e-13,
+            "translation_h": -1.0
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.36089733198516966,
+            0.17730201987407385,
+            0.10040978969687586,
+            0.059978095849797027,
+            0.04948959305826693,
+            0.02556825848220248,
+            0.009764011849984456,
+            0.004706075487235721,
+            2.40042973679351e-13
+          ]
+        },
+        "0.02": {
+          "singular_values": [
+            136.06390222695708,
+            48.899909703005235,
+            24.024618227364744,
+            13.592283213264954,
+            8.127893888828828,
+            6.700439005553735,
+            3.46707650379218,
+            1.324159616055267,
+            0.6370073618504345,
+            1.929590426708857e-11
+          ],
+          "effective_rank": 9,
+          "effective_rank_at_threshold": {
+            "0.01": 7,
+            "0.001": 9,
+            "0.0001": 9
+          },
+          "rank_tolerances": [
+            0.01,
+            0.001,
+            0.0001
+          ],
+          "smallest_sigma_margin_over_threshold": {
+            "0.01": 1.4181501449886869e-11,
+            "0.001": 1.4181501449886868e-10,
+            "0.0001": 1.4181501449886867e-09
+          },
+          "smallest_over_largest_sigma": 1.4181501449886867e-13,
+          "condition_number": 7051439535748.011,
+          "weakest_direction": {
+            "uM_per_au": -4.161994045506558e-14,
+            "n_A1_gate": 9.909250372418301e-14,
+            "carry1_mrna_half_life_min": -1.6235275894198457e-12,
+            "A1_maturation_half_life_min": 3.6312430269361237e-13,
+            "F1_maturation_half_life_min": 9.32064248296257e-14,
+            "complex_on": -4.930972655335354e-13,
+            "complex_off": -8.242770495414305e-13,
+            "complex_decay": 6.719630146042302e-14,
+            "K_D_comp_scale": 1.74021515132912e-13,
+            "translation_h": -1.0
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.35938929357941896,
+            0.1765686404266963,
+            0.09989632070519906,
+            0.059735857606607164,
+            0.04924479524611369,
+            0.025481236735435037,
+            0.009731895046244849,
+            0.004681677883880579,
+            1.4181501449886867e-13
+          ]
+        },
+        "0.05": {
+          "singular_values": [
+            143.26165783990987,
+            49.80738395329971,
+            24.389120440832407,
+            13.561727332821965,
+            8.17502486713674,
+            6.711607756537551,
+            3.499063498158725,
+            1.3606209613361244,
+            0.636234604501523,
+            9.139561598985218e-12
+          ],
+          "effective_rank": 9,
+          "effective_rank_at_threshold": {
+            "0.01": 7,
+            "0.001": 9,
+            "0.0001": 9
+          },
+          "rank_tolerances": [
+            0.01,
+            0.001,
+            0.0001
+          ],
+          "smallest_sigma_margin_over_threshold": {
+            "0.01": 6.379628532009851e-12,
+            "0.001": 6.379628532009851e-11,
+            "0.0001": 6.379628532009851e-10
+          },
+          "smallest_over_largest_sigma": 6.379628532009851e-14,
+          "condition_number": 15674893843465.803,
+          "weakest_direction": {
+            "uM_per_au": 5.059060170390707e-15,
+            "n_A1_gate": -1.5193800791462315e-13,
+            "carry1_mrna_half_life_min": -1.17629634790313e-12,
+            "A1_maturation_half_life_min": 1.3746328985683513e-13,
+            "F1_maturation_half_life_min": 6.851735380592263e-14,
+            "complex_on": -4.193615744336593e-14,
+            "complex_off": -8.482349717566947e-14,
+            "complex_decay": 4.4187478657995045e-14,
+            "K_D_comp_scale": 1.358681534951752e-13,
+            "translation_h": 1.0
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.347667231444144,
+            0.17024178561500689,
+            0.09466404017170277,
+            0.05706359252293491,
+            0.046848597578268626,
+            0.024424284563765216,
+            0.009497453693133812,
+            0.004441066884849916,
+            6.379628532009851e-14
+          ]
+        }
+      },
+      "pairwise_correlations": [
+        [
+          0.9999999999999998,
+          0.04236870441039956,
+          -0.23446573455383035,
+          0.078368436997277,
+          0.07966863089943667,
+          0.2781526880556907,
+          0.5819874217364547,
+          -0.5418592589923283,
+          0.19515884598573874,
+          0.07142409509266817
+        ],
+        [
+          0.04236870441039674,
+          1.0,
+          0.16319054367132171,
+          -0.6401694414647768,
+          0.30579474235823356,
+          0.019805694611605643,
+          0.139100715951752,
+          -0.14534083068580989,
+          -0.0898590336676674,
+          -0.21063619638472592
+        ],
+        [
+          -0.23446573455381658,
+          0.1631905436713237,
+          1.0000000000000002,
+          -0.4269758537444018,
+          -0.7844962400513369,
+          -0.004694859899184279,
+          -0.23187709038723744,
+          0.24562187037958824,
+          -0.1574209596476997,
+          -0.9597267807570263
+        ],
+        [
+          0.07836843699727394,
+          -0.6401694414647763,
+          -0.4269758537444008,
+          1.0,
+          -0.032629995526856706,
+          0.04894285229301948,
+          0.13998897335974897,
+          -0.14590952572139365,
+          -0.05288138587354069,
+          0.40899351624889413
+        ],
+        [
+          0.07966863089942339,
+          0.3057947423582303,
+          -0.7844962400513342,
+          -0.03262999552685604,
+          1.0,
+          -0.003647560430985445,
+          0.05515729145891378,
+          -0.06376708683012657,
+          -0.03157956283017684,
+          0.78882419896667
+        ],
+        [
+          0.27815268805569626,
+          0.019805694611604467,
+          -0.004694859899202196,
+          0.04894285229302544,
+          -0.0036475604309702094,
+          1.0,
+          0.2708737072758979,
+          -0.009629028362248987,
+          0.3683702678190531,
+          -0.06474208358315664
+        ],
+        [
+          0.5819874217364521,
+          0.13910071595175677,
+          -0.231877090387251,
+          0.13998897335974994,
+          0.055157291458928406,
+          0.270873707275895,
+          1.0000000000000002,
+          -0.9543893623606771,
+          0.6488599214280433,
+          -0.050054291019099965
+        ],
+        [
+          -0.5418592589923257,
+          -0.14534083068581516,
+          0.24562187037959846,
+          -0.1459095257213934,
+          -0.06376708683013846,
+          -0.00962902836224592,
+          -0.954389362360677,
+          1.0,
+          -0.49909448683392105,
+          0.02625875922335481
+        ],
+        [
+          0.19515884598573313,
+          -0.08985903366766555,
+          -0.1574209596477076,
+          -0.05288138587354019,
+          -0.03157956283016814,
+          0.3683702678190527,
+          0.6488599214280409,
+          -0.4990944868339192,
+          0.9999999999999999,
+          -0.025201577262021366
+        ],
+        [
+          0.07142409509268811,
+          -0.21063619638474512,
+          -0.9597267807571372,
+          0.40899351624894426,
+          0.7888241989667574,
+          -0.06474208358317135,
+          -0.05005429101907536,
+          0.026258759223325514,
+          -0.02520157726200534,
+          1.0
+        ]
+      ],
+      "finite_difference_convergence": [
+        {
+          "from_pct": 1.0,
+          "to_pct": 2.0,
+          "full_matrix_relative_change": 0.012256479288471782,
+          "rms_summary_relative_change": 0.00901818873351181,
+          "converged": true
+        },
+        {
+          "from_pct": 2.0,
+          "to_pct": 5.0,
+          "full_matrix_relative_change": 0.17124194298943915,
+          "rms_summary_relative_change": 0.14204133275395248,
+          "converged": false
+        }
+      ],
+      "convergence_criterion": "full_matrix_relative_change < 0.05 between consecutive steps",
+      "observable_contribution": [
+        {
+          "observable": "S0",
+          "row_norm": 16.74573482968386,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.1858372202857616e-11,
+          "sigma_min_gain": -6.437674778763153e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.012977839610652908
+        },
+        {
+          "observable": "S1",
+          "row_norm": 37.64517626332101,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.1680283031780967e-11,
+          "sigma_min_gain": -8.218566489529646e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.06558622774686729
+        },
+        {
+          "observable": "S2",
+          "row_norm": 29.814372796882818,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.204959836326656e-11,
+          "sigma_min_gain": -4.525413174673718e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.041138204995397776
+        },
+        {
+          "observable": "I0",
+          "row_norm": 32.92980278681465,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.172631035006622e-11,
+          "sigma_min_gain": -7.758293306677106e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.05018480516694479
+        },
+        {
+          "observable": "R0",
+          "row_norm": 19.567168341645893,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.20972372927853e-11,
+          "sigma_min_gain": -4.0490238794863056e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.017719438089509265
+        },
+        {
+          "observable": "C0",
+          "row_norm": 31.634811525839947,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.200964375728597e-11,
+          "sigma_min_gain": -4.92495923447959e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.04631530043952636
+        },
+        {
+          "observable": "I1",
+          "row_norm": 35.98652531802184,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.0050545958937695e-11,
+          "sigma_min_gain": -2.451593721796236e-12,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.05993407590648525
+        },
+        {
+          "observable": "R1",
+          "row_norm": 52.721316896646535,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.0921389939711086e-11,
+          "sigma_min_gain": -1.5807497410228455e-12,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.12863717154871313
+        },
+        {
+          "observable": "C1",
+          "row_norm": 25.08334777564365,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.0017449269612746e-11,
+          "sigma_min_gain": -2.4846904111211855e-12,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.02911823066669561
+        },
+        {
+          "observable": "I2",
+          "row_norm": 38.18531421776513,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.1721750581039215e-11,
+          "sigma_min_gain": -7.803890996947166e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.0674818096038442
+        },
+        {
+          "observable": "R2",
+          "row_norm": 16.001655864140737,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.2296122229241667e-11,
+          "sigma_min_gain": -2.0601745149226463e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.011850149656357334
+        },
+        {
+          "observable": "C2",
+          "row_norm": 30.92233002492572,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.1989527046095825e-11,
+          "sigma_min_gain": -5.126126346381066e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.044252560528402984
+        },
+        {
+          "observable": "A1",
+          "row_norm": 54.71635040827799,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.0624772324678473e-11,
+          "sigma_min_gain": -1.877367356055458e-12,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.13855692203437664
+        },
+        {
+          "observable": "F1",
+          "row_norm": 28.37120005245883,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.217454130509057e-11,
+          "sigma_min_gain": -3.2759837564336013e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.03725198291020848
+        },
+        {
+          "observable": "g1",
+          "row_norm": 50.12207093910444,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.1147255360036484e-11,
+          "sigma_min_gain": -1.3548843206974476e-12,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.11626580329154212
+        },
+        {
+          "observable": "J_rev1",
+          "row_norm": 38.15075014882471,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.08445237077147e-11,
+          "sigma_min_gain": -1.6576159730192337e-12,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.06735970034057748
+        },
+        {
+          "observable": "J_rev2",
+          "row_norm": 37.5830058710415,
+          "sigma_min_full": 3.250213968073393e-11,
+          "sigma_min_without": 3.179955759968945e-11,
+          "sigma_min_gain": -7.025820810444802e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.06536977746390327
+        }
+      ]
+    },
+    "experimental": {
+      "observables": [
+        "S0",
+        "S1",
+        "S2",
+        "I0",
+        "A1"
+      ],
+      "n_observables": 5,
+      "n_timepoints": 301,
+      "per_step": {
+        "0.01": {
+          "singular_values": [
+            20.506254601196172,
+            4.721369456180818,
+            1.1339771703517645,
+            1.0621532465524848,
+            0.8491185174726418,
+            0.49782548971253726,
+            0.1570928150015166,
+            0.11243200449671374,
+            0.044335231375798576,
+            3.980935598099251e-12
+          ],
+          "effective_rank": 9,
+          "effective_rank_at_threshold": {
+            "0.01": 6,
+            "0.001": 9,
+            "0.0001": 9
+          },
+          "rank_tolerances": [
+            0.01,
+            0.001,
+            0.0001
+          ],
+          "smallest_sigma_margin_over_threshold": {
+            "0.01": 1.941327500082358e-11,
+            "0.001": 1.9413275000823578e-10,
+            "0.0001": 1.941327500082358e-09
+          },
+          "smallest_over_largest_sigma": 1.9413275000823578e-13,
+          "condition_number": 5151114378988.483,
+          "weakest_direction": {
+            "uM_per_au": -1.1404346529429104e-14,
+            "n_A1_gate": -4.73617421825446e-13,
+            "carry1_mrna_half_life_min": -2.5963616412214626e-13,
+            "A1_maturation_half_life_min": 1.1100545312232143e-13,
+            "F1_maturation_half_life_min": -3.0042134889344146e-12,
+            "complex_on": 5.590905660274241e-12,
+            "complex_off": 4.983224425024616e-12,
+            "complex_decay": -5.659420618194397e-12,
+            "K_D_comp_scale": -3.3042799114069227e-13,
+            "translation_h": -1.0
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.23024045824074624,
+            0.055299087639613,
+            0.05179655023353349,
+            0.04140778186881143,
+            0.0242767633287601,
+            0.007660726839525002,
+            0.005482815203618673,
+            0.002162034571306474,
+            1.9413275000823578e-13
+          ]
+        },
+        "0.02": {
+          "singular_values": [
+            20.635088122571577,
+            4.721578190697412,
+            1.1338095220364477,
+            1.0630526094314798,
+            0.8503919769699433,
+            0.4981047466009628,
+            0.15690233902232847,
+            0.11225658760386786,
+            0.04432782308144816,
+            2.5045704460893946e-12
+          ],
+          "effective_rank": 9,
+          "effective_rank_at_threshold": {
+            "0.01": 6,
+            "0.001": 9,
+            "0.0001": 9
+          },
+          "rank_tolerances": [
+            0.01,
+            0.001,
+            0.0001
+          ],
+          "smallest_sigma_margin_over_threshold": {
+            "0.01": 1.2137435184247089e-11,
+            "0.001": 1.213743518424709e-10,
+            "0.0001": 1.213743518424709e-09
+          },
+          "smallest_over_largest_sigma": 1.2137435184247088e-13,
+          "condition_number": 8238972936373.561,
+          "weakest_direction": {
+            "uM_per_au": -1.3369045124714644e-14,
+            "n_A1_gate": 4.201859977337848e-13,
+            "carry1_mrna_half_life_min": -2.11088716974582e-12,
+            "A1_maturation_half_life_min": 3.3183324278277965e-14,
+            "F1_maturation_half_life_min": 3.3777710178134587e-12,
+            "complex_on": -5.471470303866355e-12,
+            "complex_off": -5.483326209670043e-12,
+            "complex_decay": 5.946024503649418e-12,
+            "K_D_comp_scale": 9.057289750670923e-14,
+            "translation_h": 1.0
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.2288130858783559,
+            0.05494570778189391,
+            0.05151674677214805,
+            0.04121096900185983,
+            0.024138726408253798,
+            0.007603667020481571,
+            0.0054400827821557305,
+            0.0021481770670492275,
+            1.2137435184247088e-13
+          ]
+        },
+        "0.05": {
+          "singular_values": [
+            21.586461676801335,
+            4.787259715127523,
+            1.1326002119558096,
+            1.0705294751732843,
+            0.8591610645838053,
+            0.5002327499962698,
+            0.15417800931896422,
+            0.11272363416116088,
+            0.04428409216493479,
+            9.651444808145942e-13
+          ],
+          "effective_rank": 9,
+          "effective_rank_at_threshold": {
+            "0.01": 6,
+            "0.001": 9,
+            "0.0001": 9
+          },
+          "rank_tolerances": [
+            0.01,
+            0.001,
+            0.0001
+          ],
+          "smallest_sigma_margin_over_threshold": {
+            "0.01": 4.47106383280879e-12,
+            "0.001": 4.47106383280879e-11,
+            "0.0001": 4.4710638328087895e-10
+          },
+          "smallest_over_largest_sigma": 4.471063832808789e-14,
+          "condition_number": 22366041671379.695,
+          "weakest_direction": {
+            "uM_per_au": 1.924516804829515e-14,
+            "n_A1_gate": -5.227105077319766e-14,
+            "carry1_mrna_half_life_min": -7.61510823587985e-13,
+            "A1_maturation_half_life_min": 8.34292716591422e-14,
+            "F1_maturation_half_life_min": -9.534229866668961e-13,
+            "complex_on": 9.652599206449716e-13,
+            "complex_off": 1.2033821521994834e-12,
+            "complex_decay": -1.1590711194777437e-12,
+            "K_D_comp_scale": 7.386651667768236e-14,
+            "translation_h": 1.0
+          },
+          "normalised_singular_values": [
+            1.0,
+            0.22177139481234776,
+            0.052468080638384526,
+            0.049592633160615074,
+            0.03980092140376732,
+            0.02317344813086541,
+            0.007142347441065672,
+            0.0052219597564849346,
+            0.0020514752638931223,
+            4.471063832808789e-14
+          ]
+        }
+      },
+      "pairwise_correlations": [
+        [
+          1.0,
+          0.02236607826399249,
+          -0.053410951541449515,
+          0.025187522716471566,
+          -0.18650005196723105,
+          0.6008393304993358,
+          0.7668882140838794,
+          -0.7109991414372191,
+          -0.2903252838874809,
+          0.7053180357567356
+        ],
+        [
+          0.02236607826399428,
+          0.9999999999999998,
+          -0.08917731502294905,
+          -0.09253400874115876,
+          0.3228847547389611,
+          -0.1715605446642786,
+          -0.07952680554186718,
+          0.09380881803939868,
+          -0.1500937273346499,
+          -0.19007221057721238
+        ],
+        [
+          -0.05341095154143284,
+          -0.08917731502294673,
+          1.0,
+          -0.772851879379185,
+          -0.32530010708697343,
+          0.015697925395367452,
+          -0.01322474787591173,
+          0.017994107543447484,
+          -0.06587830171254895,
+          0.01195283691499327
+        ],
+        [
+          0.025187522716457668,
+          -0.09253400874116097,
+          -0.7728518793791821,
+          1.0,
+          0.2296490553992995,
+          -0.030963612044072844,
+          -0.015642828118825707,
+          0.020018550180048476,
+          -0.06315732400994195,
+          -0.026261819163057164
+        ],
+        [
+          -0.18650005196723116,
+          0.32288475473896744,
+          -0.3253001070869717,
+          0.22964905539929928,
+          1.0,
+          -0.2438993567283195,
+          -0.28597458538787823,
+          0.2540760348272698,
+          -0.023257357239954805,
+          -0.4935992587351076
+        ],
+        [
+          0.6008393304993408,
+          -0.17156054466427412,
+          0.0156979253953499,
+          -0.03096361204405925,
+          -0.2438993567283061,
+          1.0,
+          0.8185031085648348,
+          -0.8356242552419112,
+          -0.5369941543286549,
+          0.8805215626724429
+        ],
+        [
+          0.76688821408388,
+          -0.07952680554186733,
+          -0.01322474787593227,
+          -0.015642828118809182,
+          -0.2859745853878772,
+          0.8185031085648289,
+          1.0,
+          -0.9717824314292854,
+          -0.21712236941633134,
+          0.9521701261114839
+        ],
+        [
+          -0.7109991414372197,
+          0.09380881803939795,
+          0.01799410754346674,
+          0.020018550180032988,
+          0.25407603482726804,
+          -0.8356242552419049,
+          -0.9717824314292854,
+          1.0000000000000002,
+          0.33848373863998016,
+          -0.9491057589260805
+        ],
+        [
+          -0.2903252838874872,
+          -0.15009372733465448,
+          -0.06587830171254459,
+          -0.06315732400994518,
+          -0.02325735723996594,
+          -0.5369941543286572,
+          -0.2171223694163388,
+          0.3384837386399878,
+          1.0,
+          -0.31642373837452326
+        ],
+        [
+          0.7053180357567318,
+          -0.1900722105772267,
+          0.011952836915107479,
+          -0.02626181916314524,
+          -0.4935992587351522,
+          0.8805215626724467,
+          0.9521701261114867,
+          -0.9491057589260826,
+          -0.3164237383745294,
+          1.0
+        ]
+      ],
+      "finite_difference_convergence": [
+        {
+          "from_pct": 1.0,
+          "to_pct": 2.0,
+          "full_matrix_relative_change": 0.011980215201567274,
+          "rms_summary_relative_change": 0.0071893111070991415,
+          "converged": true
+        },
+        {
+          "from_pct": 2.0,
+          "to_pct": 5.0,
+          "full_matrix_relative_change": 0.10863954599627718,
+          "rms_summary_relative_change": 0.0545761135073871,
+          "converged": false
+        }
+      ],
+      "convergence_criterion": "full_matrix_relative_change < 0.05 between consecutive steps",
+      "observable_contribution": [
+        {
+          "observable": "S0",
+          "row_norm": 4.358670431585542,
+          "sigma_min_full": 3.980935598099251e-12,
+          "sigma_min_without": 3.754695898164634e-12,
+          "sigma_min_gain": -2.2623969993461747e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.04257542917336843
+        },
+        {
+          "observable": "S1",
+          "row_norm": 9.746171355409441,
+          "sigma_min_full": 3.980935598099251e-12,
+          "sigma_min_without": 3.641205818422758e-12,
+          "sigma_min_gain": -3.3972977967649354e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.21287225239076235
+        },
+        {
+          "observable": "S2",
+          "row_norm": 7.709253048057349,
+          "sigma_min_full": 3.980935598099251e-12,
+          "sigma_min_without": 1.337977455387638e-17,
+          "sigma_min_gain": -3.980922218324697e-12,
+          "rank_without": 7,
+          "variance_fraction_lost": 0.13319121238904363
+        },
+        {
+          "observable": "I0",
+          "row_norm": 8.506632653609099,
+          "sigma_min_full": 3.980935598099251e-12,
+          "sigma_min_without": 3.685292830472133e-12,
+          "sigma_min_gain": -2.95642767627118e-13,
+          "rank_without": 9,
+          "variance_fraction_lost": 0.16216843572106554
+        },
+        {
+          "observable": "A1",
+          "row_norm": 14.157639371240164,
+          "sigma_min_full": 3.980935598099251e-12,
+          "sigma_min_without": 2.86862072307518e-12,
+          "sigma_min_gain": -1.1123148750240712e-12,
+          "rank_without": 8,
+          "variance_fraction_lost": 0.4491926703257584
+        }
+      ]
+    }
+  },
+  "predicted_confusions": {
+    "q_vs_kd_comp": {
+      "note": "model.py: q = kon/(koff+complex_decay+growth) and K_complex = q*K_D_comp; the reverse Hill reads C/K_complex, so q and K_D_comp enter ONLY as a product. Only K_complex is identifiable; the individual factors are not.",
+      "rho_K_D_comp_scale_vs_complex_on": 0.3683702678190527,
+      "rho_K_D_comp_scale_vs_complex_off": 0.6488599214280409,
+      "rho_K_D_comp_scale_vs_complex_decay": -0.4990944868339192
+    },
+    "kon_koff_decay": {
+      "correlations": {
+        "complex_off~complex_on": 0.270873707275895,
+        "complex_decay~complex_on": -0.00962902836224592,
+        "complex_decay~complex_off": -0.954389362360677
+      },
+      "note": "these three reach the reverse Hill only through q"
+    },
+    "uM_per_au_vs_translation": {
+      "rho": 0.07142409509266817,
+      "tested": true
+    },
+    "mRNA_vs_maturation": {
+      "rho_mRNA_vs_A1_mat": -0.4269758537444018,
+      "rho_mRNA_vs_F1_mat": -0.7844962400513369,
+      "rho_A1mat_vs_F1mat": -0.032629995526856706
+    },
+    "n_A1_gate_vs_scale": {
+      "rho_vs_uM_per_au": 0.04236870441039674,
+      "rho_vs_complex_on": 0.019805694611605643,
+      "note": "n_A1_gate is an exponent; a scale confusion shows as large |rho| with a scale"
+    }
+  },
+  "headline": {
+    "theoretical": {
+      "effective_rank": 9,
+      "effective_rank_at_threshold": {
+        "0.01": 7,
+        "0.001": 9,
+        "0.0001": 9
+      },
+      "smallest_sigma_margin_over_threshold": {
+        "0.01": 2.40042973679351e-11,
+        "0.001": 2.40042973679351e-10,
+        "0.0001": 2.40042973679351e-09
+      },
+      "smallest_over_largest_sigma": 2.40042973679351e-13,
+      "condition_number": 4165920729409.886,
+      "singular_values": [
+        135.4013374461451,
+        48.86598143153741,
+        24.0069306228526,
+        13.595619817643152,
+        8.121114395535603,
+        6.700957089754801,
+        3.4619763946589597,
+        1.3220602633279048,
+        0.6372089150942356,
+        3.250213968073393e-11
+      ],
+      "weakest_direction": {
+        "uM_per_au": -5.684067422883041e-14,
+        "n_A1_gate": 1.5394193095833738e-13,
+        "carry1_mrna_half_life_min": -3.502898597842581e-12,
+        "A1_maturation_half_life_min": 5.061685906037349e-13,
+        "F1_maturation_half_life_min": 3.0550936545302117e-13,
+        "complex_on": -6.075276044357522e-13,
+        "complex_off": -1.8824538885318575e-12,
+        "complex_decay": 7.714613348194671e-13,
+        "K_D_comp_scale": -1.9546766797876514e-13,
+        "translation_h": -1.0
+      }
+    },
+    "experimental": {
+      "effective_rank": 9,
+      "effective_rank_at_threshold": {
+        "0.01": 6,
+        "0.001": 9,
+        "0.0001": 9
+      },
+      "smallest_sigma_margin_over_threshold": {
+        "0.01": 1.941327500082358e-11,
+        "0.001": 1.9413275000823578e-10,
+        "0.0001": 1.941327500082358e-09
+      },
+      "smallest_over_largest_sigma": 1.9413275000823578e-13,
+      "condition_number": 5151114378988.483,
+      "singular_values": [
+        20.506254601196172,
+        4.721369456180818,
+        1.1339771703517645,
+        1.0621532465524848,
+        0.8491185174726418,
+        0.49782548971253726,
+        0.1570928150015166,
+        0.11243200449671374,
+        0.044335231375798576,
+        3.980935598099251e-12
+      ],
+      "weakest_direction": {
+        "uM_per_au": -1.1404346529429104e-14,
+        "n_A1_gate": -4.73617421825446e-13,
+        "carry1_mrna_half_life_min": -2.5963616412214626e-13,
+        "A1_maturation_half_life_min": 1.1100545312232143e-13,
+        "F1_maturation_half_life_min": -3.0042134889344146e-12,
+        "complex_on": 5.590905660274241e-12,
+        "complex_off": 4.983224425024616e-12,
+        "complex_decay": -5.659420618194397e-12,
+        "K_D_comp_scale": -3.3042799114069227e-13,
+        "translation_h": -1.0
+      }
+    },
+    "rank_lost_by_restricting_to_experimental": 0,
+    "rank_statement_qualification": "The effective rank is a thresholded quantity. At the 1e-3 cut it is 9 for both observation models, but at the looser 1e-2 cut it drops to 7 (theoretical) and 6 (experimental), and the smallest singular value clears the 1e-3 cut by only 2.40e-10 / 1.94e-10. \"Restricting to experimental observables loses no rank\" is therefore a statement AT one cut, not a robust one. Any quoted rank must name its threshold."
+  }
+}

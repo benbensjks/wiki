@@ -48,6 +48,7 @@ from plausibility_common import (OUT, frozen_carry0, frozen_extension,  # noqa: 
                                  gate_windows, leak_budget, source_hashes,
                                  write_manifest)
 from model import ZENG  # noqa: E402
+from working_point import working_point_block  # noqa: E402
 
 PROBES = [
     dict(name='baseline', k_rep_bit2=None, n_rep_bit2=None),
@@ -103,10 +104,25 @@ def make_bit2_rdf_probe():
         prefix are untouched.
         """
 
-        def __init__(self, extension=None, carry=None, k_rep=None, n_rep=None):
+        def __init__(self, extension=None, carry=None, k_rep=None, n_rep=None,
+                     n_A1_gate=None):
+            """n_A1_gate is passed through EXPLICITLY.
+
+            This subclass builds ThreeBit51Model directly rather than through
+            plausibility_common.build_threebit, so it does not inherit that
+            helper's safe default.  Leaving n_A1_gate unset makes the model fall
+            back to ZENG['n_A'][1] = 4.0, which is the ZENG TABLE value and NOT
+            the frozen working point (6.0); that fallback produced the first,
+            invalid version of this check.  The caller must supply the exponent.
+            """
             self.k_rep_bit2 = k_rep
             self.n_rep_bit2 = n_rep
-            super().__init__(extension=extension, carry=carry)
+            if n_A1_gate is None:
+                from plausibility_common import SELECTED_N_A1_GATE
+                n_A1_gate = SELECTED_N_A1_GATE
+            self.n_A1_gate = float(n_A1_gate)
+            super().__init__(extension=extension, carry=carry,
+                             n_A1_gate=self.n_A1_gate)
 
         def rhs(self, t, y):
             d = super().rhs(t, y)
@@ -147,11 +163,68 @@ def rdf_map(k_rep=None, n_rep=None, grid=2001):
                     np.interp(s, S, R)))
 
 
+def vacuity_text(base_counts, strict, counting_ok, usable, base):
+    """State what this check can and cannot conclude at the working point used.
+
+    The check asks: "at a working point where the counter FAILS, does collapsing
+    bit2's RDF repression rescue it?"  If the baseline already counts, nothing can
+    be rescued, and neither `rdf_collapse_is_load_bearing` nor
+    `rdf_collapse_supported_by_counting` is evidence of anything.  Without this
+    guard the verdict string at such a point reads
+    "SUPPORTED: ... restores a correct mod-8 count", which is misleading.
+    """
+    if base_counts:
+        return ('VACUOUS AT THIS WORKING POINT: the baseline already counts '
+                '(certified=%s, crossings=%d, longest correct mod-8 run=%d), so a collapse '
+                'probe has nothing to rescue. The load-bearing fields are reported as null '
+                'rather than true, and this check does NOT answer the RDF question here. '
+                'To ask it, run at a working point where the baseline FAILS to count (the '
+                'archived n_A1_gate=4 artefacts were such a point), or redesign the check to '
+                'force the RDF pool down or up starting from a WORKING counter.'
+                % (bool(base.certified), int(base.crossings), int(base.longest_mod8_run)))
+    if len(usable) == 0:
+        return ('INCONCLUSIVE: every collapse probe perturbed the frozen prefix, so none of '
+                'them tested bit2 in isolation')
+    if len(strict) or len(counting_ok):
+        return ('SUPPORTED: a bit2-only collapse probe restores a correct mod-8 count'
+                + (' and full certification' if len(strict) else
+                   '; certification is blocked only by unlabelled read windows'))
+    return 'not binding: prefix-preserving collapse probes do not recover bit2'
+
+
+def rdf_dependence(usable, base):
+    """A SEPARATE, POSITIVE finding: is the T -> RDF feedback needed for counting?
+
+    This must not be buried by the vacuity verdict.  "Did RDF collapse cause the
+    n_A1_gate=4 stall?" and "is the state-dependent T -> RDF feedback necessary
+    for counting at all?" are different questions, and the second one IS
+    answerable from a run whose baseline already counts.
+    """
+    base_run = int(base.longest_mod8_run)
+    broken = [r for r in usable.itertuples() if int(r.longest_mod8_run) < 16]
+    intact = [r for r in usable.itertuples() if int(r.longest_mod8_run) >= 16]
+    text = (
+        ('the state-dependent T -> RDF feedback IS necessary for counting: probe(s) %s cut the '
+         'longest correct mod-8 run from %d to %s and lose certification, while %s leave it at '
+         '%d. This holds regardless of whether RDF collapse explains the n_A1_gate=4 stall.'
+         % ([r.probe for r in broken], base_run, [int(r.longest_mod8_run) for r in broken],
+            [r.probe for r in intact] or 'no other probe', base_run))
+        if broken else
+        ('no probe breaks the count, so this run gives no evidence that the T -> RDF feedback '
+         'is necessary for counting at this working point'))
+    return dict(counting_is_rdf_dependent=bool(broken),
+                probes_that_break_counting=[r.probe for r in broken],
+                longest_mod8_run_baseline=base_run,
+                rdf_dependence_finding=text)
+
+
 def run_probe(probe, hours, sample_min, max_step_min):
     from verify_threebit51 import analyse_threebit
     started = time.perf_counter()
     model = Bit2RdfProbe(extension=frozen_extension(), carry=None,
                          k_rep=probe['k_rep_bit2'], n_rep=probe['n_rep_bit2'])
+    if float(model.n_A1_gate_effective) != float(model.n_A1_gate):
+        raise RuntimeError('gate exponent not realised: %r' % (model.n_A1_gate_effective,))
     sol = model.simulate(hours=hours, sample_min=sample_min, max_step_min=max_step_min)
     analysis = analyse_threebit(model, sol, hours)
     sig = model.diagnostic_signals(sol.y)
@@ -163,6 +236,7 @@ def run_probe(probe, hours, sample_min, max_step_min):
     k = int(np.flatnonzero(late)[int(np.argmin(S2[late]))])
     return dict(probe=probe['name'], k_rep_bit2=probe['k_rep_bit2'],
                 n_rep_bit2=probe['n_rep_bit2'],
+                n_A1_gate_effective=float(model.n_A1_gate_effective),
                 certified=bool(analysis['certified']),
                 steady_passed=bool(analysis['steady_state']['passed']),
                 crossings=len(analysis['bit2_crossings']),
@@ -198,6 +272,7 @@ def main():
         counting_ok = usable[usable.longest_mod8_run >= 16]
         strict = usable[usable.certified.astype(bool) &
                         (usable.crossings >= int(base.crossings))]
+        base_counts = bool(base.certified) and int(base.longest_mod8_run) >= 16
         verdict = dict(rescored_from_csv=True,
                        baseline_crossings=int(base.crossings),
                        baseline_reverse_events=int(base.reverse_events),
@@ -209,8 +284,14 @@ def main():
                        longest_correct_mod8_run={r.probe: int(r.longest_mod8_run)
                                                  for r in df.itertuples()},
                        near_miss={r.probe: near_miss_reason(r) for r in df.itertuples()},
-                       rdf_collapse_is_load_bearing=bool(len(strict) > 0),
-                       rdf_collapse_supported_by_counting=bool(len(counting_ok) > 0))
+                       baseline_already_counts=base_counts,
+                       vacuous_at_this_working_point=base_counts,
+                       rdf_collapse_is_load_bearing=(None if base_counts
+                                                     else bool(len(strict) > 0)),
+                       rdf_collapse_supported_by_counting=(None if base_counts
+                                                           else bool(len(counting_ok) > 0)),
+                       **rdf_dependence(usable, base),
+                       verdict=vacuity_text(base_counts, strict, counting_ok, usable, base))
         df.to_csv(OUT / 'rdf_collapse_rescored.csv', index=False, encoding='utf-8')
         (OUT / 'rdf_collapse_rescored.json').write_text(
             json.dumps(verdict, ensure_ascii=False, indent=2), encoding='utf-8')
@@ -235,15 +316,13 @@ def main():
     usable = df[(df.probe != 'baseline') & df.prefix_preserved]
     counting_ok = usable[usable.longest_mod8_run >= 16]
     strict = usable[usable.certified & (usable.crossings >= int(base.crossings))]
-    if len(usable) == 0:
-        verdict_txt = ('INCONCLUSIVE: every collapse probe perturbed the frozen prefix, '
-                       'so none of them tested bit2 in isolation')
-    elif len(strict) or len(counting_ok):
-        verdict_txt = ('SUPPORTED: a bit2-only collapse probe restores a correct mod-8 count'
-                       + (' and full certification' if len(strict) else
-                          '; certification is blocked only by unlabelled read windows'))
-    else:
-        verdict_txt = 'not binding: prefix-preserving collapse probes do not recover bit2'
+    base_counts = bool(base.certified) and int(base.longest_mod8_run) >= 16
+    verdict_txt = vacuity_text(base_counts, strict, counting_ok, usable, base)
+
+    # A SEPARATE, POSITIVE finding that the vacuity verdict must not bury: whether
+    # removing bit2's RDF repression breaks the count.  This is a different
+    # question from "did RDF collapse cause the stall", and it IS answerable here.
+    dep = rdf_dependence(usable, base)
 
     verdict = dict(baseline_crossings=int(base.crossings),
                    baseline_reverse_events=int(base.reverse_events),
@@ -259,8 +338,13 @@ def main():
                    probes_that_recover_counting=counting_ok.probe.tolist(),
                    longest_correct_mod8_run={r.probe: int(r.longest_mod8_run)
                                              for r in df.itertuples()},
-                   rdf_collapse_is_load_bearing=bool(len(strict) > 0),
-                   rdf_collapse_supported_by_counting=bool(len(counting_ok) > 0),
+                   baseline_already_counts=base_counts,
+                   vacuous_at_this_working_point=base_counts,
+                   rdf_collapse_is_load_bearing=(None if base_counts
+                                                 else bool(len(strict) > 0)),
+                   rdf_collapse_supported_by_counting=(None if base_counts
+                                                       else bool(len(counting_ok) > 0)),
+                   **dep,
                    verdict=verdict_txt,
                    note=('v2: the strict field still requires certified=True, which is '
                          'blocked by readout labelling; rdf_collapse_supported_by_counting '
@@ -272,7 +356,15 @@ def main():
     pd.DataFrame(dict(S=base_map['S'], R_ss=base_map['R'])).to_csv(
         OUT / 'rdf_collapse_curve.csv', index=False, encoding='utf-8')
     (OUT / 'rdf_collapse.json').write_text(
-        json.dumps(dict(verdict=verdict, source_sha256=source_hashes()),
+        json.dumps(dict(verdict=verdict, source_sha256=source_hashes(),
+                        working_point=working_point_block(
+                            None, dict(
+                                gate_exponents_used=sorted(
+                                    set(float(v) for v in df.n_A1_gate_effective)),
+                                note=('every probe row records n_A1_gate_effective; this '
+                                      'check builds ThreeBit51Model directly through '
+                                      'Bit2RdfProbe, so it did NOT inherit the helper '
+                                      'default and the exponent is asserted per run')))),
                    ensure_ascii=False, indent=2), encoding='utf-8')
     write_manifest()
 

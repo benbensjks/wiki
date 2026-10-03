@@ -1,0 +1,23 @@
+{
+  "source": "results\\20260927_222727_239025\\trajectories.npz",
+  "source_sha256": "988164F23E07683BA2C7342C33F2C1AC5B1495F8D4761F68730B5930BC3B1E3D",
+  "parameters": "results\\20260927_222727_239025\\parameters.json",
+  "parameters_sha256": "DEF09E268267693CBC55F952FBD4EAAFDB7944EF23143C8A127059F062F33D55",
+  "array": "original_donor",
+  "time": "original_time_min / 60",
+  "rows": 2000,
+  "hours": 33.333333333333336,
+  "state_indices": {
+    "pb0": 0,
+    "pb1": 6,
+    "A0": 4,
+    "F0_source_r0": 5,
+    "Int0": 1,
+    "Int1": 7
+  },
+  "note": "Read-only rendering of original default RK45 donor trajectory already saved by run_initial.py; no reintegration.",
+  "outputs": {
+    "zmh_twobit_current.png": "A7841A56BC03D53BE1760183028ACC70D0FCC2602DDBCB141BEAD3C6201C45C8",
+    "zmh_twobit_current.svg": "91C07992993D50309D863B4AB7E2256436364171FCF487B7BF066A499CA55CC0"
+  }
+}

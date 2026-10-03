@@ -1,0 +1,160 @@
+{
+  "hours": 300.0,
+  "cases": {
+    "off": {
+      "counting": false,
+      "events": false,
+      "diagnostic_passed": false,
+      "cold": "123xxxxxxxx4567456745674567",
+      "steady": "xxx4567456745674567",
+      "per_bit": {
+        "S0": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9854514225859179,
+          "timing": {
+            "min_setup_h": 6.556002777371333,
+            "min_hold_h": 1.178460901856866,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        },
+        "S1": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9944267385843951,
+          "timing": {
+            "min_setup_h": 6.88719234944395,
+            "min_hold_h": 1.301442822565761,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        },
+        "S2": {
+          "minimum_commitment": 0.0,
+          "unlabelled": 3,
+          "minimum": 0.0,
+          "maximum": 0.8177481924157821,
+          "timing": {
+            "min_setup_h": 17.298947855386515,
+            "min_hold_h": null,
+            "setup_samples": 19,
+            "hold_samples": 0
+          }
+        }
+      },
+      "prefix_gap": 0.0,
+      "flips": {
+        "S0": 29,
+        "S1": 14,
+        "S2": 1
+      },
+      "gate_events": {
+        "bit0_to_bit1": [
+          14,
+          14,
+          14
+        ],
+        "bit1_to_bit2": [
+          7,
+          0,
+          1
+        ]
+      },
+      "A1_initial": 6.4,
+      "F1_initial": 4.539843471827561,
+      "S2_range": [
+        0.0,
+        0.8177481924157821
+      ]
+    },
+    "on": {
+      "counting": false,
+      "events": false,
+      "diagnostic_passed": false,
+      "cold": "123xxxx45674567456745674567",
+      "steady": "5674567456745674567",
+      "per_bit": {
+        "S0": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9854514225859179,
+          "timing": {
+            "min_setup_h": 6.556002777371333,
+            "min_hold_h": 1.178460901856866,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        },
+        "S1": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9944267385843951,
+          "timing": {
+            "min_setup_h": 6.88719234944395,
+            "min_hold_h": 1.301442822565761,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        },
+        "S2": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.8395536684330869,
+          "timing": {
+            "min_setup_h": 58.81222767846325,
+            "min_hold_h": null,
+            "setup_samples": 19,
+            "hold_samples": 0
+          }
+        }
+      },
+      "prefix_gap": 0.0,
+      "flips": {
+        "S0": 29,
+        "S1": 14,
+        "S2": 1
+      },
+      "gate_events": {
+        "bit0_to_bit1": [
+          14,
+          14,
+          14
+        ],
+        "bit1_to_bit2": [
+          7,
+          0,
+          1
+        ]
+      },
+      "A1_initial": 1.2300679737379923,
+      "F1_initial": 2.3851258395219976,
+      "S2_range": [
+        0.0,
+        0.8395536684330869
+      ]
+    }
+  },
+  "source_hashes": {
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_zmh\\model_hzz.py": "EA1FE3798D09D268B638341C2A1956D45994A520F0C318F9A7D2BA8D429679AE",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_zmh\\run_comparison.py": "80B5C8396CA853AE2A491405883260D46DD0A102C170852B3DCEFCFB144899D3",
+    "C:\\Users\\18633\\Desktop\\wiki\\wiki任务\\前馈三级级联.py": "C28FB9587EF12948F40ECB626B117E7C4757DB1F63001F794F8FE4FF19206CEA",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hybrid_model.py": "33168F82A1E17778589824F66DEE2ACA06833C7F113EF723B5C7F9FEA4E7B058",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\model_hzh.py": "AD41B3E4C0681609BBB146406AFF28E6E27D87598080C9650EA5F296FEF0FA0A",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\certification\\verify_hzh.py": "3D68391A3AB4920AD6CA234886F3FA9AE41D575D1ADDB28B15C65A308FAF05A4",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\run_han_comparison.py": "0043F0B22347F963745D2B54C5CCE471425E0E57E9B4C6D8E8D22421DDCF57DF",
+    "C:\\Users\\18633\\Desktop\\wiki\\其他小组成员任务\\Week4_振荡器-C31建模\\code\\Flux_Driven_Translation_Burden_Model.py": "456326A418C4C7EE23C75FA2DD4A86070F37CAF820B5F863BBAA44FE9DCE51BD",
+    "wiki任务\\完整二级级联.py": "E790743F493F415E43296CD10911BB6C2A4E5A024F70E807A40267E9705A0E2B",
+    "final_reconstruction\\model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A"
+  },
+  "source_unchanged": true,
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "platform": "Windows-11-10.0.26200-SP0"
+}

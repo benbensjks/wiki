@@ -1,0 +1,41 @@
+{
+  "kind": "n4_matched_trajectory_archive",
+  "reason": "H3/H7 - superseded artefacts are archived, never overwritten in place. The Figure 4-3 column-index incident must be verifiable from the bytes and not only from a written claim.",
+  "how_to_read": "gen1 is the file that produced the wrong figure; gen2 is the relabelled file. gen2[b2_S] == gen1[S0] and gen2[A1] == gen1[S1] and gen2[F1] == gen1[S2], entry-wise identical, which is what establishes that the fix changed labels only and no numbers.",
+  "files": [
+    {
+      "file": "n4_matched_600h_gen1_mislabelled_S0S1S2.csv",
+      "generation": "generation 1: columns S0/S1/S2 actually held b2_S/A1/F1",
+      "columns": [
+        "time_h",
+        "S0",
+        "S1",
+        "S2",
+        "g1",
+        "clock_gate",
+        "C31_flux"
+      ],
+      "sha256": "FBE88CF7FFE9568E47BDF7C4F2D8D31894C64664405B00AE79D45665043F1692",
+      "size_bytes": 2432605,
+      "superseded_by": "data/n4_matched_600h.csv"
+    },
+    {
+      "file": "n4_matched_600h_gen2_relabelled_9col.csv",
+      "generation": "generation 2: correct column names, before b2_I/b2_R/b2_C/J_fwd2/J_rev2 added",
+      "columns": [
+        "time_h",
+        "g1",
+        "clock_gate",
+        "C31_flux",
+        "b0_S",
+        "b1_S",
+        "b2_S",
+        "A1",
+        "F1"
+      ],
+      "sha256": "F2DB0AA432325491F385C4EEFC2A411F74398418EA4D89ED8A8623DBE8CEBC6F",
+      "size_bytes": 3132839,
+      "superseded_by": "data/n4_matched_600h.csv"
+    }
+  ]
+}

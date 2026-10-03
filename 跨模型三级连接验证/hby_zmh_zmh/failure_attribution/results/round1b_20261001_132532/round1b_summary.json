@@ -1,0 +1,454 @@
+{
+  "hours": 300.0,
+  "solver": {
+    "method": "DOP853",
+    "rtol": 2e-07,
+    "atol": 2e-09,
+    "max_step": 0.016666666666666666
+  },
+  "prefix_guard": {
+    "certified": true,
+    "reads": true,
+    "sequence": true,
+    "margin": true
+  },
+  "new_cells": [
+    {
+      "arm": "off",
+      "clock_K": 0.2
+    },
+    {
+      "arm": "off",
+      "clock_K": 0.07
+    }
+  ],
+  "reference_from_round1": [
+    {
+      "arm": "on",
+      "clock_K": 0.2
+    },
+    {
+      "arm": "on",
+      "clock_K": 0.07
+    },
+    {
+      "arm": "on",
+      "clock_K": 0.4
+    },
+    {
+      "arm": "off",
+      "clock_K": 0.4
+    }
+  ],
+  "question": "does the source file 前馈三级级联.py own tail configuration (A1 autoregulation OFF, clock_K 0.40) work once the clock gate is matched to the real HBY Int0 scale?",
+  "rows": [
+    {
+      "label": "clk020|off",
+      "arm": "off",
+      "clock_K": 0.2,
+      "overrides": {},
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "diagnostic_passed": true,
+      "cold": "123456701234567012345670123",
+      "steady": "1234567012345670123",
+      "stage0": [
+        14,
+        14,
+        14
+      ],
+      "stage1": [
+        7,
+        7,
+        7
+      ],
+      "s2_flips": 7,
+      "gate_segment_count": 7,
+      "gate_duration_range": [
+        0.25,
+        0.26666666666667993
+      ],
+      "gate_dose_range": [
+        0.05755003763106543,
+        0.05862685861601311
+      ],
+      "gate_segments_meeting_duration": 7,
+      "gate_segments_meeting_dose": 7,
+      "gate_segments_meeting_both": 7,
+      "g1_peak": 0.38792760962256334,
+      "clock_peak": 0.9537574383881992,
+      "clock_duty_gt_05": 0.3848675073607022,
+      "int2_source_peak": 10.861973069431773,
+      "J_fwd2_total": 3.887968926690707,
+      "J_rev2_total": 2.9622556792889876,
+      "mechanism": {
+        "I2_peak": 1.3120198100188667,
+        "RDF2_peak": 3.7264260941316203,
+        "T2_min": 0.43331956548914646,
+        "pb2_min": 0.07400446382368017,
+        "K_rep": 0.45,
+        "n": 3.9,
+        "alpha_Int2": 28.0,
+        "K_A1": 1.2,
+        "K_R1": 0.4,
+        "clock_K": 0.2,
+        "rdf_suppression": 0.5367613433946378,
+        "RDF2_steady_predicted": 3.727789559815795,
+        "RDF2_pred_vs_measured": 1.0003658909769664,
+        "i_times_r_peak": 4.8891448560719155,
+        "K_D_comp": 0.8,
+        "reverse_hill_value": 0.9739241017391593,
+        "v_reverse_at_peak_per_h": 6.312945595494955,
+        "v_forward_at_peak_per_h": 0.008563507306113417,
+        "reverse_over_forward": 737.1915933309468,
+        "reverse_sufficient": true
+      },
+      "prefix_gap": 0.0,
+      "per_bit": {
+        "S0": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9854514225859179,
+          "timing": {
+            "min_setup_h": 6.556002777371333,
+            "min_hold_h": 1.178460901856866,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        },
+        "S1": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9944267385843951,
+          "timing": {
+            "min_setup_h": 6.88719234944395,
+            "min_hold_h": 1.301442822565761,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        },
+        "S2": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9259955361763198,
+          "timing": {
+            "min_setup_h": 6.929733265565403,
+            "min_hold_h": 1.3902807961588621,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        }
+      }
+    },
+    {
+      "label": "clk007|off",
+      "arm": "off",
+      "clock_K": 0.07,
+      "overrides": {},
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "diagnostic_passed": true,
+      "cold": "123456701234567012345670123",
+      "steady": "1234567012345670123",
+      "stage0": [
+        14,
+        14,
+        14
+      ],
+      "stage1": [
+        7,
+        7,
+        7
+      ],
+      "s2_flips": 7,
+      "gate_segment_count": 7,
+      "gate_duration_range": [
+        0.29999999999998295,
+        0.3166666666666629
+      ],
+      "gate_dose_range": [
+        0.08863093387521544,
+        0.08972015035479007
+      ],
+      "gate_segments_meeting_duration": 7,
+      "gate_segments_meeting_dose": 7,
+      "gate_segments_meeting_both": 7,
+      "g1_peak": 0.5672756450459032,
+      "clock_peak": 0.997925534511371,
+      "clock_duty_gt_05": 0.5159157824565302,
+      "int2_source_peak": 15.88371806128529,
+      "J_fwd2_total": 4.101872694811673,
+      "J_rev2_total": 3.1245474069634165,
+      "mechanism": {
+        "I2_peak": 1.9352005992635801,
+        "RDF2_peak": 7.262135527918506,
+        "T2_min": 0.13137190835270943,
+        "pb2_min": 0.021572518866604457,
+        "K_rep": 0.45,
+        "n": 3.9,
+        "alpha_Int2": 28.0,
+        "K_A1": 1.2,
+        "K_R1": 0.4,
+        "clock_K": 0.07,
+        "rdf_suppression": 0.9918515006579666,
+        "RDF2_steady_predicted": 7.278410740853644,
+        "RDF2_pred_vs_measured": 1.002241105646207,
+        "i_times_r_peak": 14.053689025561228,
+        "K_D_comp": 0.8,
+        "reverse_hill_value": 0.9967700612980986,
+        "v_reverse_at_peak_per_h": 6.826870542415552,
+        "v_forward_at_peak_per_h": 0.00161886535148359,
+        "reverse_over_forward": 4217.071256827597,
+        "reverse_sufficient": true
+      },
+      "prefix_gap": 0.0,
+      "per_bit": {
+        "S0": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9854514225859179,
+          "timing": {
+            "min_setup_h": 6.556002777371333,
+            "min_hold_h": 1.178460901856866,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        },
+        "S1": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9944267385843951,
+          "timing": {
+            "min_setup_h": 6.88719234944395,
+            "min_hold_h": 1.301442822565761,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        },
+        "S2": {
+          "minimum_commitment": 1.0,
+          "unlabelled": 0,
+          "minimum": 0.0,
+          "maximum": 0.9784274811333955,
+          "timing": {
+            "min_setup_h": 6.975162912268729,
+            "min_hold_h": 1.3456322144725448,
+            "setup_samples": 19,
+            "hold_samples": 19
+          }
+        }
+      }
+    }
+  ],
+  "side_by_side": [
+    {
+      "source": "round1",
+      "label": "base|off",
+      "arm": "off",
+      "clock_K": 0.4,
+      "counting": "False",
+      "events": "False",
+      "s2_flips": 1.0,
+      "sequence": "xxx4567456745674567",
+      "gate_dose_max": 0.013739219084189569,
+      "gate_duration_max": 0.1500000000000341,
+      "meets_both": 0.0,
+      "I2_peak": 0.39427546361851057,
+      "RDF2_peak": 0.2070880452046899,
+      "reverse_hill": 0.010309297579513599,
+      "vr_over_vf": 1.0558265278519414
+    },
+    {
+      "source": "round1",
+      "label": "base|on",
+      "arm": "on",
+      "clock_K": 0.4,
+      "counting": "False",
+      "events": "False",
+      "s2_flips": 1.0,
+      "sequence": "5674567456745674567",
+      "gate_dose_max": 0.015609652430895167,
+      "gate_duration_max": 0.2333333333333485,
+      "meets_both": 0.0,
+      "I2_peak": 0.45020143466041684,
+      "RDF2_peak": 0.3420857422448337,
+      "reverse_hill": 0.03573550300129403,
+      "vr_over_vf": 4.9052585160227515
+    },
+    {
+      "source": "round1",
+      "label": "krep85|off",
+      "arm": "off",
+      "clock_K": 0.4,
+      "counting": "False",
+      "events": "False",
+      "s2_flips": 1.0,
+      "sequence": "xxxxxxxxxxxxxxxxxxx",
+      "gate_dose_max": 0.013739219084189569,
+      "gate_duration_max": 0.1500000000000341,
+      "meets_both": 0.0,
+      "I2_peak": 0.39427546361851057,
+      "RDF2_peak": 0.26773612611761316,
+      "reverse_hill": 0.01711342291038511,
+      "vr_over_vf": 1.0538221759488298
+    },
+    {
+      "source": "round1",
+      "label": "krep85|on",
+      "arm": "on",
+      "clock_K": 0.4,
+      "counting": "False",
+      "events": "False",
+      "s2_flips": 1.0,
+      "sequence": "567xxxx4567xxxx4567",
+      "gate_dose_max": 0.015609652430895167,
+      "gate_duration_max": 0.2333333333333485,
+      "meets_both": 0.0,
+      "I2_peak": 0.45020143466041684,
+      "RDF2_peak": 0.35453048704715334,
+      "reverse_hill": 0.03828149776958454,
+      "vr_over_vf": 2.5641407402938676
+    },
+    {
+      "source": "round1",
+      "label": "aint38|off",
+      "arm": "off",
+      "clock_K": 0.4,
+      "counting": "False",
+      "events": "False",
+      "s2_flips": 1.0,
+      "sequence": "5674567456745674567",
+      "gate_dose_max": 0.013739219084189569,
+      "gate_duration_max": 0.1500000000000341,
+      "meets_both": 0.0,
+      "I2_peak": 0.5350881291965498,
+      "RDF2_peak": 0.33066492926196617,
+      "reverse_hill": 0.046634401401097376,
+      "vr_over_vf": 4.672450109062346
+    },
+    {
+      "source": "round1",
+      "label": "aint38|on",
+      "arm": "on",
+      "clock_K": 0.4,
+      "counting": "False",
+      "events": "False",
+      "s2_flips": 3.0,
+      "sequence": "567012345674567xxxx",
+      "gate_dose_max": 0.015609652430895167,
+      "gate_duration_max": 0.2333333333333485,
+      "meets_both": 0.0,
+      "I2_peak": 0.6109876613248512,
+      "RDF2_peak": 1.076787682194054,
+      "reverse_hill": 0.4034512157404102,
+      "vr_over_vf": 131.77579061586496
+    },
+    {
+      "source": "round1",
+      "label": "clk020|on",
+      "arm": "on",
+      "clock_K": 0.2,
+      "counting": "True",
+      "events": "True",
+      "s2_flips": 7.0,
+      "sequence": "1234567012345670123",
+      "gate_dose_max": 0.06858658304871139,
+      "gate_duration_max": 0.5,
+      "meets_both": 7.0,
+      "I2_peak": 1.25849087198247,
+      "RDF2_peak": 6.644586918395098,
+      "reverse_hill": 0.9909304232002498,
+      "vr_over_vf": 2900.0993069266956
+    },
+    {
+      "source": "round1",
+      "label": "clk007|on",
+      "arm": "on",
+      "clock_K": 0.07,
+      "counting": "True",
+      "events": "True",
+      "s2_flips": 7.0,
+      "sequence": "1234567012345670123",
+      "gate_dose_max": 0.09488940003423214,
+      "gate_duration_max": 0.5500000000000114,
+      "meets_both": 7.0,
+      "I2_peak": 1.6881696577051328,
+      "RDF2_peak": 7.305105706975237,
+      "reverse_hill": 0.9958094499938119,
+      "vr_over_vf": 8867.661387833517
+    },
+    {
+      "source": "round1",
+      "label": "krep85_aint38|on",
+      "arm": "on",
+      "clock_K": 0.4,
+      "counting": "False",
+      "events": "False",
+      "s2_flips": 3.0,
+      "sequence": "xxx4567xxxx45670123",
+      "gate_dose_max": 0.015609652430895167,
+      "gate_duration_max": 0.2333333333333485,
+      "meets_both": 0.0,
+      "I2_peak": 0.6109876613248512,
+      "RDF2_peak": 1.2495673476018652,
+      "reverse_hill": 0.47664820404119534,
+      "vr_over_vf": 92.20092822577534
+    },
+    {
+      "source": "round1",
+      "label": "krep85_clk007|on",
+      "arm": "on",
+      "clock_K": 0.07,
+      "counting": "True",
+      "events": "True",
+      "s2_flips": 7.0,
+      "sequence": "1234567012345670123",
+      "gate_dose_max": 0.09488940003423214,
+      "gate_duration_max": 0.5500000000000114,
+      "meets_both": 7.0,
+      "I2_peak": 1.6881696577051328,
+      "RDF2_peak": 7.296464834170931,
+      "reverse_hill": 0.9957995604751686,
+      "vr_over_vf": 7209.066814072554
+    },
+    {
+      "source": "round1b",
+      "label": "clk020|off",
+      "arm": "off",
+      "clock_K": 0.2,
+      "counting": "True",
+      "events": "True",
+      "s2_flips": 7,
+      "sequence": "1234567012345670123",
+      "gate_dose_max": 0.05862685861601311,
+      "gate_duration_max": 0.26666666666667993,
+      "meets_both": 7,
+      "I2_peak": 1.3120198100188667,
+      "RDF2_peak": 3.7264260941316203,
+      "reverse_hill": 0.9739241017391593,
+      "vr_over_vf": 737.1915933309468
+    },
+    {
+      "source": "round1b",
+      "label": "clk007|off",
+      "arm": "off",
+      "clock_K": 0.07,
+      "counting": "True",
+      "events": "True",
+      "s2_flips": 7,
+      "sequence": "1234567012345670123",
+      "gate_dose_max": 0.08972015035479007,
+      "gate_duration_max": 0.3166666666666629,
+      "meets_both": 7,
+      "I2_peak": 1.9352005992635801,
+      "RDF2_peak": 7.262135527918506,
+      "reverse_hill": 0.9967700612980986,
+      "vr_over_vf": 4217.071256827597
+    }
+  ]
+}

@@ -1,0 +1,635 @@
+{
+  "hours": 300.0,
+  "sample_min": 1.0,
+  "rtol": 2e-07,
+  "atol": 2e-09,
+  "frozen_config": {
+    "n_A1_gate": 6.0,
+    "clock_K_au": 0.3,
+    "clock_n": 2.0,
+    "clock_scale": 1.0,
+    "carry_mrna_min": 2.0,
+    "carry_maturation_min": 32.5,
+    "bit_mrna_min": 2.0,
+    "bit_maturation_min": 20.0,
+    "translation_h": 30.0,
+    "kon": 0.1,
+    "koff": 1.0,
+    "complex_decay": 1.0,
+    "receiver_uM_per_au": 5.75
+  },
+  "rows": [
+    {
+      "label": "n=4 K_A[1]=x1.00",
+      "n_A1_gate": 4.0,
+      "fold": 1.0,
+      "K_A1_value": 1.2,
+      "gate_readback": 4.0,
+      "K_A1_readback": 1.2,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.2811125988689094,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.179531913551216,
+          "hold_h": 2.161980909819576
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.36044033089578287,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 50.64944800000012
+    },
+    {
+      "label": "n=4 K_A[1]=x1.05",
+      "n_A1_gate": 4.0,
+      "fold": 1.05,
+      "K_A1_value": 1.26,
+      "gate_readback": 4.0,
+      "K_A1_readback": 1.26,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.2749124910218609,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.157913834751213,
+          "hold_h": 2.185428136210845
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.3395219302329224,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 49.47636500000044
+    },
+    {
+      "label": "n=4 K_A[1]=x1.10",
+      "n_A1_gate": 4.0,
+      "fold": 1.1,
+      "K_A1_value": 1.32,
+      "gate_readback": 4.0,
+      "K_A1_readback": 1.32,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.2561390342689638,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.136122386806591,
+          "hold_h": 2.2084951102760755
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.3181905435379664,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 42.29744870000013
+    },
+    {
+      "label": "n=4 K_A[1]=x1.15",
+      "n_A1_gate": 4.0,
+      "fold": 1.15,
+      "K_A1_value": 1.38,
+      "gate_readback": 4.0,
+      "K_A1_readback": 1.38,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.22218690129551855,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.105315404978256,
+          "hold_h": 2.230248657552522
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.2967260441604716,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 44.006642100000136
+    },
+    {
+      "label": "n=4 K_A[1]=x1.20",
+      "n_A1_gate": 4.0,
+      "fold": 1.2,
+      "K_A1_value": 1.44,
+      "gate_readback": 4.0,
+      "K_A1_readback": 1.44,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.16506993198216746,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.001844022538478,
+          "hold_h": 2.2431217208094267
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.2756156840103851,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 46.85169649999989
+    },
+    {
+      "label": "n=4 K_A[1]=x1.25",
+      "n_A1_gate": 4.0,
+      "fold": 1.25,
+      "K_A1_value": 1.5,
+      "gate_readback": 4.0,
+      "K_A1_readback": 1.5,
+      "counting_passed": false,
+      "event_causality_passed": true,
+      "full_certified": false,
+      "sequence": "xxx4567xxxx4567xxxx",
+      "commitment_global": 0.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.05941627541752992,
+          "commitment": 1.0,
+          "n_samples": 1905,
+          "setup_h": 5.421530378275548,
+          "hold_h": 2.083094777462378
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.25485162013197543,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 59.776214999999866
+    },
+    {
+      "label": "n=6 K_A[1]=x1.00",
+      "n_A1_gate": 6.0,
+      "fold": 1.0,
+      "K_A1_value": 1.2,
+      "gate_readback": 6.0,
+      "K_A1_readback": 1.2,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.28213392728037096,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.116818176046479,
+          "hold_h": 2.2212344636680115
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.38867527362533527,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 42.853800100000626
+    },
+    {
+      "label": "n=6 K_A[1]=x1.05",
+      "n_A1_gate": 6.0,
+      "fold": 1.05,
+      "K_A1_value": 1.26,
+      "gate_readback": 6.0,
+      "K_A1_readback": 1.26,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.27730939074550165,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.087265627113908,
+          "hold_h": 2.252882957439752
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.35686436849905206,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 42.14157129999967
+    },
+    {
+      "label": "n=6 K_A[1]=x1.10",
+      "n_A1_gate": 6.0,
+      "fold": 1.1,
+      "K_A1_value": 1.32,
+      "gate_readback": 6.0,
+      "K_A1_readback": 1.32,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.26433602473633866,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.056996331410545,
+          "hold_h": 2.2853979548995227
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.32361658386310144,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 41.766190299999835
+    },
+    {
+      "label": "n=6 K_A[1]=x1.15",
+      "n_A1_gate": 6.0,
+      "fold": 1.15,
+      "K_A1_value": 1.38,
+      "gate_readback": 6.0,
+      "K_A1_readback": 1.38,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.24336654637842325,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.024051303522526,
+          "hold_h": 2.3186505474454577
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.2900175409421465,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 42.40388600000006
+    },
+    {
+      "label": "n=6 K_A[1]=x1.20",
+      "n_A1_gate": 6.0,
+      "fold": 1.2,
+      "K_A1_value": 1.44,
+      "gate_readback": 6.0,
+      "K_A1_readback": 1.44,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.21045624956920506,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.975589898962227,
+          "hold_h": 2.351771303842497
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.2569950992810151,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 47.85891399999946
+    },
+    {
+      "label": "n=6 K_A[1]=x1.25",
+      "n_A1_gate": 6.0,
+      "fold": 1.25,
+      "K_A1_value": 1.5,
+      "gate_readback": 6.0,
+      "K_A1_readback": 1.5,
+      "counting_passed": true,
+      "event_causality_passed": true,
+      "full_certified": true,
+      "sequence": "1234567012345670123",
+      "commitment_global": 1.0,
+      "per_bit": {
+        "S0": {
+          "band_margin": 0.2236805753675657,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.962053316047485,
+          "hold_h": 1.178460901856866
+        },
+        "S1": {
+          "band_margin": 0.285651131602952,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 6.875213079874442,
+          "hold_h": 1.301442822565761
+        },
+        "S2": {
+          "band_margin": 0.1614292066526738,
+          "commitment": 1.0,
+          "n_samples": 3429,
+          "setup_h": 5.855769795361709,
+          "hold_h": 2.3788988565723628
+        }
+      },
+      "s0": {
+        "reverse": 14,
+        "gate": 14,
+        "flip": 14,
+        "one_to_one": true
+      },
+      "s1": {
+        "reverse": 7,
+        "gate": 7,
+        "flip": 7,
+        "one_to_one": true
+      },
+      "g1_peak": 0.22525394599650114,
+      "clock_peak": 0.7697220274528427,
+      "runtime_s": 45.13350129999981
+    }
+  ]
+}

@@ -1,0 +1,413 @@
+{
+  "rule": "OFF midpoint; total width20% period; chosen before this rerun from previous diagnostic",
+  "rows": [
+    {
+      "centre_h": 10.833333333333332,
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "value": 1,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 20.833333333333332,
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "value": 2,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 30.833333333333332,
+      "labels": [
+        1,
+        1,
+        0
+      ],
+      "value": 3,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 40.833333333333336,
+      "labels": [
+        0,
+        null,
+        0
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 50.833333333333336,
+      "labels": [
+        1,
+        null,
+        0
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 60.833333333333336,
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "value": 2,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 70.83333333333333,
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "value": 7,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 80.83333333333333,
+      "labels": [
+        0,
+        null,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 90.83333333333333,
+      "labels": [
+        1,
+        null,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 100.83333333333333,
+      "labels": [
+        0,
+        1,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 110.83333333333333,
+      "labels": [
+        1,
+        1,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 120.83333333333333,
+      "labels": [
+        0,
+        null,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 130.83333333333334,
+      "labels": [
+        1,
+        null,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 140.83333333333334,
+      "labels": [
+        0,
+        1,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 150.83333333333334,
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "value": 7,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 160.83333333333334,
+      "labels": [
+        0,
+        null,
+        0
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 170.83333333333334,
+      "labels": [
+        1,
+        null,
+        0
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 180.83333333333334,
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "value": 2,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 190.83333333333334,
+      "labels": [
+        1,
+        1,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 200.83333333333334,
+      "labels": [
+        0,
+        null,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 210.83333333333334,
+      "labels": [
+        1,
+        null,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 220.83333333333334,
+      "labels": [
+        0,
+        1,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 230.83333333333334,
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "value": 7,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 240.83333333333334,
+      "labels": [
+        0,
+        null,
+        0
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 250.83333333333334,
+      "labels": [
+        1,
+        null,
+        0
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 260.8333333333333,
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "value": 2,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 270.8333333333333,
+      "labels": [
+        1,
+        1,
+        0
+      ],
+      "value": 3,
+      "commitment": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "centre_h": 280.8333333333333,
+      "labels": [
+        0,
+        null,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "centre_h": 290.8333333333333,
+      "labels": [
+        1,
+        null,
+        null
+      ],
+      "value": null,
+      "commitment": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "sequence": "123xx27xxxxxxx7xx2xxxx7xx23xx",
+  "observed_increments": false
+}

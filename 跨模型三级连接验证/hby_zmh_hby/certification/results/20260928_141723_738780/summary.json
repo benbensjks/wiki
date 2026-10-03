@@ -1,0 +1,339 @@
+{
+  "status": "PASSED",
+  "architecture": "HBY bit0 + ZMH current-code A0/F0 and bit1 + HBY A1/F1 and bit2",
+  "input": "Han v53d shared C31 mRNA and true translation flux",
+  "criterion": "HZH_MOD8_CAUSAL_V1, not legacy 51-state certified",
+  "all_numerical_levels_same_code_and_causal_verdict": true,
+  "run_results": [
+    {
+      "name": "baseline_saved",
+      "settings": {
+        "rtol": 2e-07,
+        "atol": 2e-09,
+        "max_step_min": 1.0,
+        "sample_min": 1.0
+      },
+      "certified_v1": true,
+      "cold": {
+        "drop": 0,
+        "reads": 27,
+        "complete": true,
+        "increments_mod8": true,
+        "passed": true,
+        "sequence": "123456701234567012345670123",
+        "minimum_commitment": 1.0,
+        "boundary_clips": 0
+      },
+      "steady": {
+        "drop": 8,
+        "reads": 19,
+        "complete": true,
+        "increments_mod8": true,
+        "passed": true,
+        "sequence": "1234567012345670123",
+        "minimum_commitment": 1.0,
+        "boundary_clips": 0
+      },
+      "event_chains": {
+        "bit0_to_bit1": {
+          "reverse_events": 14,
+          "gate_events": 14,
+          "flip_events": 14,
+          "one_to_one": true,
+          "causal_order": true,
+          "alternating_directions": true,
+          "passed": true
+        },
+        "bit1_to_bit2": {
+          "reverse_events": 7,
+          "gate_events": 7,
+          "flip_events": 7,
+          "one_to_one": true,
+          "causal_order": true,
+          "alternating_directions": true,
+          "passed": true
+        }
+      },
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.178460901856866,
+          "setup_samples": 27,
+          "hold_samples": 27
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.301442822565761,
+          "setup_samples": 26,
+          "hold_samples": 27
+        },
+        "S2": {
+          "min_setup_h": 6.116818176046479,
+          "min_hold_h": 2.2212344636680115,
+          "setup_samples": 24,
+          "hold_samples": 27
+        }
+      },
+      "minimum_timing_margin_h": 1.178460901856866,
+      "clock_peak_count": 28,
+      "max_abs_state_gap_vs_baseline": 0.0,
+      "source_window_ends": [
+        9.016666666666666,
+        284.35
+      ]
+    },
+    {
+      "name": "tight",
+      "settings": {
+        "sample_min": 1.0,
+        "max_step_min": 0.5,
+        "rtol": 1e-09,
+        "atol": 1e-11,
+        "runtime_s": 56.9870192999997
+      },
+      "certified_v1": true,
+      "cold": {
+        "drop": 0,
+        "reads": 27,
+        "complete": true,
+        "increments_mod8": true,
+        "passed": true,
+        "sequence": "123456701234567012345670123",
+        "minimum_commitment": 1.0,
+        "boundary_clips": 0
+      },
+      "steady": {
+        "drop": 8,
+        "reads": 19,
+        "complete": true,
+        "increments_mod8": true,
+        "passed": true,
+        "sequence": "1234567012345670123",
+        "minimum_commitment": 1.0,
+        "boundary_clips": 0
+      },
+      "event_chains": {
+        "bit0_to_bit1": {
+          "reverse_events": 14,
+          "gate_events": 14,
+          "flip_events": 14,
+          "one_to_one": true,
+          "causal_order": true,
+          "alternating_directions": true,
+          "passed": true
+        },
+        "bit1_to_bit2": {
+          "reverse_events": 7,
+          "gate_events": 7,
+          "flip_events": 7,
+          "one_to_one": true,
+          "causal_order": true,
+          "alternating_directions": true,
+          "passed": true
+        }
+      },
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047486,
+          "min_hold_h": 1.1784609018569085,
+          "setup_samples": 27,
+          "hold_samples": 27
+        },
+        "S1": {
+          "min_setup_h": 6.87521307987444,
+          "min_hold_h": 1.301442822565818,
+          "setup_samples": 26,
+          "hold_samples": 27
+        },
+        "S2": {
+          "min_setup_h": 6.116818176046479,
+          "min_hold_h": 2.221234463668054,
+          "setup_samples": 24,
+          "hold_samples": 27
+        }
+      },
+      "minimum_timing_margin_h": 1.1784609018569085,
+      "clock_peak_count": 28,
+      "max_abs_state_gap_vs_baseline": 6.017408793468348e-13,
+      "source_window_ends": [
+        9.016666666666666,
+        284.35
+      ]
+    },
+    {
+      "name": "ultra",
+      "settings": {
+        "sample_min": 1.0,
+        "max_step_min": 0.25,
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "runtime_s": 83.83184990000063
+      },
+      "certified_v1": true,
+      "cold": {
+        "drop": 0,
+        "reads": 27,
+        "complete": true,
+        "increments_mod8": true,
+        "passed": true,
+        "sequence": "123456701234567012345670123",
+        "minimum_commitment": 1.0,
+        "boundary_clips": 0
+      },
+      "steady": {
+        "drop": 8,
+        "reads": 19,
+        "complete": true,
+        "increments_mod8": true,
+        "passed": true,
+        "sequence": "1234567012345670123",
+        "minimum_commitment": 1.0,
+        "boundary_clips": 0
+      },
+      "event_chains": {
+        "bit0_to_bit1": {
+          "reverse_events": 14,
+          "gate_events": 14,
+          "flip_events": 14,
+          "one_to_one": true,
+          "causal_order": true,
+          "alternating_directions": true,
+          "passed": true
+        },
+        "bit1_to_bit2": {
+          "reverse_events": 7,
+          "gate_events": 7,
+          "flip_events": 7,
+          "one_to_one": true,
+          "causal_order": true,
+          "alternating_directions": true,
+          "passed": true
+        }
+      },
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962053316047485,
+          "min_hold_h": 1.1784609018568943,
+          "setup_samples": 27,
+          "hold_samples": 27
+        },
+        "S1": {
+          "min_setup_h": 6.875213079874442,
+          "min_hold_h": 1.3014428225658037,
+          "setup_samples": 26,
+          "hold_samples": 27
+        },
+        "S2": {
+          "min_setup_h": 6.116818176046479,
+          "min_hold_h": 2.221234463668054,
+          "setup_samples": 24,
+          "hold_samples": 27
+        }
+      },
+      "minimum_timing_margin_h": 1.1784609018568943,
+      "clock_peak_count": 28,
+      "max_abs_state_gap_vs_baseline": 7.247535904753022e-13,
+      "source_window_ends": [
+        9.016666666666666,
+        284.35
+      ]
+    },
+    {
+      "name": "sampling_0p5min",
+      "settings": {
+        "sample_min": 0.5,
+        "max_step_min": 0.25,
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "runtime_s": 74.02089429999978
+      },
+      "certified_v1": true,
+      "cold": {
+        "drop": 0,
+        "reads": 27,
+        "complete": true,
+        "increments_mod8": true,
+        "passed": true,
+        "sequence": "123456701234567012345670123",
+        "minimum_commitment": 1.0,
+        "boundary_clips": 0
+      },
+      "steady": {
+        "drop": 8,
+        "reads": 19,
+        "complete": true,
+        "increments_mod8": true,
+        "passed": true,
+        "sequence": "1234567012345670123",
+        "minimum_commitment": 1.0,
+        "boundary_clips": 0
+      },
+      "event_chains": {
+        "bit0_to_bit1": {
+          "reverse_events": 14,
+          "gate_events": 14,
+          "flip_events": 14,
+          "one_to_one": true,
+          "causal_order": true,
+          "alternating_directions": true,
+          "passed": true
+        },
+        "bit1_to_bit2": {
+          "reverse_events": 7,
+          "gate_events": 7,
+          "flip_events": 7,
+          "one_to_one": true,
+          "causal_order": true,
+          "alternating_directions": true,
+          "passed": true
+        }
+      },
+      "bit_margins": {
+        "S0": {
+          "min_setup_h": 5.962890762992598,
+          "min_hold_h": 1.1823050454295654,
+          "setup_samples": 27,
+          "hold_samples": 27
+        },
+        "S1": {
+          "min_setup_h": 6.8752599401717625,
+          "min_hold_h": 1.3039430644110688,
+          "setup_samples": 26,
+          "hold_samples": 27
+        },
+        "S2": {
+          "min_setup_h": 6.120039945922997,
+          "min_hold_h": 2.225219145473062,
+          "setup_samples": 24,
+          "hold_samples": 27
+        }
+      },
+      "minimum_timing_margin_h": 1.1823050454295654,
+      "clock_peak_count": 28,
+      "max_abs_state_gap_vs_baseline": 7.247535904753022e-13,
+      "source_window_ends": [
+        9.016666666666666,
+        284.35
+      ]
+    }
+  ],
+  "source_hashes": {
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\certification\\verify_hzh.py": "3D68391A3AB4920AD6CA234886F3FA9AE41D575D1ADDB28B15C65A308FAF05A4",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\certification\\run_certification.py": "D5C3E0BD7DF9A7EC885E2694D3B35F6E03F41A7232E8F39F304AF1EDA525F1BB",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\model_hzh.py": "AD41B3E4C0681609BBB146406AFF28E6E27D87598080C9650EA5F296FEF0FA0A",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\test_hzh.py": "BAAC13968F9E53A3026EB06CCAC778299FD34F62553163380912A33A57ED27D7",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hybrid_model.py": "33168F82A1E17778589824F66DEE2ACA06833C7F113EF723B5C7F9FEA4E7B058",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\run_han_comparison.py": "0043F0B22347F963745D2B54C5CCE471425E0E57E9B4C6D8E8D22421DDCF57DF",
+    "C:\\Users\\18633\\Desktop\\wiki\\其他小组成员任务\\Week4_振荡器-C31建模\\code\\Flux_Driven_Translation_Burden_Model.py": "456326A418C4C7EE23C75FA2DD4A86070F37CAF820B5F863BBAA44FE9DCE51BD",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\results\\20260927_233646_924908\\han\\trajectory.npz": "761400CE75DE891755444987F963C9F6D7D01B966FF46CB805B2EBBE9D441CFF",
+    "C:\\Users\\18633\\Desktop\\wiki\\跨模型三级连接验证\\hby_zmh_hby\\results\\20260927_233646_924908\\han\\parameters.json": "9E547B0341022ED600B78CB2EE93EA7B4B985707ABF6992333EF4B0F3A5F647D",
+    "wiki任务\\完整二级级联.py": "E790743F493F415E43296CD10911BB6C2A4E5A024F70E807A40267E9705A0E2B",
+    "final_reconstruction\\model.py": "256D2D104EECB4CE17F27CF4DBC08257BEEEA79E5805FD7D5614E47BBC7E543A"
+  },
+  "environment": {
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

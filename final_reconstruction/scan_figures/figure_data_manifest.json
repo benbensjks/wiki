@@ -1,0 +1,178 @@
+{
+  "purpose": "provenance for every scan figure: which completed artefact each panel was drawn from, with SHA256 and row counts, plus the SHA256 of every figure produced by this run",
+  "figures": [
+    "fig_2bit_single_param.png",
+    "fig_3bit_single_param.png",
+    "fig_2bit_robustness.png",
+    "fig_3bit_robustness.png"
+  ],
+  "outputs": {
+    "fig_2bit_single_param.png": {
+      "sha256": "402374C9A44031042A8A923373926593D8C8CE2DFBEDC04D5E24758AEA69BFE8",
+      "bytes": 308654,
+      "width": 2582,
+      "height": 1732
+    },
+    "fig_3bit_single_param.png": {
+      "sha256": "200CC5D5E91C21C4F0A94E35B9A3104D350638D5A4E730554E6BCAFAD62D6DCA",
+      "bytes": 604826,
+      "width": 2872,
+      "height": 2397
+    },
+    "fig_2bit_robustness.png": {
+      "sha256": "2675FB7EDA15FF672F6990EEEA6A2925709F1543EFE569768C53129DA86A6CC3",
+      "bytes": 352818,
+      "width": 3076,
+      "height": 1827
+    },
+    "fig_3bit_robustness.png": {
+      "sha256": "EACFE07B821CAB5E4733B79A3D4A39440FE3BCE353A0C9791003BBE243530402",
+      "bytes": 556148,
+      "width": 2967,
+      "height": 1922
+    }
+  },
+  "inputs": [
+    {
+      "path": "twobit34_results/robustness/robustness_all.csv",
+      "sha256": "8D47C34044E6728A1F35465CF801E7F0AEBD61EF3544BE4757EF9C94F234FDBC",
+      "rows": 75,
+      "kind": "csv"
+    },
+    {
+      "path": "threebit51_results/carry1_scan_dsh/carry1_all.csv",
+      "sha256": "1693C7B2940BA452FA780E07439C881EB349428BD636EF7663D1381400CD161B",
+      "rows": 35,
+      "kind": "csv"
+    },
+    {
+      "path": "plausibility/nA1_vs_maturation_all.csv",
+      "sha256": "77D25B729E5AE9D419A49C88A8A6D511022E9B30E8794C860B0A6084073B1D6E",
+      "rows": 25,
+      "kind": "csv"
+    },
+    {
+      "path": "plausibility/preaudit_stochasticity_all.csv",
+      "sha256": "48B298A0A8C91308D84A0196CC9E67B1F2035306A1ADA039B9123A0ACB2E507E",
+      "rows": 21,
+      "kind": "csv"
+    },
+    {
+      "path": "threebit51_results/carry1_split_scan/split_all.csv",
+      "sha256": "C4BB91AEF2AD38C8584C979948E650576E43FF3A71BD93B552A2A92E0E8BEA10",
+      "rows": 63,
+      "kind": "csv"
+    },
+    {
+      "path": "twobit34_results/robustness/robustness_all.csv",
+      "sha256": "8D47C34044E6728A1F35465CF801E7F0AEBD61EF3544BE4757EF9C94F234FDBC",
+      "rows": 75,
+      "kind": "csv"
+    },
+    {
+      "path": "twobit34_results/strict_tolerance/strict_tolerance_all.csv",
+      "sha256": "0B0607E752B01B4348B38647B6BF5302B9B14AFF1E950827EF2EEE54A9F39ECB",
+      "rows": 27,
+      "kind": "csv"
+    },
+    {
+      "path": "twobit34_results/perturbations/perturbations_s_all.csv",
+      "sha256": "616368E8C5D5C81CBCD29CD2D984E186AB6EE2B9A4E5805DB7ADC22235EC15C0",
+      "rows": 40,
+      "kind": "csv"
+    },
+    {
+      "path": "twobit34_results/perturbations/perturbations_rdf_all.csv",
+      "sha256": "69541274D0E0907FE3B6983D6ED2573990330AAADD4737B8E1674316BC99CB68",
+      "rows": 40,
+      "kind": "csv"
+    },
+    {
+      "path": "twobit34_results/perturbations/perturbations_affl_all.csv",
+      "sha256": "9B51278AF67EDCC495BCA2A91E1B0B195F1AC331601E7F04526428193C4D628D",
+      "rows": 40,
+      "kind": "csv"
+    },
+    {
+      "path": "twobit34_results/perturbations/perturbations_int1_all.csv",
+      "sha256": "2CE750AC965914ECC9B535E60331F14188E33AC5DFFFF86D369EE3118C1E16FA",
+      "rows": 20,
+      "kind": "csv"
+    },
+    {
+      "path": "plausibility/nA1_vs_maturation_all.csv",
+      "sha256": "77D25B729E5AE9D419A49C88A8A6D511022E9B30E8794C860B0A6084073B1D6E",
+      "rows": 25,
+      "kind": "csv"
+    },
+    {
+      "path": "plausibility/preaudit_stochasticity_all.csv",
+      "sha256": "48B298A0A8C91308D84A0196CC9E67B1F2035306A1ADA039B9123A0ACB2E507E",
+      "rows": 21,
+      "kind": "csv"
+    },
+    {
+      "path": "plausibility/preaudit_stochasticity_verdict.json",
+      "sha256": "5DB58C16FB90DC9480BAD89CA930D59BE323420E230B7658E9306A82BFC1AA2E",
+      "kind": "json"
+    },
+    {
+      "path": "plausibility/preaudit_stochasticity_inventory.json",
+      "sha256": "CA676D0F4A1D90462216D07429235A3AA42FE9C877CC739312ADA8E8831D8558",
+      "kind": "json"
+    },
+    {
+      "path": "plausibility/carry_pairing_grid_verdict.json",
+      "sha256": "76702F2689B4FDA1ED298D6AD083C0CDF54295A1B8BC68F577F0728F25484772",
+      "kind": "json"
+    },
+    {
+      "path": "threebit51_results/postfreeze_peak_perturbation/postfreeze_all.csv",
+      "sha256": "6729E6A14FDE7947030DFEE38A314E337FC032B631CB9E69F1DD40561AD3A06E",
+      "rows": 36,
+      "kind": "csv"
+    }
+  ],
+  "working_points": {
+    "frozen_51state": {
+      "n_A1_gate": 6.0,
+      "mRNA_min": 2.0,
+      "mat_min": 32.5,
+      "uM_per_au": 5.75
+    },
+    "legacy_51state": {
+      "note": "these scans predate the n_A1_gate constructor parameter and therefore ran at the shared-slot ZENG[\"n_A\"][1] = 4.0, NOT the frozen 6.0",
+      "files": [
+        "threebit51_results/carry1_scan_dsh/carry1_all.csv",
+        "threebit51_results/carry1_split_scan/split_all.csv"
+      ]
+    },
+    "twobit_34state": {
+      "carry_mrna_half_life_min": 2.0,
+      "carry_maturation_half_life_min": 32.5,
+      "uM_per_au": 5.75
+    }
+  },
+  "metric_notes": "leak is always the paired R/F super-period L_symmetric (H4) on the 2-minute output grid, with the tail cut stated per panel; the legacy 51-state scans report crossings/cycles and gate dose, not L_symmetric",
+  "verification": "figures were NOT visually inspected (the model has no image input); they are verified numerically by selfcheck_scan_figures.py, which re-renders every panel and asserts the plotted values against the source artefacts",
+  "not_plotted": [
+    "absolute_scale.json",
+    "absolute_scale_burden.csv",
+    "absolute_scale_pools.csv",
+    "absolute_scale_thresholds.csv",
+    "mass_balance.csv",
+    "mass_balance.json",
+    "rdf_collapse.csv",
+    "rdf_collapse.json",
+    "rdf_collapse_curve.csv",
+    "rdf_collapse_rescored.csv",
+    "rdf_collapse_rescored.json",
+    "sharpen_vs_lengthen_all.csv",
+    "sharpen_vs_lengthen_shard00of10.csv ... sharpen_vs_lengthen_shard09of10.csv",
+    "sharpen_vs_lengthen_verdict.json",
+    "threshold_margin_baseline.csv",
+    "threshold_margin_baseline.json",
+    "threshold_margin_baseline_rescored_v2.csv",
+    "threshold_margin_baseline_rescored_v2.json"
+  ]
+}
